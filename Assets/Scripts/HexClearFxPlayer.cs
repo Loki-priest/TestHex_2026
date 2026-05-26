@@ -96,7 +96,20 @@ public class HexClearFxPlayer : MonoBehaviour
             }
         }
 
-        return Object.Instantiate(clearTilesFxPrefab, position, rotation);
+        GameObject spawnedFxObject = Object.Instantiate(clearTilesFxPrefab.gameObject, position, rotation);
+        if (spawnedFxObject == null)
+        {
+            return null;
+        }
+
+        ParticleSystem spawnedFx = spawnedFxObject.GetComponent<ParticleSystem>();
+        if (spawnedFx != null)
+        {
+            return spawnedFx;
+        }
+
+        Object.Destroy(spawnedFxObject);
+        return null;
     }
 
     private IEnumerator ReturnClearTilesFxAfterDelay(HexPoolService poolService, ParticleSystem fx, float delay)

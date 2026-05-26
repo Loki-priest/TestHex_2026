@@ -1066,17 +1066,19 @@ Deserializers["HexManager"] = function (request, data, root) {
   i602.clearScaleEase = i603[9]
   i602.clearScaleStagger = i603[10]
   request.r(i603[11], i603[12], 0, i602, 'clearFxPlayer')
+  i602.logTransferEvents = !!i603[13]
   return i602
 }
 
 Deserializers["HexTransferAnimator"] = function (request, data, root) {
   var i604 = root || request.c( 'HexTransferAnimator' )
   var i605 = data
-  i604.tileFlipDuration = i605[0]
-  i604.tileFlipEase = i605[1]
-  i604.tileSettleDuration = i605[2]
-  i604.tileSettleEase = i605[3]
-  i604.tileTransferFanStagger = i605[4]
+  i604.logTransferAnimatorEvents = !!i605[0]
+  i604.tileFlipDuration = i605[1]
+  i604.tileFlipEase = i605[2]
+  i604.tileSettleDuration = i605[3]
+  i604.tileSettleEase = i605[4]
+  i604.tileTransferFanStagger = i605[5]
   return i604
 }
 
@@ -1489,12 +1491,11 @@ Deserializers["DG.Tweening.Core.DOTweenSettings+ModulesSetup"] = function (reque
   i714.physics2DEnabled = !!i715[3]
   i714.spriteEnabled = !!i715[4]
   i714.uiEnabled = !!i715[5]
-  i714.uiToolkitEnabled = !!i715[6]
-  i714.textMeshProEnabled = !!i715[7]
-  i714.tk2DEnabled = !!i715[8]
-  i714.deAudioEnabled = !!i715[9]
-  i714.deUnityExtendedEnabled = !!i715[10]
-  i714.epoOutlineEnabled = !!i715[11]
+  i714.textMeshProEnabled = !!i715[6]
+  i714.tk2DEnabled = !!i715[7]
+  i714.deAudioEnabled = !!i715[8]
+  i714.deUnityExtendedEnabled = !!i715[9]
+  i714.epoOutlineEnabled = !!i715[10]
   return i714
 }
 
@@ -1737,7 +1738,7 @@ Deserializers.productName = "TestHex";
 
 Deserializers.lunaInitializationTime = "05/25/2026 23:56:59";
 
-Deserializers.lunaDaysRunning = "0.0";
+Deserializers.lunaDaysRunning = "0.1";
 
 Deserializers.lunaVersion = "7.2.0";
 
@@ -1745,11 +1746,11 @@ Deserializers.lunaSHA = "ea08d29afe2968efcb8d91d5624f033c6485cc68";
 
 Deserializers.creativeName = "";
 
-Deserializers.lunaAppID = "0";
+Deserializers.lunaAppID = "40078";
 
 Deserializers.projectId = "72ca743d8c13cb8488a5f26576d5f7d9";
 
-Deserializers.packagesInfo = "com.unity.textmeshpro: 3.0.7\ncom.unity.timeline: 1.7.7\ncom.unity.ugui: 1.0.0";
+Deserializers.packagesInfo = "com.unity.textmeshpro: 3.0.7\ncom.unity.ugui: 1.0.0";
 
 Deserializers.externalJsLibraries = "";
 
@@ -1765,19 +1766,19 @@ Deserializers.isForceUncompressed = "False";
 
 Deserializers.isAntiAliasingEnabled = "False";
 
-Deserializers.isRuntimeAnalysisEnabledForCode = "False";
+Deserializers.isRuntimeAnalysisEnabledForCode = "True";
 
-Deserializers.runtimeAnalysisExcludedClassesCount = "0";
+Deserializers.runtimeAnalysisExcludedClassesCount = "1826";
 
-Deserializers.runtimeAnalysisExcludedMethodsCount = "0";
+Deserializers.runtimeAnalysisExcludedMethodsCount = "4007";
 
-Deserializers.runtimeAnalysisExcludedModules = "";
+Deserializers.runtimeAnalysisExcludedModules = "physics2d, mecanim-wasm";
 
 Deserializers.isRuntimeAnalysisEnabledForShaders = "True";
 
 Deserializers.isRealtimeShadowsEnabled = "False";
 
-Deserializers.isLunaCompilerV2Used = "False";
+Deserializers.isLunaCompilerV2Used = "True";
 
 Deserializers.companyName = "DefaultCompany";
 
@@ -1791,9 +1792,9 @@ Deserializers.graphicsConstraint = 24;
 
 Deserializers.linearColorSpace = true;
 
-Deserializers.buildID = "9b940b55-0853-4967-beed-2cf1c8068e4a";
+Deserializers.buildID = "c1b21d76-8f28-4345-a841-c5c7cc02c39f";
 
-Deserializers.runtimeInitializeOnLoadInfos = [[["UnityEngine","Experimental","Rendering","ScriptableRuntimeReflectionSystemSettings","ScriptingDirtyReflectionSystemInstance"]],[["DG","Tweening","DOTween","RuntimeOnLoad"],["Unity","VisualScripting","RuntimeVSUsageUtility","RuntimeInitializeOnLoadBeforeSceneLoad"]],[["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"]],[],[]];
+Deserializers.runtimeInitializeOnLoadInfos = [[["UnityEngine","Experimental","Rendering","ScriptableRuntimeReflectionSystemSettings","ScriptingDirtyReflectionSystemInstance"]],[["Unity","VisualScripting","RuntimeVSUsageUtility","RuntimeInitializeOnLoadBeforeSceneLoad"]],[["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"],["$BurstDirectCallInitializer","Initialize"]],[],[]];
 
 Deserializers.typeNameToIdMap = function(){ var i = 0; return Deserializers.types.reduce( function( res, item ) { res[ item ] = i++; return res; }, {} ) }()
 

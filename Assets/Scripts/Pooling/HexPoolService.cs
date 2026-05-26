@@ -145,7 +145,7 @@ public class HexPoolService : MonoBehaviour
 
             for (int i = 0; i < safeCount; i++)
             {
-                T instance = Object.Instantiate(prefab, poolRoot);
+                T instance = InstantiateComponent(prefab, poolRoot);
                 if (instance == null)
                 {
                     continue;
@@ -184,7 +184,7 @@ public class HexPoolService : MonoBehaviour
 
             if (instance == null)
             {
-                instance = Object.Instantiate(prefab);
+                instance = InstantiateComponent(prefab);
                 if (instance == null)
                 {
                     return null;
@@ -257,6 +257,37 @@ public class HexPoolService : MonoBehaviour
             bucket = new Queue<T>();
             bucketsByPrefab[prefabId] = bucket;
             return bucket;
+        }
+
+        private static T InstantiateComponent(T prefab, Transform parent = null)
+        {
+            if (prefab == null)
+            {
+                return null;
+            }
+
+            GameObject prefabObject = prefab.gameObject;
+            if (prefabObject == null)
+            {
+                return null;
+            }
+
+            GameObject instanceObject = parent != null
+                ? Object.Instantiate(prefabObject, parent)
+                : Object.Instantiate(prefabObject);
+            if (instanceObject == null)
+            {
+                return null;
+            }
+
+            T instanceComponent = instanceObject.GetComponent<T>();
+            if (instanceComponent != null)
+            {
+                return instanceComponent;
+            }
+
+            Object.Destroy(instanceObject);
+            return null;
         }
     }
 }

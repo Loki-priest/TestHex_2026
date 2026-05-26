@@ -1,218 +1,392 @@
-report@config:load 4.05
-Permissions were validated successfully.
-report@account:authorize 1040.29
-Exporting assets from Unity...........
+report@config:load 33.53
+Authorized using stored user info.
+report@account:authorize 5.74
+stderr: "rm" �� ���� ����७��� ��� ���譥�
+��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.
+
+Exporting assets from Unity.......
 
 [ Stage1 ] Assets exported from Unity and staged for further processing
-report@unity:export 8522.01
-report@config:load 5.28
+report@unity:export 4040.27
+report@config:load 15.13
 Resources:
 {}
-report@assets:stage2 2918.99
-report@assets:stage3 647.68
+report@assets:stage2 2753.99
+report@assets:stage3 160.87
 [ Stage2 ] Assets postprocessed and bundled successfully
-report@config:unity 0.15
-report@config:load 2.63
 report@config:unity 0.11
-report@code:compose 107.85
+report@config:load 40.82
+report@config:unity 0.16
+﻿
+[ error ] $﻿
+Diagnostics gathered successfully
+.NET Core 3 runtime not found.
+.NET Core 3 runtime not found.
+Компилятор Microsoft (R) Visual C# версии 4.3.1-3.22526.13 (41a5af9d)
+© Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+
+E:\Work\TestHex\Assets\Scripts\UI\PackshotController.cs(11,41): warning CS0649: Полю "PackshotController.playNowButtonObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+E:\Work\TestHex\Assets\Scripts\HexGameContext.cs(12,47): warning CS0649: Полю "HexGameContext.stacksCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+E:\Work\TestHex\Assets\Scripts\UI\PlayableUIRoot.cs(5,56): warning CS0649: Полю "PlayableUIRoot.tutorialController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexGameContext.cs(13,46): warning CS0649: Полю "HexGameContext.floorCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\TutorialOverlayController.cs(11,44): warning CS0649: Полю "TutorialOverlayController.toAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexStacksCreator.cs(11,40): warning CS0649: Полю "HexStacksCreator.stacksRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexStack.cs(11,40): warning CS0649: Полю "HexStack.anchorPos" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexGameContext.cs(8,45): warning CS0649: Полю "HexGameContext.poolService" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(40,36): warning CS0649: Полю "CountdownTimerPanel.barBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(41,36): warning CS0649: Полю "CountdownTimerPanel.barFillImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\PackshotController.cs(9,41): warning CS0649: Полю "PackshotController.backgroundObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\TutorialOverlayController.cs(8,41): warning CS0649: Полю "TutorialOverlayController.tutorialRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloorCreator.cs(8,45): warning CS0649: Полю "HexFloorCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloorCreator.cs(11,40): warning CS0649: Полю "HexFloorCreator.bottomRowAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(47,36): warning CS0649: Полю "CountdownTimerPanel.arrowImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(38,44): warning CS0649: Полю "CountdownTimerPanel.panelRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(42,44): warning CS0649: Полю "CountdownTimerPanel.iconRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexStacksCreator.cs(10,39): warning CS0649: Полю "HexStacksCreator.spawnStackPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(45,36): warning CS0649: Полю "CountdownTimerPanel.iconNubImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\PlayableUIRoot.cs(7,50): warning CS0649: Полю "PlayableUIRoot.countdownTimerPanel" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\Pooling\HexPoolService.cs(13,42): warning CS0649: Полю "HexPoolService.prewarmStackCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
+E:\Work\TestHex\Assets\Scripts\Pooling\HexPoolService.cs(14,42): warning CS0649: Полю "HexPoolService.prewarmTileCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
+E:\Work\TestHex\Assets\Scripts\HexDragger.cs(35,35): warning CS0649: Полю "HexDragger.destroyOnSuccessfulDrop" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false.
+E:\Work\TestHex\Assets\Scripts\HexGameContext.cs(7,40): warning CS0649: Полю "HexGameContext.config" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\Pooling\HexPoolService.cs(15,42): warning CS0649: Полю "HexPoolService.prewarmFxCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
+E:\Work\TestHex\Assets\Scripts\HexStacksCreator.cs(18,35): warning CS0649: Полю "HexStacksCreator.spawnSlotsOnlyOnce" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(44,36): warning CS0649: Полю "CountdownTimerPanel.iconBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\TutorialOverlayController.cs(10,44): warning CS0649: Полю "TutorialOverlayController.fromAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+E:\Work\TestHex\Assets\Scripts\HexFloor.cs(15,40): warning CS0649: Полю "HexFloor.stackAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloor.cs(24,41): warning CS0649: Полю "HexFloor.highlightRenderers" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(46,44): warning CS0649: Полю "CountdownTimerPanel.arrowTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(43,36): warning CS0649: Полю "CountdownTimerPanel.iconFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexStacksCreator.cs(9,45): warning CS0649: Полю "HexStacksCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\CountdownTimerPanel.cs(39,36): warning CS0649: Полю "CountdownTimerPanel.barFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloorCreator.cs(14,35): warning CS0649: Полю "HexFloorCreator.generateOnStart" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false.
+E:\Work\TestHex\Assets\Scripts\UI\PlayableUIRoot.cs(6,49): warning CS0649: Полю "PlayableUIRoot.packshotController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexGameContext.cs(11,41): warning CS0649: Полю "HexGameContext.manager" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloorCreator.cs(10,40): warning CS0649: Полю "HexFloorCreator.floorRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\PackshotController.cs(10,41): warning CS0649: Полю "PackshotController.logoObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\TutorialOverlayController.cs(9,44): warning CS0649: Полю "TutorialOverlayController.handTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\PackshotController.cs(7,41): warning CS0649: Полю "PackshotController.packshotRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexFloorCreator.cs(9,41): warning CS0649: Полю "HexFloorCreator.floorPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\UI\PackshotController.cs(8,42): warning CS0649: Полю "PackshotController.packshotCanvasGroup" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexManager.cs(14,50): warning CS0649: Полю "HexManager.transferAnimator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexStacksCreator.cs(12,42): warning CS0649: Полю "HexStacksCreator.stackSlots" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexClearFxPlayer.cs(11,45): warning CS0649: Полю "HexClearFxPlayer.clearTilesFxPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+E:\Work\TestHex\Assets\Scripts\HexManager.cs(25,47): warning CS0649: Полю "HexManager.clearFxPlayer" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+E:\Work\TestHex\Assets\Scripts\HexManager.cs(10,45): warning CS0649: Полю "HexManager.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+
+Usercode compiled successfully!
+.NET Core 3 runtime not found.
+.NET Core 3 runtime not found.
+code-v2:compose complete successfully!
+report@code-v2:compose 0.16
 Authorized using stored user info.
-report@account:authorize 3.11
+report@account:authorize 4.03
 Microsoft (R) Build Engine версии 16.11.2+f32259642 для .NET Framework
 (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
 
-Сборка начата 26.05.2026 6:58:28.
+Сборка начата 26.05.2026 9:03:14.
 
 Проект "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" в узле 1 (целевые объекты Rebuild).
+
+CoreClean:
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.pdb" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UI.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UniversalRenderPipeline.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.AssemblyReference.cache" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CoreCompileInputs.cache" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CopyComplete" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.dll" удаляется.
+
+  Файл "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.pdb" удаляется.
 
 GenerateTargetFrameworkMonikerAttribute:
 Целевой объект "GenerateTargetFrameworkMonikerAttribute" пропускается, так как все выходные файлы актуальны по отношению к входным.
 
 CoreCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2022;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_3;UNITY_2022_3_62 /highentropyva+ /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.6\TextMeshPro.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /subsystemversion:6.00 /target:library /warnaserror- /utf8output /langversion:8 E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUIToolkit.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexClearFxPlayer.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Hex
-Config.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexDragger.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloor.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStack.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexTile.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexTransferAnimator.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\LunaBridge.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs Properties/AssemblyInfo.cs Sources/OtherDummyScript.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2022;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_3;UNITY_2022_3_62 /highentropyva+ /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.6\TextMeshPro.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /reference:C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /subsystemversion:6.00 /target:library /warnaserror- /utf8output /langversion:8 E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenCYInstruction.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModuleAudio.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModulePhysics.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModulePhysics2D.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModuleSprite.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModuleUI.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModuleUnityVersion.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\DG\Tweening\DOTweenModuleUtils.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexClearFxPlayer.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexConfig.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexDragger.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloor.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStack.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexTile.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexTransferAnimator.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\LunaBridge.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\Properties\AssemblyInfo.cs E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(131,50): error CS0117: "Image" не содержит определение для "OriginHorizontal". [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(18,22): warning CS0649: Полю "HexStacksCreator.stackSlots" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(109,21): error CS0117: "Physics" не содержит определение для "SyncTransforms". [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(9,25): warning CS0649: Полю "HexStacksCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexClearFxPlayer.cs(14,25): warning CS0649: Полю "HexClearFxPlayer.clearTilesFxPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(15,50): warning CS0649: Полю "HexManager.transferAnimator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(12,24): warning CS0649: Полю "TutorialOverlayController.handTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(8,20): warning CS0649: Полю "HexGameContext.config" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(5,56): warning CS0649: Полю "PlayableUIRoot.tutorialController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(103,16): warning CS0649: Полю "CountdownTimerPanel.arrowImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexClearFxPlayer.cs(11,45): warning CS0649: Полю "HexClearFxPlayer.clearTilesFxPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(13,46): warning CS0649: Полю "HexGameContext.floorCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(9,21): warning CS0649: Полю "TutorialOverlayController.tutorialRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(8,45): warning CS0649: Полю "HexGameContext.poolService" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(169,14): warning CS0649: Полю "HexPoolService.prewarmStackCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(12,47): warning CS0649: Полю "HexGameContext.stacksCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(88,24): warning CS0649: Полю "CountdownTimerPanel.iconRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(10,40): warning CS0649: Полю "HexFloorCreator.floorRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(11,45): warning CS0649: Полю "HexManager.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(91,16): warning CS0649: Полю "CountdownTimerPanel.iconFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(13,42): warning CS0649: Полю "HexPoolService.prewarmStackCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(9,41): warning CS0649: Полю "HexFloorCreator.floorPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(11,40): warning CS0649: Полю "HexFloorCreator.bottomRowAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(9,41): warning CS0649: Полю "PackshotController.backgroundObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(18,24): warning CS0649: Полю "TutorialOverlayController.toAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(11,40): warning CS0649: Полю "HexStacksCreator.stacksRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(14,35): warning CS0649: Полю "HexFloorCreator.generateOnStart" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(31,15): warning CS0649: Полю "HexStacksCreator.spawnSlotsOnlyOnce" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(15,42): warning CS0649: Полю "HexPoolService.prewarmFxCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(18,27): warning CS0649: Полю "HexGameContext.stacksCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloor.cs(36,20): warning CS0649: Полю "HexFloor.stackAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(10,39): warning CS0649: Полю "HexStacksCreator.spawnStackPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloor.cs(24,41): warning CS0649: Полю "HexFloor.highlightRenderers" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.
-2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(7,41): warning CS0649: Полю "PackshotController.packshotRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(60,30): warning CS0649: Полю "HexManager.transferAnimator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(11,41): warning CS0649: Полю "PackshotController.playNowButtonObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(12,19): warning CS0649: Полю "HexStacksCreator.spawnStackPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(41,36): warning CS0649: Полю "CountdownTimerPanel.barFillImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(173,14): warning CS0649: Полю "HexPoolService.prewarmTileCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(14,42): warning CS0649: Полю "HexPoolService.prewarmTileCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(11,25): warning CS0649: Полю "HexGameContext.poolService" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloor.cs(15,40): warning CS0649: Полю "HexFloor.stackAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(15,20): warning CS0649: Полю "HexStacksCreator.stacksRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStack.cs(11,40): warning CS0649: Полю "HexStack.anchorPos" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(10,41): warning CS0649: Полю "PackshotController.logoObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(12,30): warning CS0649: Полю "PlayableUIRoot.countdownTimerPanel" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(40,36): warning CS0649: Полю "CountdownTimerPanel.barBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(22,15): warning CS0649: Полю "HexFloorCreator.generateOnStart" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(12,42): warning CS0649: Полю "HexStacksCreator.stackSlots" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(100,24): warning CS0649: Полю "CountdownTimerPanel.arrowTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(6,49): warning CS0649: Полю "PlayableUIRoot.packshotController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(15,24): warning CS0649: Полю "TutorialOverlayController.fromAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(44,36): warning CS0649: Полю "CountdownTimerPanel.iconBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(53,25): warning CS0649: Полю "HexManager.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(42,44): warning CS0649: Полю "CountdownTimerPanel.iconRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(14,21): warning CS0649: Полю "PackshotController.backgroundObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(11,44): warning CS0649: Полю "TutorialOverlayController.toAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(15,21): warning CS0649: Полю "HexGameContext.manager" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(45,36): warning CS0649: Полю "CountdownTimerPanel.iconNubImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(97,16): warning CS0649: Полю "CountdownTimerPanel.iconNubImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(8,41): warning CS0649: Полю "TutorialOverlayController.tutorialRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(43,36): warning CS0649: Полю "CountdownTimerPanel.iconFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(21,26): warning CS0649: Полю "HexGameContext.floorCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(18,35): warning CS0649: Полю "HexStacksCreator.spawnSlotsOnlyOnce" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(85,16): warning CS0649: Полю "CountdownTimerPanel.barFillImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(7,50): warning CS0649: Полю "PlayableUIRoot.countdownTimerPanel" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(12,21): warning CS0649: Полю "HexFloorCreator.floorPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(47,36): warning CS0649: Полю "CountdownTimerPanel.arrowImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(94,16): warning CS0649: Полю "CountdownTimerPanel.iconBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(8,45): warning CS0649: Полю "HexFloorCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(76,24): warning CS0649: Полю "CountdownTimerPanel.panelRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexDragger.cs(35,35): warning CS0649: Полю "HexDragger.destroyOnSuccessfulDrop" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(20,21): warning CS0649: Полю "PackshotController.playNowButtonObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(46,44): warning CS0649: Полю "CountdownTimerPanel.arrowTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(9,29): warning CS0649: Полю "PlayableUIRoot.packshotController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(9,44): warning CS0649: Полю "TutorialOverlayController.handTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStack.cs(19,20): warning CS0649: Полю "HexStack.anchorPos" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(8,42): warning CS0649: Полю "PackshotController.packshotCanvasGroup" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(17,21): warning CS0649: Полю "PackshotController.logoObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(11,41): warning CS0649: Полю "HexGameContext.manager" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloor.cs(42,21): warning CS0649: Полю "HexFloor.highlightRenderers" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(10,44): warning CS0649: Полю "TutorialOverlayController.fromAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(15,20): warning CS0649: Полю "HexFloorCreator.floorRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(39,36): warning CS0649: Полю "CountdownTimerPanel.barFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(9,25): warning CS0649: Полю "HexFloorCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(9,45): warning CS0649: Полю "HexStacksCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(6,36): warning CS0649: Полю "PlayableUIRoot.tutorialController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(7,40): warning CS0649: Полю "HexGameContext.config" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(18,20): warning CS0649: Полю "HexFloorCreator.bottomRowAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(38,44): warning CS0649: Полю "CountdownTimerPanel.panelRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(26,47): warning CS0649: Полю "HexManager.clearFxPlayer" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexDragger.cs(58,15): warning CS0649: Полю "HexDragger.destroyOnSuccessfulDrop" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-  CompilerServer: server - server processed compilation - fb9c1f71-f0b1-45fd-a856-12016da2e91e
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(8,21): warning CS0649: Полю "PackshotController.packshotRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-Сборка проекта "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" завершена (целевые объекты Rebuild) с ошибкой.
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(11,22): warning CS0649: Полю "PackshotController.packshotCanvasGroup" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(82,16): warning CS0649: Полю "CountdownTimerPanel.barBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(79,16): warning CS0649: Полю "CountdownTimerPanel.barFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(85,27): warning CS0649: Полю "HexManager.clearFxPlayer" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(177,14): warning CS0649: Полю "HexPoolService.prewarmFxCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+  CompilerServer: server - server processed compilation - da80d0b1-8fe5-479e-9d1c-690e7714b686
+
+_CopyFilesMarkedCopyLocal:
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.dll".
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll".
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.dll".
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll".
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.6\TextMeshPro.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UniversalRenderPipeline.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UI.dll".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.xml".
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.xml" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml".
+
+  Создание "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CopyComplete", так как было задано "AlwaysCreate".
+
+CopyFilesToOutputDirectory:
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.dll" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll".
+
+  Scripts -> C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll
+
+  Копирование файла из "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.pdb" в "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.pdb".
+
+BridgeNetCompilerTask:
+  Bridge started
+
+      To enable detailed logging, configure "logging" in bridge.json.
+
+      https://github.com/bridgedotnet/Bridge/wiki/global-configuration#logging
+
+  Bridge done
+
+Сборка проекта "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" завершена (целевые объекты Rebuild).
 
 
 
-Ошибка сборки.
+Сборка успешно завершена.
 
 
 
 "C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (целевой объект Rebuild ) (1) ->
 (Целевой объект CoreCompile) -> 
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(18,22): warning CS0649: Полю "HexStacksCreator.stackSlots" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(15,50): warning CS0649: Полю "HexManager.transferAnimator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(5,56): warning CS0649: Полю "PlayableUIRoot.tutorialController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexClearFxPlayer.cs(11,45): warning CS0649: Полю "HexClearFxPlayer.clearTilesFxPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(13,46): warning CS0649: Полю "HexGameContext.floorCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(8,45): warning CS0649: Полю "HexGameContext.poolService" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(12,47): warning CS0649: Полю "HexGameContext.stacksCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(10,40): warning CS0649: Полю "HexFloorCreator.floorRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(11,45): warning CS0649: Полю "HexManager.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(13,42): warning CS0649: Полю "HexPoolService.prewarmStackCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(9,41): warning CS0649: Полю "HexFloorCreator.floorPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(11,40): warning CS0649: Полю "HexFloorCreator.bottomRowAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(9,41): warning CS0649: Полю "PackshotController.backgroundObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(11,40): warning CS0649: Полю "HexStacksCreator.stacksRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(14,35): warning CS0649: Полю "HexFloorCreator.generateOnStart" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(15,42): warning CS0649: Полю "HexPoolService.prewarmFxCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(10,39): warning CS0649: Полю "HexStacksCreator.spawnStackPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloor.cs(24,41): warning CS0649: Полю "HexFloor.highlightRenderers" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(7,41): warning CS0649: Полю "PackshotController.packshotRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(11,41): warning CS0649: Полю "PackshotController.playNowButtonObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(41,36): warning CS0649: Полю "CountdownTimerPanel.barFillImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\Pooling\HexPoolService.cs(14,42): warning CS0649: Полю "HexPoolService.prewarmTileCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloor.cs(15,40): warning CS0649: Полю "HexFloor.stackAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStack.cs(11,40): warning CS0649: Полю "HexStack.anchorPos" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(10,41): warning CS0649: Полю "PackshotController.logoObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(40,36): warning CS0649: Полю "CountdownTimerPanel.barBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(12,42): warning CS0649: Полю "HexStacksCreator.stackSlots" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(6,49): warning CS0649: Полю "PlayableUIRoot.packshotController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(44,36): warning CS0649: Полю "CountdownTimerPanel.iconBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(42,44): warning CS0649: Полю "CountdownTimerPanel.iconRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(11,44): warning CS0649: Полю "TutorialOverlayController.toAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(45,36): warning CS0649: Полю "CountdownTimerPanel.iconNubImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(8,41): warning CS0649: Полю "TutorialOverlayController.tutorialRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(43,36): warning CS0649: Полю "CountdownTimerPanel.iconFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(18,35): warning CS0649: Полю "HexStacksCreator.spawnSlotsOnlyOnce" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PlayableUIRoot.cs(7,50): warning CS0649: Полю "PlayableUIRoot.countdownTimerPanel" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(47,36): warning CS0649: Полю "CountdownTimerPanel.arrowImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(8,45): warning CS0649: Полю "HexFloorCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexDragger.cs(35,35): warning CS0649: Полю "HexDragger.destroyOnSuccessfulDrop" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(46,44): warning CS0649: Полю "CountdownTimerPanel.arrowTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(9,44): warning CS0649: Полю "TutorialOverlayController.handTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\PackshotController.cs(8,42): warning CS0649: Полю "PackshotController.packshotCanvasGroup" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(11,41): warning CS0649: Полю "HexGameContext.manager" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\TutorialOverlayController.cs(10,44): warning CS0649: Полю "TutorialOverlayController.fromAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(39,36): warning CS0649: Полю "CountdownTimerPanel.barFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexStacksCreator.cs(9,45): warning CS0649: Полю "HexStacksCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexGameContext.cs(7,40): warning CS0649: Полю "HexGameContext.config" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(38,44): warning CS0649: Полю "CountdownTimerPanel.panelRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexManager.cs(26,47): warning CS0649: Полю "HexManager.clearFxPlayer" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-
-
-"C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (целевой объект Rebuild ) (1) ->
-(Целевой объект CoreCompile) -> 
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\UI\CountdownTimerPanel.cs(131,50): error CS0117: "Image" не содержит определение для "OriginHorizontal". [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  E:\Work\TestHex\LunaTemp\stage3\processed-scripts\Assets\Scripts\HexFloorCreator.cs(109,21): error CS0117: "Physics" не содержит определение для "SyncTransforms". [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(9,25): warning CS0649: Полю "HexStacksCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexClearFxPlayer.cs(14,25): warning CS0649: Полю "HexClearFxPlayer.clearTilesFxPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(12,24): warning CS0649: Полю "TutorialOverlayController.handTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(8,20): warning CS0649: Полю "HexGameContext.config" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(103,16): warning CS0649: Полю "CountdownTimerPanel.arrowImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(9,21): warning CS0649: Полю "TutorialOverlayController.tutorialRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(169,14): warning CS0649: Полю "HexPoolService.prewarmStackCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(88,24): warning CS0649: Полю "CountdownTimerPanel.iconRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(91,16): warning CS0649: Полю "CountdownTimerPanel.iconFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(18,24): warning CS0649: Полю "TutorialOverlayController.toAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(31,15): warning CS0649: Полю "HexStacksCreator.spawnSlotsOnlyOnce" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(18,27): warning CS0649: Полю "HexGameContext.stacksCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloor.cs(36,20): warning CS0649: Полю "HexFloor.stackAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(60,30): warning CS0649: Полю "HexManager.transferAnimator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(12,19): warning CS0649: Полю "HexStacksCreator.spawnStackPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(173,14): warning CS0649: Полю "HexPoolService.prewarmTileCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(11,25): warning CS0649: Полю "HexGameContext.poolService" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStacksCreator.cs(15,20): warning CS0649: Полю "HexStacksCreator.stacksRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(12,30): warning CS0649: Полю "PlayableUIRoot.countdownTimerPanel" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(22,15): warning CS0649: Полю "HexFloorCreator.generateOnStart" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Download
+s\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(100,24): warning CS0649: Полю "CountdownTimerPanel.arrowTransform" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\TutorialOverlayController.cs(15,24): warning CS0649: Полю "TutorialOverlayController.fromAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(53,25): warning CS0649: Полю "HexManager.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(14,21): warning CS0649: Полю "PackshotController.backgroundObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(15,21): warning CS0649: Полю "HexGameContext.manager" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(97,16): warning CS0649: Полю "CountdownTimerPanel.iconNubImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexGameContext.cs(21,26): warning CS0649: Полю "HexGameContext.floorCreator" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(85,16): warning CS0649: Полю "CountdownTimerPanel.barFillImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(12,21): warning CS0649: Полю "HexFloorCreator.floorPrefab" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(94,16): warning CS0649: Полю "CountdownTimerPanel.iconBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(76,24): warning CS0649: Полю "CountdownTimerPanel.panelRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(20,21): warning CS0649: Полю "PackshotController.playNowButtonObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(9,29): warning CS0649: Полю "PlayableUIRoot.packshotController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexStack.cs(19,20): warning CS0649: Полю "HexStack.anchorPos" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(17,21): warning CS0649: Полю "PackshotController.logoObject" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloor.cs(42,21): warning CS0649: Полю "HexFloor.highlightRenderers" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(15,20): warning CS0649: Полю "HexFloorCreator.floorRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(9,25): warning CS0649: Полю "HexFloorCreator.gameContext" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PlayableUIRoot.cs(6,36): warning CS0649: Полю "PlayableUIRoot.tutorialController" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexFloorCreator.cs(18,20): warning CS0649: Полю "HexFloorCreator.bottomRowAnchor" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexDragger.cs(58,15): warning CS0649: Полю "HexDragger.destroyOnSuccessfulDrop" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию false. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(8,21): warning CS0649: Полю "PackshotController.packshotRoot" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\PackshotController.cs(11,22): warning CS0649: Полю "PackshotController.packshotCanvasGroup" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(82,16): warning CS0649: Полю "CountdownTimerPanel.barBackImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\CountdownTimerPanel.cs(79,16): warning CS0649: Полю "CountdownTimerPanel.barFrameImage" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexManager.cs(85,27): warning CS0649: Полю "HexManager.clearFxPlayer" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  E:\Work\TestHex\LunaTemp\Assemblies\stage_2\decompiled\HexPoolService.cs(177,14): warning CS0649: Полю "HexPoolService.prewarmFxCount" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0. [C:\Users\nikit\Downloads\7.2.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
 
     Предупреждений: 48
-    Ошибок: 2
+    Ошибок: 0
 
+Прошло времени 00:00:07.66
 
-Прошло времени 00:00:01.56
-
+Source code compiled successfully!
 ﻿
 [ error ] $﻿
-PHC: LP error code not found in JSON: 3015, JSON file might be outdated. Error message: Sequence contains no matching element
-
 Diagnostics gathered successfully
-report@code:build 11962.74
-report@diagnostics:verify 0.45
-
-Fatal error while building C# code
-[ error ] $Project failed to build, check project diagnostics
-Error: DIAGNOSTICS_FATAL_ERROR
-    at Function.checkForErrors (C:\Users\nikit\Downloads\7.2.0\pipeline\Jakefile.js:6:2964948)
-    at async _0x41f7c1.action (C:\Users\nikit\Downloads\7.2.0\pipeline\Jakefile.js:6:2969941)
+report@code:build 10465.67
+report@diagnostics:verify 0.65
+report@diagnostics:upload 1418.79
+report@code:stage 8013.76
+[ Stage3 ] Code compiled and bundled successfully.
+report@code:bundle 25233.91
+report@package:stage 984.76
+[ Stage4 ] Target platform: develop
+[ Stage4 ] Package bundled successfully
+report@assets:stats 0.23

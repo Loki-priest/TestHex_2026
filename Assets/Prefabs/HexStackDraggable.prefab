@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1112816667192382301}
   - component: {fileID: 5146953678533732229}
-  - component: {fileID: 3594440439236678039}
   m_Layer: 0
   m_Name: HexStackDraggable
   m_TagString: Untagged
@@ -87,33 +86,6 @@ MonoBehaviour:
   tileStep: 0.07
   tileBaseLocalPosition: {x: 0, y: 0, z: 0}
   hideWhenEmpty: 1
---- !u!114 &3594440439236678039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8235435294439610995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb7d7168c7144ef891f8af630257d3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputCamera: {fileID: 0}
-  pickMaxDistance: 100
-  interactionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  floorCheckStartHeight: 2
-  floorCheckDistance: 8
-  liftHeight: 0.45
-  liftDuration: 0.12
-  liftEase: 6
-  attachMoveDuration: 0.14
-  attachMoveEase: 6
-  dropDuration: 0.12
-  dropEase: 7
-  destroyOnSuccessfulDrop: 0
 --- !u!1001 &1094737578605142092
 PrefabInstance:
   m_ObjectHideFlags: 0

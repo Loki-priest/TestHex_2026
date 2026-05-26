@@ -52,13 +52,6 @@ public class HexStacksCreator : MonoBehaviour
         pendingPlacementStacks.Remove(stack);
         stack.SetCurrentFloor(null);
 
-        if (stack.GetComponent<HexDragger>() == null)
-        {
-            runtimePooledStacks.Remove(stack);
-            Destroy(stack.gameObject);
-            return true;
-        }
-
         HexStack fallbackPrefab = runtimeSpawnTemplate != null ? runtimeSpawnTemplate : spawnStackPrefab;
         HexPoolService poolService = PoolService;
         if (poolService != null && fallbackPrefab != null && poolService.ReturnStack(stack, fallbackPrefab))
@@ -329,10 +322,5 @@ public class HexStacksCreator : MonoBehaviour
         }
 
         stack.SetGameContext(gameContext);
-        HexDragger dragger = stack.GetComponent<HexDragger>();
-        if (dragger != null)
-        {
-            dragger.SetGameContext(gameContext);
-        }
     }
 }

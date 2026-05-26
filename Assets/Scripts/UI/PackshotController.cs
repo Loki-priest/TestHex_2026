@@ -1,8 +1,11 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
 public class PackshotController : MonoBehaviour
 {
+    public event Action PackshotShown;
+
     [Header("Bindings")]
     [SerializeField] private GameObject packshotRoot;
     [SerializeField] private CanvasGroup packshotCanvasGroup;
@@ -72,6 +75,7 @@ public class PackshotController : MonoBehaviour
             fadeTween = packshotCanvasGroup.DOFade(1f, fadeDuration).SetEase(fadeEase);
         }
 
+        PackshotShown?.Invoke();
         LunaBridge.GameEnded();
     }
 

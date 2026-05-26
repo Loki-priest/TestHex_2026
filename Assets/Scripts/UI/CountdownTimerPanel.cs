@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,6 +51,7 @@ public class CountdownTimerPanel : MonoBehaviour
     private bool isRunning;
     private bool lowStateEnabled;
     private Tween iconShakeTween;
+    public event Action CountdownFinished;
 
     public bool IsRunning => isRunning;
     public float RemainingSeconds => remainingSeconds;
@@ -97,7 +99,8 @@ public class CountdownTimerPanel : MonoBehaviour
 
         isRunning = false;
         StopShake();
-        Debug.Log("Время кончилось");
+        Debug.Log("Time is over");
+        CountdownFinished?.Invoke();
     }
 
     public void StartCountdown()

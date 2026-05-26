@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -14,18 +14,20 @@ public class HexTransferAnimator : MonoBehaviour
     [SerializeField] private Ease tileSettleEase = Ease.OutQuad;
     [SerializeField] private float tileTransferFanStagger = 0.04f;
 
-    public IEnumerator TransferTopTilesFanRoutine(
+    public void TransferTopTilesFan(
         HexStack sourceStack,
         HexFloor sourceFloor,
         HexStack targetStack,
         HexFloor targetFloor,
         int transferCount,
-        float speedMultiplier = 1f
+        float speedMultiplier,
+        Action onComplete
     )
     {
         if (sourceStack == null || targetStack == null || transferCount <= 0)
         {
-            yield break;
+            onComplete?.Invoke();
+            return;
         }
 
         float safeSpeedMultiplier = Mathf.Max(0.01f, speedMultiplier);
@@ -53,7 +55,8 @@ public class HexTransferAnimator : MonoBehaviour
         if (movingTiles.Count == 0)
         {
             LogTransferAnimator("Transfer cancelled: no tiles popped from source.");
-            yield break;
+            onComplete?.Invoke();
+            return;
         }
 
         List<Tween> transferTweens = new(movingTiles.Count);
@@ -82,20 +85,25 @@ public class HexTransferAnimator : MonoBehaviour
             }
         }
 
-        yield return WaitForTweensCompletion(transferTweens);
-
-        for (int i = 0; i < movingTiles.Count; i++)
-        {
-            HexTile tile = movingTiles[i];
-            if (tile == null)
+        CompleteAfterTweens(
+            transferTweens,
+            () =>
             {
-                continue;
+                for (int i = 0; i < movingTiles.Count; i++)
+                {
+                    HexTile tile = movingTiles[i];
+                    if (tile == null)
+                    {
+                        continue;
+                    }
+
+                    targetStack.PushTopTile(tile);
+                }
+
+                LogTransferAnimator("Transfer animation stage completed.");
+                onComplete?.Invoke();
             }
-
-            targetStack.PushTopTile(tile);
-        }
-
-        LogTransferAnimator("Transfer animation stage completed.");
+        );
     }
 
     private Tween CreateTileTransferTween(
@@ -163,38 +171,62 @@ public class HexTransferAnimator : MonoBehaviour
         return sequence;
     }
 
-    private IEnumerator WaitForTweensCompletion(List<Tween> tweens)
+    private void CompleteAfterTweens(List<Tween> tweens, Action onComplete)
     {
         if (tweens == null || tweens.Count == 0)
         {
-            yield break;
+            onComplete?.Invoke();
+            return;
         }
 
-        while (true)
+        int remainingTweens = 0;
+        bool callbackInvoked = false;
+        Action reportTweenFinished = () =>
         {
-            bool hasRunningTween = false;
-
-            for (int i = 0; i < tweens.Count; i++)
+            remainingTweens--;
+            if (remainingTweens <= 0 && !callbackInvoked)
             {
-                Tween tween = tweens[i];
-                if (tween == null)
-                {
-                    continue;
-                }
+                callbackInvoked = true;
+                onComplete?.Invoke();
+            }
+        };
 
-                if (tween.IsActive() && !tween.IsComplete())
-                {
-                    hasRunningTween = true;
-                    break;
-                }
+        for (int i = 0; i < tweens.Count; i++)
+        {
+            Tween tween = tweens[i];
+            if (tween == null || !tween.IsActive() || tween.IsComplete())
+            {
+                continue;
             }
 
-            if (!hasRunningTween)
+            remainingTweens++;
+            bool isReported = false;
+            tween.OnComplete(() =>
             {
-                yield break;
-            }
+                if (isReported)
+                {
+                    return;
+                }
 
-            yield return null;
+                isReported = true;
+                reportTweenFinished();
+            });
+            tween.OnKill(() =>
+            {
+                if (isReported)
+                {
+                    return;
+                }
+
+                isReported = true;
+                reportTweenFinished();
+            });
+        }
+
+        if (remainingTweens == 0 && !callbackInvoked)
+        {
+            callbackInvoked = true;
+            onComplete?.Invoke();
         }
     }
 

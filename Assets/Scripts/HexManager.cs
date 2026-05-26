@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -30,6 +29,7 @@ public class HexManager : MonoBehaviour
 
     private const int MaxResolveIterations = 4096;
     private int activeTransferRoutines;
+    private int transferGeneration;
 
     public bool IsTransferInProgress => activeTransferRoutines > 0;
     public HexConfig hexConfig => gameContext != null ? gameContext.Config : null;
@@ -46,6 +46,27 @@ public class HexManager : MonoBehaviour
         }
     }
 
+    private sealed class TransferChainState
+    {
+        public readonly Queue<HexStack> PendingStacks = new();
+        public readonly HashSet<HexStack> QueuedStacks = new();
+        public readonly int Generation;
+        public readonly Action OnComplete;
+
+        public int TransferStepIndex;
+        public int ClearStepIndex;
+        public int LoopGuard;
+        public bool PassStarted;
+        public bool TransferredInPass;
+        public bool IsCompleted;
+
+        public TransferChainState(int generation, Action onComplete)
+        {
+            Generation = generation;
+            OnComplete = onComplete;
+        }
+    }
+
     private HexPoolService PoolService => gameContext != null ? gameContext.PoolService : null;
     private HexStacksCreator StacksCreator => gameContext != null ? gameContext.StacksCreator : null;
 
@@ -56,6 +77,7 @@ public class HexManager : MonoBehaviour
 
     private void OnDisable()
     {
+        transferGeneration++;
         activeTransferRoutines = 0;
     }
 
@@ -148,15 +170,13 @@ public class HexManager : MonoBehaviour
             return;
         }
 
-        StartCoroutine(
-            ResolveTopColorTransferRoutine(
-                placedStack,
-                targetFloor,
-                () =>
-                {
-                    onComplete?.Invoke();
-                }
-            )
+        BeginResolveTopColorTransfer(
+            placedStack,
+            targetFloor,
+            () =>
+            {
+                onComplete?.Invoke();
+            }
         );
     }
 
@@ -198,138 +218,193 @@ public class HexManager : MonoBehaviour
         return anyStack.GetTileTemplateForPool();
     }
 
-    private IEnumerator ResolveTopColorTransferRoutine(HexStack sourceStack, HexFloor sourceFloor, Action onComplete)
+    private void BeginResolveTopColorTransfer(HexStack sourceStack, HexFloor sourceFloor, Action onComplete)
     {
         activeTransferRoutines++;
+        TransferChainState state = new TransferChainState(transferGeneration, onComplete);
+
         LogTransferEvent(
             $"Transfer chain started. sourceStack={GetStackDebugName(sourceStack)}, sourceFloor={GetFloorDebugName(sourceFloor)}, activeChains={activeTransferRoutines}"
         );
 
-        try
+        if (sourceStack == null || sourceFloor == null)
         {
-            if (sourceStack == null || sourceFloor == null)
+            LogTransferEvent("Transfer chain aborted: sourceStack/sourceFloor is null.");
+            FinishTransferChain(state);
+            return;
+        }
+
+        EnqueueForTransferCheck(sourceStack, state.PendingStacks, state.QueuedStacks);
+        EnqueueNeighborStacksForTransferCheck(sourceFloor, state.PendingStacks, state.QueuedStacks);
+        ContinueResolveTopColorTransfer(state);
+    }
+
+    private void ContinueResolveTopColorTransfer(TransferChainState state)
+    {
+        if (!IsTransferChainActive(state))
+        {
+            return;
+        }
+
+        while (state.LoopGuard < MaxResolveIterations)
+        {
+            if (!state.PassStarted)
             {
-                LogTransferEvent("Transfer chain aborted: sourceStack/sourceFloor is null.");
-                yield break;
+                state.PassStarted = true;
+                state.TransferredInPass = false;
+
+                if (state.PendingStacks.Count == 0)
+                {
+                    EnqueueAllStacksForTransferCheck(state.PendingStacks, state.QueuedStacks);
+                }
             }
 
-            Queue<HexStack> pendingStacks = new();
-            HashSet<HexStack> queuedStacks = new();
-            int transferStepIndex = 0;
-            int clearStepIndex = 0;
-
-            EnqueueForTransferCheck(sourceStack, pendingStacks, queuedStacks);
-            EnqueueNeighborStacksForTransferCheck(sourceFloor, pendingStacks, queuedStacks);
-
-            int loopGuard = 0;
-            while (loopGuard < MaxResolveIterations)
+            while (state.PendingStacks.Count > 0 && state.LoopGuard < MaxResolveIterations)
             {
-                bool transferredInPass = false;
+                state.LoopGuard++;
 
-                if (pendingStacks.Count == 0)
+                HexStack currentSourceStack = state.PendingStacks.Dequeue();
+                state.QueuedStacks.Remove(currentSourceStack);
+
+                if (!TryResolveStackFloor(currentSourceStack, out HexFloor currentSourceFloor))
                 {
-                    EnqueueAllStacksForTransferCheck(pendingStacks, queuedStacks);
+                    continue;
                 }
 
-                while (pendingStacks.Count > 0 && loopGuard < MaxResolveIterations)
-                {
-                    loopGuard++;
-
-                    HexStack currentSourceStack = pendingStacks.Dequeue();
-                    queuedStacks.Remove(currentSourceStack);
-
-                    if (!TryResolveStackFloor(currentSourceStack, out HexFloor currentSourceFloor))
-                    {
-                        continue;
-                    }
-
-                    if (!TryFindMatchingNeighbor(
-                            currentSourceStack,
-                            currentSourceFloor,
-                            out HexStack targetStack,
-                            out HexFloor targetFloor,
-                            out Material topMaterial
-                        ))
-                    {
-                        continue;
-                    }
-
-                    int transferCount = currentSourceStack.CountTopTilesWithMaterial(topMaterial);
-                    if (transferCount <= 0)
-                    {
-                        continue;
-                    }
-
-                    transferredInPass = true;
-                    float transferSpeedMultiplier = GetChainSpeedMultiplier(
-                        transferStepIndex,
-                        transferSpeedIncreasePerStack
-                    );
-                    LogTransferEvent(
-                        $"Transfer step #{transferStepIndex + 1}: count={transferCount}, color={GetMaterialDebugName(topMaterial)}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}"
-                    );
-                    yield return transferAnimator.TransferTopTilesFanRoutine(
+                if (!TryFindMatchingNeighbor(
                         currentSourceStack,
                         currentSourceFloor,
-                        targetStack,
-                        targetFloor,
-                        transferCount,
-                        transferSpeedMultiplier
-                    );
-                    LogTransferEvent($"Transfer step #{transferStepIndex + 1} completed.");
-                    transferStepIndex++;
-
-                    EnqueueForTransferCheck(currentSourceStack, pendingStacks, queuedStacks);
-                    EnqueueForTransferCheck(targetStack, pendingStacks, queuedStacks);
-                    EnqueueNeighborStacksForTransferCheck(currentSourceFloor, pendingStacks, queuedStacks);
-                    EnqueueNeighborStacksForTransferCheck(targetFloor, pendingStacks, queuedStacks);
-                }
-
-                if (loopGuard >= MaxResolveIterations)
+                        out HexStack targetStack,
+                        out HexFloor targetFloor,
+                        out Material topMaterial
+                    ))
                 {
-                    break;
-                }
-
-                if (transferredInPass)
-                {
-                    EnqueueAllStacksForTransferCheck(pendingStacks, queuedStacks);
                     continue;
                 }
 
-                if (TryFindAnyTransferCandidate(out HexStack transferCandidate, out HexFloor transferCandidateFloor))
+                int transferCount = currentSourceStack.CountTopTilesWithMaterial(topMaterial);
+                if (transferCount <= 0)
                 {
-                    EnqueueForTransferCheck(transferCandidate, pendingStacks, queuedStacks);
-                    EnqueueNeighborStacksForTransferCheck(transferCandidateFloor, pendingStacks, queuedStacks);
                     continue;
                 }
 
-                if (!TryCollectClearBatches(out List<StackClearBatch> clearBatches))
-                {
-                    break;
-                }
-
-                bool isParallelClear = clearBatches.Count > 1;
-                float clearSpeedMultiplier = isParallelClear
-                    ? 1f
-                    : GetChainSpeedMultiplier(clearStepIndex, clearSpeedIncreasePerStack);
-                LogTransferEvent(
-                    $"Top clear phase: batches={clearBatches.Count}, parallel={isParallelClear}, speedMul={clearSpeedMultiplier:F2}"
+                state.TransferredInPass = true;
+                int transferStepNumber = state.TransferStepIndex + 1;
+                float transferSpeedMultiplier = GetChainSpeedMultiplier(
+                    state.TransferStepIndex,
+                    transferSpeedIncreasePerStack
                 );
-                yield return ClearBatchesParallelRoutine(clearBatches, clearSpeedMultiplier);
-                LogTransferEvent("Top clear phase completed.");
-                if (!isParallelClear)
-                {
-                    clearStepIndex++;
-                }
-                EnqueueAllStacksForTransferCheck(pendingStacks, queuedStacks);
+                LogTransferEvent(
+                    $"Transfer step #{transferStepNumber}: count={transferCount}, color={GetMaterialDebugName(topMaterial)}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}"
+                );
+
+                transferAnimator.TransferTopTilesFan(
+                    currentSourceStack,
+                    currentSourceFloor,
+                    targetStack,
+                    targetFloor,
+                    transferCount,
+                    transferSpeedMultiplier,
+                    () =>
+                    {
+                        if (!IsTransferChainActive(state))
+                        {
+                            return;
+                        }
+
+                        LogTransferEvent($"Transfer step #{transferStepNumber} completed.");
+                        state.TransferStepIndex++;
+
+                        EnqueueForTransferCheck(currentSourceStack, state.PendingStacks, state.QueuedStacks);
+                        EnqueueForTransferCheck(targetStack, state.PendingStacks, state.QueuedStacks);
+                        EnqueueNeighborStacksForTransferCheck(currentSourceFloor, state.PendingStacks, state.QueuedStacks);
+                        EnqueueNeighborStacksForTransferCheck(targetFloor, state.PendingStacks, state.QueuedStacks);
+
+                        ContinueResolveTopColorTransfer(state);
+                    }
+                );
+                return;
             }
+
+            if (state.LoopGuard >= MaxResolveIterations)
+            {
+                break;
+            }
+
+            state.PassStarted = false;
+
+            if (state.TransferredInPass)
+            {
+                EnqueueAllStacksForTransferCheck(state.PendingStacks, state.QueuedStacks);
+                continue;
+            }
+
+            if (TryFindAnyTransferCandidate(out HexStack transferCandidate, out HexFloor transferCandidateFloor))
+            {
+                EnqueueForTransferCheck(transferCandidate, state.PendingStacks, state.QueuedStacks);
+                EnqueueNeighborStacksForTransferCheck(transferCandidateFloor, state.PendingStacks, state.QueuedStacks);
+                continue;
+            }
+
+            if (!TryCollectClearBatches(out List<StackClearBatch> clearBatches))
+            {
+                FinishTransferChain(state);
+                return;
+            }
+
+            bool isParallelClear = clearBatches.Count > 1;
+            float clearSpeedMultiplier = isParallelClear
+                ? 1f
+                : GetChainSpeedMultiplier(state.ClearStepIndex, clearSpeedIncreasePerStack);
+            LogTransferEvent(
+                $"Top clear phase: batches={clearBatches.Count}, parallel={isParallelClear}, speedMul={clearSpeedMultiplier:F2}"
+            );
+
+            ClearBatchesParallel(
+                clearBatches,
+                clearSpeedMultiplier,
+                () =>
+                {
+                    if (!IsTransferChainActive(state))
+                    {
+                        return;
+                    }
+
+                    LogTransferEvent("Top clear phase completed.");
+                    if (!isParallelClear)
+                    {
+                        state.ClearStepIndex++;
+                    }
+
+                    EnqueueAllStacksForTransferCheck(state.PendingStacks, state.QueuedStacks);
+                    ContinueResolveTopColorTransfer(state);
+                }
+            );
+            return;
         }
-        finally
+
+        FinishTransferChain(state);
+    }
+
+    private bool IsTransferChainActive(TransferChainState state)
+    {
+        return state != null
+            && !state.IsCompleted
+            && state.Generation == transferGeneration
+            && isActiveAndEnabled;
+    }
+
+    private void FinishTransferChain(TransferChainState state)
+    {
+        if (state == null || state.IsCompleted || state.Generation != transferGeneration)
         {
-            activeTransferRoutines = Mathf.Max(0, activeTransferRoutines - 1);
-            LogTransferEvent($"Transfer chain finished. activeChains={activeTransferRoutines}");
-            onComplete?.Invoke();
+            return;
         }
+
+        state.IsCompleted = true;
+        activeTransferRoutines = Mathf.Max(0, activeTransferRoutines - 1);
+        LogTransferEvent($"Transfer chain finished. activeChains={activeTransferRoutines}");
+        state.OnComplete?.Invoke();
     }
 
     private void EnqueueForTransferCheck(HexStack stack, Queue<HexStack> pendingStacks, HashSet<HexStack> queuedStacks)
@@ -577,11 +652,12 @@ public class HexManager : MonoBehaviour
         return null;
     }
 
-    private IEnumerator ClearBatchesParallelRoutine(List<StackClearBatch> clearBatches, float speedMultiplier)
+    private void ClearBatchesParallel(List<StackClearBatch> clearBatches, float speedMultiplier, Action onComplete)
     {
         if (clearBatches == null || clearBatches.Count == 0)
         {
-            yield break;
+            onComplete?.Invoke();
+            return;
         }
 
         float safeSpeedMultiplier = Mathf.Max(0.01f, speedMultiplier);
@@ -620,44 +696,50 @@ public class HexManager : MonoBehaviour
             }
         }
 
-        yield return WaitForTweensCompletion(clearTweens);
-
-        for (int batchIndex = 0; batchIndex < clearBatches.Count; batchIndex++)
-        {
-            HexStack batchStack = clearBatches[batchIndex].Stack;
-            List<HexTile> tilesToClear = clearBatches[batchIndex].Tiles;
-            if (tilesToClear == null)
+        CompleteAfterTweens(
+            clearTweens,
+            () =>
             {
-                continue;
-            }
-
-            bool hasLowestPosition = TryGetLowestTilePosition(tilesToClear, out Vector3 lowestPosition);
-            Color batchColor = Color.white;
-            bool hasBatchColor = clearFxPlayer.TryGetClearBatchColor(tilesToClear, out batchColor);
-            HexTile fallbackTilePrefab = batchStack != null ? batchStack.GetTileTemplateForPool() : null;
-
-            for (int tileIndex = 0; tileIndex < tilesToClear.Count; tileIndex++)
-            {
-                HexTile tile = tilesToClear[tileIndex];
-                if (tile == null)
+                for (int batchIndex = 0; batchIndex < clearBatches.Count; batchIndex++)
                 {
-                    continue;
+                    HexStack batchStack = clearBatches[batchIndex].Stack;
+                    List<HexTile> tilesToClear = clearBatches[batchIndex].Tiles;
+                    if (tilesToClear == null)
+                    {
+                        continue;
+                    }
+
+                    bool hasLowestPosition = TryGetLowestTilePosition(tilesToClear, out Vector3 lowestPosition);
+                    Color batchColor = Color.white;
+                    bool hasBatchColor = clearFxPlayer.TryGetClearBatchColor(tilesToClear, out batchColor);
+                    HexTile fallbackTilePrefab = batchStack != null ? batchStack.GetTileTemplateForPool() : null;
+
+                    for (int tileIndex = 0; tileIndex < tilesToClear.Count; tileIndex++)
+                    {
+                        HexTile tile = tilesToClear[tileIndex];
+                        if (tile == null)
+                        {
+                            continue;
+                        }
+
+                        tile.gameObject.SetActive(false);
+                        ReturnTile(tile, fallbackTilePrefab);
+                    }
+
+                    if (hasLowestPosition)
+                    {
+                        clearFxPlayer.PlayClearTilesFxAtPosition(
+                            this,
+                            PoolService,
+                            lowestPosition,
+                            hasBatchColor ? batchColor : Color.white
+                        );
+                    }
                 }
 
-                tile.gameObject.SetActive(false);
-                ReturnTile(tile, fallbackTilePrefab);
+                onComplete?.Invoke();
             }
-
-            if (hasLowestPosition)
-            {
-                clearFxPlayer.PlayClearTilesFxAtPosition(
-                    this,
-                    PoolService,
-                    lowestPosition,
-                    hasBatchColor ? batchColor : Color.white
-                );
-            }
-        }
+        );
     }
 
     private bool TryGetLowestTilePosition(List<HexTile> tiles, out Vector3 lowestPosition)
@@ -691,38 +773,62 @@ public class HexManager : MonoBehaviour
         return hasPosition;
     }
 
-    private IEnumerator WaitForTweensCompletion(List<Tween> tweens)
+    private void CompleteAfterTweens(List<Tween> tweens, Action onComplete)
     {
         if (tweens == null || tweens.Count == 0)
         {
-            yield break;
+            onComplete?.Invoke();
+            return;
         }
 
-        while (true)
+        int remainingTweens = 0;
+        bool callbackInvoked = false;
+        Action reportTweenFinished = () =>
         {
-            bool hasRunningTween = false;
-
-            for (int i = 0; i < tweens.Count; i++)
+            remainingTweens--;
+            if (remainingTweens <= 0 && !callbackInvoked)
             {
-                Tween tween = tweens[i];
-                if (tween == null)
-                {
-                    continue;
-                }
+                callbackInvoked = true;
+                onComplete?.Invoke();
+            }
+        };
 
-                if (tween.IsActive() && !tween.IsComplete())
-                {
-                    hasRunningTween = true;
-                    break;
-                }
+        for (int i = 0; i < tweens.Count; i++)
+        {
+            Tween tween = tweens[i];
+            if (tween == null || !tween.IsActive() || tween.IsComplete())
+            {
+                continue;
             }
 
-            if (!hasRunningTween)
+            remainingTweens++;
+            bool isReported = false;
+            tween.OnComplete(() =>
             {
-                yield break;
-            }
+                if (isReported)
+                {
+                    return;
+                }
 
-            yield return null;
+                isReported = true;
+                reportTweenFinished();
+            });
+            tween.OnKill(() =>
+            {
+                if (isReported)
+                {
+                    return;
+                }
+
+                isReported = true;
+                reportTweenFinished();
+            });
+        }
+
+        if (remainingTweens == 0 && !callbackInvoked)
+        {
+            callbackInvoked = true;
+            onComplete?.Invoke();
         }
     }
 
