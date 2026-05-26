@@ -106,7 +106,7 @@ public class HexFloorCreator : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            Physics.SyncTransforms();
+            //Physics.SyncTransforms();
         }
 
         if (!refreshNeighborsAfterGenerate)

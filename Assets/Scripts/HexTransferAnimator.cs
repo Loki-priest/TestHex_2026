@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class HexTransferAnimator : MonoBehaviour
 {
+    [Header("Runtime")]
+    [SerializeField] private bool logTransferAnimatorEvents = true;
+
     [SerializeField] private float tileFlipDuration = 0.22f;
     [SerializeField] private Ease tileFlipEase = Ease.InOutSine;
     [SerializeField] private float tileSettleDuration = 0.1f;
@@ -29,6 +32,9 @@ public class HexTransferAnimator : MonoBehaviour
         float flipDuration = tileFlipDuration / safeSpeedMultiplier;
         float settleDuration = tileSettleDuration / safeSpeedMultiplier;
         float fanStagger = Mathf.Max(0f, tileTransferFanStagger) / safeSpeedMultiplier;
+        LogTransferAnimator(
+            $"Start transfer. source={GetStackName(sourceStack)}, target={GetStackName(targetStack)}, count={transferCount}, speed={safeSpeedMultiplier:F2}"
+        );
 
         int targetStartIndex = targetStack.TileCount;
         List<HexTile> movingTiles = new(transferCount);
@@ -46,6 +52,7 @@ public class HexTransferAnimator : MonoBehaviour
 
         if (movingTiles.Count == 0)
         {
+            LogTransferAnimator("Transfer cancelled: no tiles popped from source.");
             yield break;
         }
 
@@ -87,6 +94,8 @@ public class HexTransferAnimator : MonoBehaviour
 
             targetStack.PushTopTile(tile);
         }
+
+        LogTransferAnimator("Transfer animation stage completed.");
     }
 
     private Tween CreateTileTransferTween(
@@ -208,5 +217,20 @@ public class HexTransferAnimator : MonoBehaviour
         }
 
         return sourceFloor != null ? sourceFloor.transform.forward : Vector3.forward;
+    }
+
+    private void LogTransferAnimator(string message)
+    {
+        if (!logTransferAnimatorEvents)
+        {
+            return;
+        }
+
+        Debug.Log($"[HexTransferAnimator] {message}", this);
+    }
+
+    private static string GetStackName(HexStack stack)
+    {
+        return stack != null ? stack.name : "<none>";
     }
 }

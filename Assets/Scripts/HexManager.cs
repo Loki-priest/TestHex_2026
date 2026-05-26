@@ -25,6 +25,9 @@ public class HexManager : MonoBehaviour
     [SerializeField] private float clearScaleStagger = 0.02f;
     [SerializeField] private HexClearFxPlayer clearFxPlayer;
 
+    [Header("Debug")]
+    [SerializeField] private bool logTransferEvents = true;
+
     private const int MaxResolveIterations = 4096;
     private int activeTransferRoutines;
 
@@ -128,6 +131,10 @@ public class HexManager : MonoBehaviour
             return;
         }
 
+        LogTransferEvent(
+            $"Stack placed on floor. stack={GetStackDebugName(placedStack)}, floor={GetFloorDebugName(targetFloor)}"
+        );
+
         AttachStackToFloor(placedStack, targetFloor);
         HexStacksCreator stacksCreator = StacksCreator;
         if (stacksCreator != null)
@@ -194,11 +201,15 @@ public class HexManager : MonoBehaviour
     private IEnumerator ResolveTopColorTransferRoutine(HexStack sourceStack, HexFloor sourceFloor, Action onComplete)
     {
         activeTransferRoutines++;
+        LogTransferEvent(
+            $"Transfer chain started. sourceStack={GetStackDebugName(sourceStack)}, sourceFloor={GetFloorDebugName(sourceFloor)}, activeChains={activeTransferRoutines}"
+        );
 
         try
         {
             if (sourceStack == null || sourceFloor == null)
             {
+                LogTransferEvent("Transfer chain aborted: sourceStack/sourceFloor is null.");
                 yield break;
             }
 
@@ -254,6 +265,9 @@ public class HexManager : MonoBehaviour
                         transferStepIndex,
                         transferSpeedIncreasePerStack
                     );
+                    LogTransferEvent(
+                        $"Transfer step #{transferStepIndex + 1}: count={transferCount}, color={GetMaterialDebugName(topMaterial)}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}"
+                    );
                     yield return transferAnimator.TransferTopTilesFanRoutine(
                         currentSourceStack,
                         currentSourceFloor,
@@ -262,6 +276,7 @@ public class HexManager : MonoBehaviour
                         transferCount,
                         transferSpeedMultiplier
                     );
+                    LogTransferEvent($"Transfer step #{transferStepIndex + 1} completed.");
                     transferStepIndex++;
 
                     EnqueueForTransferCheck(currentSourceStack, pendingStacks, queuedStacks);
@@ -297,7 +312,11 @@ public class HexManager : MonoBehaviour
                 float clearSpeedMultiplier = isParallelClear
                     ? 1f
                     : GetChainSpeedMultiplier(clearStepIndex, clearSpeedIncreasePerStack);
+                LogTransferEvent(
+                    $"Top clear phase: batches={clearBatches.Count}, parallel={isParallelClear}, speedMul={clearSpeedMultiplier:F2}"
+                );
                 yield return ClearBatchesParallelRoutine(clearBatches, clearSpeedMultiplier);
+                LogTransferEvent("Top clear phase completed.");
                 if (!isParallelClear)
                 {
                     clearStepIndex++;
@@ -308,6 +327,7 @@ public class HexManager : MonoBehaviour
         finally
         {
             activeTransferRoutines = Mathf.Max(0, activeTransferRoutines - 1);
+            LogTransferEvent($"Transfer chain finished. activeChains={activeTransferRoutines}");
             onComplete?.Invoke();
         }
     }
@@ -751,6 +771,31 @@ public class HexManager : MonoBehaviour
         }
 
         return tilesToClear.Count > 0;
+    }
+
+    private void LogTransferEvent(string message)
+    {
+        if (!logTransferEvents)
+        {
+            return;
+        }
+
+        Debug.Log($"[HexTransfer] {message}", this);
+    }
+
+    private static string GetStackDebugName(HexStack stack)
+    {
+        return stack != null ? stack.name : "<none>";
+    }
+
+    private static string GetFloorDebugName(HexFloor floor)
+    {
+        return floor != null ? floor.name : "<none>";
+    }
+
+    private static string GetMaterialDebugName(Material material)
+    {
+        return material != null ? material.name : "<none>";
     }
 
 }
