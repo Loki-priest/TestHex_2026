@@ -2,6 +2,9 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
+/// <summary>
+/// Управляет показом пэкшота и обработкой клика для перехода в стор.
+/// </summary>
 public class PackshotController : MonoBehaviour
 {
     public event Action PackshotShown;

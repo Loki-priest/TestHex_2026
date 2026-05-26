@@ -1,6 +1,9 @@
 using UnityEngine;
 
 [CreateAssetMenu]
+/// <summary>
+/// Конфигурация игровых параметров: палитра, пресеты стопок, правила очистки и генерация пола.
+/// </summary>
 public class HexConfig : ScriptableObject
 {
     [System.Serializable]
@@ -11,6 +14,9 @@ public class HexConfig : ScriptableObject
     }
 
     [System.Serializable]
+    /// <summary>
+    /// Пресет последовательности цветов плиток в стопке снизу вверх.
+    /// </summary>
     public class StackColorPreset
     {
         public int[] colorIdsBottomToTop;

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Представляет одну плитку в стопке и применяет ей цвет через MaterialPropertyBlock.
+/// </summary>
 public class HexTile : MonoBehaviour
 {
     private static readonly int BaseColorId = Shader.PropertyToID("_BaseColor");

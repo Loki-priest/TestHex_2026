@@ -3,6 +3,9 @@ using DG.Tweening;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Обрабатывает перетаскивание стопки игроком и установку стопки на допустимую клетку пола.
+/// </summary>
 public class HexDragger : MonoBehaviour
 {
     private const int MousePointerId = -1;
@@ -44,6 +47,7 @@ public class HexDragger : MonoBehaviour
     private bool dragEndedWithSuccessfulDrop;
     private HexFloor highlightedFloor;
     private RaycastHit[] floorRaycastBuffer;
+    private HexManager cachedManager;
 
     private HexStack activeStack;
     private Transform activeStackTransform;
@@ -67,18 +71,25 @@ public class HexDragger : MonoBehaviour
     public void SetGameContext(HexGameContext context)
     {
         gameContext = context;
+        cachedManager = null;
     }
 
     private HexManager Manager
     {
         get
         {
+            if (cachedManager != null)
+            {
+                return cachedManager;
+            }
+
             if (gameContext == null)
             {
                 gameContext = FindObjectOfType<HexGameContext>();
             }
 
-            return gameContext != null ? gameContext.Manager : null;
+            cachedManager = gameContext != null ? gameContext.Manager : null;
+            return cachedManager;
         }
     }
 
@@ -90,6 +101,7 @@ public class HexDragger : MonoBehaviour
         {
             gameContext = FindObjectOfType<HexGameContext>();
         }
+        cachedManager = gameContext != null ? gameContext.Manager : null;
 
         if (inputCamera == null)
         {
@@ -212,6 +224,7 @@ public class HexDragger : MonoBehaviour
         if (gameContext == null && activeStack.GameContext != null)
         {
             gameContext = activeStack.GameContext;
+            cachedManager = gameContext.Manager;
         }
 
         isDragging = true;
@@ -363,22 +376,47 @@ public class HexDragger : MonoBehaviour
         }
 
         Vector3 origin = activeStackTransform.position + Vector3.up * floorCheckStartHeight;
+        float rayDistance = floorCheckStartHeight + floorCheckDistance;
         EnsureFloorRaycastBuffer();
         int hitCount = Physics.RaycastNonAlloc(
             origin,
             Vector3.down,
             floorRaycastBuffer,
-            floorCheckStartHeight + floorCheckDistance,
+            rayDistance,
             interactionMask,
             QueryTriggerInteraction.Ignore
         );
+
+        if (hitCount >= floorRaycastBuffer.Length)
+        {
+            RaycastHit[] allHits = Physics.RaycastAll(
+                origin,
+                Vector3.down,
+                rayDistance,
+                interactionMask,
+                QueryTriggerInteraction.Ignore
+            );
+            floor = GetNearestFloorFromHits(allHits, allHits.Length);
+            return floor != null;
+        }
+
+        floor = GetNearestFloorFromHits(floorRaycastBuffer, hitCount);
+        return floor != null;
+    }
+
+    private HexFloor GetNearestFloorFromHits(RaycastHit[] hits, int hitCount)
+    {
+        if (hits == null || hitCount <= 0)
+        {
+            return null;
+        }
 
         float nearestDistance = float.MaxValue;
         HexFloor nearestFloor = null;
 
         for (int i = 0; i < hitCount; i++)
         {
-            RaycastHit hit = floorRaycastBuffer[i];
+            RaycastHit hit = hits[i];
             if (hit.collider == null)
             {
                 continue;
@@ -405,8 +443,7 @@ public class HexDragger : MonoBehaviour
             nearestFloor = candidateFloor;
         }
 
-        floor = nearestFloor;
-        return floor != null;
+        return nearestFloor;
     }
 
     private void EnsureFloorRaycastBuffer()

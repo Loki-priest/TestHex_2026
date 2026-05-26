@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Проигрывает и возвращает в пул визуальные эффекты очистки плиток.
+/// </summary>
 public class HexClearFxPlayer : MonoBehaviour
 {
     [SerializeField] private ParticleSystem clearTilesFxPrefab;

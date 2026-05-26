@@ -1172,6 +1172,7 @@ MonoBehaviour:
   clearBeforeGenerate: 1
   refreshNeighborsAfterGenerate: 1
   fillStacksAfterGenerate: 1
+  debugLogs: 0
   neighborDistance: 1
   shiftOddColumnsForward: 1
   anchorLocalOffset: {x: 0, y: 0, z: 0}
@@ -1233,6 +1234,7 @@ MonoBehaviour:
   spawnSlotsOnlyOnce: 0
   slotOccupancyRadius: 0.2
   logGeneratedFill: 0
+  debugLogs: 0
 --- !u!1 &1539338360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1567,7 @@ MonoBehaviour:
   useDynamicWorldTargets: 1
   handScreenOffset: {x: 0, y: 0}
   worldTargetHeightOffset: 0.2
+  debugLogs: 0
   handMoveDuration: 0.8
   handPauseDuration: 0.15
   handMoveEase: 4
@@ -1988,7 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f1f0a5e39f4b4a82ad388e83436f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameContext: {fileID: 0}
+  gameContext: {fileID: 725719213}
   durationSeconds: 30
   autoStartOnEnable: 1
   lowTimeThresholdNormalized: 0.2

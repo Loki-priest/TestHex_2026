@@ -1,4 +1,4 @@
-if ( TRACE ) { TRACE( JSON.parse( '["CountdownTimerPanel#IsRunning#get","CountdownTimerPanel#RemainingSeconds#get","CountdownTimerPanel#init","CountdownTimerPanel#Awake","CountdownTimerPanel#OnEnable","CountdownTimerPanel#OnDisable","CountdownTimerPanel#Update","CountdownTimerPanel#StartCountdown","CountdownTimerPanel#StopCountdown","CountdownTimerPanel#RestartCountdown","CountdownTimerPanel#ConfigureStaticBindings","CountdownTimerPanel#ResetToInitialState","CountdownTimerPanel#UpdateVisuals","CountdownTimerPanel#StartShake","CountdownTimerPanel#StopShake","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#ctor","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#ctor","DG.Tweening.DOTweenCYInstruction.WaitForKill#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForKill#ctor","DG.Tweening.DOTweenCYInstruction.WaitForPosition#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForPosition#ctor","DG.Tweening.DOTweenCYInstruction.WaitForRewind#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForRewind#ctor","DG.Tweening.DOTweenCYInstruction.WaitForStart#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForStart#ctor","DG.Tweening.DOTweenModuleAudio#DOFade","DG.Tweening.DOTweenModuleAudio#DOPitch","DG.Tweening.DOTweenModuleAudio#DOSetFloat","DG.Tweening.DOTweenModuleAudio#DOComplete","DG.Tweening.DOTweenModuleAudio#DOKill","DG.Tweening.DOTweenModuleAudio#DOFlip","DG.Tweening.DOTweenModuleAudio#DOGoto","DG.Tweening.DOTweenModuleAudio#DOPause","DG.Tweening.DOTweenModuleAudio#DOPlay","DG.Tweening.DOTweenModuleAudio#DOPlayBackwards","DG.Tweening.DOTweenModuleAudio#DOPlayForward","DG.Tweening.DOTweenModuleAudio#DORestart","DG.Tweening.DOTweenModuleAudio#DORewind","DG.Tweening.DOTweenModuleAudio#DOSmoothRewind","DG.Tweening.DOTweenModuleAudio#DOTogglePause","DG.Tweening.DOTweenModulePhysics#DOMove","DG.Tweening.DOTweenModulePhysics#DOMoveX","DG.Tweening.DOTweenModulePhysics#DOMoveY","DG.Tweening.DOTweenModulePhysics#DOMoveZ","DG.Tweening.DOTweenModulePhysics#DORotate","DG.Tweening.DOTweenModulePhysics#DOLookAt","DG.Tweening.DOTweenModulePhysics#DOJump","DG.Tweening.DOTweenModulePhysics#DOPath","DG.Tweening.DOTweenModulePhysics#DOPath$1","DG.Tweening.DOTweenModulePhysics#DOLocalPath","DG.Tweening.DOTweenModulePhysics#DOLocalPath$1","DG.Tweening.DOTweenModulePhysics2D#DOMove","DG.Tweening.DOTweenModulePhysics2D#DOMoveX","DG.Tweening.DOTweenModulePhysics2D#DOMoveY","DG.Tweening.DOTweenModulePhysics2D#DORotate","DG.Tweening.DOTweenModulePhysics2D#DOJump","DG.Tweening.DOTweenModulePhysics2D#DOPath","DG.Tweening.DOTweenModulePhysics2D#DOPath$1","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath$1","DG.Tweening.DOTweenModuleSprite#DOColor","DG.Tweening.DOTweenModuleSprite#DOFade","DG.Tweening.DOTweenModuleSprite#DOGradientColor","DG.Tweening.DOTweenModuleSprite#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOFade","DG.Tweening.DOTweenModuleUI#DOFade$1","DG.Tweening.DOTweenModuleUI#DOFade$2","DG.Tweening.DOTweenModuleUI#DOFade$3","DG.Tweening.DOTweenModuleUI#DOFade$4","DG.Tweening.DOTweenModuleUI#DOColor","DG.Tweening.DOTweenModuleUI#DOColor$1","DG.Tweening.DOTweenModuleUI#DOColor$2","DG.Tweening.DOTweenModuleUI#DOColor$3","DG.Tweening.DOTweenModuleUI#DOFillAmount","DG.Tweening.DOTweenModuleUI#DOGradientColor","DG.Tweening.DOTweenModuleUI#DOFlexibleSize","DG.Tweening.DOTweenModuleUI#DOMinSize","DG.Tweening.DOTweenModuleUI#DOPreferredSize","DG.Tweening.DOTweenModuleUI#DOScale","DG.Tweening.DOTweenModuleUI#DOAnchorPos","DG.Tweening.DOTweenModuleUI#DOAnchorPosX","DG.Tweening.DOTweenModuleUI#DOAnchorPosY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3D","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DX","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DZ","DG.Tweening.DOTweenModuleUI#DOAnchorMax","DG.Tweening.DOTweenModuleUI#DOAnchorMin","DG.Tweening.DOTweenModuleUI#DOPivot","DG.Tweening.DOTweenModuleUI#DOPivotX","DG.Tweening.DOTweenModuleUI#DOPivotY","DG.Tweening.DOTweenModuleUI#DOSizeDelta","DG.Tweening.DOTweenModuleUI#DOPunchAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos$1","DG.Tweening.DOTweenModuleUI#DOJumpAnchorPos","DG.Tweening.DOTweenModuleUI#DONormalizedPos","DG.Tweening.DOTweenModuleUI#DOHorizontalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOVerticalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOValue","DG.Tweening.DOTweenModuleUI#DOCounter","DG.Tweening.DOTweenModuleUI#DOText","DG.Tweening.DOTweenModuleUI#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOBlendableColor$1","DG.Tweening.DOTweenModuleUI#DOBlendableColor$2","DG.Tweening.DOTweenModuleUI#DOShapeCircle","DG.Tweening.DOTweenModuleUI.Utils#SwitchToRectTransform","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor$1","DG.Tweening.DOTweenModuleUnityVersion#WaitForCompletion","DG.Tweening.DOTweenModuleUnityVersion#WaitForRewind","DG.Tweening.DOTweenModuleUnityVersion#WaitForKill","DG.Tweening.DOTweenModuleUnityVersion#WaitForElapsedLoops","DG.Tweening.DOTweenModuleUnityVersion#WaitForPosition","DG.Tweening.DOTweenModuleUnityVersion#WaitForStart","DG.Tweening.DOTweenModuleUnityVersion#DOOffset","DG.Tweening.DOTweenModuleUnityVersion#DOTiling","DG.Tweening.DOTweenModuleUtils#Init","DG.Tweening.DOTweenModuleUtils#Preserver","DG.Tweening.DOTweenModuleUtils.Physics#SetOrientationOnPath","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody2D","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody","DG.Tweening.DOTweenModuleUtils.Physics#CreateDOTweenPathTween","HexClearFxPlayer#init","HexClearFxPlayer#TintParticleSystems","HexClearFxPlayer#EstimateParticleSystemLifetime","HexClearFxPlayer#TryGetColorFromMaterial","HexClearFxPlayer#ClearTilesFxPrefab#get","HexClearFxPlayer#init","HexClearFxPlayer#Prewarm","HexClearFxPlayer#TryGetClearBatchColor","HexClearFxPlayer#PlayClearTilesFxAtPosition","HexClearFxPlayer#RentClearTilesFx","HexClearFxPlayer#ReturnClearTilesFxAfterDelay","HexConfig#init","HexDragger#init","HexDragger#Manager#get","HexDragger#init","HexDragger#Awake","HexDragger#SetGameContext","HexDragger#Update","HexDragger#OnDisable","HexDragger#TryBeginDrag","HexDragger#StartDrag","HexDragger#UpdateDrag","HexDragger#EndDrag","HexDragger#StartSettleTween","HexDragger#FinalizeSettle","HexDragger#TryGetFloorUnderStack","HexDragger#EnsureFloorRaycastBuffer","HexDragger#KillActiveTween","HexDragger#ReleaseDragState","HexDragger#UpdateDropHighlight","HexDragger#SetHighlightedFloor","HexDragger#TryGetPointerDown","HexDragger#TryGetPointerPosition","HexDragger#WasPointerReleased","HexFloor#init","HexFloor#NearFloors#get","HexFloor#OccupiedStack#get","HexFloor#StackAnchor#get","HexFloor#init","HexFloor#Awake","HexFloor#OnDisable","HexFloor#FindNearFloors","HexFloor#GetNeighborBySide","HexFloor#GetSideIndexOfNeighbor","HexFloor#SetOccupiedStack","HexFloor#ClearOccupiedStack","HexFloor#GetStackPlacementPosition","HexFloor#SetDropHighlight","HexFloor#CacheHighlightRenderers","HexFloor#FindNeighborForSide","HexFloor#GetNearestFloorFromHits","HexFloor#GetSideDirection","HexFloor#GetRayOrigin","HexFloor#EnsureNeighborStorage","HexFloor#EnsureNeighborRaycastBuffer","HexFloor#OnDrawGizmosSelected","HexFloor.RendererHighlightState#init","HexFloorCreator#ClearFloors","HexFloorCreator#HexConfig#get","HexFloorCreator#init","HexFloorCreator#Start","HexFloorCreator#GenerateFloor","HexFloorCreator#ClearGeneratedFloor","HexGameContext#Config#get","HexGameContext#PoolService#get","HexGameContext#Manager#get","HexGameContext#StacksCreator#get","HexGameContext#FloorCreator#get","HexManager#init","HexManager#GetStackDebugName","HexManager#GetFloorDebugName","HexManager#GetMaterialDebugName","HexManager#IsTransferInProgress#get","HexManager#hexConfig#get","HexManager#PoolService#get","HexManager#StacksCreator#get","HexManager#init","HexManager#Awake","HexManager#OnDisable","HexManager#RentTile","HexManager#ReturnTile","HexManager#TryRecycleEmptyStack","HexManager#CanPlaceStackOnFloor","HexManager#HandleStackPlaced","HexManager#PrewarmPools","HexManager#ResolveTilePrefabForPool","HexManager#BeginResolveTopColorTransfer","HexManager#ContinueResolveTopColorTransfer","HexManager#IsTransferChainActive","HexManager#FinishTransferChain","HexManager#EnqueueForTransferCheck","HexManager#EnqueueNeighborStacksForTransferCheck","HexManager#EnqueueAllStacksForTransferCheck","HexManager#TryResolveStackFloor","HexManager#TryFindAnyTransferCandidate","HexManager#TryCollectClearBatches","HexManager#TryFindMatchingNeighbor","HexManager#TryGetMatchingStack","HexManager#AttachStackToFloor","HexManager#ResolveStackOnFloor","HexManager#ClearBatchesParallel","HexManager#TryGetLowestTilePosition","HexManager#CompleteAfterTweens","HexManager#GetChainSpeedMultiplier","HexManager#TryExtractTopMatchTiles","HexManager#LogTransferEvent","HexManager.StackClearBatch#getDefaultValue","HexManager.StackClearBatch#$ctor1","HexManager.StackClearBatch#ctor","HexManager.StackClearBatch#getHashCode","HexManager.StackClearBatch#equals","HexManager.StackClearBatch#$clone","HexManager.TransferChainState#init","HexManager.TransferChainState#ctor","HexPoolService#Awake","HexPoolService#PrewarmStacks$1","HexPoolService#PrewarmStacks","HexPoolService#PrewarmTiles$1","HexPoolService#PrewarmTiles","HexPoolService#PrewarmFx$1","HexPoolService#PrewarmFx","HexPoolService#RentStack","HexPoolService#ReturnStack","HexPoolService#RentTile","HexPoolService#ReturnTile","HexPoolService#RentFx","HexPoolService#ReturnFx","HexPoolService#EnsurePoolsInitialized","HexPoolService#EnsurePoolRoot","HexPoolService.ComponentPool$1#InstantiateComponent","HexPoolService.ComponentPool$1#init","HexPoolService.ComponentPool$1#ctor","HexPoolService.ComponentPool$1#Prewarm","HexPoolService.ComponentPool$1#Rent","HexPoolService.ComponentPool$1#Return","HexPoolService.ComponentPool$1#TryResolvePrefabId","HexPoolService.ComponentPool$1#GetOrCreateBucket","HexStack#ResolveTileMaterialForIndex","HexStack#CurrentFloor#get","HexStack#GameContext#get","HexStack#TileCount#get","HexStack#init","HexStack#Awake","HexStack#Start","HexStack#CreateStack","HexStack#SetCurrentFloor","HexStack#SetGameContext","HexStack#GetTileTemplateForPool","HexStack#GetTopTile","HexStack#GetTopMaterial","HexStack#CountTopTilesWithMaterial","HexStack#PopTopTile","HexStack#PushTopTile","HexStack#GetNextTopWorldPosition","HexStack#GetWorldPositionForTileIndex","HexStack#CacheGeometryFromTiles","HexStack#GetLocalPositionForIndex","HexStack#EnsureTileCount","HexStack#ResolveTileTemplate","HexStack#CompactNullTiles","HexStack#EnsureTilesInitializedFromChildren","HexStack#GetAnchorBaseLocalPosition","HexStack#AlignTilesToAnchor","HexStack#RefreshVisibilityAndBinding","HexStack#DetachFromFloor","HexStacksCreator#HexConfig#get","HexStacksCreator#PoolService#get","HexStacksCreator#init","HexStacksCreator#Start","HexStacksCreator#TryRecycleEmptyStack","HexStacksCreator#NotifyStackPlaced","HexStacksCreator#TrySpawnIntoSlotsByPlacementState","HexStacksCreator#ResolveTileTemplateForPool","HexStacksCreator#ClearExistingStacks","HexStacksCreator#AreAllPendingStacksPlacedOnFloor","HexStacksCreator#SpawnStacksIntoSlots","HexStacksCreator#GetRandomPresetColors","HexStacksCreator#RentStack","HexStacksCreator#RegisterPendingPlacementStack","HexStacksCreator#CleanupPendingPlacementStacks","HexStacksCreator#IsSlotOccupied","HexStacksCreator#CreateRuntimeSpawnTemplate","HexStacksCreator#PrewarmStacks","HexStacksCreator#ApplyContext","HexTile#CurrentMaterial#get","HexTile#SetMaterial","HexTransferAnimator#GetStackName","HexTransferAnimator#init","HexTransferAnimator#TransferTopTilesFan","HexTransferAnimator#CreateTileTransferTween","HexTransferAnimator#CompleteAfterTweens","HexTransferAnimator#GetNeighborDirection","HexTransferAnimator#LogTransferAnimator","LunaBridge#GameEnded","LunaBridge#InstallFullGame","PackshotController#init","PackshotController#Awake","PackshotController#OnDisable","PackshotController#Update","PackshotController#ShowPackshot","PackshotController#HidePackshot","PackshotController#OnPlayNowPressed","PackshotController#SetVisible","PackshotController#SetStaticContentActive","PackshotController#KillFadeTween","PackshotController#WasPointerPressedThisFrame","PlayableUIRoot#TutorialController#get","PlayableUIRoot#PackshotController#get","PlayableUIRoot#CountdownTimerPanel#get","PlayableUIRoot#StartTutorial","PlayableUIRoot#StopTutorial","PlayableUIRoot#ShowPackshot","PlayableUIRoot#StartCountdownTimer","PlayableUIRoot#StopCountdownTimer","TutorialOverlayController#init","TutorialOverlayController#OnEnable","TutorialOverlayController#OnDisable","TutorialOverlayController#StartTutorial","TutorialOverlayController#StopTutorial","TutorialOverlayController#ResetTutorialState","TutorialOverlayController#HandleDragStarted","TutorialOverlayController#HandleDragFinished","TutorialOverlayController#RestartTutorialAfterDelayRoutine","TutorialOverlayController#PlayHandLoop","TutorialOverlayController#KillHandTween","TutorialOverlayController#StopRestartRoutine","TutorialOverlayController#SetTutorialVisible"]' ) ); }
+if ( TRACE ) { TRACE( JSON.parse( '["CountdownTimerPanel#IsRunning#get","CountdownTimerPanel#RemainingSeconds#get","CountdownTimerPanel#init","CountdownTimerPanel#Awake","CountdownTimerPanel#OnEnable","CountdownTimerPanel#OnDisable","CountdownTimerPanel#Update","CountdownTimerPanel#StartCountdown","CountdownTimerPanel#StopCountdown","CountdownTimerPanel#RestartCountdown","CountdownTimerPanel#ApplyConfiguredDurationFromConfig","CountdownTimerPanel#ConfigureStaticBindings","CountdownTimerPanel#ResetToInitialState","CountdownTimerPanel#UpdateVisuals","CountdownTimerPanel#StartShake","CountdownTimerPanel#StopShake","CountdownTimerPanel#LogTimerEvent","CountdownTimerPanel#LogTimerWarning","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForCompletion#ctor","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForElapsedLoops#ctor","DG.Tweening.DOTweenCYInstruction.WaitForKill#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForKill#ctor","DG.Tweening.DOTweenCYInstruction.WaitForPosition#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForPosition#ctor","DG.Tweening.DOTweenCYInstruction.WaitForRewind#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForRewind#ctor","DG.Tweening.DOTweenCYInstruction.WaitForStart#keepWaiting#get","DG.Tweening.DOTweenCYInstruction.WaitForStart#ctor","DG.Tweening.DOTweenModuleAudio#DOFade","DG.Tweening.DOTweenModuleAudio#DOPitch","DG.Tweening.DOTweenModuleAudio#DOSetFloat","DG.Tweening.DOTweenModuleAudio#DOComplete","DG.Tweening.DOTweenModuleAudio#DOKill","DG.Tweening.DOTweenModuleAudio#DOFlip","DG.Tweening.DOTweenModuleAudio#DOGoto","DG.Tweening.DOTweenModuleAudio#DOPause","DG.Tweening.DOTweenModuleAudio#DOPlay","DG.Tweening.DOTweenModuleAudio#DOPlayBackwards","DG.Tweening.DOTweenModuleAudio#DOPlayForward","DG.Tweening.DOTweenModuleAudio#DORestart","DG.Tweening.DOTweenModuleAudio#DORewind","DG.Tweening.DOTweenModuleAudio#DOSmoothRewind","DG.Tweening.DOTweenModuleAudio#DOTogglePause","DG.Tweening.DOTweenModulePhysics#DOMove","DG.Tweening.DOTweenModulePhysics#DOMoveX","DG.Tweening.DOTweenModulePhysics#DOMoveY","DG.Tweening.DOTweenModulePhysics#DOMoveZ","DG.Tweening.DOTweenModulePhysics#DORotate","DG.Tweening.DOTweenModulePhysics#DOLookAt","DG.Tweening.DOTweenModulePhysics#DOJump","DG.Tweening.DOTweenModulePhysics#DOPath","DG.Tweening.DOTweenModulePhysics#DOPath$1","DG.Tweening.DOTweenModulePhysics#DOLocalPath","DG.Tweening.DOTweenModulePhysics#DOLocalPath$1","DG.Tweening.DOTweenModulePhysics2D#DOMove","DG.Tweening.DOTweenModulePhysics2D#DOMoveX","DG.Tweening.DOTweenModulePhysics2D#DOMoveY","DG.Tweening.DOTweenModulePhysics2D#DORotate","DG.Tweening.DOTweenModulePhysics2D#DOJump","DG.Tweening.DOTweenModulePhysics2D#DOPath","DG.Tweening.DOTweenModulePhysics2D#DOPath$1","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath","DG.Tweening.DOTweenModulePhysics2D#DOLocalPath$1","DG.Tweening.DOTweenModuleSprite#DOColor","DG.Tweening.DOTweenModuleSprite#DOFade","DG.Tweening.DOTweenModuleSprite#DOGradientColor","DG.Tweening.DOTweenModuleSprite#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOFade","DG.Tweening.DOTweenModuleUI#DOFade$1","DG.Tweening.DOTweenModuleUI#DOFade$2","DG.Tweening.DOTweenModuleUI#DOFade$3","DG.Tweening.DOTweenModuleUI#DOFade$4","DG.Tweening.DOTweenModuleUI#DOColor","DG.Tweening.DOTweenModuleUI#DOColor$1","DG.Tweening.DOTweenModuleUI#DOColor$2","DG.Tweening.DOTweenModuleUI#DOColor$3","DG.Tweening.DOTweenModuleUI#DOFillAmount","DG.Tweening.DOTweenModuleUI#DOGradientColor","DG.Tweening.DOTweenModuleUI#DOFlexibleSize","DG.Tweening.DOTweenModuleUI#DOMinSize","DG.Tweening.DOTweenModuleUI#DOPreferredSize","DG.Tweening.DOTweenModuleUI#DOScale","DG.Tweening.DOTweenModuleUI#DOAnchorPos","DG.Tweening.DOTweenModuleUI#DOAnchorPosX","DG.Tweening.DOTweenModuleUI#DOAnchorPosY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3D","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DX","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DY","DG.Tweening.DOTweenModuleUI#DOAnchorPos3DZ","DG.Tweening.DOTweenModuleUI#DOAnchorMax","DG.Tweening.DOTweenModuleUI#DOAnchorMin","DG.Tweening.DOTweenModuleUI#DOPivot","DG.Tweening.DOTweenModuleUI#DOPivotX","DG.Tweening.DOTweenModuleUI#DOPivotY","DG.Tweening.DOTweenModuleUI#DOSizeDelta","DG.Tweening.DOTweenModuleUI#DOPunchAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos","DG.Tweening.DOTweenModuleUI#DOShakeAnchorPos$1","DG.Tweening.DOTweenModuleUI#DOJumpAnchorPos","DG.Tweening.DOTweenModuleUI#DONormalizedPos","DG.Tweening.DOTweenModuleUI#DOHorizontalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOVerticalNormalizedPos","DG.Tweening.DOTweenModuleUI#DOValue","DG.Tweening.DOTweenModuleUI#DOCounter","DG.Tweening.DOTweenModuleUI#DOText","DG.Tweening.DOTweenModuleUI#DOBlendableColor","DG.Tweening.DOTweenModuleUI#DOBlendableColor$1","DG.Tweening.DOTweenModuleUI#DOBlendableColor$2","DG.Tweening.DOTweenModuleUI#DOShapeCircle","DG.Tweening.DOTweenModuleUI.Utils#SwitchToRectTransform","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor","DG.Tweening.DOTweenModuleUnityVersion#DOGradientColor$1","DG.Tweening.DOTweenModuleUnityVersion#WaitForCompletion","DG.Tweening.DOTweenModuleUnityVersion#WaitForRewind","DG.Tweening.DOTweenModuleUnityVersion#WaitForKill","DG.Tweening.DOTweenModuleUnityVersion#WaitForElapsedLoops","DG.Tweening.DOTweenModuleUnityVersion#WaitForPosition","DG.Tweening.DOTweenModuleUnityVersion#WaitForStart","DG.Tweening.DOTweenModuleUnityVersion#DOOffset","DG.Tweening.DOTweenModuleUnityVersion#DOTiling","DG.Tweening.DOTweenModuleUtils#Init","DG.Tweening.DOTweenModuleUtils#Preserver","DG.Tweening.DOTweenModuleUtils.Physics#SetOrientationOnPath","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody2D","DG.Tweening.DOTweenModuleUtils.Physics#HasRigidbody","DG.Tweening.DOTweenModuleUtils.Physics#CreateDOTweenPathTween","HexClearFxPlayer#TintParticleSystems","HexClearFxPlayer#EstimateParticleSystemLifetime","HexClearFxPlayer#ClearTilesFxPrefab#get","HexClearFxPlayer#init","HexClearFxPlayer#Prewarm","HexClearFxPlayer#TryGetClearBatchColor","HexClearFxPlayer#PlayClearTilesFxAtPosition","HexClearFxPlayer#RentClearTilesFx","HexClearFxPlayer#ReturnClearTilesFxAfterDelay","HexConfig#init","HexConfig.FloorCoord#getDefaultValue","HexConfig.FloorCoord#ctor","HexConfig.FloorCoord#getHashCode","HexConfig.FloorCoord#equals","HexConfig.FloorCoord#$clone","HexDragger#IsGlobalDragEnabled#get","HexDragger#init","HexDragger#SetGlobalDragEnabled","HexDragger#Manager#get","HexDragger#init","HexDragger#SetGameContext","HexDragger#Awake","HexDragger#OnEnable","HexDragger#Update","HexDragger#OnDisable","HexDragger#TryBeginDrag","HexDragger#StartDrag","HexDragger#UpdateDrag","HexDragger#EndDrag","HexDragger#StartSettleTween","HexDragger#FinalizeSettle","HexDragger#TryGetFloorUnderStack","HexDragger#GetNearestFloorFromHits","HexDragger#EnsureFloorRaycastBuffer","HexDragger#KillActiveTween","HexDragger#ReleaseDragState","HexDragger#CancelActiveDrag","HexDragger#CancelActiveDragInternal","HexDragger#UpdateDropHighlight","HexDragger#SetHighlightedFloor","HexDragger#TryGetPointerDown","HexDragger#TryGetPointerPosition","HexDragger#WasPointerReleased","HexDragger#IsActiveStackValid","HexFloor#ActiveFloors#get","HexFloor#init","HexFloor#NearFloors#get","HexFloor#OccupiedStack#get","HexFloor#StackAnchor#get","HexFloor#GridX#get","HexFloor#GridZ#get","HexFloor#init","HexFloor#Awake","HexFloor#OnEnable","HexFloor#OnDisable","HexFloor#FindNearFloors","HexFloor#GetNeighborBySide","HexFloor#GetSideIndexOfNeighbor","HexFloor#SetOccupiedStack","HexFloor#SetGridCoordinates","HexFloor#ClearOccupiedStack","HexFloor#GetStackPlacementPosition","HexFloor#SetDropHighlight","HexFloor#CacheHighlightRenderers","HexFloor#FindNeighborForSide","HexFloor#GetNearestFloorFromHits","HexFloor#GetSideDirection","HexFloor#GetRayOrigin","HexFloor#EnsureNeighborStorage","HexFloor#EnsureNeighborRaycastBuffer","HexFloor#OnDrawGizmosSelected","HexFloor.RendererHighlightState#init","HexFloorCreator#ClearFloors","HexFloorCreator#HexConfig#get","HexFloorCreator#init","HexFloorCreator#Start","HexFloorCreator#GenerateFloor","HexFloorCreator#ClearGeneratedFloor","HexFloorCreator#MarkInitialGenerationCompleted","HexFloorCreator#LogFloorCreator","HexGameContext#Config#get","HexGameContext#PoolService#get","HexGameContext#Manager#get","HexGameContext#StacksCreator#get","HexGameContext#FloorCreator#get","HexManager#init","HexManager#GetStackDebugName","HexManager#GetFloorDebugName","HexManager#IsTransferInProgress#get","HexManager#hexConfig#get","HexManager#PoolService#get","HexManager#StacksCreator#get","HexManager#init","HexManager#Awake","HexManager#OnDisable","HexManager#RentTile","HexManager#ReturnTile","HexManager#TryRecycleEmptyStack","HexManager#CanPlaceStackOnFloor","HexManager#HandleStackPlaced","HexManager#PrewarmPools","HexManager#ResolveTilePrefabForPool","HexManager#BeginResolveTopColorTransfer","HexManager#ContinueResolveTopColorTransfer","HexManager#IsTransferChainActive","HexManager#FinishTransferChain","HexManager#EnqueueForTransferCheck","HexManager#EnqueueNeighborStacksForTransferCheck","HexManager#EnqueueAllStacksForTransferCheck","HexManager#TryResolveStackFloor","HexManager#TryFindAnyTransferCandidate","HexManager#TryCollectClearBatches","HexManager#TryFindMatchingNeighbor","HexManager#TryGetMatchingStack","HexManager#AttachStackToFloor","HexManager#ResolveStackOnFloor","HexManager#ClearBatchesParallel","HexManager#TryGetLowestTilePosition","HexManager#CompleteAfterTweens","HexManager#GetChainSpeedMultiplier","HexManager#TryExtractTopMatchTiles","HexManager#GetTopMatchClearCount","HexManager#LogTransferEvent","HexManager.StackClearBatch#getDefaultValue","HexManager.StackClearBatch#$ctor1","HexManager.StackClearBatch#ctor","HexManager.StackClearBatch#getHashCode","HexManager.StackClearBatch#equals","HexManager.StackClearBatch#$clone","HexManager.TransferChainState#init","HexManager.TransferChainState#ctor","HexPoolService#Awake","HexPoolService#PrewarmStacks$1","HexPoolService#PrewarmStacks","HexPoolService#PrewarmTiles$1","HexPoolService#PrewarmTiles","HexPoolService#PrewarmFx$1","HexPoolService#PrewarmFx","HexPoolService#RentStack","HexPoolService#ReturnStack","HexPoolService#RentTile","HexPoolService#ReturnTile","HexPoolService#RentFx","HexPoolService#ReturnFx","HexPoolService#EnsurePoolsInitialized","HexPoolService#EnsurePoolRoot","HexPoolService.ComponentPool$1#InstantiateComponent","HexPoolService.ComponentPool$1#init","HexPoolService.ComponentPool$1#ctor","HexPoolService.ComponentPool$1#Prewarm","HexPoolService.ComponentPool$1#Rent","HexPoolService.ComponentPool$1#Return","HexPoolService.ComponentPool$1#TryResolvePrefabId","HexPoolService.ComponentPool$1#GetOrCreateBucket","HexStack#ActiveStacks#get","HexStack#init","HexStack#ResolveTileColorIdForIndex","HexStack#ResolveActivePaletteColorCount","HexStack#CurrentFloor#get","HexStack#GameContext#get","HexStack#TileCount#get","HexStack#init","HexStack#Awake","HexStack#OnEnable","HexStack#OnDisable","HexStack#Start","HexStack#CreateStack","HexStack#SetCurrentFloor","HexStack#SetGameContext","HexStack#GetTileTemplateForPool","HexStack#GetTopTile","HexStack#GetTopColorId","HexStack#CountTopTilesWithColorId","HexStack#PopTopTile","HexStack#PushTopTile","HexStack#GetNextTopWorldPosition","HexStack#GetWorldPositionForTileIndex","HexStack#CacheGeometryFromTiles","HexStack#GetLocalPositionForIndex","HexStack#EnsureTileCount","HexStack#ResolveTileTemplate","HexStack#CompactNullTiles","HexStack#EnsureTilesInitializedFromChildren","HexStack#GetAnchorBaseLocalPosition","HexStack#AlignTilesToAnchor","HexStack#RefreshVisibilityAndBinding","HexStack#DetachFromFloor","HexStacksCreator#init","HexStacksCreator#NormalizePresetColorIds","HexStacksCreator#NormalizeColorId","HexStacksCreator#GetSpawnNeighborCount","HexStacksCreator#BuildNoSpawnCoordSet","HexStacksCreator#BuildCoordKey","HexStacksCreator#HexConfig#get","HexStacksCreator#PoolService#get","HexStacksCreator#init","HexStacksCreator#Start","HexStacksCreator#TryRecycleEmptyStack","HexStacksCreator#NotifyStackPlaced","HexStacksCreator#FillFloorsWithConfiguredStacks","HexStacksCreator#TrySpawnIntoSlotsByPlacementState","HexStacksCreator#ResolveTileTemplateForPool","HexStacksCreator#ClearExistingStacks","HexStacksCreator#AreAllPendingStacksPlacedOnFloor","HexStacksCreator#SpawnStacksIntoSlots","HexStacksCreator#GetPlayerStackColorIds","HexStacksCreator#GetRandomPresetColorIds","HexStacksCreator#TryBuildFivePlusFiveColorIds","HexStacksCreator#RentStack","HexStacksCreator#RegisterPendingPlacementStack","HexStacksCreator#CleanupPendingPlacementStacks","HexStacksCreator#IsSlotOccupied","HexStacksCreator#CreateRuntimeSpawnTemplate","HexStacksCreator#PrewarmStacks","HexStacksCreator#CleanupTrackedStacks","HexStacksCreator#ClearStacksPlacedOnFloors","HexStacksCreator#DespawnStack","HexStacksCreator#CollectSpawnFloors","HexStacksCreator#SpawnConfiguredFloorStack","HexStacksCreator#ResolveBottomColorId","HexStacksCreator#GetActivePaletteColorCount","HexStacksCreator#TryBuildTopColorAssignment","HexStacksCreator#AssignTopColorsRecursive","HexStacksCreator#GetAvailableTopColors","HexStacksCreator#LogGeneratedFloorFill","HexStacksCreator#ApplyContext","HexStacksCreator#MarkInitialPlayerStacksCompleted","HexStacksCreator#LogStacksCreator","HexTile#init","HexTile#ColorIdValue#get","HexTile#HasColor#get","HexTile#CurrentColor#get","HexTile#init","HexTile#SetColor","HexTile#TryGetColor","HexTile#ClearColor","HexTile#ApplyColor","HexTransferAnimator#GetStackName","HexTransferAnimator#init","HexTransferAnimator#TransferTopTilesFan","HexTransferAnimator#CreateTileTransferTween","HexTransferAnimator#CompleteAfterTweens","HexTransferAnimator#GetNeighborDirection","HexTransferAnimator#LogTransferAnimator","LunaBridge#GameEnded","LunaBridge#InstallFullGame","PackshotController#init","PackshotController#Awake","PackshotController#OnDisable","PackshotController#Update","PackshotController#ShowPackshot","PackshotController#HidePackshot","PackshotController#OnPlayNowPressed","PackshotController#SetVisible","PackshotController#SetStaticContentActive","PackshotController#KillFadeTween","PackshotController#WasPointerPressedThisFrame","PlayableUIRoot#TutorialController#get","PlayableUIRoot#PackshotController#get","PlayableUIRoot#CountdownTimerPanel#get","PlayableUIRoot#OnEnable","PlayableUIRoot#OnDisable","PlayableUIRoot#StartTutorial","PlayableUIRoot#StopTutorial","PlayableUIRoot#ShowPackshot","PlayableUIRoot#StartCountdownTimer","PlayableUIRoot#StopCountdownTimer","PlayableUIRoot#HandleCountdownFinished","PlayableUIRoot#HandlePackshotShown","PlayableUIRoot#HandleFirstTransferAndClearChainFinished","PlayableUIRoot#SubscribeManagerEvents","PlayableUIRoot#UnsubscribeManagerEvents","PlayableUIRoot#TryGetConfiguredGameDuration","PlayableUIRoot#IsEndGameAfterFirstChainEnabled","TutorialOverlayController#SelectBestTargetFloor","TutorialOverlayController#IsMatchingNeighborStack","TutorialOverlayController#GetStackName","TutorialOverlayController#GetFloorName","TutorialOverlayController#init","TutorialOverlayController#OnEnable","TutorialOverlayController#Start","TutorialOverlayController#StartTutorialAfterBootstrap","TutorialOverlayController#OnDisable","TutorialOverlayController#Update","TutorialOverlayController#StartTutorial","TutorialOverlayController#StopTutorial","TutorialOverlayController#ResetTutorialState","TutorialOverlayController#DisableTutorialPermanently","TutorialOverlayController#HandleDragStarted","TutorialOverlayController#HandleDragFinished","TutorialOverlayController#RestartTutorialAfterDelayRoutine","TutorialOverlayController#PlayHandLoop","TutorialOverlayController#TryResolveHandTargets","TutorialOverlayController#TryResolveDynamicHandTargets","TutorialOverlayController#TryFindTutorialMovePair","TutorialOverlayController#SelectBottomMostPlayerStack","TutorialOverlayController#HasNeighborWithTopColor","TutorialOverlayController#ResolveManager","TutorialOverlayController#ResolveWorldCamera","TutorialOverlayController#TryConvertWorldToUiPosition","TutorialOverlayController#KillHandTween","TutorialOverlayController#StopRestartRoutine","TutorialOverlayController#SetTutorialVisible","TutorialOverlayController#AreInitialGenerationSystemsReady$1","TutorialOverlayController#AreInitialGenerationSystemsReady","TutorialOverlayController#LogTutorial"]' ) ); }
 /**
  * @compiler Bridge.NET 17.9.42-luna
  */
@@ -9,6 +9,7 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
     Bridge.define("CountdownTimerPanel", {
         inherits: [UnityEngine.MonoBehaviour],
         fields: {
+            gameContext: null,
             durationSeconds: 0,
             autoStartOnEnable: false,
             lowTimeThresholdNormalized: 0,
@@ -43,6 +44,9 @@ Bridge.assembly("UnityScriptsCompiler", function ($asm, globals) {
             isRunning: false,
             lowStateEnabled: false,
             iconShakeTween: null
+        },
+        events: {
+            CountdownFinished: null
         },
         props: {
             IsRunning: {
@@ -102,6 +106,7 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#init", this ); }
             Awake: function () {
 if ( TRACE ) { TRACE( "CountdownTimerPanel#Awake", this ); }
 
+                this.ApplyConfiguredDurationFromConfig();
                 this.ConfigureStaticBindings();
                 this.ResetToInitialState();
             },
@@ -112,11 +117,12 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#Awake", this ); }
 if ( TRACE ) { TRACE( "CountdownTimerPanel#OnEnable", this ); }
 
                 if (this.autoStartOnEnable) {
+                    this.ApplyConfiguredDurationFromConfig();
                     this.StartCountdown();
-                    return;
+                } else {
+                    this.StopCountdown();
+                    this.ResetToInitialState();
                 }
-                this.StopCountdown();
-                this.ResetToInitialState();
             },
             /*CountdownTimerPanel.OnEnable end.*/
 
@@ -140,7 +146,7 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#Update", this ); }
                     if (!(this.remainingSeconds > 0.0)) {
                         this.isRunning = false;
                         this.StopShake();
-                        UnityEngine.Debug.Log$1("\u0412\u0440\u0435\u043c\u044f \u043a\u043e\u043d\u0447\u0438\u043b\u043e\u0441\u044c");
+                        !Bridge.staticEquals(this.CountdownFinished, null) ? this.CountdownFinished() : null;
                     }
                 }
             },
@@ -177,6 +183,17 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#RestartCountdown", this ); }
             },
             /*CountdownTimerPanel.RestartCountdown end.*/
 
+            /*CountdownTimerPanel.ApplyConfiguredDurationFromConfig start.*/
+            ApplyConfiguredDurationFromConfig: function () {
+if ( TRACE ) { TRACE( "CountdownTimerPanel#ApplyConfiguredDurationFromConfig", this ); }
+
+                var config = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Config : null);
+                if (!(config == null)) {
+                    this.durationSeconds = UnityEngine.Mathf.Max(0.1, config.gameDurationSeconds);
+                }
+            },
+            /*CountdownTimerPanel.ApplyConfiguredDurationFromConfig end.*/
+
             /*CountdownTimerPanel.ConfigureStaticBindings start.*/
             ConfigureStaticBindings: function () {
 if ( TRACE ) { TRACE( "CountdownTimerPanel#ConfigureStaticBindings", this ); }
@@ -190,8 +207,7 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#ConfigureStaticBindings", this ); }
                 if (UnityEngine.MonoBehaviour.op_Inequality(this.arrowImage, null)) {
                     this.arrowImage.color = this.arrowNormalColor.$clone();
                 }
-                if (UnityEngine.Component.op_Equality(this.panelRoot, null)) {
-                    UnityEngine.Debug.LogWarning$1("CountdownTimerPanel: panelRoot is not assigned.", this);
+                if (!(UnityEngine.Component.op_Equality(this.panelRoot, null))) {
                 }
             },
             /*CountdownTimerPanel.ConfigureStaticBindings end.*/
@@ -287,6 +303,22 @@ if ( TRACE ) { TRACE( "CountdownTimerPanel#StopShake", this ); }
                 }
             },
             /*CountdownTimerPanel.StopShake end.*/
+
+            /*CountdownTimerPanel.LogTimerEvent start.*/
+            LogTimerEvent: function (message) {
+if ( TRACE ) { TRACE( "CountdownTimerPanel#LogTimerEvent", this ); }
+
+                UnityEngine.Debug.Log$1(message, this);
+            },
+            /*CountdownTimerPanel.LogTimerEvent end.*/
+
+            /*CountdownTimerPanel.LogTimerWarning start.*/
+            LogTimerWarning: function (message) {
+if ( TRACE ) { TRACE( "CountdownTimerPanel#LogTimerWarning", this ); }
+
+                UnityEngine.Debug.LogWarning$1(message, this);
+            },
+            /*CountdownTimerPanel.LogTimerWarning end.*/
 
 
         }
@@ -2085,20 +2117,6 @@ if ( TRACE ) { TRACE( "DG.Tweening.DOTweenModuleUtils.Physics#CreateDOTweenPathT
     Bridge.define("HexClearFxPlayer", {
         inherits: [UnityEngine.MonoBehaviour],
         statics: {
-            fields: {
-                BaseColorId: 0,
-                ColorId: 0,
-                TintColorId: 0
-            },
-            ctors: {
-                init: function () {
-if ( TRACE ) { TRACE( "HexClearFxPlayer#init", this ); }
-
-                    this.BaseColorId = UnityEngine.Shader.PropertyToID("_BaseColor");
-                    this.ColorId = UnityEngine.Shader.PropertyToID("_Color");
-                    this.TintColorId = UnityEngine.Shader.PropertyToID("_TintColor");
-                }
-            },
             methods: {
                 /*HexClearFxPlayer.TintParticleSystems:static start.*/
                 TintParticleSystems: function (rootFx, tintColor) {
@@ -2161,30 +2179,6 @@ if ( TRACE ) { TRACE( "HexClearFxPlayer#EstimateParticleSystemLifetime", this );
                 },
                 /*HexClearFxPlayer.EstimateParticleSystemLifetime:static end.*/
 
-                /*HexClearFxPlayer.TryGetColorFromMaterial:static start.*/
-                TryGetColorFromMaterial: function (material, color) {
-if ( TRACE ) { TRACE( "HexClearFxPlayer#TryGetColorFromMaterial", this ); }
-
-                    color.v = new pc.Color( 1, 1, 1, 1 );
-                    if (material == null) {
-                        return false;
-                    }
-                    if (material.HasProperty(HexClearFxPlayer.BaseColorId)) {
-                        color.v = material.GetColor(HexClearFxPlayer.BaseColorId);
-                        return true;
-                    }
-                    if (material.HasProperty(HexClearFxPlayer.ColorId)) {
-                        color.v = material.GetColor(HexClearFxPlayer.ColorId);
-                        return true;
-                    }
-                    if (material.HasProperty(HexClearFxPlayer.TintColorId)) {
-                        color.v = material.GetColor(HexClearFxPlayer.TintColorId);
-                        return true;
-                    }
-                    return false;
-                },
-                /*HexClearFxPlayer.TryGetColorFromMaterial:static end.*/
-
 
             }
         },
@@ -2229,11 +2223,8 @@ if ( TRACE ) { TRACE( "HexClearFxPlayer#TryGetClearBatchColor", this ); }
                 }
                 for (var i = 0; i < tiles.Count; i = (i + 1) | 0) {
                     var tile = tiles.getItem(i);
-                    if (!(UnityEngine.MonoBehaviour.op_Equality(tile, null))) {
-                        var tileMaterial = tile.CurrentMaterial;
-                        if (HexClearFxPlayer.TryGetColorFromMaterial(tileMaterial, color)) {
-                            return true;
-                        }
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(tile, null)) && tile.TryGetColor(color)) {
+                        return true;
                     }
                 }
                 return false;
@@ -2348,7 +2339,15 @@ if ( TRACE ) { TRACE( "HexClearFxPlayer#ReturnClearTilesFxAfterDelay", this ); }
         inherits: [UnityEngine.ScriptableObject],
         fields: {
             colors: null,
+            paletteColorCount: 0,
+            isRandom: false,
             startStackColors: null,
+            generatePlayerStacksByFivePlusFive: false,
+            fillGeneratedFloorWithStacks: false,
+            noStackSpawnCoords: null,
+            topMatchClearCount: 0,
+            gameDurationSeconds: 0,
+            endGameAfterFirstTransferAndClearChain: false,
             floorWidth: 0,
             floorLength: 0
         },
@@ -2356,6 +2355,13 @@ if ( TRACE ) { TRACE( "HexClearFxPlayer#ReturnClearTilesFxAfterDelay", this ); }
             init: function () {
 if ( TRACE ) { TRACE( "HexConfig#init", this ); }
 
+                this.paletteColorCount = 0;
+                this.isRandom = false;
+                this.generatePlayerStacksByFivePlusFive = false;
+                this.fillGeneratedFloorWithStacks = true;
+                this.topMatchClearCount = 3;
+                this.gameDurationSeconds = 20.0;
+                this.endGameAfterFirstTransferAndClearChain = false;
                 this.floorWidth = 3;
                 this.floorLength = 3;
             }
@@ -2363,11 +2369,59 @@ if ( TRACE ) { TRACE( "HexConfig#init", this ); }
     });
     /*HexConfig end.*/
 
+    /*HexConfig+FloorCoord start.*/
+    Bridge.define("HexConfig.FloorCoord", {
+        $kind: 1004,
+        statics: {
+            methods: {
+                getDefaultValue: function () {
+if ( TRACE ) { TRACE( "HexConfig.FloorCoord#getDefaultValue", this ); }
+ return new HexConfig.FloorCoord(); }
+            }
+        },
+        fields: {
+            x: 0,
+            z: 0
+        },
+        ctors: {
+            ctor: function () {
+if ( TRACE ) { TRACE( "HexConfig.FloorCoord#ctor", this ); }
+
+                this.$initialize();
+            }
+        },
+        methods: {
+            getHashCode: function () {
+if ( TRACE ) { TRACE( "HexConfig.FloorCoord#getHashCode", this ); }
+
+                var h = Bridge.addHash([3739161642, this.x, this.z]);
+                return h;
+            },
+            equals: function (o) {
+if ( TRACE ) { TRACE( "HexConfig.FloorCoord#equals", this ); }
+
+                if (!Bridge.is(o, HexConfig.FloorCoord)) {
+                    return false;
+                }
+                return Bridge.equals(this.x, o.x) && Bridge.equals(this.z, o.z);
+            },
+            $clone: function (to) {
+if ( TRACE ) { TRACE( "HexConfig.FloorCoord#$clone", this ); }
+
+                var s = to || new HexConfig.FloorCoord();
+                s.x = this.x;
+                s.z = this.z;
+                return s;
+            }
+        }
+    });
+    /*HexConfig+FloorCoord end.*/
+
     /*HexConfig+StackColorPreset start.*/
     Bridge.define("HexConfig.StackColorPreset", {
         $kind: 1002,
         fields: {
-            colorsBottomToTop: null
+            colorIdsBottomToTop: null
         }
     });
     /*HexConfig+StackColorPreset end.*/
@@ -2378,18 +2432,43 @@ if ( TRACE ) { TRACE( "HexConfig#init", this ); }
         statics: {
             fields: {
                 MousePointerId: 0,
-                activeDraggedDragger: null
+                instance: null,
+                globalDragEnabled: false
             },
             events: {
                 DragStarted: null,
                 DragFinished: null
+            },
+            props: {
+                IsGlobalDragEnabled: {
+                    get: function () {
+if ( TRACE ) { TRACE( "HexDragger#IsGlobalDragEnabled#get", this ); }
+
+                        return HexDragger.globalDragEnabled;
+                    }
+                }
             },
             ctors: {
                 init: function () {
 if ( TRACE ) { TRACE( "HexDragger#init", this ); }
 
                     this.MousePointerId = -1;
+                    this.globalDragEnabled = true;
                 }
+            },
+            methods: {
+                /*HexDragger.SetGlobalDragEnabled:static start.*/
+                SetGlobalDragEnabled: function (enabled) {
+if ( TRACE ) { TRACE( "HexDragger#SetGlobalDragEnabled", this ); }
+
+                    HexDragger.globalDragEnabled = enabled;
+                    if (!enabled && UnityEngine.MonoBehaviour.op_Inequality(HexDragger.instance, null)) {
+                        HexDragger.instance.CancelActiveDrag();
+                    }
+                },
+                /*HexDragger.SetGlobalDragEnabled:static end.*/
+
+
             }
         },
         fields: {
@@ -2407,8 +2486,6 @@ if ( TRACE ) { TRACE( "HexDragger#init", this ); }
             attachMoveEase: 0,
             dropDuration: 0,
             dropEase: 0,
-            destroyOnSuccessfulDrop: false,
-            stack: null,
             activeTween: null,
             isDragging: false,
             isSettling: false,
@@ -2419,14 +2496,24 @@ if ( TRACE ) { TRACE( "HexDragger#init", this ); }
             dragPlane: null,
             dragEndedWithSuccessfulDrop: false,
             highlightedFloor: null,
-            floorRaycastBuffer: null
+            floorRaycastBuffer: null,
+            cachedManager: null,
+            activeStack: null,
+            activeStackTransform: null
         },
         props: {
             Manager: {
                 get: function () {
 if ( TRACE ) { TRACE( "HexDragger#Manager#get", this ); }
 
-                    return (UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Manager : null;
+                    if (UnityEngine.MonoBehaviour.op_Inequality(this.cachedManager, null)) {
+                        return this.cachedManager;
+                    }
+                    if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null)) {
+                        this.gameContext = UnityEngine.Object.FindObjectOfType(HexGameContext);
+                    }
+                    this.cachedManager = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Manager : null);
+                    return this.cachedManager;
                 }
             }
         },
@@ -2454,14 +2541,24 @@ if ( TRACE ) { TRACE( "HexDragger#init", this ); }
             }
         },
         methods: {
+            /*HexDragger.SetGameContext start.*/
+            SetGameContext: function (context) {
+if ( TRACE ) { TRACE( "HexDragger#SetGameContext", this ); }
+
+                this.gameContext = context;
+                this.cachedManager = null;
+            },
+            /*HexDragger.SetGameContext end.*/
+
             /*HexDragger.Awake start.*/
             Awake: function () {
 if ( TRACE ) { TRACE( "HexDragger#Awake", this ); }
 
-                this.stack = this.GetComponent(HexStack);
-                if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null) && UnityEngine.MonoBehaviour.op_Inequality(this.stack, null)) {
-                    this.gameContext = this.stack.GameContext;
+                HexDragger.instance = this;
+                if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null)) {
+                    this.gameContext = UnityEngine.Object.FindObjectOfType(HexGameContext);
                 }
+                this.cachedManager = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Manager : null);
                 if (UnityEngine.Component.op_Equality(this.inputCamera, null)) {
                     this.inputCamera = UnityEngine.Camera.main;
                 }
@@ -2469,31 +2566,41 @@ if ( TRACE ) { TRACE( "HexDragger#Awake", this ); }
             },
             /*HexDragger.Awake end.*/
 
-            /*HexDragger.SetGameContext start.*/
-            SetGameContext: function (context) {
-if ( TRACE ) { TRACE( "HexDragger#SetGameContext", this ); }
+            /*HexDragger.OnEnable start.*/
+            OnEnable: function () {
+if ( TRACE ) { TRACE( "HexDragger#OnEnable", this ); }
 
-                this.gameContext = context;
+                HexDragger.instance = this;
             },
-            /*HexDragger.SetGameContext end.*/
+            /*HexDragger.OnEnable end.*/
 
             /*HexDragger.Update start.*/
             Update: function () {
 if ( TRACE ) { TRACE( "HexDragger#Update", this ); }
 
-                if (this.isSettling) {
-                    return;
-                }
-                if (!this.isDragging) {
-                    this.TryBeginDrag();
-                    return;
-                }
-                var pointerPosition = { v : new UnityEngine.Vector2() };
-                if (this.TryGetPointerPosition(this.activePointerId, pointerPosition)) {
-                    this.UpdateDrag(pointerPosition.v.$clone());
-                }
-                if (this.WasPointerReleased(this.activePointerId)) {
-                    this.EndDrag();
+                if (!HexDragger.globalDragEnabled) {
+                    if (this.isDragging || this.isSettling) {
+                        this.CancelActiveDrag();
+                    }
+                } else {
+                    if (this.isSettling) {
+                        return;
+                    }
+                    if (!this.isDragging) {
+                        this.TryBeginDrag();
+                        return;
+                    }
+                    if (!this.IsActiveStackValid()) {
+                        this.CancelActiveDrag();
+                        return;
+                    }
+                    var pointerPosition = { v : new UnityEngine.Vector2() };
+                    if (this.TryGetPointerPosition(this.activePointerId, pointerPosition)) {
+                        this.UpdateDrag(pointerPosition.v.$clone());
+                    }
+                    if (this.WasPointerReleased(this.activePointerId)) {
+                        this.EndDrag();
+                    }
                 }
             },
             /*HexDragger.Update end.*/
@@ -2503,7 +2610,10 @@ if ( TRACE ) { TRACE( "HexDragger#Update", this ); }
 if ( TRACE ) { TRACE( "HexDragger#OnDisable", this ); }
 
                 this.KillActiveTween(false);
-                this.ReleaseDragState();
+                this.CancelActiveDragInternal(false);
+                if (UnityEngine.MonoBehaviour.op_Equality(HexDragger.instance, this)) {
+                    HexDragger.instance = null;
+                }
             },
             /*HexDragger.OnDisable end.*/
 
@@ -2511,39 +2621,56 @@ if ( TRACE ) { TRACE( "HexDragger#OnDisable", this ); }
             TryBeginDrag: function () {
 if ( TRACE ) { TRACE( "HexDragger#TryBeginDrag", this ); }
 
+                if (UnityEngine.Component.op_Equality(this.inputCamera, null)) {
+                    return;
+                }
+                var manager = this.Manager;
                 var pointerId = { };
                 var pointerPosition = { v : new UnityEngine.Vector2() };
-                if (UnityEngine.MonoBehaviour.op_Inequality(HexDragger.activeDraggedDragger, null) || UnityEngine.Component.op_Equality(this.inputCamera, null) || (UnityEngine.MonoBehaviour.op_Inequality(this.Manager, null) && this.Manager.IsTransferInProgress) || !this.TryGetPointerDown(pointerId, pointerPosition)) {
+                if ((UnityEngine.MonoBehaviour.op_Inequality(manager, null) && manager.IsTransferInProgress) || !this.TryGetPointerDown(pointerId, pointerPosition)) {
                     return;
                 }
                 var ray = this.inputCamera.ScreenPointToRay(UnityEngine.Vector3.FromVector2(pointerPosition.v));
                 var hit = { v : new UnityEngine.RaycastHit() };
                 if (UnityEngine.Physics.Raycast$1(ray, hit, this.pickMaxDistance, UnityEngine.LayerMask.op_Implicit(this.interactionMask.$clone()), UnityEngine.QueryTriggerInteraction.Ignore)) {
                     var hitStack = hit.v.collider.GetComponentInParent(HexStack);
-                    if (!(UnityEngine.MonoBehaviour.op_Inequality(hitStack, this.stack))) {
-                        this.StartDrag(pointerId.v, hit.v.point.$clone());
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(hitStack, null)) && hitStack.gameObject.activeInHierarchy && hitStack.TileCount !== 0 && !(UnityEngine.MonoBehaviour.op_Inequality(hitStack.CurrentFloor, null))) {
+                        this.StartDrag(hitStack, pointerId.v, hit.v.point.$clone());
                     }
                 }
             },
             /*HexDragger.TryBeginDrag end.*/
 
             /*HexDragger.StartDrag start.*/
-            StartDrag: function (pointerId, hitPoint) {
+            StartDrag: function (stackToDrag, pointerId, hitPoint) {
 if ( TRACE ) { TRACE( "HexDragger#StartDrag", this ); }
 
+                if (UnityEngine.MonoBehaviour.op_Equality(stackToDrag, null)) {
+                    return;
+                }
                 this.KillActiveTween(false);
+                this.activeStack = stackToDrag;
+                this.activeStackTransform = stackToDrag.transform;
+                if (UnityEngine.Component.op_Equality(this.activeStackTransform, null)) {
+                    this.CancelActiveDragInternal(false);
+                    return;
+                }
+                if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null) && UnityEngine.MonoBehaviour.op_Inequality(this.activeStack.GameContext, null)) {
+                    this.gameContext = this.activeStack.GameContext;
+                    this.cachedManager = this.gameContext.Manager;
+                }
                 this.isDragging = true;
-                HexDragger.activeDraggedDragger = this;
+                this.isSettling = false;
                 this.activePointerId = pointerId;
-                this.dragStartPosition = this.transform.position.$clone();
+                this.dragStartPosition = this.activeStackTransform.position.$clone();
                 this.dragLiftY = this.dragStartPosition.y + this.liftHeight;
                 this.dragPlane = new UnityEngine.Plane.$ctor2(pc.Vec3.UP.clone(), this.dragStartPosition);
                 this.dragOffset = this.dragStartPosition.$clone().sub( hitPoint );
                 this.dragOffset.y = 0.0;
                 this.dragEndedWithSuccessfulDrop = false;
-                !Bridge.staticEquals(HexDragger.DragStarted, null) ? HexDragger.DragStarted(this.stack) : null;
+                !Bridge.staticEquals(HexDragger.DragStarted, null) ? HexDragger.DragStarted(this.activeStack) : null;
                 this.UpdateDropHighlight();
-                this.activeTween = DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMoveY(this.transform, this.dragLiftY, this.liftDuration), this.liftEase);
+                this.activeTween = DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMoveY(this.activeStackTransform, this.dragLiftY, this.liftDuration), this.liftEase);
             },
             /*HexDragger.StartDrag end.*/
 
@@ -2551,13 +2678,15 @@ if ( TRACE ) { TRACE( "HexDragger#StartDrag", this ); }
             UpdateDrag: function (pointerPosition) {
 if ( TRACE ) { TRACE( "HexDragger#UpdateDrag", this ); }
 
-                var ray = this.inputCamera.ScreenPointToRay(UnityEngine.Vector3.FromVector2(pointerPosition));
-                var enter = { };
-                if (this.dragPlane.Raycast(ray, enter)) {
-                    var pointOnPlane = ray.GetPoint(enter.v).add( this.dragOffset );
-                    var current = this.transform.position.$clone();
-                    this.transform.position = new pc.Vec3( pointOnPlane.x, current.y, pointOnPlane.z );
-                    this.UpdateDropHighlight();
+                if (!(UnityEngine.Component.op_Equality(this.activeStackTransform, null)) && !(UnityEngine.Component.op_Equality(this.inputCamera, null))) {
+                    var ray = this.inputCamera.ScreenPointToRay(UnityEngine.Vector3.FromVector2(pointerPosition));
+                    var enter = { };
+                    if (this.dragPlane.Raycast(ray, enter)) {
+                        var pointOnPlane = ray.GetPoint(enter.v).add( this.dragOffset );
+                        var current = this.activeStackTransform.position.$clone();
+                        this.activeStackTransform.position = new pc.Vec3( pointOnPlane.x, current.y, pointOnPlane.z );
+                        this.UpdateDropHighlight();
+                    }
                 }
             },
             /*HexDragger.UpdateDrag end.*/
@@ -2566,46 +2695,57 @@ if ( TRACE ) { TRACE( "HexDragger#UpdateDrag", this ); }
             EndDrag: function () {
 if ( TRACE ) { TRACE( "HexDragger#EndDrag", this ); }
 
+                if (!this.IsActiveStackValid()) {
+                    this.CancelActiveDragInternal(false);
+                    return;
+                }
                 this.isDragging = false;
                 var floor = { v : this.highlightedFloor };
                 var hasFloorUnderStack = UnityEngine.MonoBehaviour.op_Inequality(floor.v, null);
                 if (!hasFloorUnderStack) {
                     hasFloorUnderStack = this.TryGetFloorUnderStack(floor);
                 }
-                if (hasFloorUnderStack && UnityEngine.MonoBehaviour.op_Inequality(this.Manager, null) && !this.Manager.CanPlaceStackOnFloor(this.stack, floor.v)) {
+                var manager = this.Manager;
+                if (hasFloorUnderStack && UnityEngine.MonoBehaviour.op_Inequality(manager, null) && !manager.CanPlaceStackOnFloor(this.activeStack, floor.v)) {
                     hasFloorUnderStack = false;
                     floor.v = null;
                 }
                 this.SetHighlightedFloor(null);
                 var targetPosition = (hasFloorUnderStack ? floor.v.GetStackPlacementPosition(this.dragStartPosition.y) : this.dragStartPosition.$clone());
                 this.dragEndedWithSuccessfulDrop = hasFloorUnderStack;
-                var destroyAfterSettle = hasFloorUnderStack && this.destroyOnSuccessfulDrop;
-                this.StartSettleTween(targetPosition.$clone(), hasFloorUnderStack ? floor.v : null, destroyAfterSettle);
+                this.StartSettleTween(targetPosition.$clone(), hasFloorUnderStack ? floor.v : null);
             },
             /*HexDragger.EndDrag end.*/
 
             /*HexDragger.StartSettleTween start.*/
-            StartSettleTween: function (targetPosition, targetFloor, destroyAfterSettle) {
+            StartSettleTween: function (targetPosition, targetFloor) {
 if ( TRACE ) { TRACE( "HexDragger#StartSettleTween", this ); }
 
+                if (UnityEngine.Component.op_Equality(this.activeStackTransform, null)) {
+                    this.CancelActiveDragInternal(false);
+                    return;
+                }
                 this.isSettling = true;
                 this.KillActiveTween(false);
-                var moveY = UnityEngine.Mathf.Max(this.transform.position.y, this.dragLiftY);
+                var moveY = UnityEngine.Mathf.Max(this.activeStackTransform.position.y, this.dragLiftY);
                 var movePoint = new pc.Vec3( targetPosition.x, moveY, targetPosition.z );
                 var sequence = DG.Tweening.DOTween.Sequence();
-                DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMove(this.transform, movePoint.$clone(), this.attachMoveDuration), this.attachMoveEase));
-                DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMoveY(this.transform, targetPosition.y, this.dropDuration), this.dropEase));
+                DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMove(this.activeStackTransform, movePoint.$clone(), this.attachMoveDuration), this.attachMoveEase));
+                DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMoveY(this.activeStackTransform, targetPosition.y, this.dropDuration), this.dropEase));
                 DG.Tweening.TweenSettingsExtensions.OnComplete(DG.Tweening.Sequence, sequence, Bridge.fn.bind(this, function () {
-                    this.transform.position = targetPosition.$clone();
+                    if (UnityEngine.Component.op_Inequality(this.activeStackTransform, null)) {
+                        this.activeStackTransform.position = targetPosition.$clone();
+                    }
                     this.activeTween = null;
-                    if (UnityEngine.MonoBehaviour.op_Inequality(targetFloor, null) && UnityEngine.MonoBehaviour.op_Inequality(this.Manager, null)) {
-                        this.Manager.HandleStackPlaced(this.stack, targetFloor, Bridge.fn.bind(this, function () {
+                    var manager = this.Manager;
+                    if (UnityEngine.MonoBehaviour.op_Inequality(targetFloor, null) && UnityEngine.MonoBehaviour.op_Inequality(manager, null) && UnityEngine.MonoBehaviour.op_Inequality(this.activeStack, null)) {
+                        manager.HandleStackPlaced(this.activeStack, targetFloor, Bridge.fn.bind(this, function () {
                             if (!(UnityEngine.MonoBehaviour.op_Equality(this, null))) {
-                                this.FinalizeSettle(destroyAfterSettle);
+                                this.FinalizeSettle();
                             }
                         }));
                     } else {
-                        this.FinalizeSettle(destroyAfterSettle);
+                        this.FinalizeSettle();
                     }
                 }));
                 DG.Tweening.TweenSettingsExtensions.OnKill(DG.Tweening.Sequence, sequence, Bridge.fn.bind(this, function () {
@@ -2621,15 +2761,14 @@ if ( TRACE ) { TRACE( "HexDragger#StartSettleTween", this ); }
             /*HexDragger.StartSettleTween end.*/
 
             /*HexDragger.FinalizeSettle start.*/
-            FinalizeSettle: function (destroyAfterSettle) {
+            FinalizeSettle: function () {
 if ( TRACE ) { TRACE( "HexDragger#FinalizeSettle", this ); }
 
+                var finishedStack = this.activeStack;
+                var wasSuccessfulDrop = this.dragEndedWithSuccessfulDrop;
                 this.isSettling = false;
-                !Bridge.staticEquals(HexDragger.DragFinished, null) ? HexDragger.DragFinished(this.stack, this.dragEndedWithSuccessfulDrop) : null;
                 this.ReleaseDragState();
-                if (destroyAfterSettle) {
-                    UnityEngine.Object.Destroy(this);
-                }
+                !Bridge.staticEquals(HexDragger.DragFinished, null) ? HexDragger.DragFinished(finishedStack, wasSuccessfulDrop) : null;
             },
             /*HexDragger.FinalizeSettle end.*/
 
@@ -2638,18 +2777,39 @@ if ( TRACE ) { TRACE( "HexDragger#FinalizeSettle", this ); }
 if ( TRACE ) { TRACE( "HexDragger#TryGetFloorUnderStack", this ); }
 
                 floor.v = null;
-                var origin = this.transform.position.$clone().add( pc.Vec3.UP.clone().clone().scale( this.floorCheckStartHeight ) );
+                if (!this.IsActiveStackValid()) {
+                    return false;
+                }
+                var origin = this.activeStackTransform.position.$clone().add( pc.Vec3.UP.clone().clone().scale( this.floorCheckStartHeight ) );
+                var rayDistance = this.floorCheckStartHeight + this.floorCheckDistance;
                 this.EnsureFloorRaycastBuffer();
-                var hitCount = UnityEngine.Physics.RaycastNonAlloc$2(origin, pc.Vec3.DOWN.clone(), this.floorRaycastBuffer, this.floorCheckStartHeight + this.floorCheckDistance, UnityEngine.LayerMask.op_Implicit(this.interactionMask.$clone()), UnityEngine.QueryTriggerInteraction.Ignore);
+                var hitCount = UnityEngine.Physics.RaycastNonAlloc$2(origin, pc.Vec3.DOWN.clone(), this.floorRaycastBuffer, rayDistance, UnityEngine.LayerMask.op_Implicit(this.interactionMask.$clone()), UnityEngine.QueryTriggerInteraction.Ignore);
+                if (hitCount >= this.floorRaycastBuffer.length) {
+                    var allHits = UnityEngine.Physics.RaycastAll$2(origin, pc.Vec3.DOWN.clone(), rayDistance, UnityEngine.LayerMask.op_Implicit(this.interactionMask.$clone()), UnityEngine.QueryTriggerInteraction.Ignore);
+                    floor.v = this.GetNearestFloorFromHits(allHits, allHits.length);
+                    return UnityEngine.MonoBehaviour.op_Inequality(floor.v, null);
+                }
+                floor.v = this.GetNearestFloorFromHits(this.floorRaycastBuffer, hitCount);
+                return UnityEngine.MonoBehaviour.op_Inequality(floor.v, null);
+            },
+            /*HexDragger.TryGetFloorUnderStack end.*/
+
+            /*HexDragger.GetNearestFloorFromHits start.*/
+            GetNearestFloorFromHits: function (hits, hitCount) {
+if ( TRACE ) { TRACE( "HexDragger#GetNearestFloorFromHits", this ); }
+
+                if (hits == null || hitCount <= 0) {
+                    return null;
+                }
                 var nearestDistance = 3.40282347E+38;
                 var nearestFloor = null;
                 for (var i = 0; i < hitCount; i = (i + 1) | 0) {
-                    var hit = this.floorRaycastBuffer[i].$clone();
+                    var hit = hits[i].$clone();
                     if (UnityEngine.Component.op_Equality(hit.collider, null)) {
                         continue;
                     }
                     var hitStack = hit.collider.GetComponentInParent(HexStack);
-                    if (!(UnityEngine.MonoBehaviour.op_Equality(hitStack, this.stack))) {
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(hitStack, this.activeStack))) {
                         var candidateFloor = hit.collider.GetComponentInParent(HexFloor);
                         if (!(UnityEngine.MonoBehaviour.op_Equality(candidateFloor, null)) && !(hit.distance >= nearestDistance)) {
                             nearestDistance = hit.distance;
@@ -2657,10 +2817,9 @@ if ( TRACE ) { TRACE( "HexDragger#TryGetFloorUnderStack", this ); }
                         }
                     }
                 }
-                floor.v = nearestFloor;
-                return UnityEngine.MonoBehaviour.op_Inequality(floor.v, null);
+                return nearestFloor;
             },
-            /*HexDragger.TryGetFloorUnderStack end.*/
+            /*HexDragger.GetNearestFloorFromHits end.*/
 
             /*HexDragger.EnsureFloorRaycastBuffer start.*/
             EnsureFloorRaycastBuffer: function () {
@@ -2694,23 +2853,53 @@ if ( TRACE ) { TRACE( "HexDragger#ReleaseDragState", this ); }
 
                 this.activePointerId = -2147483648;
                 this.isDragging = false;
+                this.dragEndedWithSuccessfulDrop = false;
                 this.SetHighlightedFloor(null);
-                if (UnityEngine.MonoBehaviour.op_Equality(HexDragger.activeDraggedDragger, this)) {
-                    HexDragger.activeDraggedDragger = null;
-                }
+                this.activeStack = null;
+                this.activeStackTransform = null;
             },
             /*HexDragger.ReleaseDragState end.*/
+
+            /*HexDragger.CancelActiveDrag start.*/
+            CancelActiveDrag: function () {
+if ( TRACE ) { TRACE( "HexDragger#CancelActiveDrag", this ); }
+
+                this.CancelActiveDragInternal(false);
+            },
+            /*HexDragger.CancelActiveDrag end.*/
+
+            /*HexDragger.CancelActiveDragInternal start.*/
+            CancelActiveDragInternal: function (invokeFinishedEvent) {
+if ( TRACE ) { TRACE( "HexDragger#CancelActiveDragInternal", this ); }
+
+                var cancelledStack = this.activeStack;
+                this.KillActiveTween(false);
+                if (UnityEngine.Component.op_Inequality(this.activeStackTransform, null)) {
+                    this.activeStackTransform.position = this.dragStartPosition.$clone();
+                }
+                this.isSettling = false;
+                this.ReleaseDragState();
+                if (invokeFinishedEvent && UnityEngine.MonoBehaviour.op_Inequality(cancelledStack, null)) {
+                    !Bridge.staticEquals(HexDragger.DragFinished, null) ? HexDragger.DragFinished(cancelledStack, false) : null;
+                }
+            },
+            /*HexDragger.CancelActiveDragInternal end.*/
 
             /*HexDragger.UpdateDropHighlight start.*/
             UpdateDropHighlight: function () {
 if ( TRACE ) { TRACE( "HexDragger#UpdateDropHighlight", this ); }
 
+                if (!this.isDragging || !this.IsActiveStackValid()) {
+                    this.SetHighlightedFloor(null);
+                    return;
+                }
                 var floor = { };
-                if (!this.isDragging) {
+                if (!this.TryGetFloorUnderStack(floor)) {
                     this.SetHighlightedFloor(null);
-                } else if (!this.TryGetFloorUnderStack(floor)) {
-                    this.SetHighlightedFloor(null);
-                } else if (UnityEngine.MonoBehaviour.op_Inequality(this.Manager, null) && !this.Manager.CanPlaceStackOnFloor(this.stack, floor.v)) {
+                    return;
+                }
+                var manager = this.Manager;
+                if (UnityEngine.MonoBehaviour.op_Inequality(manager, null) && !manager.CanPlaceStackOnFloor(this.activeStack, floor.v)) {
                     this.SetHighlightedFloor(null);
                 } else {
                     this.SetHighlightedFloor(floor.v);
@@ -2796,6 +2985,14 @@ if ( TRACE ) { TRACE( "HexDragger#WasPointerReleased", this ); }
             },
             /*HexDragger.WasPointerReleased end.*/
 
+            /*HexDragger.IsActiveStackValid start.*/
+            IsActiveStackValid: function () {
+if ( TRACE ) { TRACE( "HexDragger#IsActiveStackValid", this ); }
+
+                return UnityEngine.MonoBehaviour.op_Inequality(this.activeStack, null) && UnityEngine.Component.op_Inequality(this.activeStackTransform, null) && this.activeStack.gameObject.activeInHierarchy;
+            },
+            /*HexDragger.IsActiveStackValid end.*/
+
 
         }
     });
@@ -2809,7 +3006,17 @@ if ( TRACE ) { TRACE( "HexDragger#WasPointerReleased", this ); }
                 SideCount: 0,
                 BaseColorId: 0,
                 ColorId: 0,
-                EmissionColorId: 0
+                EmissionColorId: 0,
+                ActiveFloorSet: null
+            },
+            props: {
+                ActiveFloors: {
+                    get: function () {
+if ( TRACE ) { TRACE( "HexFloor#ActiveFloors#get", this ); }
+
+                        return HexFloor.ActiveFloorSet;
+                    }
+                }
             },
             ctors: {
                 init: function () {
@@ -2819,12 +3026,15 @@ if ( TRACE ) { TRACE( "HexFloor#init", this ); }
                     this.BaseColorId = UnityEngine.Shader.PropertyToID("_BaseColor");
                     this.ColorId = UnityEngine.Shader.PropertyToID("_Color");
                     this.EmissionColorId = UnityEngine.Shader.PropertyToID("_EmissionColor");
+                    this.ActiveFloorSet = new (System.Collections.Generic.HashSet$1(HexFloor)).ctor();
                 }
             }
         },
         fields: {
             nearFloors: null,
             stackAnchor: null,
+            gridX: 0,
+            gridZ: 0,
             occupiedStack: null,
             highlightRenderers: null,
             dropHighlightColor: null,
@@ -2868,6 +3078,20 @@ if ( TRACE ) { TRACE( "HexFloor#OccupiedStack#get", this ); }
 if ( TRACE ) { TRACE( "HexFloor#StackAnchor#get", this ); }
 
                     return this.stackAnchor;
+                }
+            },
+            GridX: {
+                get: function () {
+if ( TRACE ) { TRACE( "HexFloor#GridX#get", this ); }
+
+                    return this.gridX;
+                }
+            },
+            GridZ: {
+                get: function () {
+if ( TRACE ) { TRACE( "HexFloor#GridZ#get", this ); }
+
+                    return this.gridZ;
                 }
             }
         },
@@ -2914,10 +3138,19 @@ if ( TRACE ) { TRACE( "HexFloor#Awake", this ); }
             },
             /*HexFloor.Awake end.*/
 
+            /*HexFloor.OnEnable start.*/
+            OnEnable: function () {
+if ( TRACE ) { TRACE( "HexFloor#OnEnable", this ); }
+
+                HexFloor.ActiveFloorSet.add(this);
+            },
+            /*HexFloor.OnEnable end.*/
+
             /*HexFloor.OnDisable start.*/
             OnDisable: function () {
 if ( TRACE ) { TRACE( "HexFloor#OnDisable", this ); }
 
+                HexFloor.ActiveFloorSet.remove(this);
                 this.SetDropHighlight(false);
             },
             /*HexFloor.OnDisable end.*/
@@ -2972,6 +3205,15 @@ if ( TRACE ) { TRACE( "HexFloor#SetOccupiedStack", this ); }
                 this.occupiedStack = stack;
             },
             /*HexFloor.SetOccupiedStack end.*/
+
+            /*HexFloor.SetGridCoordinates start.*/
+            SetGridCoordinates: function (x, z) {
+if ( TRACE ) { TRACE( "HexFloor#SetGridCoordinates", this ); }
+
+                this.gridX = x;
+                this.gridZ = z;
+            },
+            /*HexFloor.SetGridCoordinates end.*/
 
             /*HexFloor.ClearOccupiedStack start.*/
             ClearOccupiedStack: function (stack) {
@@ -3262,10 +3504,13 @@ if ( TRACE ) { TRACE( "HexFloorCreator#ClearFloors", this ); }
             generateOnStart: false,
             clearBeforeGenerate: false,
             refreshNeighborsAfterGenerate: false,
+            fillStacksAfterGenerate: false,
+            debugLogs: false,
             neighborDistance: 0,
             shiftOddColumnsForward: false,
             anchorLocalOffset: null,
-            generatedFloors: null
+            generatedFloors: null,
+            InitialGenerationCompleted: false
         },
         props: {
             HexConfig: {
@@ -3283,6 +3528,8 @@ if ( TRACE ) { TRACE( "HexFloorCreator#init", this ); }
                 this.anchorLocalOffset = new UnityEngine.Vector3();
                 this.clearBeforeGenerate = true;
                 this.refreshNeighborsAfterGenerate = true;
+                this.fillStacksAfterGenerate = true;
+                this.debugLogs = false;
                 this.neighborDistance = 1.0;
                 this.shiftOddColumnsForward = true;
                 this.anchorLocalOffset = pc.Vec3.ZERO.clone();
@@ -3297,6 +3544,7 @@ if ( TRACE ) { TRACE( "HexFloorCreator#Start", this ); }
                 if (this.generateOnStart) {
                     this.GenerateFloor();
                 }
+                this.MarkInitialGenerationCompleted();
             },
             /*HexFloorCreator.Start end.*/
 
@@ -3343,21 +3591,28 @@ if ( TRACE ) { TRACE( "HexFloorCreator#GenerateFloor", this ); }
                             }
                         } else {
                             floor.name = System.String.format("HexFloor [x:{0}, z:{1}]", Bridge.box(colX, System.Int32), Bridge.box(rowZ, System.Int32));
+                            floor.SetGridCoordinates(colX, rowZ);
                             this.generatedFloors.add(floor);
                         }
                     }
                 }
                 if (UnityEngine.Application.isPlaying) {
                 }
-                if (!this.refreshNeighborsAfterGenerate) {
-                    return;
-                }
-                for (var i = 0; i < this.generatedFloors.Count; i = (i + 1) | 0) {
-                    var floor2 = this.generatedFloors.getItem(i);
-                    if (!(UnityEngine.MonoBehaviour.op_Equality(floor2, null))) {
-                        floor2.FindNearFloors();
+                var shouldFillStacks = this.fillStacksAfterGenerate && hexConfig.fillGeneratedFloorWithStacks;
+                if (this.refreshNeighborsAfterGenerate || shouldFillStacks) {
+                    for (var i = 0; i < this.generatedFloors.Count; i = (i + 1) | 0) {
+                        var floor2 = this.generatedFloors.getItem(i);
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(floor2, null))) {
+                            floor2.FindNearFloors();
+                        }
                     }
                 }
+                if (!shouldFillStacks || UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null) || UnityEngine.MonoBehaviour.op_Equality(this.gameContext.StacksCreator, null)) {
+                    this.MarkInitialGenerationCompleted();
+                    return;
+                }
+                this.gameContext.StacksCreator.FillFloorsWithConfiguredStacks(this.generatedFloors);
+                this.MarkInitialGenerationCompleted();
             },
             /*HexFloorCreator.GenerateFloor end.*/
 
@@ -3370,6 +3625,26 @@ if ( TRACE ) { TRACE( "HexFloorCreator#ClearGeneratedFloor", this ); }
                 this.generatedFloors.clear();
             },
             /*HexFloorCreator.ClearGeneratedFloor end.*/
+
+            /*HexFloorCreator.MarkInitialGenerationCompleted start.*/
+            MarkInitialGenerationCompleted: function () {
+if ( TRACE ) { TRACE( "HexFloorCreator#MarkInitialGenerationCompleted", this ); }
+
+                if (!this.InitialGenerationCompleted) {
+                    this.InitialGenerationCompleted = true;
+                }
+            },
+            /*HexFloorCreator.MarkInitialGenerationCompleted end.*/
+
+            /*HexFloorCreator.LogFloorCreator start.*/
+            LogFloorCreator: function (message) {
+if ( TRACE ) { TRACE( "HexFloorCreator#LogFloorCreator", this ); }
+
+                if (this.debugLogs) {
+                    UnityEngine.Debug.Log$1("[HexFloorCreator] " + (message || ""), this);
+                }
+            },
+            /*HexFloorCreator.LogFloorCreator end.*/
 
 
         }
@@ -3457,14 +3732,6 @@ if ( TRACE ) { TRACE( "HexManager#GetFloorDebugName", this ); }
                 },
                 /*HexManager.GetFloorDebugName:static end.*/
 
-                /*HexManager.GetMaterialDebugName:static start.*/
-                GetMaterialDebugName: function (material) {
-if ( TRACE ) { TRACE( "HexManager#GetMaterialDebugName", this ); }
-
-                    return (material != null) ? material.name : "<none>";
-                },
-                /*HexManager.GetMaterialDebugName:static end.*/
-
 
             }
         },
@@ -3474,14 +3741,17 @@ if ( TRACE ) { TRACE( "HexManager#GetMaterialDebugName", this ); }
             transferAnimator: null,
             transferSpeedIncreasePerStack: 0,
             clearSpeedIncreasePerStack: 0,
-            topMatchClearCount: 0,
             clearScaleDuration: 0,
             clearScaleEase: 0,
             clearScaleStagger: 0,
             clearFxPlayer: null,
             logTransferEvents: false,
             activeTransferRoutines: 0,
-            transferGeneration: 0
+            transferGeneration: 0,
+            firstTransferAndClearChainRaised: false
+        },
+        events: {
+            FirstTransferAndClearChainFinished: null
         },
         props: {
             IsTransferInProgress: {
@@ -3520,11 +3790,10 @@ if ( TRACE ) { TRACE( "HexManager#init", this ); }
                 this.transferOnStackPlaced = true;
                 this.transferSpeedIncreasePerStack = 0.3;
                 this.clearSpeedIncreasePerStack = 0.3;
-                this.topMatchClearCount = 3;
                 this.clearScaleDuration = 0.14;
                 this.clearScaleEase = DG.Tweening.Ease.InBack;
                 this.clearScaleStagger = 0.02;
-                this.logTransferEvents = true;
+                this.logTransferEvents = false;
             }
         },
         methods: {
@@ -3532,6 +3801,7 @@ if ( TRACE ) { TRACE( "HexManager#init", this ); }
             Awake: function () {
 if ( TRACE ) { TRACE( "HexManager#Awake", this ); }
 
+                this.firstTransferAndClearChainRaised = false;
                 this.PrewarmPools();
             },
             /*HexManager.Awake end.*/
@@ -3614,7 +3884,6 @@ if ( TRACE ) { TRACE( "HexManager#HandleStackPlaced", this ); }
                     !Bridge.staticEquals(onComplete, null) ? onComplete() : null;
                     return;
                 }
-                this.LogTransferEvent("Stack placed on floor. stack=" + (HexManager.GetStackDebugName(placedStack) || "") + ", floor=" + (HexManager.GetFloorDebugName(targetFloor) || ""));
                 this.AttachStackToFloor(placedStack, targetFloor);
                 var stacksCreator = this.StacksCreator;
                 if (UnityEngine.MonoBehaviour.op_Inequality(stacksCreator, null)) {
@@ -3649,6 +3918,7 @@ if ( TRACE ) { TRACE( "HexManager#PrewarmPools", this ); }
             ResolveTilePrefabForPool: function () {
 if ( TRACE ) { TRACE( "HexManager#ResolveTilePrefabForPool", this ); }
 
+                var $t;
                 var stacksCreator = this.StacksCreator;
                 if (UnityEngine.MonoBehaviour.op_Inequality(stacksCreator, null)) {
                     var tileTemplate = stacksCreator.ResolveTileTemplateForPool();
@@ -3656,9 +3926,27 @@ if ( TRACE ) { TRACE( "HexManager#ResolveTilePrefabForPool", this ); }
                         return tileTemplate;
                     }
                 }
-                var anyStack = UnityEngine.Object.FindObjectOfType(HexStack);
+                var anyStack = null;
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
+                try {
+                    while ($t.moveNext()) {
+                        var stack = $t.Current;
+                        if (UnityEngine.MonoBehaviour.op_Equality(stack, null)) {
+                            continue;
+                        }
+                        anyStack = stack;
+                        break;
+                    }
+                } finally {
+                    if (Bridge.is($t, System.IDisposable)) {
+                        $t.System$IDisposable$Dispose();
+                    }
+                }
                 if (UnityEngine.MonoBehaviour.op_Equality(anyStack, null)) {
-                    return null;
+                    anyStack = UnityEngine.Object.FindObjectOfType(HexStack);
+                    if (UnityEngine.MonoBehaviour.op_Equality(anyStack, null)) {
+                        return null;
+                    }
                 }
                 return anyStack.GetTileTemplateForPool();
             },
@@ -3670,15 +3958,13 @@ if ( TRACE ) { TRACE( "HexManager#BeginResolveTopColorTransfer", this ); }
 
                 this.activeTransferRoutines = (this.activeTransferRoutines + 1) | 0;
                 var state = new HexManager.TransferChainState(this.transferGeneration, onComplete);
-                this.LogTransferEvent(System.String.format("Transfer chain started. sourceStack={0}, sourceFloor={1}, activeChains={2}", HexManager.GetStackDebugName(sourceStack), HexManager.GetFloorDebugName(sourceFloor), Bridge.box(this.activeTransferRoutines, System.Int32)));
                 if (UnityEngine.MonoBehaviour.op_Equality(sourceStack, null) || UnityEngine.MonoBehaviour.op_Equality(sourceFloor, null)) {
-                    this.LogTransferEvent("Transfer chain aborted: sourceStack/sourceFloor is null.");
                     this.FinishTransferChain(state);
-                } else {
-                    this.EnqueueForTransferCheck(sourceStack, state.PendingStacks, state.QueuedStacks);
-                    this.EnqueueNeighborStacksForTransferCheck(sourceFloor, state.PendingStacks, state.QueuedStacks);
-                    this.ContinueResolveTopColorTransfer(state);
+                    return;
                 }
+                this.EnqueueForTransferCheck(sourceStack, state.PendingStacks, state.QueuedStacks);
+                this.EnqueueNeighborStacksForTransferCheck(sourceFloor, state.PendingStacks, state.QueuedStacks);
+                this.ContinueResolveTopColorTransfer(state);
             },
             /*HexManager.BeginResolveTopColorTransfer end.*/
 
@@ -3704,22 +3990,24 @@ if ( TRACE ) { TRACE( "HexManager#ContinueResolveTopColorTransfer", this ); }
                         var currentSourceFloor = { };
                         var targetStack = { };
                         var targetFloor = { };
-                        var topMaterial = { };
-                        if (!this.TryResolveStackFloor(currentSourceStack.v, currentSourceFloor) || !this.TryFindMatchingNeighbor(currentSourceStack.v, currentSourceFloor.v, targetStack, targetFloor, topMaterial)) {
+                        var topColorId = { };
+                        if (!this.TryResolveStackFloor(currentSourceStack.v, currentSourceFloor) || !this.TryFindMatchingNeighbor(currentSourceStack.v, currentSourceFloor.v, targetStack, targetFloor, topColorId)) {
                             continue;
                         }
-                        var transferCount = currentSourceStack.v.CountTopTilesWithMaterial(topMaterial.v);
+                        var transferCount = currentSourceStack.v.CountTopTilesWithColorId(topColorId.v);
                         if (transferCount <= 0) {
                             continue;
                         }
                         state.TransferredInPass = true;
-                        var transferStepNumber = { v : (state.TransferStepIndex + 1) | 0 };
+                        var transferStepNumber = (state.TransferStepIndex + 1) | 0;
                         var transferSpeedMultiplier = this.GetChainSpeedMultiplier(state.TransferStepIndex, this.transferSpeedIncreasePerStack);
-                        this.LogTransferEvent(System.String.format("Transfer step #{0}: count={1}, color={2}, from={3}({4}) -> to={5}({6}), speedMul={7:F2}", Bridge.box(transferStepNumber.v, System.Int32), Bridge.box(transferCount, System.Int32), HexManager.GetMaterialDebugName(topMaterial.v), HexManager.GetStackDebugName(currentSourceStack.v), HexManager.GetFloorDebugName(currentSourceFloor.v), HexManager.GetStackDebugName(targetStack.v), HexManager.GetFloorDebugName(targetFloor.v), Bridge.box(transferSpeedMultiplier, System.Single, System.Single.format, System.Single.getHashCode)));
-                        this.transferAnimator.TransferTopTilesFan(currentSourceStack.v, currentSourceFloor.v, targetStack.v, targetFloor.v, transferCount, transferSpeedMultiplier, (function ($me, transferStepNumber, currentSourceStack, targetStack, currentSourceFloor, targetFloor) {
+                        this.transferAnimator.TransferTopTilesFan(currentSourceStack.v, currentSourceFloor.v, targetStack.v, targetFloor.v, transferCount, transferSpeedMultiplier, (function ($me, targetStack, currentSourceStack, currentSourceFloor, targetFloor) {
                             return Bridge.fn.bind($me, function () {
                                 if (this.IsTransferChainActive(state)) {
-                                    this.LogTransferEvent(System.String.format("Transfer step #{0} completed.", [Bridge.box(transferStepNumber.v, System.Int32)]));
+                                    state.HadTransfers = true;
+                                    if (UnityEngine.MonoBehaviour.op_Inequality(targetStack.v, null)) {
+                                        state.TransferTargetStacks.add(targetStack.v);
+                                    }
                                     state.TransferStepIndex = (state.TransferStepIndex + 1) | 0;
                                     this.EnqueueForTransferCheck(currentSourceStack.v, state.PendingStacks, state.QueuedStacks);
                                     this.EnqueueForTransferCheck(targetStack.v, state.PendingStacks, state.QueuedStacks);
@@ -3728,7 +4016,7 @@ if ( TRACE ) { TRACE( "HexManager#ContinueResolveTopColorTransfer", this ); }
                                     this.ContinueResolveTopColorTransfer(state);
                                 }
                             });
-                        })(this, transferStepNumber, currentSourceStack, targetStack, currentSourceFloor, targetFloor));
+                        })(this, targetStack, currentSourceStack, currentSourceFloor, targetFloor));
                         return;
                     }
                     if (state.LoopGuard >= 4096) {
@@ -3747,17 +4035,16 @@ if ( TRACE ) { TRACE( "HexManager#ContinueResolveTopColorTransfer", this ); }
                         continue;
                     }
                     var clearBatches = { };
-                    if (!this.TryCollectClearBatches(clearBatches)) {
+                    if (!this.TryCollectClearBatches(state.TransferTargetStacks, clearBatches)) {
                         this.FinishTransferChain(state);
                         return;
                     }
                     var isParallelClear = { v : clearBatches.v.Count > 1 };
                     var clearSpeedMultiplier = (isParallelClear.v ? 1.0 : this.GetChainSpeedMultiplier(state.ClearStepIndex, this.clearSpeedIncreasePerStack));
-                    this.LogTransferEvent(System.String.format("Top clear phase: batches={0}, parallel={1}, speedMul={2:F2}", Bridge.box(clearBatches.v.Count, System.Int32), Bridge.box(isParallelClear.v, System.Boolean, System.Boolean.toString), Bridge.box(clearSpeedMultiplier, System.Single, System.Single.format, System.Single.getHashCode)));
+                    state.HadClears = true;
                     this.ClearBatchesParallel(clearBatches.v, clearSpeedMultiplier, (function ($me, isParallelClear) {
                         return Bridge.fn.bind($me, function () {
                             if (this.IsTransferChainActive(state)) {
-                                this.LogTransferEvent("Top clear phase completed.");
                                 if (!isParallelClear.v) {
                                     state.ClearStepIndex = (state.ClearStepIndex + 1) | 0;
                                 }
@@ -3787,7 +4074,10 @@ if ( TRACE ) { TRACE( "HexManager#FinishTransferChain", this ); }
                 if (state != null && !state.IsCompleted && state.Generation === this.transferGeneration) {
                     state.IsCompleted = true;
                     this.activeTransferRoutines = UnityEngine.Mathf.Max(0, ((this.activeTransferRoutines - 1) | 0));
-                    this.LogTransferEvent(System.String.format("Transfer chain finished. activeChains={0}", [Bridge.box(this.activeTransferRoutines, System.Int32)]));
+                    if (!this.firstTransferAndClearChainRaised && state.HadTransfers && state.HadClears) {
+                        this.firstTransferAndClearChainRaised = true;
+                        !Bridge.staticEquals(this.FirstTransferAndClearChainFinished, null) ? this.FirstTransferAndClearChainFinished() : null;
+                    }
                     !Bridge.staticEquals(state.OnComplete, null) ? state.OnComplete() : null;
                 }
             },
@@ -3825,9 +4115,7 @@ if ( TRACE ) { TRACE( "HexManager#EnqueueNeighborStacksForTransferCheck", this )
 if ( TRACE ) { TRACE( "HexManager#EnqueueAllStacksForTransferCheck", this ); }
 
                 var $t;
-                var discoveredStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
-                var array = discoveredStacks;
-                $t = Bridge.getEnumerator(array);
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
                 try {
                     while ($t.moveNext()) {
                         var stack = $t.Current;
@@ -3861,9 +4149,7 @@ if ( TRACE ) { TRACE( "HexManager#TryFindAnyTransferCandidate", this ); }
                 var $t;
                 sourceStack.v = null;
                 sourceFloor.v = null;
-                var discoveredStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
-                var array = discoveredStacks;
-                $t = Bridge.getEnumerator(array);
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
                 try {
                     while ($t.moveNext()) {
                         var stack = $t.Current;
@@ -3871,11 +4157,12 @@ if ( TRACE ) { TRACE( "HexManager#TryFindAnyTransferCandidate", this ); }
                         var _discard2 = { };
                         var _discard3 = { };
                         var floor = { };
-                        if (this.TryResolveStackFloor(stack, floor) && this.TryFindMatchingNeighbor(stack, floor.v, _discard1, _discard2, _discard3)) {
-                            sourceStack.v = stack;
-                            sourceFloor.v = floor.v;
-                            return true;
+                        if (!this.TryResolveStackFloor(stack, floor) || !this.TryFindMatchingNeighbor(stack, floor.v, _discard1, _discard2, _discard3)) {
+                            continue;
                         }
+                        sourceStack.v = stack;
+                        sourceFloor.v = floor.v;
+                        return true;
                     }
                 } finally {
                     if (Bridge.is($t, System.IDisposable)) {
@@ -3887,14 +4174,15 @@ if ( TRACE ) { TRACE( "HexManager#TryFindAnyTransferCandidate", this ); }
             /*HexManager.TryFindAnyTransferCandidate end.*/
 
             /*HexManager.TryCollectClearBatches start.*/
-            TryCollectClearBatches: function (clearBatches) {
+            TryCollectClearBatches: function (eligibleStacks, clearBatches) {
 if ( TRACE ) { TRACE( "HexManager#TryCollectClearBatches", this ); }
 
                 var $t;
                 clearBatches.v = new (System.Collections.Generic.List$1(HexManager.StackClearBatch)).ctor();
-                var discoveredStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
-                var array = discoveredStacks;
-                $t = Bridge.getEnumerator(array);
+                if (eligibleStacks == null || eligibleStacks.Count === 0) {
+                    return false;
+                }
+                $t = Bridge.getEnumerator(eligibleStacks);
                 try {
                     while ($t.moveNext()) {
                         var stack = $t.Current;
@@ -3913,18 +4201,18 @@ if ( TRACE ) { TRACE( "HexManager#TryCollectClearBatches", this ); }
             /*HexManager.TryCollectClearBatches end.*/
 
             /*HexManager.TryFindMatchingNeighbor start.*/
-            TryFindMatchingNeighbor: function (sourceStack, sourceFloor, targetStack, targetFloor, topMaterial) {
+            TryFindMatchingNeighbor: function (sourceStack, sourceFloor, targetStack, targetFloor, topColorId) {
 if ( TRACE ) { TRACE( "HexManager#TryFindMatchingNeighbor", this ); }
 
                 targetStack.v = null;
                 targetFloor.v = null;
-                topMaterial.v = ((UnityEngine.MonoBehaviour.op_Inequality(sourceStack, null)) ? sourceStack.GetTopMaterial() : null);
-                if (UnityEngine.MonoBehaviour.op_Equality(sourceStack, null) || UnityEngine.MonoBehaviour.op_Equality(sourceFloor, null) || topMaterial.v == null) {
+                topColorId.v = ((UnityEngine.MonoBehaviour.op_Inequality(sourceStack, null)) ? sourceStack.GetTopColorId() : (-1));
+                if (UnityEngine.MonoBehaviour.op_Equality(sourceStack, null) || UnityEngine.MonoBehaviour.op_Equality(sourceFloor, null) || topColorId.v < 0) {
                     return false;
                 }
                 for (var sideIndex = 0; sideIndex < 6; sideIndex = (sideIndex + 1) | 0) {
                     var neighborFloor = sourceFloor.GetNeighborBySide(sideIndex);
-                    if (this.TryGetMatchingStack(sourceStack, neighborFloor, topMaterial.v, targetStack)) {
+                    if (this.TryGetMatchingStack(sourceStack, neighborFloor, topColorId.v, targetStack)) {
                         targetFloor.v = neighborFloor;
                         return true;
                     }
@@ -3932,7 +4220,7 @@ if ( TRACE ) { TRACE( "HexManager#TryFindMatchingNeighbor", this ); }
                 var nearFloors = sourceFloor.NearFloors;
                 for (var i = 0; i < System.Array.getCount(nearFloors, HexFloor); i = (i + 1) | 0) {
                     var neighborFloor2 = System.Array.getItem(nearFloors, i, HexFloor);
-                    if (this.TryGetMatchingStack(sourceStack, neighborFloor2, topMaterial.v, targetStack)) {
+                    if (this.TryGetMatchingStack(sourceStack, neighborFloor2, topColorId.v, targetStack)) {
                         targetFloor.v = neighborFloor2;
                         return true;
                     }
@@ -3942,7 +4230,7 @@ if ( TRACE ) { TRACE( "HexManager#TryFindMatchingNeighbor", this ); }
             /*HexManager.TryFindMatchingNeighbor end.*/
 
             /*HexManager.TryGetMatchingStack start.*/
-            TryGetMatchingStack: function (sourceStack, neighborFloor, topMaterial, matchingStack) {
+            TryGetMatchingStack: function (sourceStack, neighborFloor, topColorId, matchingStack) {
 if ( TRACE ) { TRACE( "HexManager#TryGetMatchingStack", this ); }
 
                 matchingStack.v = null;
@@ -3953,7 +4241,7 @@ if ( TRACE ) { TRACE( "HexManager#TryGetMatchingStack", this ); }
                 if (UnityEngine.MonoBehaviour.op_Equality(neighborStack, null) || UnityEngine.MonoBehaviour.op_Equality(neighborStack, sourceStack)) {
                     return false;
                 }
-                if (!Bridge.referenceEquals(neighborStack.GetTopMaterial(), topMaterial)) {
+                if (neighborStack.GetTopColorId() !== topColorId) {
                     return false;
                 }
                 matchingStack.v = neighborStack;
@@ -3996,16 +4284,15 @@ if ( TRACE ) { TRACE( "HexManager#ResolveStackOnFloor", this ); }
                     }
                     floor.ClearOccupiedStack(occupiedStack);
                 }
-                var discoveredStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
-                var array = discoveredStacks;
-                $t = Bridge.getEnumerator(array);
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
                 try {
                     while ($t.moveNext()) {
                         var stack = $t.Current;
-                        if (!(UnityEngine.MonoBehaviour.op_Equality(stack, null)) && stack.gameObject.activeInHierarchy && stack.TileCount !== 0 && !(UnityEngine.MonoBehaviour.op_Equality(stack, ignoredStack)) && !(UnityEngine.MonoBehaviour.op_Inequality(stack.CurrentFloor, floor))) {
-                            floor.SetOccupiedStack(stack);
-                            return stack;
+                        if (UnityEngine.MonoBehaviour.op_Equality(stack, null) || !stack.gameObject.activeInHierarchy || stack.TileCount === 0 || UnityEngine.MonoBehaviour.op_Equality(stack, ignoredStack) || UnityEngine.MonoBehaviour.op_Inequality(stack.CurrentFloor, floor)) {
+                            continue;
                         }
+                        floor.SetOccupiedStack(stack);
+                        return stack;
                     }
                 } finally {
                     if (Bridge.is($t, System.IDisposable)) {
@@ -4167,12 +4454,12 @@ if ( TRACE ) { TRACE( "HexManager#TryExtractTopMatchTiles", this ); }
                 if (UnityEngine.MonoBehaviour.op_Equality(stack, null)) {
                     return false;
                 }
-                var topMaterial = stack.GetTopMaterial();
-                if (topMaterial == null) {
+                var topColorId = stack.GetTopColorId();
+                if (topColorId < 0) {
                     return false;
                 }
-                var topSameColorCount = stack.CountTopTilesWithMaterial(topMaterial);
-                if (topSameColorCount < this.topMatchClearCount) {
+                var topSameColorCount = stack.CountTopTilesWithColorId(topColorId);
+                if (topSameColorCount < this.GetTopMatchClearCount()) {
                     return false;
                 }
                 var clearCount = topSameColorCount;
@@ -4187,6 +4474,18 @@ if ( TRACE ) { TRACE( "HexManager#TryExtractTopMatchTiles", this ); }
                 return tilesToClear.v.Count > 0;
             },
             /*HexManager.TryExtractTopMatchTiles end.*/
+
+            /*HexManager.GetTopMatchClearCount start.*/
+            GetTopMatchClearCount: function () {
+if ( TRACE ) { TRACE( "HexManager#GetTopMatchClearCount", this ); }
+
+                var config = this.hexConfig;
+                if (config == null) {
+                    return 3;
+                }
+                return UnityEngine.Mathf.Max(1, config.topMatchClearCount);
+            },
+            /*HexManager.GetTopMatchClearCount end.*/
 
             /*HexManager.LogTransferEvent start.*/
             LogTransferEvent: function (message) {
@@ -4264,6 +4563,7 @@ if ( TRACE ) { TRACE( "HexManager.StackClearBatch#$clone", this ); }
         fields: {
             PendingStacks: null,
             QueuedStacks: null,
+            TransferTargetStacks: null,
             Generation: 0,
             OnComplete: null,
             TransferStepIndex: 0,
@@ -4271,6 +4571,8 @@ if ( TRACE ) { TRACE( "HexManager.StackClearBatch#$clone", this ); }
             LoopGuard: 0,
             PassStarted: false,
             TransferredInPass: false,
+            HadTransfers: false,
+            HadClears: false,
             IsCompleted: false
         },
         ctors: {
@@ -4279,6 +4581,7 @@ if ( TRACE ) { TRACE( "HexManager.TransferChainState#init", this ); }
 
                 this.PendingStacks = new (System.Collections.Generic.Queue$1(HexStack)).ctor();
                 this.QueuedStacks = new (System.Collections.Generic.HashSet$1(HexStack)).ctor();
+                this.TransferTargetStacks = new (System.Collections.Generic.HashSet$1(HexStack)).ctor();
             },
             ctor: function (generation, onComplete) {
 if ( TRACE ) { TRACE( "HexManager.TransferChainState#ctor", this ); }
@@ -4639,23 +4942,57 @@ if ( TRACE ) { TRACE( "HexPoolService.ComponentPool$1#GetOrCreateBucket", this )
     Bridge.define("HexStack", {
         inherits: [UnityEngine.MonoBehaviour],
         statics: {
-            methods: {
-                /*HexStack.ResolveTileMaterialForIndex:static start.*/
-                ResolveTileMaterialForIndex: function (index, presetColors, randomColors) {
-if ( TRACE ) { TRACE( "HexStack#ResolveTileMaterialForIndex", this ); }
+            fields: {
+                ActiveStackSet: null
+            },
+            props: {
+                ActiveStacks: {
+                    get: function () {
+if ( TRACE ) { TRACE( "HexStack#ActiveStacks#get", this ); }
 
-                    if (presetColors != null && index < presetColors.length) {
-                        var presetMaterial = presetColors[index];
-                        if (presetMaterial != null) {
-                            return presetMaterial;
+                        return HexStack.ActiveStackSet;
+                    }
+                }
+            },
+            ctors: {
+                init: function () {
+if ( TRACE ) { TRACE( "HexStack#init", this ); }
+
+                    this.ActiveStackSet = new (System.Collections.Generic.HashSet$1(HexStack)).ctor();
+                }
+            },
+            methods: {
+                /*HexStack.ResolveTileColorIdForIndex:static start.*/
+                ResolveTileColorIdForIndex: function (index, presetColorIds, paletteLength) {
+if ( TRACE ) { TRACE( "HexStack#ResolveTileColorIdForIndex", this ); }
+
+                    if (paletteLength <= 0) {
+                        return -1;
+                    }
+                    if (presetColorIds != null && index < presetColorIds.length) {
+                        var presetColorId = presetColorIds[index];
+                        if (presetColorId >= 0 && presetColorId < paletteLength) {
+                            return presetColorId;
                         }
                     }
-                    if (randomColors == null || randomColors.length === 0) {
-                        return null;
-                    }
-                    return randomColors[UnityEngine.Random.Range(0, randomColors.length)];
+                    return UnityEngine.Random.Range(0, paletteLength);
                 },
-                /*HexStack.ResolveTileMaterialForIndex:static end.*/
+                /*HexStack.ResolveTileColorIdForIndex:static end.*/
+
+                /*HexStack.ResolveActivePaletteColorCount:static start.*/
+                ResolveActivePaletteColorCount: function (config, paletteLength) {
+if ( TRACE ) { TRACE( "HexStack#ResolveActivePaletteColorCount", this ); }
+
+                    if (paletteLength <= 0) {
+                        return 0;
+                    }
+                    var configuredCount = ((config != null) ? config.paletteColorCount : 0);
+                    if (configuredCount <= 0) {
+                        return paletteLength;
+                    }
+                    return Math.max(1, Math.min(configuredCount, paletteLength));
+                },
+                /*HexStack.ResolveActivePaletteColorCount:static end.*/
 
 
             }
@@ -4716,6 +5053,22 @@ if ( TRACE ) { TRACE( "HexStack#Awake", this ); }
             },
             /*HexStack.Awake end.*/
 
+            /*HexStack.OnEnable start.*/
+            OnEnable: function () {
+if ( TRACE ) { TRACE( "HexStack#OnEnable", this ); }
+
+                HexStack.ActiveStackSet.add(this);
+            },
+            /*HexStack.OnEnable end.*/
+
+            /*HexStack.OnDisable start.*/
+            OnDisable: function () {
+if ( TRACE ) { TRACE( "HexStack#OnDisable", this ); }
+
+                HexStack.ActiveStackSet.remove(this);
+            },
+            /*HexStack.OnDisable end.*/
+
             /*HexStack.Start start.*/
             Start: function () {
 if ( TRACE ) { TRACE( "HexStack#Start", this ); }
@@ -4728,29 +5081,28 @@ if ( TRACE ) { TRACE( "HexStack#Start", this ); }
             /*HexStack.Start end.*/
 
             /*HexStack.CreateStack start.*/
-            CreateStack: function (colorsBottomToTop) {
+            CreateStack: function (colorIdsBottomToTop) {
 if ( TRACE ) { TRACE( "HexStack#CreateStack", this ); }
 
-                if (colorsBottomToTop === void 0) { colorsBottomToTop = null; }
+                if (colorIdsBottomToTop === void 0) { colorIdsBottomToTop = null; }
                 this.EnsureTilesInitializedFromChildren();
-                var hasPreset = colorsBottomToTop != null && colorsBottomToTop.length !== 0;
-                var randomColors = null;
-                if (!hasPreset) {
-                    var config = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Config : null);
-                    if (config == null) {
-                        return;
-                    }
-                    randomColors = config.colors;
+                var hasPreset = colorIdsBottomToTop != null && colorIdsBottomToTop.length !== 0;
+                var palette = null;
+                var config = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Config : null);
+                if (config == null || config.colors == null || config.colors.length === 0) {
+                    return;
                 }
-                if ((!hasPreset && (randomColors == null || randomColors.length === 0)) || (hasPreset && !this.EnsureTileCount(colorsBottomToTop.length))) {
+                palette = config.colors;
+                var activePaletteColorCount = HexStack.ResolveActivePaletteColorCount(config, palette.length);
+                if (activePaletteColorCount <= 0 || (hasPreset && !this.EnsureTileCount(colorIdsBottomToTop.length))) {
                     return;
                 }
                 this.CompactNullTiles();
                 for (var i = 0; i < this.hexTiles.Count; i = (i + 1) | 0) {
-                    var tileMaterial = HexStack.ResolveTileMaterialForIndex(i, colorsBottomToTop, randomColors);
-                    if (tileMaterial != null) {
+                    var tileColorId = HexStack.ResolveTileColorIdForIndex(i, colorIdsBottomToTop, activePaletteColorCount);
+                    if (tileColorId >= 0 && tileColorId < palette.length) {
                         this.hexTiles.getItem(i).gameObject.SetActive(true);
-                        this.hexTiles.getItem(i).SetMaterial(tileMaterial);
+                        this.hexTiles.getItem(i).SetColor(tileColorId, palette[tileColorId].$clone());
                     }
                 }
                 this.stackInitialized = true;
@@ -4795,34 +5147,34 @@ if ( TRACE ) { TRACE( "HexStack#GetTopTile", this ); }
             },
             /*HexStack.GetTopTile end.*/
 
-            /*HexStack.GetTopMaterial start.*/
-            GetTopMaterial: function () {
-if ( TRACE ) { TRACE( "HexStack#GetTopMaterial", this ); }
+            /*HexStack.GetTopColorId start.*/
+            GetTopColorId: function () {
+if ( TRACE ) { TRACE( "HexStack#GetTopColorId", this ); }
 
                 var topTile = this.GetTopTile();
-                return (UnityEngine.MonoBehaviour.op_Inequality(topTile, null)) ? topTile.CurrentMaterial : null;
+                return (UnityEngine.MonoBehaviour.op_Inequality(topTile, null)) ? topTile.ColorIdValue : (-1);
             },
-            /*HexStack.GetTopMaterial end.*/
+            /*HexStack.GetTopColorId end.*/
 
-            /*HexStack.CountTopTilesWithMaterial start.*/
-            CountTopTilesWithMaterial: function (material) {
-if ( TRACE ) { TRACE( "HexStack#CountTopTilesWithMaterial", this ); }
+            /*HexStack.CountTopTilesWithColorId start.*/
+            CountTopTilesWithColorId: function (colorId) {
+if ( TRACE ) { TRACE( "HexStack#CountTopTilesWithColorId", this ); }
 
-                if (material == null) {
+                if (colorId < 0) {
                     return 0;
                 }
                 this.CompactNullTiles();
                 var count = 0;
                 for (var i = (this.hexTiles.Count - 1) | 0; i >= 0; i = (i - 1) | 0) {
                     var tile = this.hexTiles.getItem(i);
-                    if (UnityEngine.MonoBehaviour.op_Equality(tile, null) || !Bridge.referenceEquals(tile.CurrentMaterial, material)) {
+                    if (UnityEngine.MonoBehaviour.op_Equality(tile, null) || tile.ColorIdValue !== colorId) {
                         break;
                     }
                     count = (count + 1) | 0;
                 }
                 return count;
             },
-            /*HexStack.CountTopTilesWithMaterial end.*/
+            /*HexStack.CountTopTilesWithColorId end.*/
 
             /*HexStack.PopTopTile start.*/
             PopTopTile: function () {
@@ -5061,8 +5413,7 @@ if ( TRACE ) { TRACE( "HexStack#DetachFromFloor", this ); }
                     this.currentFloor.ClearOccupiedStack(this);
                     this.currentFloor = null;
                 }
-                var allFloors = UnityEngine.Object.FindObjectsOfType(HexFloor);
-                $t = Bridge.getEnumerator(allFloors);
+                $t = Bridge.getEnumerator(HexFloor.ActiveFloors, HexFloor);
                 try {
                     while ($t.moveNext()) {
                         var floor = $t.Current;
@@ -5086,6 +5437,95 @@ if ( TRACE ) { TRACE( "HexStack#DetachFromFloor", this ); }
     /*HexStacksCreator start.*/
     Bridge.define("HexStacksCreator", {
         inherits: [UnityEngine.MonoBehaviour],
+        statics: {
+            fields: {
+                GeneratedBottomLayerCount: 0,
+                GeneratedTopLayerCount: 0
+            },
+            ctors: {
+                init: function () {
+if ( TRACE ) { TRACE( "HexStacksCreator#init", this ); }
+
+                    this.GeneratedBottomLayerCount = 5;
+                    this.GeneratedTopLayerCount = 5;
+                }
+            },
+            methods: {
+                /*HexStacksCreator.NormalizePresetColorIds:static start.*/
+                NormalizePresetColorIds: function (presetColorIds, colorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#NormalizePresetColorIds", this ); }
+
+                    if (presetColorIds == null || presetColorIds.length === 0 || colorCount <= 0) {
+                        return null;
+                    }
+                    var normalized = System.Array.init(presetColorIds.length, 0, System.Int32);
+                    for (var i = 0; i < presetColorIds.length; i = (i + 1) | 0) {
+                        normalized[i] = HexStacksCreator.NormalizeColorId(presetColorIds[i], colorCount);
+                    }
+                    return normalized;
+                },
+                /*HexStacksCreator.NormalizePresetColorIds:static end.*/
+
+                /*HexStacksCreator.NormalizeColorId:static start.*/
+                NormalizeColorId: function (colorId, colorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#NormalizeColorId", this ); }
+
+                    if (colorCount <= 0) {
+                        return -1;
+                    }
+                    var normalized = colorId % colorCount;
+                    if (normalized < 0) {
+                        normalized = (normalized + colorCount) | 0;
+                    }
+                    return normalized;
+                },
+                /*HexStacksCreator.NormalizeColorId:static end.*/
+
+                /*HexStacksCreator.GetSpawnNeighborCount:static start.*/
+                GetSpawnNeighborCount: function (floor, spawnSet) {
+if ( TRACE ) { TRACE( "HexStacksCreator#GetSpawnNeighborCount", this ); }
+
+                    if (UnityEngine.MonoBehaviour.op_Equality(floor, null) || spawnSet == null || spawnSet.Count === 0) {
+                        return 0;
+                    }
+                    var count = 0;
+                    for (var side = 0; side < 6; side = (side + 1) | 0) {
+                        var neighbor = floor.GetNeighborBySide(side);
+                        if (UnityEngine.MonoBehaviour.op_Inequality(neighbor, null) && spawnSet.contains(neighbor)) {
+                            count = (count + 1) | 0;
+                        }
+                    }
+                    return count;
+                },
+                /*HexStacksCreator.GetSpawnNeighborCount:static end.*/
+
+                /*HexStacksCreator.BuildNoSpawnCoordSet:static start.*/
+                BuildNoSpawnCoordSet: function (config) {
+if ( TRACE ) { TRACE( "HexStacksCreator#BuildNoSpawnCoordSet", this ); }
+
+                    var blockedCoords = new (System.Collections.Generic.HashSet$1(System.Int64)).ctor();
+                    if (config == null || config.noStackSpawnCoords == null) {
+                        return blockedCoords;
+                    }
+                    for (var i = 0; i < config.noStackSpawnCoords.length; i = (i + 1) | 0) {
+                        var coord = config.noStackSpawnCoords[i].$clone();
+                        blockedCoords.add(HexStacksCreator.BuildCoordKey(coord.x, coord.z));
+                    }
+                    return blockedCoords;
+                },
+                /*HexStacksCreator.BuildNoSpawnCoordSet:static end.*/
+
+                /*HexStacksCreator.BuildCoordKey:static start.*/
+                BuildCoordKey: function (x, z) {
+if ( TRACE ) { TRACE( "HexStacksCreator#BuildCoordKey", this ); }
+
+                    return (System.Int64(x).shl(32)).xor(System.Int64((z >>> 0)));
+                },
+                /*HexStacksCreator.BuildCoordKey:static end.*/
+
+
+            }
+        },
         fields: {
             gameContext: null,
             spawnStackPrefab: null,
@@ -5096,10 +5536,14 @@ if ( TRACE ) { TRACE( "HexStack#DetachFromFloor", this ); }
             respawnWhenAllPlaced: false,
             spawnSlotsOnlyOnce: false,
             slotOccupancyRadius: 0,
+            logGeneratedFill: false,
+            debugLogs: false,
             pendingPlacementStacks: null,
             runtimePooledStacks: null,
+            stackQueryBuffer: null,
             runtimeSpawnTemplate: null,
-            hasSpawnedStacks: false
+            hasSpawnedStacks: false,
+            InitialPlayerStacksCompleted: false
         },
         props: {
             HexConfig: {
@@ -5125,8 +5569,10 @@ if ( TRACE ) { TRACE( "HexStacksCreator#init", this ); }
                 this.clearExistingOnStart = true;
                 this.respawnWhenAllPlaced = true;
                 this.slotOccupancyRadius = 0.2;
+                this.debugLogs = false;
                 this.pendingPlacementStacks = new (System.Collections.Generic.HashSet$1(HexStack)).ctor();
                 this.runtimePooledStacks = new (System.Collections.Generic.HashSet$1(HexStack)).ctor();
+                this.stackQueryBuffer = new (System.Collections.Generic.List$1(HexStack)).ctor();
             }
         },
         methods: {
@@ -5142,6 +5588,7 @@ if ( TRACE ) { TRACE( "HexStacksCreator#Start", this ); }
                     this.PrewarmStacks();
                     this.TrySpawnIntoSlotsByPlacementState(false);
                 }
+                this.MarkInitialPlayerStacksCompleted();
             },
             /*HexStacksCreator.Start end.*/
 
@@ -5154,11 +5601,6 @@ if ( TRACE ) { TRACE( "HexStacksCreator#TryRecycleEmptyStack", this ); }
                 }
                 this.pendingPlacementStacks.remove(stack);
                 stack.SetCurrentFloor(null);
-                if (UnityEngine.MonoBehaviour.op_Equality(stack.GetComponent(HexDragger), null)) {
-                    this.runtimePooledStacks.remove(stack);
-                    UnityEngine.Object.Destroy(stack.gameObject);
-                    return true;
-                }
                 var fallbackPrefab = ((UnityEngine.MonoBehaviour.op_Inequality(this.runtimeSpawnTemplate, null)) ? this.runtimeSpawnTemplate : this.spawnStackPrefab);
                 var poolService = this.PoolService;
                 if (UnityEngine.MonoBehaviour.op_Inequality(poolService, null) && UnityEngine.MonoBehaviour.op_Inequality(fallbackPrefab, null) && poolService.ReturnStack(stack, fallbackPrefab)) {
@@ -5179,6 +5621,51 @@ if ( TRACE ) { TRACE( "HexStacksCreator#NotifyStackPlaced", this ); }
                 this.TrySpawnIntoSlotsByPlacementState(true);
             },
             /*HexStacksCreator.NotifyStackPlaced end.*/
+
+            /*HexStacksCreator.FillFloorsWithConfiguredStacks start.*/
+            FillFloorsWithConfiguredStacks: function (floors) {
+if ( TRACE ) { TRACE( "HexStacksCreator#FillFloorsWithConfiguredStacks", this ); }
+
+                if (floors == null || System.Array.getCount(floors, HexFloor) === 0) {
+                    return;
+                }
+                var hexConfig = this.HexConfig;
+                if (hexConfig == null || hexConfig.colors == null || hexConfig.colors.length === 0) {
+                    return;
+                }
+                var activePaletteColorCount = this.GetActivePaletteColorCount(hexConfig.colors);
+                if (activePaletteColorCount < 2) {
+                    UnityEngine.Debug.LogWarning$1("[HexStacksCreator] At least 2 colors are required for generated floor stacks.");
+                    return;
+                }
+                this.CleanupTrackedStacks();
+                this.CreateRuntimeSpawnTemplate();
+                this.PrewarmStacks();
+                this.ClearStacksPlacedOnFloors();
+                var prefab = ((UnityEngine.MonoBehaviour.op_Inequality(this.runtimeSpawnTemplate, null)) ? this.runtimeSpawnTemplate : this.spawnStackPrefab);
+                if (UnityEngine.MonoBehaviour.op_Equality(prefab, null)) {
+                    return;
+                }
+                var noSpawnCoords = HexStacksCreator.BuildNoSpawnCoordSet(hexConfig);
+                var spawnFloors = this.CollectSpawnFloors(floors, noSpawnCoords);
+                if (spawnFloors.Count === 0) {
+                    return;
+                }
+                var topColorByFloor = { };
+                if (!this.TryBuildTopColorAssignment(spawnFloors, activePaletteColorCount, topColorByFloor)) {
+                    UnityEngine.Debug.LogWarning$1("[HexStacksCreator] Unable to assign top colors without neighbor duplicates.");
+                    return;
+                }
+                var createdCount = 0;
+                for (var i = 0; i < spawnFloors.Count; i = (i + 1) | 0) {
+                    var floor = spawnFloors.getItem(i);
+                    var topColorId = { };
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(floor, null)) && topColorByFloor.v.tryGetValue(floor, topColorId) && this.SpawnConfiguredFloorStack(floor, prefab, topColorId.v, activePaletteColorCount)) {
+                        createdCount = (createdCount + 1) | 0;
+                    }
+                }
+            },
+            /*HexStacksCreator.FillFloorsWithConfiguredStacks end.*/
 
             /*HexStacksCreator.TrySpawnIntoSlotsByPlacementState start.*/
             TrySpawnIntoSlotsByPlacementState: function (respectRespawnToggle) {
@@ -5269,7 +5756,7 @@ if ( TRACE ) { TRACE( "HexStacksCreator#SpawnStacksIntoSlots", this ); }
                             spawnedStack.gameObject.SetActive(true);
                             spawnedStack.transform.SetPositionAndRotation(slot.position, slot.rotation);
                             spawnedStack.SetCurrentFloor(null);
-                            spawnedStack.CreateStack(this.GetRandomPresetColors());
+                            spawnedStack.CreateStack(this.GetPlayerStackColorIds());
                             this.runtimePooledStacks.add(spawnedStack);
                             this.RegisterPendingPlacementStack(spawnedStack);
                             spawnedCount = (spawnedCount + 1) | 0;
@@ -5280,24 +5767,69 @@ if ( TRACE ) { TRACE( "HexStacksCreator#SpawnStacksIntoSlots", this ); }
             },
             /*HexStacksCreator.SpawnStacksIntoSlots end.*/
 
-            /*HexStacksCreator.GetRandomPresetColors start.*/
-            GetRandomPresetColors: function () {
-if ( TRACE ) { TRACE( "HexStacksCreator#GetRandomPresetColors", this ); }
+            /*HexStacksCreator.GetPlayerStackColorIds start.*/
+            GetPlayerStackColorIds: function () {
+if ( TRACE ) { TRACE( "HexStacksCreator#GetPlayerStackColorIds", this ); }
 
                 var hexConfig = this.HexConfig;
-                if (hexConfig == null || hexConfig.startStackColors == null || hexConfig.startStackColors.length === 0) {
+                var activePaletteColorCount = this.GetActivePaletteColorCount((hexConfig != null) ? hexConfig.colors : null);
+                if (activePaletteColorCount <= 0) {
+                    return null;
+                }
+                var fivePlusFiveColorIds = { };
+                if (hexConfig != null && hexConfig.generatePlayerStacksByFivePlusFive && this.TryBuildFivePlusFiveColorIds(activePaletteColorCount, fivePlusFiveColorIds)) {
+                    return fivePlusFiveColorIds.v;
+                }
+                return this.GetRandomPresetColorIds(activePaletteColorCount);
+            },
+            /*HexStacksCreator.GetPlayerStackColorIds end.*/
+
+            /*HexStacksCreator.GetRandomPresetColorIds start.*/
+            GetRandomPresetColorIds: function (activePaletteColorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#GetRandomPresetColorIds", this ); }
+
+                var hexConfig = this.HexConfig;
+                if (activePaletteColorCount <= 0 || hexConfig == null || hexConfig.startStackColors == null || hexConfig.startStackColors.length === 0) {
                     return null;
                 }
                 var startIndex = UnityEngine.Random.Range(0, hexConfig.startStackColors.length);
                 for (var i = 0; i < hexConfig.startStackColors.length; i = (i + 1) | 0) {
                     var preset = hexConfig.startStackColors[(((startIndex + i) | 0)) % hexConfig.startStackColors.length];
-                    if (preset != null && preset.colorsBottomToTop != null && preset.colorsBottomToTop.length !== 0) {
-                        return preset.colorsBottomToTop;
+                    if (preset != null && preset.colorIdsBottomToTop != null && preset.colorIdsBottomToTop.length !== 0) {
+                        return HexStacksCreator.NormalizePresetColorIds(preset.colorIdsBottomToTop, activePaletteColorCount);
                     }
                 }
                 return null;
             },
-            /*HexStacksCreator.GetRandomPresetColors end.*/
+            /*HexStacksCreator.GetRandomPresetColorIds end.*/
+
+            /*HexStacksCreator.TryBuildFivePlusFiveColorIds start.*/
+            TryBuildFivePlusFiveColorIds: function (activePaletteColorCount, colorIdsBottomToTop) {
+if ( TRACE ) { TRACE( "HexStacksCreator#TryBuildFivePlusFiveColorIds", this ); }
+
+                colorIdsBottomToTop.v = null;
+                if (activePaletteColorCount <= 0) {
+                    return false;
+                }
+                var bottomColorId = UnityEngine.Random.Range(0, activePaletteColorCount);
+                var topColorId = bottomColorId;
+                if (activePaletteColorCount > 1) {
+                    topColorId = UnityEngine.Random.Range(0, ((activePaletteColorCount - 1) | 0));
+                    if (topColorId >= bottomColorId) {
+                        topColorId = (topColorId + 1) | 0;
+                    }
+                }
+                var tileCount = 10;
+                colorIdsBottomToTop.v = System.Array.init(tileCount, 0, System.Int32);
+                for (var j = 0; j < 5; j = (j + 1) | 0) {
+                    colorIdsBottomToTop.v[j] = bottomColorId;
+                }
+                for (var i = 5; i < tileCount; i = (i + 1) | 0) {
+                    colorIdsBottomToTop.v[i] = topColorId;
+                }
+                return true;
+            },
+            /*HexStacksCreator.TryBuildFivePlusFiveColorIds end.*/
 
             /*HexStacksCreator.RentStack start.*/
             RentStack: function (prefab, position, rotation, parent) {
@@ -5345,8 +5877,7 @@ if ( TRACE ) { TRACE( "HexStacksCreator#IsSlotOccupied", this ); }
                 var safeRadius = UnityEngine.Mathf.Max(0.01, this.slotOccupancyRadius);
                 var maxSqrDistance = safeRadius * safeRadius;
                 var slotPosition = slot.position.$clone();
-                var allStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
-                $t = Bridge.getEnumerator(allStacks);
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
                 try {
                     while ($t.moveNext()) {
                         var stack = $t.Current;
@@ -5394,19 +5925,265 @@ if ( TRACE ) { TRACE( "HexStacksCreator#PrewarmStacks", this ); }
             },
             /*HexStacksCreator.PrewarmStacks end.*/
 
+            /*HexStacksCreator.CleanupTrackedStacks start.*/
+            CleanupTrackedStacks: function () {
+if ( TRACE ) { TRACE( "HexStacksCreator#CleanupTrackedStacks", this ); }
+
+                this.pendingPlacementStacks.RemoveWhere(function (stack) {
+                    return UnityEngine.MonoBehaviour.op_Equality(stack, null);
+                });
+                this.runtimePooledStacks.RemoveWhere(function (stack) {
+                    return UnityEngine.MonoBehaviour.op_Equality(stack, null);
+                });
+            },
+            /*HexStacksCreator.CleanupTrackedStacks end.*/
+
+            /*HexStacksCreator.ClearStacksPlacedOnFloors start.*/
+            ClearStacksPlacedOnFloors: function () {
+if ( TRACE ) { TRACE( "HexStacksCreator#ClearStacksPlacedOnFloors", this ); }
+
+                var $t;
+                this.stackQueryBuffer.clear();
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
+                try {
+                    while ($t.moveNext()) {
+                        var stack = $t.Current;
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(stack, null)) && !(UnityEngine.MonoBehaviour.op_Equality(stack, this.runtimeSpawnTemplate)) && !(UnityEngine.MonoBehaviour.op_Equality(stack.CurrentFloor, null))) {
+                            this.stackQueryBuffer.add(stack);
+                        }
+                    }
+                } finally {
+                    if (Bridge.is($t, System.IDisposable)) {
+                        $t.System$IDisposable$Dispose();
+                    }
+                }
+                for (var i = 0; i < this.stackQueryBuffer.Count; i = (i + 1) | 0) {
+                    this.DespawnStack(this.stackQueryBuffer.getItem(i));
+                }
+            },
+            /*HexStacksCreator.ClearStacksPlacedOnFloors end.*/
+
+            /*HexStacksCreator.DespawnStack start.*/
+            DespawnStack: function (stack) {
+if ( TRACE ) { TRACE( "HexStacksCreator#DespawnStack", this ); }
+
+                if (UnityEngine.MonoBehaviour.op_Equality(stack, null)) {
+                    return;
+                }
+                var floor = stack.CurrentFloor;
+                if (UnityEngine.MonoBehaviour.op_Inequality(floor, null)) {
+                    floor.ClearOccupiedStack(stack);
+                    stack.SetCurrentFloor(null);
+                }
+                this.pendingPlacementStacks.remove(stack);
+                this.runtimePooledStacks.remove(stack);
+                var fallbackPrefab = ((UnityEngine.MonoBehaviour.op_Inequality(this.runtimeSpawnTemplate, null)) ? this.runtimeSpawnTemplate : this.spawnStackPrefab);
+                var poolService = this.PoolService;
+                if (!(UnityEngine.MonoBehaviour.op_Inequality(poolService, null)) || !(UnityEngine.MonoBehaviour.op_Inequality(fallbackPrefab, null)) || !poolService.ReturnStack(stack, fallbackPrefab)) {
+                    if (UnityEngine.Application.isPlaying) {
+                        UnityEngine.Object.Destroy(stack.gameObject);
+                    } else {
+                        UnityEngine.Object.DestroyImmediate(stack.gameObject);
+                    }
+                }
+            },
+            /*HexStacksCreator.DespawnStack end.*/
+
+            /*HexStacksCreator.CollectSpawnFloors start.*/
+            CollectSpawnFloors: function (floors, noSpawnCoords) {
+if ( TRACE ) { TRACE( "HexStacksCreator#CollectSpawnFloors", this ); }
+
+                var result = new (System.Collections.Generic.List$1(HexFloor)).ctor();
+                for (var i = 0; i < System.Array.getCount(floors, HexFloor); i = (i + 1) | 0) {
+                    var floor = System.Array.getItem(floors, i, HexFloor);
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(floor, null)) && !noSpawnCoords.contains(HexStacksCreator.BuildCoordKey(floor.GridX, floor.GridZ)) && !(UnityEngine.MonoBehaviour.op_Inequality(floor.OccupiedStack, null))) {
+                        result.add(floor);
+                    }
+                }
+                return result;
+            },
+            /*HexStacksCreator.CollectSpawnFloors end.*/
+
+            /*HexStacksCreator.SpawnConfiguredFloorStack start.*/
+            SpawnConfiguredFloorStack: function (floor, prefab, topColorId, activePaletteColorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#SpawnConfiguredFloorStack", this ); }
+
+                if (UnityEngine.MonoBehaviour.op_Equality(floor, null) || UnityEngine.MonoBehaviour.op_Equality(prefab, null) || activePaletteColorCount <= 0) {
+                    return false;
+                }
+                var bottomColorId = this.ResolveBottomColorId(topColorId, activePaletteColorCount);
+                var totalTileCount = 10;
+                var colorIds = System.Array.init(totalTileCount, 0, System.Int32);
+                for (var i = 0; i < 5 && i < totalTileCount; i = (i + 1) | 0) {
+                    colorIds[i] = bottomColorId;
+                }
+                for (var j = 5; j < totalTileCount; j = (j + 1) | 0) {
+                    colorIds[j] = topColorId;
+                }
+                var rotation = ((UnityEngine.Component.op_Inequality(floor.StackAnchor, null)) ? floor.StackAnchor.rotation.$clone() : floor.transform.rotation.$clone());
+                var position = floor.GetStackPlacementPosition(prefab.transform.position.y);
+                var stack = this.RentStack(prefab, position.$clone(), rotation.$clone(), floor.transform);
+                if (UnityEngine.MonoBehaviour.op_Equality(stack, null)) {
+                    return false;
+                }
+                this.ApplyContext(stack);
+                stack.gameObject.SetActive(true);
+                stack.transform.SetPositionAndRotation(position, rotation);
+                stack.SetCurrentFloor(floor);
+                floor.SetOccupiedStack(stack);
+                stack.CreateStack(colorIds);
+                this.runtimePooledStacks.add(stack);
+                this.pendingPlacementStacks.remove(stack);
+                return true;
+            },
+            /*HexStacksCreator.SpawnConfiguredFloorStack end.*/
+
+            /*HexStacksCreator.ResolveBottomColorId start.*/
+            ResolveBottomColorId: function (topColorId, paletteLength) {
+if ( TRACE ) { TRACE( "HexStacksCreator#ResolveBottomColorId", this ); }
+
+                if (paletteLength <= 1) {
+                    return Math.max(0, Math.min(topColorId, UnityEngine.Mathf.Max(0, ((paletteLength - 1) | 0))));
+                }
+                var randomOffset = UnityEngine.Random.Range(1, paletteLength);
+                return (((UnityEngine.Mathf.Max(0, topColorId) + randomOffset) | 0)) % paletteLength;
+            },
+            /*HexStacksCreator.ResolveBottomColorId end.*/
+
+            /*HexStacksCreator.GetActivePaletteColorCount start.*/
+            GetActivePaletteColorCount: function (palette) {
+if ( TRACE ) { TRACE( "HexStacksCreator#GetActivePaletteColorCount", this ); }
+
+                if (palette == null || palette.length === 0) {
+                    return 0;
+                }
+                var hexConfig = this.HexConfig;
+                var configuredCount = ((hexConfig != null) ? hexConfig.paletteColorCount : 0);
+                if (configuredCount <= 0) {
+                    return palette.length;
+                }
+                return Math.max(1, Math.min(configuredCount, palette.length));
+            },
+            /*HexStacksCreator.GetActivePaletteColorCount end.*/
+
+            /*HexStacksCreator.TryBuildTopColorAssignment start.*/
+            TryBuildTopColorAssignment: function (spawnFloors, colorCount, topColorByFloor) {
+if ( TRACE ) { TRACE( "HexStacksCreator#TryBuildTopColorAssignment", this ); }
+
+                topColorByFloor.v = new (System.Collections.Generic.Dictionary$2(HexFloor,System.Int32)).ctor();
+                if (spawnFloors == null || spawnFloors.Count === 0) {
+                    return true;
+                }
+                if (colorCount <= 0) {
+                    return false;
+                }
+                var spawnSet = new (System.Collections.Generic.HashSet$1(HexFloor)).$ctor1(spawnFloors);
+                return this.AssignTopColorsRecursive(spawnFloors, spawnSet, topColorByFloor.v, colorCount);
+            },
+            /*HexStacksCreator.TryBuildTopColorAssignment end.*/
+
+            /*HexStacksCreator.AssignTopColorsRecursive start.*/
+            AssignTopColorsRecursive: function (spawnFloors, spawnSet, assignedColors, colorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#AssignTopColorsRecursive", this ); }
+
+                var $t;
+                if (assignedColors.Count >= spawnFloors.Count) {
+                    return true;
+                }
+                var selectedFloor = null;
+                var selectedAvailableColors = null;
+                var selectedNeighborCount = -1;
+                for (var i = 0; i < spawnFloors.Count; i = (i + 1) | 0) {
+                    var floor = spawnFloors.getItem(i);
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(floor, null)) && !assignedColors.containsKey(floor)) {
+                        var availableColors = this.GetAvailableTopColors(floor, spawnSet, assignedColors, colorCount);
+                        if (availableColors.Count === 0) {
+                            return false;
+                        }
+                        var neighborCount = HexStacksCreator.GetSpawnNeighborCount(floor, spawnSet);
+                        if (UnityEngine.MonoBehaviour.op_Equality(selectedFloor, null) || availableColors.Count < selectedAvailableColors.Count || (availableColors.Count === selectedAvailableColors.Count && neighborCount > selectedNeighborCount)) {
+                            selectedFloor = floor;
+                            selectedAvailableColors = availableColors;
+                            selectedNeighborCount = neighborCount;
+                        }
+                    }
+                }
+                if (UnityEngine.MonoBehaviour.op_Equality(selectedFloor, null) || selectedAvailableColors == null || selectedAvailableColors.Count === 0) {
+                    return false;
+                }
+                var startIndex = UnityEngine.Random.Range(0, selectedAvailableColors.Count);
+                for (var j = 0; j < selectedAvailableColors.Count; j = (j + 1) | 0) {
+                    var colorId = (($t = selectedAvailableColors.getItem((((startIndex + j) | 0)) % selectedAvailableColors.Count), assignedColors.setItem(selectedFloor, $t), $t));
+                    if (this.AssignTopColorsRecursive(spawnFloors, spawnSet, assignedColors, colorCount)) {
+                        return true;
+                    }
+                    assignedColors.remove(selectedFloor);
+                }
+                return false;
+            },
+            /*HexStacksCreator.AssignTopColorsRecursive end.*/
+
+            /*HexStacksCreator.GetAvailableTopColors start.*/
+            GetAvailableTopColors: function (floor, spawnSet, assignedColors, colorCount) {
+if ( TRACE ) { TRACE( "HexStacksCreator#GetAvailableTopColors", this ); }
+
+                var forbidden = System.Array.init(colorCount, false, System.Boolean);
+                for (var side = 0; side < 6; side = (side + 1) | 0) {
+                    var neighbor = floor.GetNeighborBySide(side);
+                    var neighborColorId = { };
+                    if (!(UnityEngine.MonoBehaviour.op_Equality(neighbor, null)) && spawnSet.contains(neighbor) && assignedColors.tryGetValue(neighbor, neighborColorId) && neighborColorId.v >= 0 && neighborColorId.v < colorCount) {
+                        forbidden[neighborColorId.v] = true;
+                    }
+                }
+                var available = new (System.Collections.Generic.List$1(System.Int32)).ctor();
+                for (var colorId = 0; colorId < colorCount; colorId = (colorId + 1) | 0) {
+                    if (!forbidden[colorId]) {
+                        available.add(colorId);
+                    }
+                }
+                return available;
+            },
+            /*HexStacksCreator.GetAvailableTopColors end.*/
+
+            /*HexStacksCreator.LogGeneratedFloorFill start.*/
+            LogGeneratedFloorFill: function (message) {
+if ( TRACE ) { TRACE( "HexStacksCreator#LogGeneratedFloorFill", this ); }
+
+                if (this.logGeneratedFill) {
+                    UnityEngine.Debug.Log$1("[HexStacksCreator] " + (message || ""), this);
+                }
+            },
+            /*HexStacksCreator.LogGeneratedFloorFill end.*/
+
             /*HexStacksCreator.ApplyContext start.*/
             ApplyContext: function (stack) {
 if ( TRACE ) { TRACE( "HexStacksCreator#ApplyContext", this ); }
 
                 if (!(UnityEngine.MonoBehaviour.op_Equality(stack, null))) {
                     stack.SetGameContext(this.gameContext);
-                    var dragger = stack.GetComponent(HexDragger);
-                    if (UnityEngine.MonoBehaviour.op_Inequality(dragger, null)) {
-                        dragger.SetGameContext(this.gameContext);
-                    }
                 }
             },
             /*HexStacksCreator.ApplyContext end.*/
+
+            /*HexStacksCreator.MarkInitialPlayerStacksCompleted start.*/
+            MarkInitialPlayerStacksCompleted: function () {
+if ( TRACE ) { TRACE( "HexStacksCreator#MarkInitialPlayerStacksCompleted", this ); }
+
+                if (!this.InitialPlayerStacksCompleted) {
+                    this.InitialPlayerStacksCompleted = true;
+                }
+            },
+            /*HexStacksCreator.MarkInitialPlayerStacksCompleted end.*/
+
+            /*HexStacksCreator.LogStacksCreator start.*/
+            LogStacksCreator: function (message) {
+if ( TRACE ) { TRACE( "HexStacksCreator#LogStacksCreator", this ); }
+
+                if (this.debugLogs) {
+                    UnityEngine.Debug.Log$1("[HexStacksCreator] " + (message || ""), this);
+                }
+            },
+            /*HexStacksCreator.LogStacksCreator end.*/
 
 
         }
@@ -5416,30 +6193,110 @@ if ( TRACE ) { TRACE( "HexStacksCreator#ApplyContext", this ); }
     /*HexTile start.*/
     Bridge.define("HexTile", {
         inherits: [UnityEngine.MonoBehaviour],
-        fields: {
-            myMeshRenderer: null,
-            myMaterial: null
-        },
-        props: {
-            CurrentMaterial: {
-                get: function () {
-if ( TRACE ) { TRACE( "HexTile#CurrentMaterial#get", this ); }
+        statics: {
+            fields: {
+                BaseColorId: 0,
+                ColorId: 0
+            },
+            ctors: {
+                init: function () {
+if ( TRACE ) { TRACE( "HexTile#init", this ); }
 
-                    return (this.myMaterial != null) ? this.myMaterial : ((UnityEngine.Component.op_Inequality(this.myMeshRenderer, null)) ? this.myMeshRenderer.sharedMaterial : null);
+                    this.BaseColorId = UnityEngine.Shader.PropertyToID("_BaseColor");
+                    this.ColorId = UnityEngine.Shader.PropertyToID("_Color");
                 }
             }
         },
-        methods: {
-            /*HexTile.SetMaterial start.*/
-            SetMaterial: function (material) {
-if ( TRACE ) { TRACE( "HexTile#SetMaterial", this ); }
+        fields: {
+            myMeshRenderer: null,
+            colorId: 0,
+            currentColor: null,
+            colorPropertyBlock: null
+        },
+        props: {
+            ColorIdValue: {
+                get: function () {
+if ( TRACE ) { TRACE( "HexTile#ColorIdValue#get", this ); }
 
-                this.myMaterial = material;
-                if (UnityEngine.Component.op_Inequality(this.myMeshRenderer, null)) {
-                    this.myMeshRenderer.sharedMaterial = material;
+                    return this.colorId;
                 }
             },
-            /*HexTile.SetMaterial end.*/
+            HasColor: {
+                get: function () {
+if ( TRACE ) { TRACE( "HexTile#HasColor#get", this ); }
+
+                    return this.colorId >= 0;
+                }
+            },
+            CurrentColor: {
+                get: function () {
+if ( TRACE ) { TRACE( "HexTile#CurrentColor#get", this ); }
+
+                    return this.currentColor.$clone();
+                }
+            }
+        },
+        ctors: {
+            init: function () {
+if ( TRACE ) { TRACE( "HexTile#init", this ); }
+
+                this.currentColor = new UnityEngine.Color();
+                this.colorId = -1;
+                this.currentColor = new pc.Color( 1, 1, 1, 1 );
+            }
+        },
+        methods: {
+            /*HexTile.SetColor start.*/
+            SetColor: function (id, color) {
+if ( TRACE ) { TRACE( "HexTile#SetColor", this ); }
+
+                this.colorId = id;
+                this.currentColor = color.$clone();
+                this.ApplyColor(color.$clone());
+            },
+            /*HexTile.SetColor end.*/
+
+            /*HexTile.TryGetColor start.*/
+            TryGetColor: function (color) {
+if ( TRACE ) { TRACE( "HexTile#TryGetColor", this ); }
+
+                if (!this.HasColor) {
+                    color.v = new pc.Color( 1, 1, 1, 1 );
+                    return false;
+                }
+                color.v = this.currentColor.$clone();
+                return true;
+            },
+            /*HexTile.TryGetColor end.*/
+
+            /*HexTile.ClearColor start.*/
+            ClearColor: function () {
+if ( TRACE ) { TRACE( "HexTile#ClearColor", this ); }
+
+                this.colorId = -1;
+            },
+            /*HexTile.ClearColor end.*/
+
+            /*HexTile.ApplyColor start.*/
+            ApplyColor: function (color) {
+if ( TRACE ) { TRACE( "HexTile#ApplyColor", this ); }
+
+                if (!(UnityEngine.Component.op_Equality(this.myMeshRenderer, null))) {
+                    if (this.colorPropertyBlock == null) {
+                        this.colorPropertyBlock = new UnityEngine.MaterialPropertyBlock();
+                    }
+                    var sharedMaterial = this.myMeshRenderer.sharedMaterial;
+                    this.myMeshRenderer.GetPropertyBlock(this.colorPropertyBlock);
+                    if (sharedMaterial != null && sharedMaterial.HasProperty(HexTile.BaseColorId)) {
+                        this.colorPropertyBlock.SetColor(HexTile.BaseColorId, color);
+                    }
+                    if (sharedMaterial != null && sharedMaterial.HasProperty(HexTile.ColorId)) {
+                        this.colorPropertyBlock.SetColor(HexTile.ColorId, color);
+                    }
+                    this.myMeshRenderer.SetPropertyBlock(this.colorPropertyBlock);
+                }
+            },
+            /*HexTile.ApplyColor end.*/
 
 
         }
@@ -5474,7 +6331,7 @@ if ( TRACE ) { TRACE( "HexTransferAnimator#GetStackName", this ); }
             init: function () {
 if ( TRACE ) { TRACE( "HexTransferAnimator#init", this ); }
 
-                this.logTransferAnimatorEvents = true;
+                this.logTransferAnimatorEvents = false;
                 this.tileFlipDuration = 0.22;
                 this.tileFlipEase = DG.Tweening.Ease.InOutSine;
                 this.tileSettleDuration = 0.1;
@@ -5495,7 +6352,6 @@ if ( TRACE ) { TRACE( "HexTransferAnimator#TransferTopTilesFan", this ); }
                 var flipDuration = this.tileFlipDuration / safeSpeedMultiplier;
                 var settleDuration = this.tileSettleDuration / safeSpeedMultiplier;
                 var fanStagger = UnityEngine.Mathf.Max(0.0, this.tileTransferFanStagger) / safeSpeedMultiplier;
-                this.LogTransferAnimator(System.String.format("Start transfer. source={0}, target={1}, count={2}, speed={3:F2}", HexTransferAnimator.GetStackName(sourceStack), HexTransferAnimator.GetStackName(targetStack), Bridge.box(transferCount, System.Int32), Bridge.box(safeSpeedMultiplier, System.Single, System.Single.format, System.Single.getHashCode)));
                 var targetStartIndex = targetStack.TileCount;
                 var movingTiles = new (System.Collections.Generic.List$1(HexTile)).$ctor2(transferCount);
                 for (var j = 0; j < transferCount; j = (j + 1) | 0) {
@@ -5506,7 +6362,6 @@ if ( TRACE ) { TRACE( "HexTransferAnimator#TransferTopTilesFan", this ); }
                     movingTiles.add(tile2);
                 }
                 if (movingTiles.Count === 0) {
-                    this.LogTransferAnimator("Transfer cancelled: no tiles popped from source.");
                     !Bridge.staticEquals(onComplete, null) ? onComplete() : null;
                     return;
                 }
@@ -5522,16 +6377,15 @@ if ( TRACE ) { TRACE( "HexTransferAnimator#TransferTopTilesFan", this ); }
                         }
                     }
                 }
-                this.CompleteAfterTweens(transferTweens, Bridge.fn.bind(this, function () {
+                this.CompleteAfterTweens(transferTweens, function () {
                     for (var k = 0; k < movingTiles.Count; k = (k + 1) | 0) {
                         var hexTile = movingTiles.getItem(k);
                         if (!(UnityEngine.MonoBehaviour.op_Equality(hexTile, null))) {
                             targetStack.PushTopTile(hexTile);
                         }
                     }
-                    this.LogTransferAnimator("Transfer animation stage completed.");
                     !Bridge.staticEquals(onComplete, null) ? onComplete() : null;
-                }));
+                });
             },
             /*HexTransferAnimator.TransferTopTilesFan end.*/
 
@@ -5701,6 +6555,9 @@ if ( TRACE ) { TRACE( "LunaBridge#InstallFullGame", this ); }
             fadeTween: null,
             isShown: false
         },
+        events: {
+            PackshotShown: null
+        },
         ctors: {
             init: function () {
 if ( TRACE ) { TRACE( "PackshotController#init", this ); }
@@ -5757,6 +6614,7 @@ if ( TRACE ) { TRACE( "PackshotController#ShowPackshot", this ); }
                         this.packshotCanvasGroup.blocksRaycasts = true;
                         this.fadeTween = DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(System.Single,System.Single,DG.Tweening.Plugins.Options.FloatOptions), DG.Tweening.DOTweenModuleUI.DOFade(this.packshotCanvasGroup, 1.0, this.fadeDuration), this.fadeEase);
                     }
+                    !Bridge.staticEquals(this.PackshotShown, null) ? this.PackshotShown() : null;
                     LunaBridge.GameEnded();
                 }
             },
@@ -5850,9 +6708,11 @@ if ( TRACE ) { TRACE( "PackshotController#WasPointerPressedThisFrame", this ); }
     Bridge.define("PlayableUIRoot", {
         inherits: [UnityEngine.MonoBehaviour],
         fields: {
+            gameContext: null,
             tutorialController: null,
             packshotController: null,
-            countdownTimerPanel: null
+            countdownTimerPanel: null,
+            subscribedManager: null
         },
         props: {
             TutorialController: {
@@ -5878,6 +6738,34 @@ if ( TRACE ) { TRACE( "PlayableUIRoot#CountdownTimerPanel#get", this ); }
             }
         },
         methods: {
+            /*PlayableUIRoot.OnEnable start.*/
+            OnEnable: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#OnEnable", this ); }
+
+                this.SubscribeManagerEvents();
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.countdownTimerPanel, null)) {
+                    this.countdownTimerPanel.addCountdownFinished(Bridge.fn.cacheBind(this, this.HandleCountdownFinished));
+                }
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.packshotController, null)) {
+                    this.packshotController.addPackshotShown(Bridge.fn.cacheBind(this, this.HandlePackshotShown));
+                }
+            },
+            /*PlayableUIRoot.OnEnable end.*/
+
+            /*PlayableUIRoot.OnDisable start.*/
+            OnDisable: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#OnDisable", this ); }
+
+                this.UnsubscribeManagerEvents();
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.countdownTimerPanel, null)) {
+                    this.countdownTimerPanel.removeCountdownFinished(Bridge.fn.cacheBind(this, this.HandleCountdownFinished));
+                }
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.packshotController, null)) {
+                    this.packshotController.removePackshotShown(Bridge.fn.cacheBind(this, this.HandlePackshotShown));
+                }
+            },
+            /*PlayableUIRoot.OnDisable end.*/
+
             /*PlayableUIRoot.StartTutorial start.*/
             StartTutorial: function () {
 if ( TRACE ) { TRACE( "PlayableUIRoot#StartTutorial", this ); }
@@ -5906,7 +6794,17 @@ if ( TRACE ) { TRACE( "PlayableUIRoot#ShowPackshot", this ); }
             StartCountdownTimer: function () {
 if ( TRACE ) { TRACE( "PlayableUIRoot#StartCountdownTimer", this ); }
 
-                UnityEngine.MonoBehaviour.op_Inequality(this.countdownTimerPanel, null) ? this.countdownTimerPanel.StartCountdown() : null;
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.countdownTimerPanel, null) && !this.countdownTimerPanel.gameObject.activeSelf) {
+                    this.countdownTimerPanel.gameObject.SetActive(true);
+                }
+                if (!(UnityEngine.MonoBehaviour.op_Equality(this.countdownTimerPanel, null))) {
+                    var configuredDuration = { };
+                    if (this.TryGetConfiguredGameDuration(configuredDuration)) {
+                        this.countdownTimerPanel.RestartCountdown(configuredDuration.v);
+                    } else {
+                        this.countdownTimerPanel.StartCountdown();
+                    }
+                }
             },
             /*PlayableUIRoot.StartCountdownTimer end.*/
 
@@ -5918,6 +6816,84 @@ if ( TRACE ) { TRACE( "PlayableUIRoot#StopCountdownTimer", this ); }
             },
             /*PlayableUIRoot.StopCountdownTimer end.*/
 
+            /*PlayableUIRoot.HandleCountdownFinished start.*/
+            HandleCountdownFinished: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#HandleCountdownFinished", this ); }
+
+                UnityEngine.MonoBehaviour.op_Inequality(this.packshotController, null) ? this.packshotController.ShowPackshot() : null;
+            },
+            /*PlayableUIRoot.HandleCountdownFinished end.*/
+
+            /*PlayableUIRoot.HandlePackshotShown start.*/
+            HandlePackshotShown: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#HandlePackshotShown", this ); }
+
+                UnityEngine.MonoBehaviour.op_Inequality(this.tutorialController, null) ? this.tutorialController.DisableTutorialPermanently() : null;
+                HexDragger.SetGlobalDragEnabled(false);
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.countdownTimerPanel, null)) {
+                    this.countdownTimerPanel.StopCountdown();
+                    this.countdownTimerPanel.gameObject.SetActive(false);
+                }
+            },
+            /*PlayableUIRoot.HandlePackshotShown end.*/
+
+            /*PlayableUIRoot.HandleFirstTransferAndClearChainFinished start.*/
+            HandleFirstTransferAndClearChainFinished: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#HandleFirstTransferAndClearChainFinished", this ); }
+
+                if (this.IsEndGameAfterFirstChainEnabled()) {
+                    UnityEngine.MonoBehaviour.op_Inequality(this.packshotController, null) ? this.packshotController.ShowPackshot() : null;
+                }
+            },
+            /*PlayableUIRoot.HandleFirstTransferAndClearChainFinished end.*/
+
+            /*PlayableUIRoot.SubscribeManagerEvents start.*/
+            SubscribeManagerEvents: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#SubscribeManagerEvents", this ); }
+
+                var manager = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Manager : null);
+                if (!(UnityEngine.MonoBehaviour.op_Equality(manager, null)) && !(UnityEngine.MonoBehaviour.op_Equality(this.subscribedManager, manager))) {
+                    this.UnsubscribeManagerEvents();
+                    this.subscribedManager = manager;
+                    this.subscribedManager.addFirstTransferAndClearChainFinished(Bridge.fn.cacheBind(this, this.HandleFirstTransferAndClearChainFinished));
+                }
+            },
+            /*PlayableUIRoot.SubscribeManagerEvents end.*/
+
+            /*PlayableUIRoot.UnsubscribeManagerEvents start.*/
+            UnsubscribeManagerEvents: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#UnsubscribeManagerEvents", this ); }
+
+                if (!(UnityEngine.MonoBehaviour.op_Equality(this.subscribedManager, null))) {
+                    this.subscribedManager.removeFirstTransferAndClearChainFinished(Bridge.fn.cacheBind(this, this.HandleFirstTransferAndClearChainFinished));
+                    this.subscribedManager = null;
+                }
+            },
+            /*PlayableUIRoot.UnsubscribeManagerEvents end.*/
+
+            /*PlayableUIRoot.TryGetConfiguredGameDuration start.*/
+            TryGetConfiguredGameDuration: function (durationSeconds) {
+if ( TRACE ) { TRACE( "PlayableUIRoot#TryGetConfiguredGameDuration", this ); }
+
+                durationSeconds.v = 0.0;
+                var config = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Config : null);
+                if (config == null) {
+                    return false;
+                }
+                durationSeconds.v = UnityEngine.Mathf.Max(0.1, config.gameDurationSeconds);
+                return true;
+            },
+            /*PlayableUIRoot.TryGetConfiguredGameDuration end.*/
+
+            /*PlayableUIRoot.IsEndGameAfterFirstChainEnabled start.*/
+            IsEndGameAfterFirstChainEnabled: function () {
+if ( TRACE ) { TRACE( "PlayableUIRoot#IsEndGameAfterFirstChainEnabled", this ); }
+
+                var config = ((UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null)) ? this.gameContext.Config : null);
+                return config != null && config.endGameAfterFirstTransferAndClearChain;
+            },
+            /*PlayableUIRoot.IsEndGameAfterFirstChainEnabled end.*/
+
 
         }
     });
@@ -5926,31 +6902,117 @@ if ( TRACE ) { TRACE( "PlayableUIRoot#StopCountdownTimer", this ); }
     /*TutorialOverlayController start.*/
     Bridge.define("TutorialOverlayController", {
         inherits: [UnityEngine.MonoBehaviour],
+        statics: {
+            methods: {
+                /*TutorialOverlayController.SelectBestTargetFloor:static start.*/
+                SelectBestTargetFloor: function (sourceStack, candidateFloors) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#SelectBestTargetFloor", this ); }
+
+                    if (UnityEngine.MonoBehaviour.op_Equality(sourceStack, null) || candidateFloors == null || candidateFloors.Count === 0) {
+                        return null;
+                    }
+                    var bestFloor = null;
+                    var bestDistanceSqr = 3.40282347E+38;
+                    var sourcePosition = sourceStack.transform.position.$clone();
+                    for (var i = 0; i < candidateFloors.Count; i = (i + 1) | 0) {
+                        var floor = candidateFloors.getItem(i);
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(floor, null))) {
+                            var distanceSqr = (sourcePosition.$clone().sub( floor.transform.position )).lengthSq();
+                            if (!(distanceSqr >= bestDistanceSqr)) {
+                                bestDistanceSqr = distanceSqr;
+                                bestFloor = floor;
+                            }
+                        }
+                    }
+                    return bestFloor;
+                },
+                /*TutorialOverlayController.SelectBestTargetFloor:static end.*/
+
+                /*TutorialOverlayController.IsMatchingNeighborStack:static start.*/
+                IsMatchingNeighborStack: function (floor, colorId) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#IsMatchingNeighborStack", this ); }
+
+                    if (UnityEngine.MonoBehaviour.op_Equality(floor, null)) {
+                        return false;
+                    }
+                    var neighborStack = floor.OccupiedStack;
+                    if (UnityEngine.MonoBehaviour.op_Equality(neighborStack, null) || neighborStack.TileCount === 0) {
+                        return false;
+                    }
+                    return neighborStack.GetTopColorId() === colorId;
+                },
+                /*TutorialOverlayController.IsMatchingNeighborStack:static end.*/
+
+                /*TutorialOverlayController.GetStackName:static start.*/
+                GetStackName: function (stack) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#GetStackName", this ); }
+
+                    return (UnityEngine.MonoBehaviour.op_Inequality(stack, null)) ? stack.name : "null";
+                },
+                /*TutorialOverlayController.GetStackName:static end.*/
+
+                /*TutorialOverlayController.GetFloorName:static start.*/
+                GetFloorName: function (floor) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#GetFloorName", this ); }
+
+                    return (UnityEngine.MonoBehaviour.op_Inequality(floor, null)) ? floor.name : "null";
+                },
+                /*TutorialOverlayController.GetFloorName:static end.*/
+
+
+            }
+        },
         fields: {
             tutorialRoot: null,
             handTransform: null,
+            canvasRoot: null,
+            uiCamera: null,
+            worldCamera: null,
+            gameContext: null,
             fromAnchor: null,
             toAnchor: null,
             startOnEnable: false,
-            completeOnSuccessfulDrop: false,
             restartDelay: 0,
+            useDynamicWorldTargets: false,
+            handScreenOffset: null,
+            worldTargetHeightOffset: 0,
+            fallbackScanInterval: 0,
+            debugLogs: false,
             handMoveDuration: 0,
             handPauseDuration: 0,
             handMoveEase: 0,
             isCompleted: false,
+            isPermanentlyDisabled: false,
             restartRoutine: null,
-            handTween: null
+            handTween: null,
+            cachedManager: null,
+            hasStarted: false,
+            tutorialStacksBuffer: null,
+            candidateChainFloorsBuffer: null,
+            candidateFreeFloorsBuffer: null,
+            nextBootstrapStateLogAt: 0,
+            nextStackFallbackScanAt: 0,
+            nextFloorFallbackScanAt: 0,
+            cachedFallbackWorldCamera: null
         },
         ctors: {
             init: function () {
 if ( TRACE ) { TRACE( "TutorialOverlayController#init", this ); }
 
+                this.handScreenOffset = new UnityEngine.Vector2();
                 this.startOnEnable = false;
-                this.completeOnSuccessfulDrop = true;
                 this.restartDelay = 2.0;
+                this.useDynamicWorldTargets = true;
+                this.handScreenOffset = pc.Vec2.ZERO.clone();
+                this.worldTargetHeightOffset = 0.2;
+                this.fallbackScanInterval = 0.35;
+                this.debugLogs = false;
                 this.handMoveDuration = 0.8;
                 this.handPauseDuration = 0.15;
                 this.handMoveEase = DG.Tweening.Ease.InOutSine;
+                this.tutorialStacksBuffer = new (System.Collections.Generic.List$1(HexStack)).ctor();
+                this.candidateChainFloorsBuffer = new (System.Collections.Generic.List$1(HexFloor)).ctor();
+                this.candidateFreeFloorsBuffer = new (System.Collections.Generic.List$1(HexFloor)).ctor();
             }
         },
         methods: {
@@ -5960,13 +7022,94 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#OnEnable", this ); }
 
                 HexDragger.addDragStarted(Bridge.fn.cacheBind(this, this.HandleDragStarted));
                 HexDragger.addDragFinished(Bridge.fn.cacheBind(this, this.HandleDragFinished));
-                if (this.startOnEnable && !this.isCompleted) {
+                if (this.hasStarted && this.startOnEnable && !this.isCompleted) {
                     this.StartTutorial();
                 } else {
                     this.SetTutorialVisible(false);
                 }
             },
             /*TutorialOverlayController.OnEnable end.*/
+
+            /*TutorialOverlayController.Start start.*/
+            Start: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#Start", this ); }
+
+                this.StartCoroutine$1(this.StartTutorialAfterBootstrap());
+            },
+            /*TutorialOverlayController.Start end.*/
+
+            /*TutorialOverlayController.StartTutorialAfterBootstrap start.*/
+            StartTutorialAfterBootstrap: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#StartTutorialAfterBootstrap", this ); }
+
+                var $step = 0,
+                    $jumpFromFinally,
+                    $returnValue,
+                    readinessDetails,
+                    $async_e;
+
+                var $enumerator = new Bridge.GeneratorEnumerator(Bridge.fn.bind(this, function () {
+                    try {
+                        for (;;) {
+                            switch ($step) {
+                                case 0: {
+                                    this.hasStarted = true;
+                                        if (!this.startOnEnable || this.isCompleted) {
+                                            $step = 1;
+                                            continue;
+                                        } 
+                                        $step = 2;
+                                        continue;
+                                }
+                                case 1: {
+                                    return false;
+                                }
+                                case 2: {
+                                    this.nextBootstrapStateLogAt = UnityEngine.Time.unscaledTime;
+                                        readinessDetails = { };
+                                    $step = 3;
+                                    continue;
+                                }
+                                case 3: {
+                                    if ( !this.AreInitialGenerationSystemsReady$1(readinessDetails) ) {
+                                            $step = 4;
+                                            continue;
+                                        } 
+                                        $step = 6;
+                                        continue;
+                                }
+                                case 4: {
+                                    if (UnityEngine.Time.unscaledTime >= this.nextBootstrapStateLogAt) {
+                                            this.nextBootstrapStateLogAt = UnityEngine.Time.unscaledTime + 0.5;
+                                        }
+                                        $enumerator.current = null;
+                                        $step = 5;
+                                        return true;
+                                }
+                                case 5: {
+                                    
+                                        $step = 3;
+                                        continue;
+                                }
+                                case 6: {
+                                    if (!this.isCompleted && !this.isPermanentlyDisabled && this.isActiveAndEnabled) {
+                                            this.StartTutorial();
+                                        }
+
+                                }
+                                default: {
+                                    return false;
+                                }
+                            }
+                        }
+                    } catch($async_e1) {
+                        $async_e = System.Exception.create($async_e1);
+                        throw $async_e;
+                    }
+                }));
+                return $enumerator;
+            },
+            /*TutorialOverlayController.StartTutorialAfterBootstrap end.*/
 
             /*TutorialOverlayController.OnDisable start.*/
             OnDisable: function () {
@@ -5979,13 +7122,23 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#OnDisable", this ); }
             },
             /*TutorialOverlayController.OnDisable end.*/
 
+            /*TutorialOverlayController.Update start.*/
+            Update: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#Update", this ); }
+
+                if (!this.isCompleted && !this.isPermanentlyDisabled && !HexDragger.IsGlobalDragEnabled) {
+                    this.DisableTutorialPermanently();
+                }
+            },
+            /*TutorialOverlayController.Update end.*/
+
             /*TutorialOverlayController.StartTutorial start.*/
             StartTutorial: function () {
 if ( TRACE ) { TRACE( "TutorialOverlayController#StartTutorial", this ); }
 
-                if (!this.isCompleted) {
+                if (!this.isCompleted && !this.isPermanentlyDisabled) {
                     this.StopRestartRoutine();
-                    this.SetTutorialVisible(true);
+                    this.SetTutorialVisible(false);
                     this.PlayHandLoop();
                 }
             },
@@ -6005,12 +7158,24 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#StopTutorial", this ); }
             ResetTutorialState: function () {
 if ( TRACE ) { TRACE( "TutorialOverlayController#ResetTutorialState", this ); }
 
-                this.isCompleted = false;
-                if (this.startOnEnable) {
-                    this.StartTutorial();
+                if (!this.isPermanentlyDisabled) {
+                    this.isCompleted = false;
+                    if (this.startOnEnable) {
+                        this.StartTutorial();
+                    }
                 }
             },
             /*TutorialOverlayController.ResetTutorialState end.*/
+
+            /*TutorialOverlayController.DisableTutorialPermanently start.*/
+            DisableTutorialPermanently: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#DisableTutorialPermanently", this ); }
+
+                this.isPermanentlyDisabled = true;
+                this.isCompleted = true;
+                this.StopTutorial();
+            },
+            /*TutorialOverlayController.DisableTutorialPermanently end.*/
 
             /*TutorialOverlayController.HandleDragStarted start.*/
             HandleDragStarted: function (draggedStack) {
@@ -6029,7 +7194,7 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#HandleDragStarted", this ); }
 if ( TRACE ) { TRACE( "TutorialOverlayController#HandleDragFinished", this ); }
 
                 if (!this.isCompleted) {
-                    if (successfulDrop && this.completeOnSuccessfulDrop) {
+                    if (successfulDrop) {
                         this.isCompleted = true;
                         this.StopTutorial();
                     } else {
@@ -6059,7 +7224,8 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#RestartTutorialAfterDelayRoutin
                                         return true;
                                 }
                                 case 1: {
-                                    if (!this.isCompleted) {
+                                    this.restartRoutine = null;
+                                        if (!this.isCompleted && !this.isPermanentlyDisabled) {
                                             this.StartTutorial();
                                         }
 
@@ -6083,20 +7249,315 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#RestartTutorialAfterDelayRoutin
 if ( TRACE ) { TRACE( "TutorialOverlayController#PlayHandLoop", this ); }
 
                 this.KillHandTween();
-                if (!(UnityEngine.Component.op_Equality(this.handTransform, null)) && !(UnityEngine.Component.op_Equality(this.fromAnchor, null)) && !(UnityEngine.Component.op_Equality(this.toAnchor, null))) {
-                    this.handTransform.position = this.fromAnchor.position.$clone();
-                    var sequence = DG.Tweening.DOTween.Sequence();
-                    DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMove(this.handTransform, this.toAnchor.position.$clone(), this.handMoveDuration), this.handMoveEase));
-                    DG.Tweening.TweenSettingsExtensions.AppendInterval(sequence, this.handPauseDuration);
-                    DG.Tweening.TweenSettingsExtensions.AppendCallback(sequence, Bridge.fn.bind(this, function () {
-                        this.handTransform.position = this.fromAnchor.position.$clone();
-                    }));
-                    DG.Tweening.TweenSettingsExtensions.AppendInterval(sequence, this.handPauseDuration);
-                    DG.Tweening.TweenSettingsExtensions.SetLoops$1(DG.Tweening.Sequence, sequence, -1, DG.Tweening.LoopType.Restart);
-                    this.handTween = sequence;
+                var fromPosition = { v : new UnityEngine.Vector3() };
+                var toPosition = { v : new UnityEngine.Vector3() };
+                if (!this.TryResolveHandTargets(fromPosition, toPosition)) {
+                    this.SetTutorialVisible(false);
+                    if (this.restartRoutine == null) {
+                        this.restartRoutine = this.StartCoroutine$1(this.RestartTutorialAfterDelayRoutine());
+                    }
+                    return;
                 }
+                this.handTransform.position = fromPosition.v.$clone();
+                this.SetTutorialVisible(true);
+                var sequence = DG.Tweening.DOTween.Sequence();
+                DG.Tweening.TweenSettingsExtensions.Append(sequence, DG.Tweening.TweenSettingsExtensions.SetEase$2(DG.Tweening.Core.TweenerCore$3(UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions), DG.Tweening.ShortcutExtensions.DOMove(this.handTransform, toPosition.v.$clone(), this.handMoveDuration), this.handMoveEase));
+                DG.Tweening.TweenSettingsExtensions.AppendInterval(sequence, this.handPauseDuration);
+                DG.Tweening.TweenSettingsExtensions.AppendCallback(sequence, Bridge.fn.bind(this, function () {
+                    this.handTransform.position = fromPosition.v.$clone();
+                }));
+                DG.Tweening.TweenSettingsExtensions.AppendInterval(sequence, this.handPauseDuration);
+                DG.Tweening.TweenSettingsExtensions.OnComplete(DG.Tweening.Sequence, sequence, Bridge.fn.bind(this, function () {
+                    this.handTween = null;
+                    if (!this.isCompleted && UnityEngine.GameObject.op_Inequality(this.tutorialRoot, null) && this.tutorialRoot.activeInHierarchy) {
+                        this.PlayHandLoop();
+                    }
+                }));
+                this.handTween = sequence;
             },
             /*TutorialOverlayController.PlayHandLoop end.*/
+
+            /*TutorialOverlayController.TryResolveHandTargets start.*/
+            TryResolveHandTargets: function (fromPosition, toPosition) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#TryResolveHandTargets", this ); }
+
+                fromPosition.v = pc.Vec3.ZERO.clone();
+                toPosition.v = pc.Vec3.ZERO.clone();
+                if (UnityEngine.Component.op_Equality(this.handTransform, null)) {
+                    return false;
+                }
+                if (this.useDynamicWorldTargets) {
+                    return this.TryResolveDynamicHandTargets(fromPosition, toPosition);
+                }
+                if (UnityEngine.Component.op_Equality(this.fromAnchor, null) || UnityEngine.Component.op_Equality(this.toAnchor, null)) {
+                    return false;
+                }
+                fromPosition.v = this.fromAnchor.position.$clone();
+                toPosition.v = this.toAnchor.position.$clone();
+                return true;
+            },
+            /*TutorialOverlayController.TryResolveHandTargets end.*/
+
+            /*TutorialOverlayController.TryResolveDynamicHandTargets start.*/
+            TryResolveDynamicHandTargets: function (fromPosition, toPosition) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#TryResolveDynamicHandTargets", this ); }
+
+                fromPosition.v = pc.Vec3.ZERO.clone();
+                toPosition.v = pc.Vec3.ZERO.clone();
+                var sourceStack = { };
+                var targetFloor = { };
+                if (!this.TryFindTutorialMovePair(sourceStack, targetFloor)) {
+                    return false;
+                }
+                var sourceWorldPoint = sourceStack.v.transform.position.$clone().add( pc.Vec3.UP.clone().clone().scale( this.worldTargetHeightOffset ) );
+                var targetWorldPoint = targetFloor.v.transform.position.$clone().add( pc.Vec3.UP.clone().clone().scale( this.worldTargetHeightOffset ) );
+                if (!this.TryConvertWorldToUiPosition(sourceWorldPoint.$clone(), fromPosition)) {
+                    return false;
+                }
+                if (!this.TryConvertWorldToUiPosition(targetWorldPoint.$clone(), toPosition)) {
+                    return false;
+                }
+                return true;
+            },
+            /*TutorialOverlayController.TryResolveDynamicHandTargets end.*/
+
+            /*TutorialOverlayController.TryFindTutorialMovePair start.*/
+            TryFindTutorialMovePair: function (sourceStack, targetFloor) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#TryFindTutorialMovePair", this ); }
+
+                var $t, $t1, $t2, $t3;
+                sourceStack.v = null;
+                targetFloor.v = null;
+                var manager = this.ResolveManager();
+                this.tutorialStacksBuffer.clear();
+                this.candidateChainFloorsBuffer.clear();
+                this.candidateFreeFloorsBuffer.clear();
+                $t = Bridge.getEnumerator(HexStack.ActiveStacks, HexStack);
+                try {
+                    while ($t.moveNext()) {
+                        var stack = $t.Current;
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(stack, null)) && stack.gameObject.activeInHierarchy && stack.TileCount !== 0 && !(UnityEngine.MonoBehaviour.op_Inequality(stack.CurrentFloor, null))) {
+                            this.tutorialStacksBuffer.add(stack);
+                        }
+                    }
+                } finally {
+                    if (Bridge.is($t, System.IDisposable)) {
+                        $t.System$IDisposable$Dispose();
+                    }
+                }
+                if (this.tutorialStacksBuffer.Count === 0 && UnityEngine.Time.unscaledTime >= this.nextStackFallbackScanAt) {
+                    this.nextStackFallbackScanAt = UnityEngine.Time.unscaledTime + UnityEngine.Mathf.Max(0.05, this.fallbackScanInterval);
+                    var allStacks = UnityEngine.Object.FindObjectsOfType(HexStack);
+                    $t1 = Bridge.getEnumerator(allStacks);
+                    try {
+                        while ($t1.moveNext()) {
+                            var stack2 = $t1.Current;
+                            if (!(UnityEngine.MonoBehaviour.op_Equality(stack2, null)) && stack2.gameObject.activeInHierarchy && stack2.TileCount !== 0 && !(UnityEngine.MonoBehaviour.op_Inequality(stack2.CurrentFloor, null))) {
+                                this.tutorialStacksBuffer.add(stack2);
+                            }
+                        }
+                    } finally {
+                        if (Bridge.is($t1, System.IDisposable)) {
+                            $t1.System$IDisposable$Dispose();
+                        }
+                    }
+                    if (this.tutorialStacksBuffer.Count <= 0) {
+                    }
+                }
+                if (this.tutorialStacksBuffer.Count === 0) {
+                    return false;
+                }
+                sourceStack.v = this.SelectBottomMostPlayerStack(this.tutorialStacksBuffer);
+                if (UnityEngine.MonoBehaviour.op_Equality(sourceStack.v, null)) {
+                    return false;
+                }
+                var sourceTopColorId = sourceStack.v.GetTopColorId();
+                $t2 = Bridge.getEnumerator(HexFloor.ActiveFloors, HexFloor);
+                try {
+                    while ($t2.moveNext()) {
+                        var floor2 = $t2.Current;
+                        if (!(UnityEngine.MonoBehaviour.op_Equality(floor2, null)) && ((UnityEngine.MonoBehaviour.op_Inequality(manager, null)) ? manager.CanPlaceStackOnFloor(sourceStack.v, floor2) : (UnityEngine.MonoBehaviour.op_Equality(floor2.OccupiedStack, null)))) {
+                            this.candidateFreeFloorsBuffer.add(floor2);
+                            if (sourceTopColorId >= 0 && this.HasNeighborWithTopColor(floor2, sourceTopColorId)) {
+                                this.candidateChainFloorsBuffer.add(floor2);
+                            }
+                        }
+                    }
+                } finally {
+                    if (Bridge.is($t2, System.IDisposable)) {
+                        $t2.System$IDisposable$Dispose();
+                    }
+                }
+                if (this.candidateFreeFloorsBuffer.Count === 0 && UnityEngine.Time.unscaledTime >= this.nextFloorFallbackScanAt) {
+                    this.nextFloorFallbackScanAt = UnityEngine.Time.unscaledTime + UnityEngine.Mathf.Max(0.05, this.fallbackScanInterval);
+                    var allFloors = UnityEngine.Object.FindObjectsOfType(HexFloor);
+                    $t3 = Bridge.getEnumerator(allFloors);
+                    try {
+                        while ($t3.moveNext()) {
+                            var floor = $t3.Current;
+                            if (!(UnityEngine.MonoBehaviour.op_Equality(floor, null)) && floor.gameObject.activeInHierarchy && ((UnityEngine.MonoBehaviour.op_Inequality(manager, null)) ? manager.CanPlaceStackOnFloor(sourceStack.v, floor) : (UnityEngine.MonoBehaviour.op_Equality(floor.OccupiedStack, null)))) {
+                                if (!this.candidateFreeFloorsBuffer.contains(floor)) {
+                                    this.candidateFreeFloorsBuffer.add(floor);
+                                }
+                                if (sourceTopColorId >= 0 && this.HasNeighborWithTopColor(floor, sourceTopColorId) && !this.candidateChainFloorsBuffer.contains(floor)) {
+                                    this.candidateChainFloorsBuffer.add(floor);
+                                }
+                            }
+                        }
+                    } finally {
+                        if (Bridge.is($t3, System.IDisposable)) {
+                            $t3.System$IDisposable$Dispose();
+                        }
+                    }
+                    if (this.candidateFreeFloorsBuffer.Count <= 0) {
+                    }
+                }
+                if (this.candidateChainFloorsBuffer.Count > 0) {
+                    targetFloor.v = TutorialOverlayController.SelectBestTargetFloor(sourceStack.v, this.candidateChainFloorsBuffer);
+                    return UnityEngine.MonoBehaviour.op_Inequality(targetFloor.v, null);
+                }
+                if (this.candidateFreeFloorsBuffer.Count === 0) {
+                    return false;
+                }
+                targetFloor.v = TutorialOverlayController.SelectBestTargetFloor(sourceStack.v, this.candidateFreeFloorsBuffer);
+                return UnityEngine.MonoBehaviour.op_Inequality(targetFloor.v, null);
+            },
+            /*TutorialOverlayController.TryFindTutorialMovePair end.*/
+
+            /*TutorialOverlayController.SelectBottomMostPlayerStack start.*/
+            SelectBottomMostPlayerStack: function (stacks) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#SelectBottomMostPlayerStack", this ); }
+
+                if (stacks == null || stacks.Count === 0) {
+                    return null;
+                }
+                var gameplayCamera = this.ResolveWorldCamera();
+                var bestStack = null;
+                var bestScreenY = 3.40282347E+38;
+                var bestCenterOffset = 3.40282347E+38;
+                var screenCenterX = UnityEngine.Screen.width * 0.5;
+                var foundVisibleStack = false;
+                for (var i = 0; i < stacks.Count; i = (i + 1) | 0) {
+                    var stack = stacks.getItem(i);
+                    if (UnityEngine.MonoBehaviour.op_Equality(stack, null)) {
+                        continue;
+                    }
+                    var screenPoint = ((UnityEngine.Component.op_Inequality(gameplayCamera, null)) ? gameplayCamera.WorldToScreenPoint(stack.transform.position) : new pc.Vec3( stack.transform.position.x, stack.transform.position.y, 1.0 ));
+                    if (UnityEngine.Component.op_Inequality(gameplayCamera, null) && screenPoint.z < 0.0) {
+                        continue;
+                    }
+                    var isVisibleOnScreen = screenPoint.x >= 0.0 && screenPoint.x <= UnityEngine.Screen.width && screenPoint.y >= 0.0 && screenPoint.y <= UnityEngine.Screen.height;
+                    if (!foundVisibleStack || isVisibleOnScreen) {
+                        if (!foundVisibleStack && isVisibleOnScreen) {
+                            foundVisibleStack = true;
+                            bestStack = null;
+                            bestScreenY = 3.40282347E+38;
+                            bestCenterOffset = 3.40282347E+38;
+                        }
+                        var stackScreenY = screenPoint.y;
+                        var centerOffset = Math.abs(screenPoint.x - screenCenterX);
+                        if (UnityEngine.MonoBehaviour.op_Equality(bestStack, null) || stackScreenY < bestScreenY || (UnityEngine.Mathf.Approximately(stackScreenY, bestScreenY) && centerOffset < bestCenterOffset)) {
+                            bestStack = stack;
+                            bestScreenY = stackScreenY;
+                            bestCenterOffset = centerOffset;
+                        }
+                    }
+                }
+                return bestStack;
+            },
+            /*TutorialOverlayController.SelectBottomMostPlayerStack end.*/
+
+            /*TutorialOverlayController.HasNeighborWithTopColor start.*/
+            HasNeighborWithTopColor: function (centerFloor, colorId) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#HasNeighborWithTopColor", this ); }
+
+                if (UnityEngine.MonoBehaviour.op_Equality(centerFloor, null) || colorId < 0) {
+                    return false;
+                }
+                for (var side = 0; side < 6; side = (side + 1) | 0) {
+                    var neighborFloor = centerFloor.GetNeighborBySide(side);
+                    if (TutorialOverlayController.IsMatchingNeighborStack(neighborFloor, colorId)) {
+                        return true;
+                    }
+                }
+                var nearFloors = centerFloor.NearFloors;
+                for (var i = 0; i < System.Array.getCount(nearFloors, HexFloor); i = (i + 1) | 0) {
+                    if (TutorialOverlayController.IsMatchingNeighborStack(System.Array.getItem(nearFloors, i, HexFloor), colorId)) {
+                        return true;
+                    }
+                }
+                return false;
+            },
+            /*TutorialOverlayController.HasNeighborWithTopColor end.*/
+
+            /*TutorialOverlayController.ResolveManager start.*/
+            ResolveManager: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#ResolveManager", this ); }
+
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.cachedManager, null)) {
+                    return this.cachedManager;
+                }
+                if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null)) {
+                    this.gameContext = UnityEngine.Object.FindObjectOfType(HexGameContext);
+                }
+                if (UnityEngine.MonoBehaviour.op_Inequality(this.gameContext, null) && UnityEngine.MonoBehaviour.op_Inequality(this.gameContext.Manager, null)) {
+                    this.cachedManager = this.gameContext.Manager;
+                    return this.cachedManager;
+                }
+                this.cachedManager = UnityEngine.Object.FindObjectOfType(HexManager);
+                if (UnityEngine.MonoBehaviour.op_Equality(this.cachedManager, null)) {
+                }
+                return this.cachedManager;
+            },
+            /*TutorialOverlayController.ResolveManager end.*/
+
+            /*TutorialOverlayController.ResolveWorldCamera start.*/
+            ResolveWorldCamera: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#ResolveWorldCamera", this ); }
+
+                if (UnityEngine.Component.op_Inequality(this.worldCamera, null)) {
+                    return this.worldCamera;
+                }
+                if (UnityEngine.Component.op_Inequality(this.cachedFallbackWorldCamera, null)) {
+                    return this.cachedFallbackWorldCamera;
+                }
+                var mainCamera = UnityEngine.Camera.main;
+                if (UnityEngine.Component.op_Inequality(mainCamera, null)) {
+                    this.cachedFallbackWorldCamera = mainCamera;
+                    return mainCamera;
+                }
+                var anyCamera = UnityEngine.Object.FindObjectOfType(UnityEngine.Camera);
+                if (!(UnityEngine.Component.op_Equality(anyCamera, null))) {
+                    this.cachedFallbackWorldCamera = anyCamera;
+                }
+                return anyCamera;
+            },
+            /*TutorialOverlayController.ResolveWorldCamera end.*/
+
+            /*TutorialOverlayController.TryConvertWorldToUiPosition start.*/
+            TryConvertWorldToUiPosition: function (worldPosition, uiPosition) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#TryConvertWorldToUiPosition", this ); }
+
+                uiPosition.v = pc.Vec3.ZERO.clone();
+                var gameplayCamera = this.ResolveWorldCamera();
+                if (UnityEngine.Component.op_Equality(gameplayCamera, null)) {
+                    return false;
+                }
+                var screenPoint = gameplayCamera.WorldToScreenPoint(worldPosition);
+                if (screenPoint.z < 0.0) {
+                    return false;
+                }
+                var screenPoint2D = UnityEngine.Vector2.FromVector3(screenPoint).add( this.handScreenOffset );
+                if (UnityEngine.Component.op_Inequality(this.canvasRoot, null)) {
+                    if (!UnityEngine.RectTransformUtility.ScreenPointToWorldPointInRectangle(this.canvasRoot, screenPoint2D, this.uiCamera, uiPosition)) {
+                        return false;
+                    }
+                    return true;
+                }
+                uiPosition.v = new pc.Vec3( screenPoint2D.x, screenPoint2D.y, this.handTransform.position.z );
+                return true;
+            },
+            /*TutorialOverlayController.TryConvertWorldToUiPosition end.*/
 
             /*TutorialOverlayController.KillHandTween start.*/
             KillHandTween: function () {
@@ -6132,7 +7593,53 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
             },
             /*TutorialOverlayController.SetTutorialVisible end.*/
 
+            /*TutorialOverlayController.AreInitialGenerationSystemsReady$1 start.*/
+            AreInitialGenerationSystemsReady$1: function (details) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#AreInitialGenerationSystemsReady$1", this ); }
 
+                if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null)) {
+                    this.gameContext = UnityEngine.Object.FindObjectOfType(HexGameContext);
+                    if (UnityEngine.MonoBehaviour.op_Equality(this.gameContext, null)) {
+                        details.v = "HexGameContext not found (treated as ready).";
+                        return true;
+                    }
+                }
+                var floorCreator = this.gameContext.FloorCreator;
+                var floorReady = UnityEngine.MonoBehaviour.op_Equality(floorCreator, null) || floorCreator.InitialGenerationCompleted;
+                if (UnityEngine.MonoBehaviour.op_Inequality(floorCreator, null) && !floorCreator.InitialGenerationCompleted) {
+                    details.v = System.String.format("floorReady={0}, stacksReady=unknown", [Bridge.box(floorReady, System.Boolean, System.Boolean.toString)]);
+                    return false;
+                }
+                var stacksCreator = this.gameContext.StacksCreator;
+                var stacksReady = UnityEngine.MonoBehaviour.op_Equality(stacksCreator, null) || stacksCreator.InitialPlayerStacksCompleted;
+                details.v = System.String.format("floorReady={0}, stacksReady={1}", Bridge.box(floorReady, System.Boolean, System.Boolean.toString), Bridge.box(stacksReady, System.Boolean, System.Boolean.toString));
+                return stacksReady;
+            },
+            /*TutorialOverlayController.AreInitialGenerationSystemsReady$1 end.*/
+
+            /*TutorialOverlayController.AreInitialGenerationSystemsReady start.*/
+            AreInitialGenerationSystemsReady: function () {
+if ( TRACE ) { TRACE( "TutorialOverlayController#AreInitialGenerationSystemsReady", this ); }
+
+                var details = { };
+                return this.AreInitialGenerationSystemsReady$1(details);
+            },
+            /*TutorialOverlayController.AreInitialGenerationSystemsReady end.*/
+
+            /*TutorialOverlayController.LogTutorial start.*/
+            LogTutorial: function (message) {
+if ( TRACE ) { TRACE( "TutorialOverlayController#LogTutorial", this ); }
+
+                if (this.debugLogs) {
+                    UnityEngine.Debug.Log$1("[Tutorial] " + (message || ""), this);
+                }
+            },
+            /*TutorialOverlayController.LogTutorial end.*/
+
+
+        },
+        overloads: {
+            "AreInitialGenerationSystemsReady(string)": "AreInitialGenerationSystemsReady$1"
         }
     });
     /*TutorialOverlayController end.*/
@@ -6142,27 +7649,31 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
         $n = ["System","UnityEngine.UI","UnityEngine","DG.Tweening","System.Collections","System.Collections.Generic","UnityEngine.Audio","DG.Tweening.Core","DG.Tweening.Plugins.Core.PathCore","System.Globalization","DG.Tweening.Plugins.Options"];
 
     /*CountdownTimerPanel start.*/
-    $m("CountdownTimerPanel", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"ConfigureStaticBindings","t":8,"sn":"ConfigureStaticBindings","rt":$n[0].Void},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":1,"n":"ResetToInitialState","t":8,"sn":"ResetToInitialState","rt":$n[0].Void},{"a":2,"n":"RestartCountdown","t":8,"pi":[{"n":"newDurationSeconds","pt":$n[0].Single,"ps":0}],"sn":"RestartCountdown","rt":$n[0].Void,"p":[$n[0].Single]},{"a":2,"n":"StartCountdown","t":8,"sn":"StartCountdown","rt":$n[0].Void},{"a":1,"n":"StartShake","t":8,"sn":"StartShake","rt":$n[0].Void},{"a":2,"n":"StopCountdown","t":8,"sn":"StopCountdown","rt":$n[0].Void},{"a":1,"n":"StopShake","t":8,"sn":"StopShake","rt":$n[0].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"UpdateVisuals","t":8,"pi":[{"n":"normalizedTime","pt":$n[0].Single,"ps":0}],"sn":"UpdateVisuals","rt":$n[0].Void,"p":[$n[0].Single]},{"a":2,"n":"IsRunning","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_IsRunning","t":8,"rt":$n[0].Boolean,"fg":"IsRunning","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"IsRunning"},{"a":2,"n":"RemainingSeconds","t":16,"rt":$n[0].Single,"g":{"a":2,"n":"get_RemainingSeconds","t":8,"rt":$n[0].Single,"fg":"RemainingSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},"fn":"RemainingSeconds"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowEndAngle","t":4,"rt":$n[0].Single,"sn":"arrowEndAngle","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowImage","t":4,"rt":$n[1].Image,"sn":"arrowImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowNormalColor","t":4,"rt":$n[2].Color,"sn":"arrowNormalColor"},{"at":[new UnityEngine.HeaderAttribute("Arrow"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowStartAngle","t":4,"rt":$n[0].Single,"sn":"arrowStartAngle","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowTransform","t":4,"rt":$n[2].RectTransform,"sn":"arrowTransform"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"autoStartOnEnable","t":4,"rt":$n[0].Boolean,"sn":"autoStartOnEnable","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackImage","t":4,"rt":$n[1].Image,"sn":"barBackImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackLowColor","t":4,"rt":$n[2].Color,"sn":"barBackLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackNormalColor","t":4,"rt":$n[2].Color,"sn":"barBackNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillImage","t":4,"rt":$n[1].Image,"sn":"barFillImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillLowColor","t":4,"rt":$n[2].Color,"sn":"barFillLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillNormalColor","t":4,"rt":$n[2].Color,"sn":"barFillNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameImage","t":4,"rt":$n[1].Image,"sn":"barFrameImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameLowColor","t":4,"rt":$n[2].Color,"sn":"barFrameLowColor"},{"at":[new UnityEngine.HeaderAttribute("Colors"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameNormalColor","t":4,"rt":$n[2].Color,"sn":"barFrameNormalColor"},{"at":[new UnityEngine.HeaderAttribute("Timer"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"durationSeconds","t":4,"rt":$n[0].Single,"sn":"durationSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackImage","t":4,"rt":$n[1].Image,"sn":"iconBackImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackLowColor","t":4,"rt":$n[2].Color,"sn":"iconBackLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackNormalColor","t":4,"rt":$n[2].Color,"sn":"iconBackNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameImage","t":4,"rt":$n[1].Image,"sn":"iconFrameImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameLowColor","t":4,"rt":$n[2].Color,"sn":"iconFrameLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameNormalColor","t":4,"rt":$n[2].Color,"sn":"iconFrameNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconNubImage","t":4,"rt":$n[1].Image,"sn":"iconNubImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconRoot","t":4,"rt":$n[2].RectTransform,"sn":"iconRoot"},{"at":[new UnityEngine.HeaderAttribute("Low Time FX"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeDuration","t":4,"rt":$n[0].Single,"sn":"iconShakeDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeStrength","t":4,"rt":$n[0].Single,"sn":"iconShakeStrength","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"iconShakeTween","t":4,"rt":$n[3].Tween,"sn":"iconShakeTween"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeVibrato","t":4,"rt":$n[0].Int32,"sn":"iconShakeVibrato","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"isRunning","t":4,"rt":$n[0].Boolean,"sn":"isRunning","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.02, 0.9)],"a":1,"n":"lowBackdropBlendRange","t":4,"rt":$n[0].Single,"sn":"lowBackdropBlendRange","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"lowStateEnabled","t":4,"rt":$n[0].Boolean,"sn":"lowStateEnabled","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.05, 0.95)],"a":1,"n":"lowTimeThresholdNormalized","t":4,"rt":$n[0].Single,"sn":"lowTimeThresholdNormalized","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"panelRoot","t":4,"rt":$n[2].RectTransform,"sn":"panelRoot"},{"a":1,"n":"remainingSeconds","t":4,"rt":$n[0].Single,"sn":"remainingSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    $m("CountdownTimerPanel", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ApplyConfiguredDurationFromConfig","t":8,"sn":"ApplyConfiguredDurationFromConfig","rt":$n[0].Void},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"ConfigureStaticBindings","t":8,"sn":"ConfigureStaticBindings","rt":$n[0].Void},{"a":1,"n":"LogTimerEvent","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogTimerEvent","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"LogTimerWarning","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogTimerWarning","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":1,"n":"ResetToInitialState","t":8,"sn":"ResetToInitialState","rt":$n[0].Void},{"a":2,"n":"RestartCountdown","t":8,"pi":[{"n":"newDurationSeconds","pt":$n[0].Single,"ps":0}],"sn":"RestartCountdown","rt":$n[0].Void,"p":[$n[0].Single]},{"a":2,"n":"StartCountdown","t":8,"sn":"StartCountdown","rt":$n[0].Void},{"a":1,"n":"StartShake","t":8,"sn":"StartShake","rt":$n[0].Void},{"a":2,"n":"StopCountdown","t":8,"sn":"StopCountdown","rt":$n[0].Void},{"a":1,"n":"StopShake","t":8,"sn":"StopShake","rt":$n[0].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"UpdateVisuals","t":8,"pi":[{"n":"normalizedTime","pt":$n[0].Single,"ps":0}],"sn":"UpdateVisuals","rt":$n[0].Void,"p":[$n[0].Single]},{"a":2,"n":"IsRunning","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_IsRunning","t":8,"rt":$n[0].Boolean,"fg":"IsRunning","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"IsRunning"},{"a":2,"n":"RemainingSeconds","t":16,"rt":$n[0].Single,"g":{"a":2,"n":"get_RemainingSeconds","t":8,"rt":$n[0].Single,"fg":"RemainingSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},"fn":"RemainingSeconds"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowEndAngle","t":4,"rt":$n[0].Single,"sn":"arrowEndAngle","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowImage","t":4,"rt":$n[1].Image,"sn":"arrowImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowNormalColor","t":4,"rt":$n[2].Color,"sn":"arrowNormalColor"},{"at":[new UnityEngine.HeaderAttribute("Arrow"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowStartAngle","t":4,"rt":$n[0].Single,"sn":"arrowStartAngle","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"arrowTransform","t":4,"rt":$n[2].RectTransform,"sn":"arrowTransform"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"autoStartOnEnable","t":4,"rt":$n[0].Boolean,"sn":"autoStartOnEnable","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackImage","t":4,"rt":$n[1].Image,"sn":"barBackImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackLowColor","t":4,"rt":$n[2].Color,"sn":"barBackLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barBackNormalColor","t":4,"rt":$n[2].Color,"sn":"barBackNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillImage","t":4,"rt":$n[1].Image,"sn":"barFillImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillLowColor","t":4,"rt":$n[2].Color,"sn":"barFillLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFillNormalColor","t":4,"rt":$n[2].Color,"sn":"barFillNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameImage","t":4,"rt":$n[1].Image,"sn":"barFrameImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameLowColor","t":4,"rt":$n[2].Color,"sn":"barFrameLowColor"},{"at":[new UnityEngine.HeaderAttribute("Colors"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"barFrameNormalColor","t":4,"rt":$n[2].Color,"sn":"barFrameNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"durationSeconds","t":4,"rt":$n[0].Single,"sn":"durationSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Timer"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackImage","t":4,"rt":$n[1].Image,"sn":"iconBackImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackLowColor","t":4,"rt":$n[2].Color,"sn":"iconBackLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconBackNormalColor","t":4,"rt":$n[2].Color,"sn":"iconBackNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameImage","t":4,"rt":$n[1].Image,"sn":"iconFrameImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameLowColor","t":4,"rt":$n[2].Color,"sn":"iconFrameLowColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconFrameNormalColor","t":4,"rt":$n[2].Color,"sn":"iconFrameNormalColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconNubImage","t":4,"rt":$n[1].Image,"sn":"iconNubImage"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconRoot","t":4,"rt":$n[2].RectTransform,"sn":"iconRoot"},{"at":[new UnityEngine.HeaderAttribute("Low Time FX"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeDuration","t":4,"rt":$n[0].Single,"sn":"iconShakeDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeStrength","t":4,"rt":$n[0].Single,"sn":"iconShakeStrength","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"iconShakeTween","t":4,"rt":$n[3].Tween,"sn":"iconShakeTween"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"iconShakeVibrato","t":4,"rt":$n[0].Int32,"sn":"iconShakeVibrato","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"isRunning","t":4,"rt":$n[0].Boolean,"sn":"isRunning","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.02, 0.9)],"a":1,"n":"lowBackdropBlendRange","t":4,"rt":$n[0].Single,"sn":"lowBackdropBlendRange","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"lowStateEnabled","t":4,"rt":$n[0].Boolean,"sn":"lowStateEnabled","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.05, 0.95)],"a":1,"n":"lowTimeThresholdNormalized","t":4,"rt":$n[0].Single,"sn":"lowTimeThresholdNormalized","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"panelRoot","t":4,"rt":$n[2].RectTransform,"sn":"panelRoot"},{"a":1,"n":"remainingSeconds","t":4,"rt":$n[0].Single,"sn":"remainingSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"CountdownFinished","t":2,"ad":{"a":2,"n":"add_CountdownFinished","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addCountdownFinished","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_CountdownFinished","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeCountdownFinished","rt":$n[0].Void,"p":[Function]}}]}; }, $n);
     /*CountdownTimerPanel end.*/
 
     /*HexClearFxPlayer start.*/
-    $m("HexClearFxPlayer", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"EstimateParticleSystemLifetime","is":true,"t":8,"pi":[{"n":"rootFx","pt":$n[2].ParticleSystem,"ps":0}],"sn":"EstimateParticleSystemLifetime","rt":$n[0].Single,"p":[$n[2].ParticleSystem],"box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"PlayClearTilesFxAtPosition","t":8,"pi":[{"n":"coroutineRunner","pt":$n[2].MonoBehaviour,"ps":0},{"n":"poolService","pt":HexPoolService,"ps":1},{"n":"position","pt":$n[2].Vector3,"ps":2},{"n":"tintColor","pt":$n[2].Color,"ps":3}],"sn":"PlayClearTilesFxAtPosition","rt":$n[0].Void,"p":[$n[2].MonoBehaviour,HexPoolService,$n[2].Vector3,$n[2].Color]},{"a":2,"n":"Prewarm","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0}],"sn":"Prewarm","rt":$n[0].Void,"p":[HexPoolService]},{"a":1,"n":"RentClearTilesFx","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0},{"n":"position","pt":$n[2].Vector3,"ps":1},{"n":"rotation","pt":$n[2].Quaternion,"ps":2}],"sn":"RentClearTilesFx","rt":$n[2].ParticleSystem,"p":[HexPoolService,$n[2].Vector3,$n[2].Quaternion]},{"a":1,"n":"ReturnClearTilesFxAfterDelay","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0},{"n":"fx","pt":$n[2].ParticleSystem,"ps":1},{"n":"delay","pt":$n[0].Single,"ps":2}],"sn":"ReturnClearTilesFxAfterDelay","rt":$n[4].IEnumerator,"p":[HexPoolService,$n[2].ParticleSystem,$n[0].Single]},{"a":1,"n":"TintParticleSystems","is":true,"t":8,"pi":[{"n":"rootFx","pt":$n[2].ParticleSystem,"ps":0},{"n":"tintColor","pt":$n[2].Color,"ps":1}],"sn":"TintParticleSystems","rt":$n[0].Void,"p":[$n[2].ParticleSystem,$n[2].Color]},{"a":2,"n":"TryGetClearBatchColor","t":8,"pi":[{"n":"tiles","pt":$n[5].List$1(HexTile),"ps":0},{"n":"color","out":true,"pt":$n[2].Color,"ps":1}],"sn":"TryGetClearBatchColor","rt":$n[0].Boolean,"p":[$n[5].List$1(HexTile),$n[2].Color],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetColorFromMaterial","is":true,"t":8,"pi":[{"n":"material","pt":$n[2].Material,"ps":0},{"n":"color","out":true,"pt":$n[2].Color,"ps":1}],"sn":"TryGetColorFromMaterial","rt":$n[0].Boolean,"p":[$n[2].Material,$n[2].Color],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"ClearTilesFxPrefab","t":16,"rt":$n[2].ParticleSystem,"g":{"a":2,"n":"get_ClearTilesFxPrefab","t":8,"rt":$n[2].ParticleSystem,"fg":"ClearTilesFxPrefab"},"fn":"ClearTilesFxPrefab"},{"a":1,"n":"BaseColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"BaseColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"ColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"TintColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"TintColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearTilesFxLifetimePadding","t":4,"rt":$n[0].Single,"sn":"clearTilesFxLifetimePadding","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearTilesFxPrefab","t":4,"rt":$n[2].ParticleSystem,"sn":"clearTilesFxPrefab"}]}; }, $n);
+    $m("HexClearFxPlayer", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"EstimateParticleSystemLifetime","is":true,"t":8,"pi":[{"n":"rootFx","pt":$n[2].ParticleSystem,"ps":0}],"sn":"EstimateParticleSystemLifetime","rt":$n[0].Single,"p":[$n[2].ParticleSystem],"box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"PlayClearTilesFxAtPosition","t":8,"pi":[{"n":"coroutineRunner","pt":$n[2].MonoBehaviour,"ps":0},{"n":"poolService","pt":HexPoolService,"ps":1},{"n":"position","pt":$n[2].Vector3,"ps":2},{"n":"tintColor","pt":$n[2].Color,"ps":3}],"sn":"PlayClearTilesFxAtPosition","rt":$n[0].Void,"p":[$n[2].MonoBehaviour,HexPoolService,$n[2].Vector3,$n[2].Color]},{"a":2,"n":"Prewarm","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0}],"sn":"Prewarm","rt":$n[0].Void,"p":[HexPoolService]},{"a":1,"n":"RentClearTilesFx","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0},{"n":"position","pt":$n[2].Vector3,"ps":1},{"n":"rotation","pt":$n[2].Quaternion,"ps":2}],"sn":"RentClearTilesFx","rt":$n[2].ParticleSystem,"p":[HexPoolService,$n[2].Vector3,$n[2].Quaternion]},{"a":1,"n":"ReturnClearTilesFxAfterDelay","t":8,"pi":[{"n":"poolService","pt":HexPoolService,"ps":0},{"n":"fx","pt":$n[2].ParticleSystem,"ps":1},{"n":"delay","pt":$n[0].Single,"ps":2}],"sn":"ReturnClearTilesFxAfterDelay","rt":$n[4].IEnumerator,"p":[HexPoolService,$n[2].ParticleSystem,$n[0].Single]},{"a":1,"n":"TintParticleSystems","is":true,"t":8,"pi":[{"n":"rootFx","pt":$n[2].ParticleSystem,"ps":0},{"n":"tintColor","pt":$n[2].Color,"ps":1}],"sn":"TintParticleSystems","rt":$n[0].Void,"p":[$n[2].ParticleSystem,$n[2].Color]},{"a":2,"n":"TryGetClearBatchColor","t":8,"pi":[{"n":"tiles","pt":$n[5].List$1(HexTile),"ps":0},{"n":"color","out":true,"pt":$n[2].Color,"ps":1}],"sn":"TryGetClearBatchColor","rt":$n[0].Boolean,"p":[$n[5].List$1(HexTile),$n[2].Color],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"ClearTilesFxPrefab","t":16,"rt":$n[2].ParticleSystem,"g":{"a":2,"n":"get_ClearTilesFxPrefab","t":8,"rt":$n[2].ParticleSystem,"fg":"ClearTilesFxPrefab"},"fn":"ClearTilesFxPrefab"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearTilesFxLifetimePadding","t":4,"rt":$n[0].Single,"sn":"clearTilesFxLifetimePadding","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearTilesFxPrefab","t":4,"rt":$n[2].ParticleSystem,"sn":"clearTilesFxPrefab"}]}; }, $n);
     /*HexClearFxPlayer end.*/
 
     /*HexConfig start.*/
-    $m("HexConfig", function () { return {"nested":[HexConfig.StackColorPreset],"att":1048577,"a":2,"at":[new UnityEngine.CreateAssetMenuAttribute()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"at":[new UnityEngine.HeaderAttribute("Fallback Random Colors")],"a":2,"n":"colors","t":4,"rt":System.Array.type(UnityEngine.Material),"sn":"colors"},{"at":[new UnityEngine.TooltipAttribute("Number of floor rows along world Z axis.")],"a":2,"n":"floorLength","t":4,"rt":$n[0].Int32,"sn":"floorLength","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Floor Generation"),new UnityEngine.TooltipAttribute("Number of floor columns along world X axis.")],"a":2,"n":"floorWidth","t":4,"rt":$n[0].Int32,"sn":"floorWidth","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Stack Presets")],"a":2,"n":"startStackColors","t":4,"rt":System.Array.type(HexConfig.StackColorPreset),"sn":"startStackColors"}]}; }, $n);
+    $m("HexConfig", function () { return {"nested":[HexConfig.FloorCoord,HexConfig.StackColorPreset],"att":1048577,"a":2,"at":[new UnityEngine.CreateAssetMenuAttribute()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"at":[new UnityEngine.HeaderAttribute("Fallback Random Colors")],"a":2,"n":"colors","t":4,"rt":System.Array.type(UnityEngine.Color),"sn":"colors"},{"a":2,"n":"endGameAfterFirstTransferAndClearChain","t":4,"rt":$n[0].Boolean,"sn":"endGameAfterFirstTransferAndClearChain","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Floor Stack Spawn")],"a":2,"n":"fillGeneratedFloorWithStacks","t":4,"rt":$n[0].Boolean,"sn":"fillGeneratedFloorWithStacks","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.TooltipAttribute("Number of floor rows along world Z axis.")],"a":2,"n":"floorLength","t":4,"rt":$n[0].Int32,"sn":"floorLength","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Floor Generation"),new UnityEngine.TooltipAttribute("Number of floor columns along world X axis.")],"a":2,"n":"floorWidth","t":4,"rt":$n[0].Int32,"sn":"floorWidth","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Game Flow")],"a":2,"n":"gameDurationSeconds","t":4,"rt":$n[0].Single,"sn":"gameDurationSeconds","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"generatePlayerStacksByFivePlusFive","t":4,"rt":$n[0].Boolean,"sn":"generatePlayerStacksByFivePlusFive","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Stack Presets")],"a":2,"n":"isRandom","t":4,"rt":$n[0].Boolean,"sn":"isRandom","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"noStackSpawnCoords","t":4,"rt":System.Array.type(HexConfig.FloorCoord),"sn":"noStackSpawnCoords"},{"at":[new UnityEngine.TooltipAttribute("How many first colors from `colors` are used in gameplay generation. 0 = use all.")],"a":2,"n":"paletteColorCount","t":4,"rt":$n[0].Int32,"sn":"paletteColorCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"startStackColors","t":4,"rt":System.Array.type(HexConfig.StackColorPreset),"sn":"startStackColors"},{"at":[new UnityEngine.HeaderAttribute("Match Rules")],"a":2,"n":"topMatchClearCount","t":4,"rt":$n[0].Int32,"sn":"topMatchClearCount","box":function ($v) { return Bridge.box($v, System.Int32);}}]}; }, $n);
     /*HexConfig end.*/
 
+    /*HexConfig+FloorCoord start.*/
+    $m("HexConfig.FloorCoord", function () { return {"td":HexConfig,"att":1057034,"a":2,"at":[new System.SerializableAttribute()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"x","t":4,"rt":$n[0].Int32,"sn":"x","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"z","t":4,"rt":$n[0].Int32,"sn":"z","box":function ($v) { return Bridge.box($v, System.Int32);}}]}; }, $n);
+    /*HexConfig+FloorCoord end.*/
+
     /*HexConfig+StackColorPreset start.*/
-    $m("HexConfig.StackColorPreset", function () { return {"td":HexConfig,"att":1056770,"a":2,"at":[new System.SerializableAttribute()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"colorsBottomToTop","t":4,"rt":System.Array.type(UnityEngine.Material),"sn":"colorsBottomToTop"}]}; }, $n);
+    $m("HexConfig.StackColorPreset", function () { return {"td":HexConfig,"att":1056770,"a":2,"at":[new System.SerializableAttribute()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"colorIdsBottomToTop","t":4,"rt":$n[0].Array.type(System.Int32),"sn":"colorIdsBottomToTop"}]}; }, $n);
     /*HexConfig+StackColorPreset end.*/
 
     /*HexDragger start.*/
-    $m("HexDragger", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent(),new UnityEngine.RequireComponent.ctor(HexStack)],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"EndDrag","t":8,"sn":"EndDrag","rt":$n[0].Void},{"a":1,"n":"EnsureFloorRaycastBuffer","t":8,"sn":"EnsureFloorRaycastBuffer","rt":$n[0].Void},{"a":1,"n":"FinalizeSettle","t":8,"pi":[{"n":"destroyAfterSettle","pt":$n[0].Boolean,"ps":0}],"sn":"FinalizeSettle","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"KillActiveTween","t":8,"pi":[{"n":"complete","pt":$n[0].Boolean,"ps":0}],"sn":"KillActiveTween","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"ReleaseDragState","t":8,"sn":"ReleaseDragState","rt":$n[0].Void},{"a":2,"n":"SetGameContext","t":8,"pi":[{"n":"context","pt":HexGameContext,"ps":0}],"sn":"SetGameContext","rt":$n[0].Void,"p":[HexGameContext]},{"a":1,"n":"SetHighlightedFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"SetHighlightedFloor","rt":$n[0].Void,"p":[HexFloor]},{"a":1,"n":"StartDrag","t":8,"pi":[{"n":"pointerId","pt":$n[0].Int32,"ps":0},{"n":"hitPoint","pt":$n[2].Vector3,"ps":1}],"sn":"StartDrag","rt":$n[0].Void,"p":[$n[0].Int32,$n[2].Vector3]},{"a":1,"n":"StartSettleTween","t":8,"pi":[{"n":"targetPosition","pt":$n[2].Vector3,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1},{"n":"destroyAfterSettle","pt":$n[0].Boolean,"ps":2}],"sn":"StartSettleTween","rt":$n[0].Void,"p":[$n[2].Vector3,HexFloor,$n[0].Boolean]},{"a":1,"n":"TryBeginDrag","t":8,"sn":"TryBeginDrag","rt":$n[0].Void},{"a":1,"n":"TryGetFloorUnderStack","t":8,"pi":[{"n":"floor","out":true,"pt":HexFloor,"ps":0}],"sn":"TryGetFloorUnderStack","rt":$n[0].Boolean,"p":[HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetPointerDown","t":8,"pi":[{"n":"pointerId","out":true,"pt":$n[0].Int32,"ps":0},{"n":"pointerPosition","out":true,"pt":$n[2].Vector2,"ps":1}],"sn":"TryGetPointerDown","rt":$n[0].Boolean,"p":[$n[0].Int32,$n[2].Vector2],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetPointerPosition","t":8,"pi":[{"n":"pointerId","pt":$n[0].Int32,"ps":0},{"n":"pointerPosition","out":true,"pt":$n[2].Vector2,"ps":1}],"sn":"TryGetPointerPosition","rt":$n[0].Boolean,"p":[$n[0].Int32,$n[2].Vector2],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"UpdateDrag","t":8,"pi":[{"n":"pointerPosition","pt":$n[2].Vector2,"ps":0}],"sn":"UpdateDrag","rt":$n[0].Void,"p":[$n[2].Vector2]},{"a":1,"n":"UpdateDropHighlight","t":8,"sn":"UpdateDropHighlight","rt":$n[0].Void},{"a":1,"n":"WasPointerReleased","t":8,"pi":[{"n":"pointerId","pt":$n[0].Int32,"ps":0}],"sn":"WasPointerReleased","rt":$n[0].Boolean,"p":[$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"Manager","t":16,"rt":HexManager,"g":{"a":1,"n":"get_Manager","t":8,"rt":HexManager,"fg":"Manager"},"fn":"Manager"},{"a":1,"n":"MousePointerId","is":true,"t":4,"rt":$n[0].Int32,"sn":"MousePointerId","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activeDraggedDragger","is":true,"t":4,"rt":HexDragger,"sn":"activeDraggedDragger"},{"a":1,"n":"activePointerId","t":4,"rt":$n[0].Int32,"sn":"activePointerId","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activeTween","t":4,"rt":$n[3].Tween,"sn":"activeTween"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"attachMoveDuration","t":4,"rt":$n[0].Single,"sn":"attachMoveDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"attachMoveEase","t":4,"rt":$n[3].Ease,"sn":"attachMoveEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.HeaderAttribute("Behaviour"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"destroyOnSuccessfulDrop","t":4,"rt":$n[0].Boolean,"sn":"destroyOnSuccessfulDrop","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"dragEndedWithSuccessfulDrop","t":4,"rt":$n[0].Boolean,"sn":"dragEndedWithSuccessfulDrop","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"dragLiftY","t":4,"rt":$n[0].Single,"sn":"dragLiftY","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"dragOffset","t":4,"rt":$n[2].Vector3,"sn":"dragOffset"},{"a":1,"n":"dragPlane","t":4,"rt":$n[2].Plane,"sn":"dragPlane"},{"a":1,"n":"dragStartPosition","t":4,"rt":$n[2].Vector3,"sn":"dragStartPosition"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropDuration","t":4,"rt":$n[0].Single,"sn":"dropDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropEase","t":4,"rt":$n[3].Ease,"sn":"dropEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorCheckDistance","t":4,"rt":$n[0].Single,"sn":"floorCheckDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Floor Check"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorCheckStartHeight","t":4,"rt":$n[0].Single,"sn":"floorCheckStartHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"floorRaycastBuffer","t":4,"rt":System.Array.type(UnityEngine.RaycastHit),"sn":"floorRaycastBuffer"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorRaycastBufferSize","t":4,"rt":$n[0].Int32,"sn":"floorRaycastBufferSize","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Input")],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"a":1,"n":"highlightedFloor","t":4,"rt":HexFloor,"sn":"highlightedFloor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"inputCamera","t":4,"rt":$n[2].Camera,"sn":"inputCamera"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"interactionMask","t":4,"rt":$n[2].LayerMask,"sn":"interactionMask"},{"a":1,"n":"isDragging","t":4,"rt":$n[0].Boolean,"sn":"isDragging","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isSettling","t":4,"rt":$n[0].Boolean,"sn":"isSettling","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftDuration","t":4,"rt":$n[0].Single,"sn":"liftDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftEase","t":4,"rt":$n[3].Ease,"sn":"liftEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.HeaderAttribute("Tween"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftHeight","t":4,"rt":$n[0].Single,"sn":"liftHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"pickMaxDistance","t":4,"rt":$n[0].Single,"sn":"pickMaxDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"stack","t":4,"rt":HexStack,"sn":"stack"},{"a":2,"n":"DragFinished","is":true,"t":2,"ad":{"a":2,"n":"add_DragFinished","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addDragFinished","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_DragFinished","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeDragFinished","rt":$n[0].Void,"p":[Function]}},{"a":2,"n":"DragStarted","is":true,"t":2,"ad":{"a":2,"n":"add_DragStarted","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addDragStarted","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_DragStarted","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeDragStarted","rt":$n[0].Void,"p":[Function]}}]}; }, $n);
+    $m("HexDragger", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"CancelActiveDrag","t":8,"sn":"CancelActiveDrag","rt":$n[0].Void},{"a":1,"n":"CancelActiveDragInternal","t":8,"pi":[{"n":"invokeFinishedEvent","pt":$n[0].Boolean,"ps":0}],"sn":"CancelActiveDragInternal","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"EndDrag","t":8,"sn":"EndDrag","rt":$n[0].Void},{"a":1,"n":"EnsureFloorRaycastBuffer","t":8,"sn":"EnsureFloorRaycastBuffer","rt":$n[0].Void},{"a":1,"n":"FinalizeSettle","t":8,"sn":"FinalizeSettle","rt":$n[0].Void},{"a":1,"n":"GetNearestFloorFromHits","t":8,"pi":[{"n":"hits","pt":System.Array.type(UnityEngine.RaycastHit),"ps":0},{"n":"hitCount","pt":$n[0].Int32,"ps":1}],"sn":"GetNearestFloorFromHits","rt":HexFloor,"p":[System.Array.type(UnityEngine.RaycastHit),$n[0].Int32]},{"a":1,"n":"IsActiveStackValid","t":8,"sn":"IsActiveStackValid","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"KillActiveTween","t":8,"pi":[{"n":"complete","pt":$n[0].Boolean,"ps":0}],"sn":"KillActiveTween","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":1,"n":"ReleaseDragState","t":8,"sn":"ReleaseDragState","rt":$n[0].Void},{"a":2,"n":"SetGameContext","t":8,"pi":[{"n":"context","pt":HexGameContext,"ps":0}],"sn":"SetGameContext","rt":$n[0].Void,"p":[HexGameContext]},{"a":2,"n":"SetGlobalDragEnabled","is":true,"t":8,"pi":[{"n":"enabled","pt":$n[0].Boolean,"ps":0}],"sn":"SetGlobalDragEnabled","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"SetHighlightedFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"SetHighlightedFloor","rt":$n[0].Void,"p":[HexFloor]},{"a":1,"n":"StartDrag","t":8,"pi":[{"n":"stackToDrag","pt":HexStack,"ps":0},{"n":"pointerId","pt":$n[0].Int32,"ps":1},{"n":"hitPoint","pt":$n[2].Vector3,"ps":2}],"sn":"StartDrag","rt":$n[0].Void,"p":[HexStack,$n[0].Int32,$n[2].Vector3]},{"a":1,"n":"StartSettleTween","t":8,"pi":[{"n":"targetPosition","pt":$n[2].Vector3,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1}],"sn":"StartSettleTween","rt":$n[0].Void,"p":[$n[2].Vector3,HexFloor]},{"a":1,"n":"TryBeginDrag","t":8,"sn":"TryBeginDrag","rt":$n[0].Void},{"a":1,"n":"TryGetFloorUnderStack","t":8,"pi":[{"n":"floor","out":true,"pt":HexFloor,"ps":0}],"sn":"TryGetFloorUnderStack","rt":$n[0].Boolean,"p":[HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetPointerDown","t":8,"pi":[{"n":"pointerId","out":true,"pt":$n[0].Int32,"ps":0},{"n":"pointerPosition","out":true,"pt":$n[2].Vector2,"ps":1}],"sn":"TryGetPointerDown","rt":$n[0].Boolean,"p":[$n[0].Int32,$n[2].Vector2],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetPointerPosition","t":8,"pi":[{"n":"pointerId","pt":$n[0].Int32,"ps":0},{"n":"pointerPosition","out":true,"pt":$n[2].Vector2,"ps":1}],"sn":"TryGetPointerPosition","rt":$n[0].Boolean,"p":[$n[0].Int32,$n[2].Vector2],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"UpdateDrag","t":8,"pi":[{"n":"pointerPosition","pt":$n[2].Vector2,"ps":0}],"sn":"UpdateDrag","rt":$n[0].Void,"p":[$n[2].Vector2]},{"a":1,"n":"UpdateDropHighlight","t":8,"sn":"UpdateDropHighlight","rt":$n[0].Void},{"a":1,"n":"WasPointerReleased","t":8,"pi":[{"n":"pointerId","pt":$n[0].Int32,"ps":0}],"sn":"WasPointerReleased","rt":$n[0].Boolean,"p":[$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"IsGlobalDragEnabled","is":true,"t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_IsGlobalDragEnabled","t":8,"rt":$n[0].Boolean,"fg":"IsGlobalDragEnabled","is":true,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"IsGlobalDragEnabled"},{"a":1,"n":"Manager","t":16,"rt":HexManager,"g":{"a":1,"n":"get_Manager","t":8,"rt":HexManager,"fg":"Manager"},"fn":"Manager"},{"a":1,"n":"MousePointerId","is":true,"t":4,"rt":$n[0].Int32,"sn":"MousePointerId","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activePointerId","t":4,"rt":$n[0].Int32,"sn":"activePointerId","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activeStack","t":4,"rt":HexStack,"sn":"activeStack"},{"a":1,"n":"activeStackTransform","t":4,"rt":$n[2].Transform,"sn":"activeStackTransform"},{"a":1,"n":"activeTween","t":4,"rt":$n[3].Tween,"sn":"activeTween"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"attachMoveDuration","t":4,"rt":$n[0].Single,"sn":"attachMoveDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"attachMoveEase","t":4,"rt":$n[3].Ease,"sn":"attachMoveEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"a":1,"n":"cachedManager","t":4,"rt":HexManager,"sn":"cachedManager"},{"a":1,"n":"dragEndedWithSuccessfulDrop","t":4,"rt":$n[0].Boolean,"sn":"dragEndedWithSuccessfulDrop","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"dragLiftY","t":4,"rt":$n[0].Single,"sn":"dragLiftY","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"dragOffset","t":4,"rt":$n[2].Vector3,"sn":"dragOffset"},{"a":1,"n":"dragPlane","t":4,"rt":$n[2].Plane,"sn":"dragPlane"},{"a":1,"n":"dragStartPosition","t":4,"rt":$n[2].Vector3,"sn":"dragStartPosition"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropDuration","t":4,"rt":$n[0].Single,"sn":"dropDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropEase","t":4,"rt":$n[3].Ease,"sn":"dropEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorCheckDistance","t":4,"rt":$n[0].Single,"sn":"floorCheckDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Floor Check"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorCheckStartHeight","t":4,"rt":$n[0].Single,"sn":"floorCheckStartHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"floorRaycastBuffer","t":4,"rt":System.Array.type(UnityEngine.RaycastHit),"sn":"floorRaycastBuffer"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorRaycastBufferSize","t":4,"rt":$n[0].Int32,"sn":"floorRaycastBufferSize","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Input"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"a":1,"n":"globalDragEnabled","is":true,"t":4,"rt":$n[0].Boolean,"sn":"globalDragEnabled","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"highlightedFloor","t":4,"rt":HexFloor,"sn":"highlightedFloor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"inputCamera","t":4,"rt":$n[2].Camera,"sn":"inputCamera"},{"a":1,"n":"instance","is":true,"t":4,"rt":HexDragger,"sn":"instance"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"interactionMask","t":4,"rt":$n[2].LayerMask,"sn":"interactionMask"},{"a":1,"n":"isDragging","t":4,"rt":$n[0].Boolean,"sn":"isDragging","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isSettling","t":4,"rt":$n[0].Boolean,"sn":"isSettling","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftDuration","t":4,"rt":$n[0].Single,"sn":"liftDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftEase","t":4,"rt":$n[3].Ease,"sn":"liftEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.HeaderAttribute("Tween"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"liftHeight","t":4,"rt":$n[0].Single,"sn":"liftHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"pickMaxDistance","t":4,"rt":$n[0].Single,"sn":"pickMaxDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"DragFinished","is":true,"t":2,"ad":{"a":2,"n":"add_DragFinished","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addDragFinished","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_DragFinished","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeDragFinished","rt":$n[0].Void,"p":[Function]}},{"a":2,"n":"DragStarted","is":true,"t":2,"ad":{"a":2,"n":"add_DragStarted","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addDragStarted","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_DragStarted","is":true,"t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeDragStarted","rt":$n[0].Void,"p":[Function]}}]}; }, $n);
     /*HexDragger end.*/
 
     /*HexFloor start.*/
-    $m("HexFloor", function () { return {"nested":[HexFloor.RendererHighlightState],"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"CacheHighlightRenderers","t":8,"sn":"CacheHighlightRenderers","rt":$n[0].Void},{"a":2,"n":"ClearOccupiedStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"ClearOccupiedStack","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"EnsureNeighborRaycastBuffer","t":8,"sn":"EnsureNeighborRaycastBuffer","rt":$n[0].Void},{"a":1,"n":"EnsureNeighborStorage","t":8,"sn":"EnsureNeighborStorage","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Auto Find Near Floors")],"a":2,"n":"FindNearFloors","t":8,"sn":"FindNearFloors","rt":$n[0].Void},{"a":1,"n":"FindNeighborForSide","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"FindNeighborForSide","rt":HexFloor,"p":[$n[0].Int32]},{"a":1,"n":"GetNearestFloorFromHits","t":8,"pi":[{"n":"hits","pt":System.Array.type(UnityEngine.RaycastHit),"ps":0},{"n":"hitCount","pt":$n[0].Int32,"ps":1}],"sn":"GetNearestFloorFromHits","rt":HexFloor,"p":[System.Array.type(UnityEngine.RaycastHit),$n[0].Int32]},{"a":2,"n":"GetNeighborBySide","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"GetNeighborBySide","rt":HexFloor,"p":[$n[0].Int32]},{"a":1,"n":"GetRayOrigin","t":8,"sn":"GetRayOrigin","rt":$n[2].Vector3},{"a":2,"n":"GetSideDirection","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"GetSideDirection","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":2,"n":"GetSideIndexOfNeighbor","t":8,"pi":[{"n":"neighbor","pt":HexFloor,"ps":0}],"sn":"GetSideIndexOfNeighbor","rt":$n[0].Int32,"p":[HexFloor],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"GetStackPlacementPosition","t":8,"pi":[{"n":"fallbackY","pt":$n[0].Single,"ps":0}],"sn":"GetStackPlacementPosition","rt":$n[2].Vector3,"p":[$n[0].Single]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnDrawGizmosSelected","t":8,"sn":"OnDrawGizmosSelected","rt":$n[0].Void},{"a":2,"n":"SetDropHighlight","t":8,"pi":[{"n":"enabled","pt":$n[0].Boolean,"ps":0}],"sn":"SetDropHighlight","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":2,"n":"SetOccupiedStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"SetOccupiedStack","rt":$n[0].Void,"p":[HexStack]},{"a":2,"n":"NearFloors","t":16,"rt":$n[5].IReadOnlyList$1(HexFloor),"g":{"a":2,"n":"get_NearFloors","t":8,"rt":$n[5].IReadOnlyList$1(HexFloor),"fg":"NearFloors"},"fn":"NearFloors"},{"a":2,"n":"OccupiedStack","t":16,"rt":HexStack,"g":{"a":2,"n":"get_OccupiedStack","t":8,"rt":HexStack,"fg":"OccupiedStack"},"fn":"OccupiedStack"},{"a":2,"n":"StackAnchor","t":16,"rt":$n[2].Transform,"g":{"a":2,"n":"get_StackAnchor","t":8,"rt":$n[2].Transform,"fg":"StackAnchor"},"fn":"StackAnchor"},{"a":1,"n":"BaseColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"BaseColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"ColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"EmissionColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"EmissionColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"SideCount","is":true,"t":4,"rt":$n[0].Int32,"sn":"SideCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Search"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"autoFindOnAwake","t":4,"rt":$n[0].Boolean,"sn":"autoFindOnAwake","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Gizmos"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"drawSideRays","t":4,"rt":$n[0].Boolean,"sn":"drawSideRays","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.0, 1.0)],"a":1,"n":"dropHighlightBlend","t":4,"rt":$n[0].Single,"sn":"dropHighlightBlend","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropHighlightColor","t":4,"rt":$n[2].Color,"sn":"dropHighlightColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropHighlightEmissionColor","t":4,"rt":$n[2].Color,"sn":"dropHighlightEmissionColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoNeighborColor","t":4,"rt":$n[2].Color,"sn":"gizmoNeighborColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoNoNeighborColor","t":4,"rt":$n[2].Color,"sn":"gizmoNoNeighborColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoRayLength","t":4,"rt":$n[0].Single,"sn":"gizmoRayLength","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoSideOffset","t":4,"rt":$n[0].Single,"sn":"gizmoSideOffset","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoSphereRadius","t":4,"rt":$n[0].Single,"sn":"gizmoSphereRadius","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Drop Highlight"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"highlightRenderers","t":4,"rt":System.Array.type(UnityEngine.Renderer),"sn":"highlightRenderers"},{"a":1,"n":"highlightStates","t":4,"rt":$n[5].List$1(HexFloor.RendererHighlightState),"sn":"highlightStates","ro":true},{"a":1,"n":"isDropHighlighted","t":4,"rt":$n[0].Boolean,"sn":"isDropHighlighted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"nearFloors","t":4,"rt":$n[5].List$1(HexFloor),"sn":"nearFloors"},{"a":1,"n":"neighborRaycastBuffer","t":4,"rt":System.Array.type(UnityEngine.RaycastHit),"sn":"neighborRaycastBuffer"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborRaycastBufferSize","t":4,"rt":$n[0].Int32,"sn":"neighborRaycastBufferSize","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborSearchDistance","t":4,"rt":$n[0].Single,"sn":"neighborSearchDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"occupiedStack","t":4,"rt":HexStack,"sn":"occupiedStack"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"rayHeight","t":4,"rt":$n[0].Single,"sn":"rayHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"searchMask","t":4,"rt":$n[2].LayerMask,"sn":"searchMask"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"sideDirectionOffsetDegrees","t":4,"rt":$n[0].Single,"sn":"sideDirectionOffsetDegrees","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"sideNeighbors","t":4,"rt":System.Array.type(HexFloor),"sn":"sideNeighbors"},{"at":[new UnityEngine.HeaderAttribute("Placement"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stackAnchor","t":4,"rt":$n[2].Transform,"sn":"stackAnchor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"useEmissionHighlight","t":4,"rt":$n[0].Boolean,"sn":"useEmissionHighlight","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
+    $m("HexFloor", function () { return {"nested":[HexFloor.RendererHighlightState],"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"CacheHighlightRenderers","t":8,"sn":"CacheHighlightRenderers","rt":$n[0].Void},{"a":2,"n":"ClearOccupiedStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"ClearOccupiedStack","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"EnsureNeighborRaycastBuffer","t":8,"sn":"EnsureNeighborRaycastBuffer","rt":$n[0].Void},{"a":1,"n":"EnsureNeighborStorage","t":8,"sn":"EnsureNeighborStorage","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Auto Find Near Floors")],"a":2,"n":"FindNearFloors","t":8,"sn":"FindNearFloors","rt":$n[0].Void},{"a":1,"n":"FindNeighborForSide","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"FindNeighborForSide","rt":HexFloor,"p":[$n[0].Int32]},{"a":1,"n":"GetNearestFloorFromHits","t":8,"pi":[{"n":"hits","pt":System.Array.type(UnityEngine.RaycastHit),"ps":0},{"n":"hitCount","pt":$n[0].Int32,"ps":1}],"sn":"GetNearestFloorFromHits","rt":HexFloor,"p":[System.Array.type(UnityEngine.RaycastHit),$n[0].Int32]},{"a":2,"n":"GetNeighborBySide","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"GetNeighborBySide","rt":HexFloor,"p":[$n[0].Int32]},{"a":1,"n":"GetRayOrigin","t":8,"sn":"GetRayOrigin","rt":$n[2].Vector3},{"a":2,"n":"GetSideDirection","t":8,"pi":[{"n":"sideIndex","pt":$n[0].Int32,"ps":0}],"sn":"GetSideDirection","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":2,"n":"GetSideIndexOfNeighbor","t":8,"pi":[{"n":"neighbor","pt":HexFloor,"ps":0}],"sn":"GetSideIndexOfNeighbor","rt":$n[0].Int32,"p":[HexFloor],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"GetStackPlacementPosition","t":8,"pi":[{"n":"fallbackY","pt":$n[0].Single,"ps":0}],"sn":"GetStackPlacementPosition","rt":$n[2].Vector3,"p":[$n[0].Single]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnDrawGizmosSelected","t":8,"sn":"OnDrawGizmosSelected","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":2,"n":"SetDropHighlight","t":8,"pi":[{"n":"enabled","pt":$n[0].Boolean,"ps":0}],"sn":"SetDropHighlight","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":2,"n":"SetGridCoordinates","t":8,"pi":[{"n":"x","pt":$n[0].Int32,"ps":0},{"n":"z","pt":$n[0].Int32,"ps":1}],"sn":"SetGridCoordinates","rt":$n[0].Void,"p":[$n[0].Int32,$n[0].Int32]},{"a":2,"n":"SetOccupiedStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"SetOccupiedStack","rt":$n[0].Void,"p":[HexStack]},{"a":2,"n":"ActiveFloors","is":true,"t":16,"rt":$n[5].IEnumerable$1(HexFloor),"g":{"a":2,"n":"get_ActiveFloors","t":8,"rt":$n[5].IEnumerable$1(HexFloor),"fg":"ActiveFloors","is":true},"fn":"ActiveFloors"},{"a":2,"n":"GridX","t":16,"rt":$n[0].Int32,"g":{"a":2,"n":"get_GridX","t":8,"rt":$n[0].Int32,"fg":"GridX","box":function ($v) { return Bridge.box($v, System.Int32);}},"fn":"GridX"},{"a":2,"n":"GridZ","t":16,"rt":$n[0].Int32,"g":{"a":2,"n":"get_GridZ","t":8,"rt":$n[0].Int32,"fg":"GridZ","box":function ($v) { return Bridge.box($v, System.Int32);}},"fn":"GridZ"},{"a":2,"n":"NearFloors","t":16,"rt":$n[5].IReadOnlyList$1(HexFloor),"g":{"a":2,"n":"get_NearFloors","t":8,"rt":$n[5].IReadOnlyList$1(HexFloor),"fg":"NearFloors"},"fn":"NearFloors"},{"a":2,"n":"OccupiedStack","t":16,"rt":HexStack,"g":{"a":2,"n":"get_OccupiedStack","t":8,"rt":HexStack,"fg":"OccupiedStack"},"fn":"OccupiedStack"},{"a":2,"n":"StackAnchor","t":16,"rt":$n[2].Transform,"g":{"a":2,"n":"get_StackAnchor","t":8,"rt":$n[2].Transform,"fg":"StackAnchor"},"fn":"StackAnchor"},{"a":1,"n":"ActiveFloorSet","is":true,"t":4,"rt":$n[5].HashSet$1(HexFloor),"sn":"ActiveFloorSet","ro":true},{"a":1,"n":"BaseColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"BaseColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"ColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"EmissionColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"EmissionColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"SideCount","is":true,"t":4,"rt":$n[0].Int32,"sn":"SideCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Search"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"autoFindOnAwake","t":4,"rt":$n[0].Boolean,"sn":"autoFindOnAwake","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Gizmos"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"drawSideRays","t":4,"rt":$n[0].Boolean,"sn":"drawSideRays","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute(),new UnityEngine.RangeAttribute(0.0, 1.0)],"a":1,"n":"dropHighlightBlend","t":4,"rt":$n[0].Single,"sn":"dropHighlightBlend","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropHighlightColor","t":4,"rt":$n[2].Color,"sn":"dropHighlightColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dropHighlightEmissionColor","t":4,"rt":$n[2].Color,"sn":"dropHighlightEmissionColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoNeighborColor","t":4,"rt":$n[2].Color,"sn":"gizmoNeighborColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoNoNeighborColor","t":4,"rt":$n[2].Color,"sn":"gizmoNoNeighborColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoRayLength","t":4,"rt":$n[0].Single,"sn":"gizmoRayLength","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoSideOffset","t":4,"rt":$n[0].Single,"sn":"gizmoSideOffset","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gizmoSphereRadius","t":4,"rt":$n[0].Single,"sn":"gizmoSphereRadius","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gridX","t":4,"rt":$n[0].Int32,"sn":"gridX","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gridZ","t":4,"rt":$n[0].Int32,"sn":"gridZ","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Drop Highlight"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"highlightRenderers","t":4,"rt":System.Array.type(UnityEngine.Renderer),"sn":"highlightRenderers"},{"a":1,"n":"highlightStates","t":4,"rt":$n[5].List$1(HexFloor.RendererHighlightState),"sn":"highlightStates","ro":true},{"a":1,"n":"isDropHighlighted","t":4,"rt":$n[0].Boolean,"sn":"isDropHighlighted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"nearFloors","t":4,"rt":$n[5].List$1(HexFloor),"sn":"nearFloors"},{"a":1,"n":"neighborRaycastBuffer","t":4,"rt":System.Array.type(UnityEngine.RaycastHit),"sn":"neighborRaycastBuffer"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborRaycastBufferSize","t":4,"rt":$n[0].Int32,"sn":"neighborRaycastBufferSize","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborSearchDistance","t":4,"rt":$n[0].Single,"sn":"neighborSearchDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"occupiedStack","t":4,"rt":HexStack,"sn":"occupiedStack"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"rayHeight","t":4,"rt":$n[0].Single,"sn":"rayHeight","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"searchMask","t":4,"rt":$n[2].LayerMask,"sn":"searchMask"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"sideDirectionOffsetDegrees","t":4,"rt":$n[0].Single,"sn":"sideDirectionOffsetDegrees","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"sideNeighbors","t":4,"rt":System.Array.type(HexFloor),"sn":"sideNeighbors"},{"at":[new UnityEngine.HeaderAttribute("Placement"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stackAnchor","t":4,"rt":$n[2].Transform,"sn":"stackAnchor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"useEmissionHighlight","t":4,"rt":$n[0].Boolean,"sn":"useEmissionHighlight","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
     /*HexFloor end.*/
 
     /*HexFloor+RendererHighlightState start.*/
@@ -6170,7 +7681,7 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
     /*HexFloor+RendererHighlightState end.*/
 
     /*HexFloorCreator start.*/
-    $m("HexFloorCreator", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ClearFloors","is":true,"t":8,"pi":[{"n":"root","pt":$n[2].Transform,"ps":0}],"sn":"ClearFloors","rt":$n[0].Void,"p":[$n[2].Transform]},{"at":[new UnityEngine.ContextMenu.ctor("Clear Generated Floor")],"a":2,"n":"ClearGeneratedFloor","t":8,"sn":"ClearGeneratedFloor","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Generate Floor")],"a":2,"n":"GenerateFloor","t":8,"sn":"GenerateFloor","rt":$n[0].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":1,"n":"HexConfig","t":16,"rt":HexConfig,"g":{"a":1,"n":"get_HexConfig","t":8,"rt":HexConfig,"fg":"HexConfig"},"fn":"HexConfig"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"anchorLocalOffset","t":4,"rt":$n[2].Vector3,"sn":"anchorLocalOffset"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"bottomRowAnchor","t":4,"rt":$n[2].Transform,"sn":"bottomRowAnchor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearBeforeGenerate","t":4,"rt":$n[0].Boolean,"sn":"clearBeforeGenerate","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorPrefab","t":4,"rt":$n[2].GameObject,"sn":"floorPrefab"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorRoot","t":4,"rt":$n[2].Transform,"sn":"floorRoot"},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.HeaderAttribute("Build"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"generateOnStart","t":4,"rt":$n[0].Boolean,"sn":"generateOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"generatedFloors","t":4,"rt":$n[5].List$1(HexFloor),"sn":"generatedFloors","ro":true},{"at":[new UnityEngine.HeaderAttribute("Layout"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborDistance","t":4,"rt":$n[0].Single,"sn":"neighborDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"refreshNeighborsAfterGenerate","t":4,"rt":$n[0].Boolean,"sn":"refreshNeighborsAfterGenerate","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"shiftOddColumnsForward","t":4,"rt":$n[0].Boolean,"sn":"shiftOddColumnsForward","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
+    $m("HexFloorCreator", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ClearFloors","is":true,"t":8,"pi":[{"n":"root","pt":$n[2].Transform,"ps":0}],"sn":"ClearFloors","rt":$n[0].Void,"p":[$n[2].Transform]},{"at":[new UnityEngine.ContextMenu.ctor("Clear Generated Floor")],"a":2,"n":"ClearGeneratedFloor","t":8,"sn":"ClearGeneratedFloor","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Generate Floor")],"a":2,"n":"GenerateFloor","t":8,"sn":"GenerateFloor","rt":$n[0].Void},{"a":1,"n":"LogFloorCreator","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogFloorCreator","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"MarkInitialGenerationCompleted","t":8,"sn":"MarkInitialGenerationCompleted","rt":$n[0].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":1,"n":"HexConfig","t":16,"rt":HexConfig,"g":{"a":1,"n":"get_HexConfig","t":8,"rt":HexConfig,"fg":"HexConfig"},"fn":"HexConfig"},{"a":2,"n":"InitialGenerationCompleted","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_InitialGenerationCompleted","t":8,"rt":$n[0].Boolean,"fg":"InitialGenerationCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"s":{"a":1,"n":"set_InitialGenerationCompleted","t":8,"p":[$n[0].Boolean],"rt":$n[0].Void,"fs":"InitialGenerationCompleted"},"fn":"InitialGenerationCompleted"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"anchorLocalOffset","t":4,"rt":$n[2].Vector3,"sn":"anchorLocalOffset"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"bottomRowAnchor","t":4,"rt":$n[2].Transform,"sn":"bottomRowAnchor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearBeforeGenerate","t":4,"rt":$n[0].Boolean,"sn":"clearBeforeGenerate","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"debugLogs","t":4,"rt":$n[0].Boolean,"sn":"debugLogs","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fillStacksAfterGenerate","t":4,"rt":$n[0].Boolean,"sn":"fillStacksAfterGenerate","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorPrefab","t":4,"rt":$n[2].GameObject,"sn":"floorPrefab"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"floorRoot","t":4,"rt":$n[2].Transform,"sn":"floorRoot"},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.HeaderAttribute("Build"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"generateOnStart","t":4,"rt":$n[0].Boolean,"sn":"generateOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"generatedFloors","t":4,"rt":$n[5].List$1(HexFloor),"sn":"generatedFloors","ro":true},{"at":[new UnityEngine.HeaderAttribute("Layout"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"neighborDistance","t":4,"rt":$n[0].Single,"sn":"neighborDistance","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"refreshNeighborsAfterGenerate","t":4,"rt":$n[0].Boolean,"sn":"refreshNeighborsAfterGenerate","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"shiftOddColumnsForward","t":4,"rt":$n[0].Boolean,"sn":"shiftOddColumnsForward","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"backing":true,"n":"<InitialGenerationCompleted>k__BackingField","t":4,"rt":$n[0].Boolean,"sn":"InitialGenerationCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
     /*HexFloorCreator end.*/
 
     /*HexGameContext start.*/
@@ -6178,7 +7689,7 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
     /*HexGameContext end.*/
 
     /*HexManager start.*/
-    $m("HexManager", function () { return {"nested":[HexManager.StackClearBatch,HexManager.TransferChainState],"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"AttachStackToFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1}],"sn":"AttachStackToFloor","rt":$n[0].Void,"p":[HexStack,HexFloor]},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"BeginResolveTopColorTransfer","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"sourceFloor","pt":HexFloor,"ps":1},{"n":"onComplete","pt":Function,"ps":2}],"sn":"BeginResolveTopColorTransfer","rt":$n[0].Void,"p":[HexStack,HexFloor,Function]},{"a":2,"n":"CanPlaceStackOnFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"floor","pt":HexFloor,"ps":1}],"sn":"CanPlaceStackOnFloor","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"ClearBatchesParallel","t":8,"pi":[{"n":"clearBatches","pt":$n[5].List$1(HexManager.StackClearBatch),"ps":0},{"n":"speedMultiplier","pt":$n[0].Single,"ps":1},{"n":"onComplete","pt":Function,"ps":2}],"sn":"ClearBatchesParallel","rt":$n[0].Void,"p":[$n[5].List$1(HexManager.StackClearBatch),$n[0].Single,Function]},{"a":1,"n":"CompleteAfterTweens","t":8,"pi":[{"n":"tweens","pt":$n[5].List$1(DG.Tweening.Tween),"ps":0},{"n":"onComplete","pt":Function,"ps":1}],"sn":"CompleteAfterTweens","rt":$n[0].Void,"p":[$n[5].List$1(DG.Tweening.Tween),Function]},{"a":1,"n":"ContinueResolveTopColorTransfer","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"ContinueResolveTopColorTransfer","rt":$n[0].Void,"p":[HexManager.TransferChainState]},{"a":1,"n":"EnqueueAllStacksForTransferCheck","t":8,"pi":[{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":0},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":1}],"sn":"EnqueueAllStacksForTransferCheck","rt":$n[0].Void,"p":[$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"EnqueueForTransferCheck","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":1},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":2}],"sn":"EnqueueForTransferCheck","rt":$n[0].Void,"p":[HexStack,$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"EnqueueNeighborStacksForTransferCheck","t":8,"pi":[{"n":"centerFloor","pt":HexFloor,"ps":0},{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":1},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":2}],"sn":"EnqueueNeighborStacksForTransferCheck","rt":$n[0].Void,"p":[HexFloor,$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"FinishTransferChain","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"FinishTransferChain","rt":$n[0].Void,"p":[HexManager.TransferChainState]},{"a":1,"n":"GetChainSpeedMultiplier","t":8,"pi":[{"n":"stepIndex","pt":$n[0].Int32,"ps":0},{"n":"speedIncreasePerStep","pt":$n[0].Single,"ps":1}],"sn":"GetChainSpeedMultiplier","rt":$n[0].Single,"p":[$n[0].Int32,$n[0].Single],"box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"GetFloorDebugName","is":true,"t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"GetFloorDebugName","rt":$n[0].String,"p":[HexFloor]},{"a":1,"n":"GetMaterialDebugName","is":true,"t":8,"pi":[{"n":"material","pt":$n[2].Material,"ps":0}],"sn":"GetMaterialDebugName","rt":$n[0].String,"p":[$n[2].Material]},{"a":1,"n":"GetStackDebugName","is":true,"t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"GetStackDebugName","rt":$n[0].String,"p":[HexStack]},{"a":2,"n":"HandleStackPlaced","t":8,"pi":[{"n":"placedStack","pt":HexStack,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1},{"n":"onComplete","dv":null,"o":true,"pt":Function,"ps":2}],"sn":"HandleStackPlaced","rt":$n[0].Void,"p":[HexStack,HexFloor,Function]},{"a":1,"n":"IsTransferChainActive","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"IsTransferChainActive","rt":$n[0].Boolean,"p":[HexManager.TransferChainState],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"LogTransferEvent","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogTransferEvent","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"PrewarmPools","t":8,"sn":"PrewarmPools","rt":$n[0].Void},{"a":2,"n":"RentTile","t":8,"pi":[{"n":"prefab","pt":HexTile,"ps":0},{"n":"parent","pt":$n[2].Transform,"ps":1}],"sn":"RentTile","rt":HexTile,"p":[HexTile,$n[2].Transform]},{"a":1,"n":"ResolveStackOnFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"ignoredStack","dv":null,"o":true,"pt":HexStack,"ps":1}],"sn":"ResolveStackOnFloor","rt":HexStack,"p":[HexFloor,HexStack]},{"a":1,"n":"ResolveTilePrefabForPool","t":8,"sn":"ResolveTilePrefabForPool","rt":HexTile},{"a":2,"n":"ReturnTile","t":8,"pi":[{"n":"tile","pt":HexTile,"ps":0},{"n":"fallbackPrefab","dv":null,"o":true,"pt":HexTile,"ps":1}],"sn":"ReturnTile","rt":$n[0].Void,"p":[HexTile,HexTile]},{"a":1,"n":"TryCollectClearBatches","t":8,"pi":[{"n":"clearBatches","out":true,"pt":$n[5].List$1(HexManager.StackClearBatch),"ps":0}],"sn":"TryCollectClearBatches","rt":$n[0].Boolean,"p":[$n[5].List$1(HexManager.StackClearBatch)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryExtractTopMatchTiles","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"tilesToClear","out":true,"pt":$n[5].List$1(HexTile),"ps":1}],"sn":"TryExtractTopMatchTiles","rt":$n[0].Boolean,"p":[HexStack,$n[5].List$1(HexTile)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryFindAnyTransferCandidate","t":8,"pi":[{"n":"sourceStack","out":true,"pt":HexStack,"ps":0},{"n":"sourceFloor","out":true,"pt":HexFloor,"ps":1}],"sn":"TryFindAnyTransferCandidate","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryFindMatchingNeighbor","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"sourceFloor","pt":HexFloor,"ps":1},{"n":"targetStack","out":true,"pt":HexStack,"ps":2},{"n":"targetFloor","out":true,"pt":HexFloor,"ps":3},{"n":"topMaterial","out":true,"pt":$n[2].Material,"ps":4}],"sn":"TryFindMatchingNeighbor","rt":$n[0].Boolean,"p":[HexStack,HexFloor,HexStack,HexFloor,$n[2].Material],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetLowestTilePosition","t":8,"pi":[{"n":"tiles","pt":$n[5].List$1(HexTile),"ps":0},{"n":"lowestPosition","out":true,"pt":$n[2].Vector3,"ps":1}],"sn":"TryGetLowestTilePosition","rt":$n[0].Boolean,"p":[$n[5].List$1(HexTile),$n[2].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetMatchingStack","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"neighborFloor","pt":HexFloor,"ps":1},{"n":"topMaterial","pt":$n[2].Material,"ps":2},{"n":"matchingStack","out":true,"pt":HexStack,"ps":3}],"sn":"TryGetMatchingStack","rt":$n[0].Boolean,"p":[HexStack,HexFloor,$n[2].Material,HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"TryRecycleEmptyStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"TryRecycleEmptyStack","rt":$n[0].Boolean,"p":[HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryResolveStackFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"floor","out":true,"pt":HexFloor,"ps":1}],"sn":"TryResolveStackFloor","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"IsTransferInProgress","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_IsTransferInProgress","t":8,"rt":$n[0].Boolean,"fg":"IsTransferInProgress","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"IsTransferInProgress"},{"a":1,"n":"PoolService","t":16,"rt":HexPoolService,"g":{"a":1,"n":"get_PoolService","t":8,"rt":HexPoolService,"fg":"PoolService"},"fn":"PoolService"},{"a":1,"n":"StacksCreator","t":16,"rt":HexStacksCreator,"g":{"a":1,"n":"get_StacksCreator","t":8,"rt":HexStacksCreator,"fg":"StacksCreator"},"fn":"StacksCreator"},{"a":2,"n":"hexConfig","t":16,"rt":HexConfig,"g":{"a":2,"n":"get_hexConfig","t":8,"rt":HexConfig,"fg":"hexConfig"},"fn":"hexConfig"},{"a":1,"n":"MaxResolveIterations","is":true,"t":4,"rt":$n[0].Int32,"sn":"MaxResolveIterations","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activeTransferRoutines","t":4,"rt":$n[0].Int32,"sn":"activeTransferRoutines","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearFxPlayer","t":4,"rt":HexClearFxPlayer,"sn":"clearFxPlayer"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleDuration","t":4,"rt":$n[0].Single,"sn":"clearScaleDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleEase","t":4,"rt":$n[3].Ease,"sn":"clearScaleEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleStagger","t":4,"rt":$n[0].Single,"sn":"clearScaleStagger","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearSpeedIncreasePerStack","t":4,"rt":$n[0].Single,"sn":"clearSpeedIncreasePerStack","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.HeaderAttribute("Debug"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"logTransferEvents","t":4,"rt":$n[0].Boolean,"sn":"logTransferEvents","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Top Match Clear"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"topMatchClearCount","t":4,"rt":$n[0].Int32,"sn":"topMatchClearCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferAnimator","t":4,"rt":HexTransferAnimator,"sn":"transferAnimator"},{"a":1,"n":"transferGeneration","t":4,"rt":$n[0].Int32,"sn":"transferGeneration","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Transfer"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferOnStackPlaced","t":4,"rt":$n[0].Boolean,"sn":"transferOnStackPlaced","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Chain Reaction Speed"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferSpeedIncreasePerStack","t":4,"rt":$n[0].Single,"sn":"transferSpeedIncreasePerStack","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
+    $m("HexManager", function () { return {"nested":[HexManager.StackClearBatch,HexManager.TransferChainState],"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"AttachStackToFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1}],"sn":"AttachStackToFloor","rt":$n[0].Void,"p":[HexStack,HexFloor]},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"BeginResolveTopColorTransfer","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"sourceFloor","pt":HexFloor,"ps":1},{"n":"onComplete","pt":Function,"ps":2}],"sn":"BeginResolveTopColorTransfer","rt":$n[0].Void,"p":[HexStack,HexFloor,Function]},{"a":2,"n":"CanPlaceStackOnFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"floor","pt":HexFloor,"ps":1}],"sn":"CanPlaceStackOnFloor","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"ClearBatchesParallel","t":8,"pi":[{"n":"clearBatches","pt":$n[5].List$1(HexManager.StackClearBatch),"ps":0},{"n":"speedMultiplier","pt":$n[0].Single,"ps":1},{"n":"onComplete","pt":Function,"ps":2}],"sn":"ClearBatchesParallel","rt":$n[0].Void,"p":[$n[5].List$1(HexManager.StackClearBatch),$n[0].Single,Function]},{"a":1,"n":"CompleteAfterTweens","t":8,"pi":[{"n":"tweens","pt":$n[5].List$1(DG.Tweening.Tween),"ps":0},{"n":"onComplete","pt":Function,"ps":1}],"sn":"CompleteAfterTweens","rt":$n[0].Void,"p":[$n[5].List$1(DG.Tweening.Tween),Function]},{"a":1,"n":"ContinueResolveTopColorTransfer","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"ContinueResolveTopColorTransfer","rt":$n[0].Void,"p":[HexManager.TransferChainState]},{"a":1,"n":"EnqueueAllStacksForTransferCheck","t":8,"pi":[{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":0},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":1}],"sn":"EnqueueAllStacksForTransferCheck","rt":$n[0].Void,"p":[$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"EnqueueForTransferCheck","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":1},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":2}],"sn":"EnqueueForTransferCheck","rt":$n[0].Void,"p":[HexStack,$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"EnqueueNeighborStacksForTransferCheck","t":8,"pi":[{"n":"centerFloor","pt":HexFloor,"ps":0},{"n":"pendingStacks","pt":$n[5].Queue$1(HexStack),"ps":1},{"n":"queuedStacks","pt":$n[5].HashSet$1(HexStack),"ps":2}],"sn":"EnqueueNeighborStacksForTransferCheck","rt":$n[0].Void,"p":[HexFloor,$n[5].Queue$1(HexStack),$n[5].HashSet$1(HexStack)]},{"a":1,"n":"FinishTransferChain","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"FinishTransferChain","rt":$n[0].Void,"p":[HexManager.TransferChainState]},{"a":1,"n":"GetChainSpeedMultiplier","t":8,"pi":[{"n":"stepIndex","pt":$n[0].Int32,"ps":0},{"n":"speedIncreasePerStep","pt":$n[0].Single,"ps":1}],"sn":"GetChainSpeedMultiplier","rt":$n[0].Single,"p":[$n[0].Int32,$n[0].Single],"box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"GetFloorDebugName","is":true,"t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"GetFloorDebugName","rt":$n[0].String,"p":[HexFloor]},{"a":1,"n":"GetStackDebugName","is":true,"t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"GetStackDebugName","rt":$n[0].String,"p":[HexStack]},{"a":1,"n":"GetTopMatchClearCount","t":8,"sn":"GetTopMatchClearCount","rt":$n[0].Int32,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"HandleStackPlaced","t":8,"pi":[{"n":"placedStack","pt":HexStack,"ps":0},{"n":"targetFloor","pt":HexFloor,"ps":1},{"n":"onComplete","dv":null,"o":true,"pt":Function,"ps":2}],"sn":"HandleStackPlaced","rt":$n[0].Void,"p":[HexStack,HexFloor,Function]},{"a":1,"n":"IsTransferChainActive","t":8,"pi":[{"n":"state","pt":HexManager.TransferChainState,"ps":0}],"sn":"IsTransferChainActive","rt":$n[0].Boolean,"p":[HexManager.TransferChainState],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"LogTransferEvent","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogTransferEvent","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"PrewarmPools","t":8,"sn":"PrewarmPools","rt":$n[0].Void},{"a":2,"n":"RentTile","t":8,"pi":[{"n":"prefab","pt":HexTile,"ps":0},{"n":"parent","pt":$n[2].Transform,"ps":1}],"sn":"RentTile","rt":HexTile,"p":[HexTile,$n[2].Transform]},{"a":1,"n":"ResolveStackOnFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"ignoredStack","dv":null,"o":true,"pt":HexStack,"ps":1}],"sn":"ResolveStackOnFloor","rt":HexStack,"p":[HexFloor,HexStack]},{"a":1,"n":"ResolveTilePrefabForPool","t":8,"sn":"ResolveTilePrefabForPool","rt":HexTile},{"a":2,"n":"ReturnTile","t":8,"pi":[{"n":"tile","pt":HexTile,"ps":0},{"n":"fallbackPrefab","dv":null,"o":true,"pt":HexTile,"ps":1}],"sn":"ReturnTile","rt":$n[0].Void,"p":[HexTile,HexTile]},{"a":1,"n":"TryCollectClearBatches","t":8,"pi":[{"n":"eligibleStacks","pt":$n[5].HashSet$1(HexStack),"ps":0},{"n":"clearBatches","out":true,"pt":$n[5].List$1(HexManager.StackClearBatch),"ps":1}],"sn":"TryCollectClearBatches","rt":$n[0].Boolean,"p":[$n[5].HashSet$1(HexStack),$n[5].List$1(HexManager.StackClearBatch)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryExtractTopMatchTiles","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"tilesToClear","out":true,"pt":$n[5].List$1(HexTile),"ps":1}],"sn":"TryExtractTopMatchTiles","rt":$n[0].Boolean,"p":[HexStack,$n[5].List$1(HexTile)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryFindAnyTransferCandidate","t":8,"pi":[{"n":"sourceStack","out":true,"pt":HexStack,"ps":0},{"n":"sourceFloor","out":true,"pt":HexFloor,"ps":1}],"sn":"TryFindAnyTransferCandidate","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryFindMatchingNeighbor","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"sourceFloor","pt":HexFloor,"ps":1},{"n":"targetStack","out":true,"pt":HexStack,"ps":2},{"n":"targetFloor","out":true,"pt":HexFloor,"ps":3},{"n":"topColorId","out":true,"pt":$n[0].Int32,"ps":4}],"sn":"TryFindMatchingNeighbor","rt":$n[0].Boolean,"p":[HexStack,HexFloor,HexStack,HexFloor,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetLowestTilePosition","t":8,"pi":[{"n":"tiles","pt":$n[5].List$1(HexTile),"ps":0},{"n":"lowestPosition","out":true,"pt":$n[2].Vector3,"ps":1}],"sn":"TryGetLowestTilePosition","rt":$n[0].Boolean,"p":[$n[5].List$1(HexTile),$n[2].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryGetMatchingStack","t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"neighborFloor","pt":HexFloor,"ps":1},{"n":"topColorId","pt":$n[0].Int32,"ps":2},{"n":"matchingStack","out":true,"pt":HexStack,"ps":3}],"sn":"TryGetMatchingStack","rt":$n[0].Boolean,"p":[HexStack,HexFloor,$n[0].Int32,HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"TryRecycleEmptyStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"TryRecycleEmptyStack","rt":$n[0].Boolean,"p":[HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryResolveStackFloor","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0},{"n":"floor","out":true,"pt":HexFloor,"ps":1}],"sn":"TryResolveStackFloor","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"IsTransferInProgress","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_IsTransferInProgress","t":8,"rt":$n[0].Boolean,"fg":"IsTransferInProgress","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"IsTransferInProgress"},{"a":1,"n":"PoolService","t":16,"rt":HexPoolService,"g":{"a":1,"n":"get_PoolService","t":8,"rt":HexPoolService,"fg":"PoolService"},"fn":"PoolService"},{"a":1,"n":"StacksCreator","t":16,"rt":HexStacksCreator,"g":{"a":1,"n":"get_StacksCreator","t":8,"rt":HexStacksCreator,"fg":"StacksCreator"},"fn":"StacksCreator"},{"a":2,"n":"hexConfig","t":16,"rt":HexConfig,"g":{"a":2,"n":"get_hexConfig","t":8,"rt":HexConfig,"fg":"hexConfig"},"fn":"hexConfig"},{"a":1,"n":"MaxResolveIterations","is":true,"t":4,"rt":$n[0].Int32,"sn":"MaxResolveIterations","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"activeTransferRoutines","t":4,"rt":$n[0].Int32,"sn":"activeTransferRoutines","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearFxPlayer","t":4,"rt":HexClearFxPlayer,"sn":"clearFxPlayer"},{"at":[new UnityEngine.HeaderAttribute("Top Match Clear"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleDuration","t":4,"rt":$n[0].Single,"sn":"clearScaleDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleEase","t":4,"rt":$n[3].Ease,"sn":"clearScaleEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearScaleStagger","t":4,"rt":$n[0].Single,"sn":"clearScaleStagger","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearSpeedIncreasePerStack","t":4,"rt":$n[0].Single,"sn":"clearSpeedIncreasePerStack","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"firstTransferAndClearChainRaised","t":4,"rt":$n[0].Boolean,"sn":"firstTransferAndClearChainRaised","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.HeaderAttribute("Debug"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"logTransferEvents","t":4,"rt":$n[0].Boolean,"sn":"logTransferEvents","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferAnimator","t":4,"rt":HexTransferAnimator,"sn":"transferAnimator"},{"a":1,"n":"transferGeneration","t":4,"rt":$n[0].Int32,"sn":"transferGeneration","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.HeaderAttribute("Transfer"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferOnStackPlaced","t":4,"rt":$n[0].Boolean,"sn":"transferOnStackPlaced","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Chain Reaction Speed"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"transferSpeedIncreasePerStack","t":4,"rt":$n[0].Single,"sn":"transferSpeedIncreasePerStack","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":2,"n":"FirstTransferAndClearChainFinished","t":2,"ad":{"a":2,"n":"add_FirstTransferAndClearChainFinished","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addFirstTransferAndClearChainFinished","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_FirstTransferAndClearChainFinished","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removeFirstTransferAndClearChainFinished","rt":$n[0].Void,"p":[Function]}}]}; }, $n);
     /*HexManager end.*/
 
     /*HexManager+StackClearBatch start.*/
@@ -6186,7 +7697,7 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
     /*HexManager+StackClearBatch end.*/
 
     /*HexManager+TransferChainState start.*/
-    $m("HexManager.TransferChainState", function () { return {"td":HexManager,"att":1048835,"a":1,"m":[{"a":2,"n":".ctor","t":1,"p":[$n[0].Int32,Function],"pi":[{"n":"generation","pt":$n[0].Int32,"ps":0},{"n":"onComplete","pt":Function,"ps":1}],"sn":"ctor"},{"a":2,"n":"ClearStepIndex","t":4,"rt":$n[0].Int32,"sn":"ClearStepIndex","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"Generation","t":4,"rt":$n[0].Int32,"sn":"Generation","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"IsCompleted","t":4,"rt":$n[0].Boolean,"sn":"IsCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"LoopGuard","t":4,"rt":$n[0].Int32,"sn":"LoopGuard","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"OnComplete","t":4,"rt":Function,"sn":"OnComplete","ro":true},{"a":2,"n":"PassStarted","t":4,"rt":$n[0].Boolean,"sn":"PassStarted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"PendingStacks","t":4,"rt":$n[5].Queue$1(HexStack),"sn":"PendingStacks","ro":true},{"a":2,"n":"QueuedStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"QueuedStacks","ro":true},{"a":2,"n":"TransferStepIndex","t":4,"rt":$n[0].Int32,"sn":"TransferStepIndex","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"TransferredInPass","t":4,"rt":$n[0].Boolean,"sn":"TransferredInPass","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
+    $m("HexManager.TransferChainState", function () { return {"td":HexManager,"att":1048835,"a":1,"m":[{"a":2,"n":".ctor","t":1,"p":[$n[0].Int32,Function],"pi":[{"n":"generation","pt":$n[0].Int32,"ps":0},{"n":"onComplete","pt":Function,"ps":1}],"sn":"ctor"},{"a":2,"n":"ClearStepIndex","t":4,"rt":$n[0].Int32,"sn":"ClearStepIndex","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"Generation","t":4,"rt":$n[0].Int32,"sn":"Generation","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"HadClears","t":4,"rt":$n[0].Boolean,"sn":"HadClears","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"HadTransfers","t":4,"rt":$n[0].Boolean,"sn":"HadTransfers","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"IsCompleted","t":4,"rt":$n[0].Boolean,"sn":"IsCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"LoopGuard","t":4,"rt":$n[0].Int32,"sn":"LoopGuard","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"OnComplete","t":4,"rt":Function,"sn":"OnComplete","ro":true},{"a":2,"n":"PassStarted","t":4,"rt":$n[0].Boolean,"sn":"PassStarted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"PendingStacks","t":4,"rt":$n[5].Queue$1(HexStack),"sn":"PendingStacks","ro":true},{"a":2,"n":"QueuedStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"QueuedStacks","ro":true},{"a":2,"n":"TransferStepIndex","t":4,"rt":$n[0].Int32,"sn":"TransferStepIndex","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"TransferTargetStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"TransferTargetStacks","ro":true},{"a":2,"n":"TransferredInPass","t":4,"rt":$n[0].Boolean,"sn":"TransferredInPass","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
     /*HexManager+TransferChainState end.*/
 
     /*HexPoolService start.*/
@@ -6198,15 +7709,15 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
     /*HexPoolService+ComponentPool$1 end.*/
 
     /*HexStack start.*/
-    $m("HexStack", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"AlignTilesToAnchor","t":8,"sn":"AlignTilesToAnchor","rt":$n[0].Void},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"CacheGeometryFromTiles","t":8,"sn":"CacheGeometryFromTiles","rt":$n[0].Void},{"a":1,"n":"CompactNullTiles","t":8,"sn":"CompactNullTiles","rt":$n[0].Void},{"a":2,"n":"CountTopTilesWithMaterial","t":8,"pi":[{"n":"material","pt":$n[2].Material,"ps":0}],"sn":"CountTopTilesWithMaterial","rt":$n[0].Int32,"p":[$n[2].Material],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"CreateStack","t":8,"pi":[{"n":"colorsBottomToTop","dv":null,"o":true,"pt":System.Array.type(UnityEngine.Material),"ps":0}],"sn":"CreateStack","rt":$n[0].Void,"p":[System.Array.type(UnityEngine.Material)]},{"a":1,"n":"DetachFromFloor","t":8,"sn":"DetachFromFloor","rt":$n[0].Void},{"a":1,"n":"EnsureTileCount","t":8,"pi":[{"n":"targetCount","pt":$n[0].Int32,"ps":0}],"sn":"EnsureTileCount","rt":$n[0].Boolean,"p":[$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"EnsureTilesInitializedFromChildren","t":8,"sn":"EnsureTilesInitializedFromChildren","rt":$n[0].Void},{"a":1,"n":"GetAnchorBaseLocalPosition","t":8,"sn":"GetAnchorBaseLocalPosition","rt":$n[2].Vector3},{"a":1,"n":"GetLocalPositionForIndex","t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0}],"sn":"GetLocalPositionForIndex","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":2,"n":"GetNextTopWorldPosition","t":8,"sn":"GetNextTopWorldPosition","rt":$n[2].Vector3},{"a":2,"n":"GetTileTemplateForPool","t":8,"sn":"GetTileTemplateForPool","rt":HexTile},{"a":2,"n":"GetTopMaterial","t":8,"sn":"GetTopMaterial","rt":$n[2].Material},{"a":2,"n":"GetTopTile","t":8,"sn":"GetTopTile","rt":HexTile},{"a":2,"n":"GetWorldPositionForTileIndex","t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0}],"sn":"GetWorldPositionForTileIndex","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":2,"n":"PopTopTile","t":8,"sn":"PopTopTile","rt":HexTile},{"a":2,"n":"PushTopTile","t":8,"pi":[{"n":"tile","pt":HexTile,"ps":0}],"sn":"PushTopTile","rt":$n[0].Void,"p":[HexTile]},{"a":1,"n":"RefreshVisibilityAndBinding","t":8,"sn":"RefreshVisibilityAndBinding","rt":$n[0].Void},{"a":1,"n":"ResolveTileMaterialForIndex","is":true,"t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0},{"n":"presetColors","pt":System.Array.type(UnityEngine.Material),"ps":1},{"n":"randomColors","pt":System.Array.type(UnityEngine.Material),"ps":2}],"sn":"ResolveTileMaterialForIndex","rt":$n[2].Material,"p":[$n[0].Int32,System.Array.type(UnityEngine.Material),System.Array.type(UnityEngine.Material)]},{"a":1,"n":"ResolveTileTemplate","t":8,"sn":"ResolveTileTemplate","rt":HexTile},{"a":2,"n":"SetCurrentFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"SetCurrentFloor","rt":$n[0].Void,"p":[HexFloor]},{"a":2,"n":"SetGameContext","t":8,"pi":[{"n":"context","pt":HexGameContext,"ps":0}],"sn":"SetGameContext","rt":$n[0].Void,"p":[HexGameContext]},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":2,"n":"CurrentFloor","t":16,"rt":HexFloor,"g":{"a":2,"n":"get_CurrentFloor","t":8,"rt":HexFloor,"fg":"CurrentFloor"},"fn":"CurrentFloor"},{"a":2,"n":"GameContext","t":16,"rt":HexGameContext,"g":{"a":2,"n":"get_GameContext","t":8,"rt":HexGameContext,"fg":"GameContext"},"fn":"GameContext"},{"a":2,"n":"TileCount","t":16,"rt":$n[0].Int32,"g":{"a":2,"n":"get_TileCount","t":8,"rt":$n[0].Int32,"fg":"TileCount","box":function ($v) { return Bridge.box($v, System.Int32);}},"fn":"TileCount"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"anchorPos","t":4,"rt":$n[2].Transform,"sn":"anchorPos"},{"a":1,"n":"currentFloor","t":4,"rt":HexFloor,"sn":"currentFloor"},{"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hexTiles","t":4,"rt":$n[5].List$1(HexTile),"sn":"hexTiles"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hideWhenEmpty","t":4,"rt":$n[0].Boolean,"sn":"hideWhenEmpty","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"stackInitialized","t":4,"rt":$n[0].Boolean,"sn":"stackInitialized","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileBaseLocalPosition","t":4,"rt":$n[2].Vector3,"sn":"tileBaseLocalPosition"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileStep","t":4,"rt":$n[0].Single,"sn":"tileStep","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileTemplate","t":4,"rt":HexTile,"sn":"tileTemplate"}]}; }, $n);
+    $m("HexStack", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"AlignTilesToAnchor","t":8,"sn":"AlignTilesToAnchor","rt":$n[0].Void},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":1,"n":"CacheGeometryFromTiles","t":8,"sn":"CacheGeometryFromTiles","rt":$n[0].Void},{"a":1,"n":"CompactNullTiles","t":8,"sn":"CompactNullTiles","rt":$n[0].Void},{"a":2,"n":"CountTopTilesWithColorId","t":8,"pi":[{"n":"colorId","pt":$n[0].Int32,"ps":0}],"sn":"CountTopTilesWithColorId","rt":$n[0].Int32,"p":[$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"CreateStack","t":8,"pi":[{"n":"colorIdsBottomToTop","dv":null,"o":true,"pt":$n[0].Array.type(System.Int32),"ps":0}],"sn":"CreateStack","rt":$n[0].Void,"p":[$n[0].Array.type(System.Int32)]},{"a":1,"n":"DetachFromFloor","t":8,"sn":"DetachFromFloor","rt":$n[0].Void},{"a":1,"n":"EnsureTileCount","t":8,"pi":[{"n":"targetCount","pt":$n[0].Int32,"ps":0}],"sn":"EnsureTileCount","rt":$n[0].Boolean,"p":[$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"EnsureTilesInitializedFromChildren","t":8,"sn":"EnsureTilesInitializedFromChildren","rt":$n[0].Void},{"a":1,"n":"GetAnchorBaseLocalPosition","t":8,"sn":"GetAnchorBaseLocalPosition","rt":$n[2].Vector3},{"a":1,"n":"GetLocalPositionForIndex","t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0}],"sn":"GetLocalPositionForIndex","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":2,"n":"GetNextTopWorldPosition","t":8,"sn":"GetNextTopWorldPosition","rt":$n[2].Vector3},{"a":2,"n":"GetTileTemplateForPool","t":8,"sn":"GetTileTemplateForPool","rt":HexTile},{"a":2,"n":"GetTopColorId","t":8,"sn":"GetTopColorId","rt":$n[0].Int32,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"GetTopTile","t":8,"sn":"GetTopTile","rt":HexTile},{"a":2,"n":"GetWorldPositionForTileIndex","t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0}],"sn":"GetWorldPositionForTileIndex","rt":$n[2].Vector3,"p":[$n[0].Int32]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":2,"n":"PopTopTile","t":8,"sn":"PopTopTile","rt":HexTile},{"a":2,"n":"PushTopTile","t":8,"pi":[{"n":"tile","pt":HexTile,"ps":0}],"sn":"PushTopTile","rt":$n[0].Void,"p":[HexTile]},{"a":1,"n":"RefreshVisibilityAndBinding","t":8,"sn":"RefreshVisibilityAndBinding","rt":$n[0].Void},{"a":1,"n":"ResolveActivePaletteColorCount","is":true,"t":8,"pi":[{"n":"config","pt":HexConfig,"ps":0},{"n":"paletteLength","pt":$n[0].Int32,"ps":1}],"sn":"ResolveActivePaletteColorCount","rt":$n[0].Int32,"p":[HexConfig,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ResolveTileColorIdForIndex","is":true,"t":8,"pi":[{"n":"index","pt":$n[0].Int32,"ps":0},{"n":"presetColorIds","pt":$n[0].Array.type(System.Int32),"ps":1},{"n":"paletteLength","pt":$n[0].Int32,"ps":2}],"sn":"ResolveTileColorIdForIndex","rt":$n[0].Int32,"p":[$n[0].Int32,$n[0].Array.type(System.Int32),$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ResolveTileTemplate","t":8,"sn":"ResolveTileTemplate","rt":HexTile},{"a":2,"n":"SetCurrentFloor","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"SetCurrentFloor","rt":$n[0].Void,"p":[HexFloor]},{"a":2,"n":"SetGameContext","t":8,"pi":[{"n":"context","pt":HexGameContext,"ps":0}],"sn":"SetGameContext","rt":$n[0].Void,"p":[HexGameContext]},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":2,"n":"ActiveStacks","is":true,"t":16,"rt":$n[5].IEnumerable$1(HexStack),"g":{"a":2,"n":"get_ActiveStacks","t":8,"rt":$n[5].IEnumerable$1(HexStack),"fg":"ActiveStacks","is":true},"fn":"ActiveStacks"},{"a":2,"n":"CurrentFloor","t":16,"rt":HexFloor,"g":{"a":2,"n":"get_CurrentFloor","t":8,"rt":HexFloor,"fg":"CurrentFloor"},"fn":"CurrentFloor"},{"a":2,"n":"GameContext","t":16,"rt":HexGameContext,"g":{"a":2,"n":"get_GameContext","t":8,"rt":HexGameContext,"fg":"GameContext"},"fn":"GameContext"},{"a":2,"n":"TileCount","t":16,"rt":$n[0].Int32,"g":{"a":2,"n":"get_TileCount","t":8,"rt":$n[0].Int32,"fg":"TileCount","box":function ($v) { return Bridge.box($v, System.Int32);}},"fn":"TileCount"},{"a":1,"n":"ActiveStackSet","is":true,"t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"ActiveStackSet","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"anchorPos","t":4,"rt":$n[2].Transform,"sn":"anchorPos"},{"a":1,"n":"currentFloor","t":4,"rt":HexFloor,"sn":"currentFloor"},{"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hexTiles","t":4,"rt":$n[5].List$1(HexTile),"sn":"hexTiles"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hideWhenEmpty","t":4,"rt":$n[0].Boolean,"sn":"hideWhenEmpty","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"stackInitialized","t":4,"rt":$n[0].Boolean,"sn":"stackInitialized","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileBaseLocalPosition","t":4,"rt":$n[2].Vector3,"sn":"tileBaseLocalPosition"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileStep","t":4,"rt":$n[0].Single,"sn":"tileStep","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tileTemplate","t":4,"rt":HexTile,"sn":"tileTemplate"}]}; }, $n);
     /*HexStack end.*/
 
     /*HexStacksCreator start.*/
-    $m("HexStacksCreator", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ApplyContext","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"ApplyContext","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"AreAllPendingStacksPlacedOnFloor","t":8,"sn":"AreAllPendingStacksPlacedOnFloor","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"CleanupPendingPlacementStacks","t":8,"sn":"CleanupPendingPlacementStacks","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Clear Existing Stacks")],"a":2,"n":"ClearExistingStacks","t":8,"sn":"ClearExistingStacks","rt":$n[0].Void},{"a":1,"n":"CreateRuntimeSpawnTemplate","t":8,"sn":"CreateRuntimeSpawnTemplate","rt":$n[0].Void},{"a":1,"n":"GetRandomPresetColors","t":8,"sn":"GetRandomPresetColors","rt":System.Array.type(UnityEngine.Material)},{"a":1,"n":"IsSlotOccupied","t":8,"pi":[{"n":"slot","pt":$n[2].Transform,"ps":0}],"sn":"IsSlotOccupied","rt":$n[0].Boolean,"p":[$n[2].Transform],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"NotifyStackPlaced","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"NotifyStackPlaced","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"PrewarmStacks","t":8,"sn":"PrewarmStacks","rt":$n[0].Void},{"a":1,"n":"RegisterPendingPlacementStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"RegisterPendingPlacementStack","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"RentStack","t":8,"pi":[{"n":"prefab","pt":HexStack,"ps":0},{"n":"position","pt":$n[2].Vector3,"ps":1},{"n":"rotation","pt":$n[2].Quaternion,"ps":2},{"n":"parent","pt":$n[2].Transform,"ps":3}],"sn":"RentStack","rt":HexStack,"p":[HexStack,$n[2].Vector3,$n[2].Quaternion,$n[2].Transform]},{"a":2,"n":"ResolveTileTemplateForPool","t":8,"sn":"ResolveTileTemplateForPool","rt":HexTile},{"a":1,"n":"SpawnStacksIntoSlots","t":8,"sn":"SpawnStacksIntoSlots","rt":$n[0].Int32,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":2,"n":"TryRecycleEmptyStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"TryRecycleEmptyStack","rt":$n[0].Boolean,"p":[HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TrySpawnIntoSlotsByPlacementState","t":8,"pi":[{"n":"respectRespawnToggle","pt":$n[0].Boolean,"ps":0}],"sn":"TrySpawnIntoSlotsByPlacementState","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"HexConfig","t":16,"rt":HexConfig,"g":{"a":1,"n":"get_HexConfig","t":8,"rt":HexConfig,"fg":"HexConfig"},"fn":"HexConfig"},{"a":1,"n":"PoolService","t":16,"rt":HexPoolService,"g":{"a":1,"n":"get_PoolService","t":8,"rt":HexPoolService,"fg":"PoolService"},"fn":"PoolService"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearExistingOnStart","t":4,"rt":$n[0].Boolean,"sn":"clearExistingOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"a":1,"n":"hasSpawnedStacks","t":4,"rt":$n[0].Boolean,"sn":"hasSpawnedStacks","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"pendingPlacementStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"pendingPlacementStacks","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"respawnWhenAllPlaced","t":4,"rt":$n[0].Boolean,"sn":"respawnWhenAllPlaced","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"runtimePooledStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"runtimePooledStacks","ro":true},{"a":1,"n":"runtimeSpawnTemplate","t":4,"rt":HexStack,"sn":"runtimeSpawnTemplate"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"slotOccupancyRadius","t":4,"rt":$n[0].Single,"sn":"slotOccupancyRadius","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Spawn"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnOnStart","t":4,"rt":$n[0].Boolean,"sn":"spawnOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnSlotsOnlyOnce","t":4,"rt":$n[0].Boolean,"sn":"spawnSlotsOnlyOnce","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnStackPrefab","t":4,"rt":HexStack,"sn":"spawnStackPrefab"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stackSlots","t":4,"rt":System.Array.type(UnityEngine.Transform),"sn":"stackSlots"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stacksRoot","t":4,"rt":$n[2].Transform,"sn":"stacksRoot"}]}; }, $n);
+    $m("HexStacksCreator", function () { return {"att":1048577,"a":2,"at":[new UnityEngine.DisallowMultipleComponent()],"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ApplyContext","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"ApplyContext","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"AreAllPendingStacksPlacedOnFloor","t":8,"sn":"AreAllPendingStacksPlacedOnFloor","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"AssignTopColorsRecursive","t":8,"pi":[{"n":"spawnFloors","pt":$n[5].List$1(HexFloor),"ps":0},{"n":"spawnSet","pt":$n[5].HashSet$1(HexFloor),"ps":1},{"n":"assignedColors","pt":$n[5].Dictionary$2(HexFloor,System.Int32),"ps":2},{"n":"colorCount","pt":$n[0].Int32,"ps":3}],"sn":"AssignTopColorsRecursive","rt":$n[0].Boolean,"p":[$n[5].List$1(HexFloor),$n[5].HashSet$1(HexFloor),$n[5].Dictionary$2(HexFloor,System.Int32),$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"BuildCoordKey","is":true,"t":8,"pi":[{"n":"x","pt":$n[0].Int32,"ps":0},{"n":"z","pt":$n[0].Int32,"ps":1}],"sn":"BuildCoordKey","rt":$n[0].Int64,"p":[$n[0].Int32,$n[0].Int32]},{"a":1,"n":"BuildNoSpawnCoordSet","is":true,"t":8,"pi":[{"n":"config","pt":HexConfig,"ps":0}],"sn":"BuildNoSpawnCoordSet","rt":$n[5].HashSet$1(System.Int64),"p":[HexConfig]},{"a":1,"n":"CleanupPendingPlacementStacks","t":8,"sn":"CleanupPendingPlacementStacks","rt":$n[0].Void},{"a":1,"n":"CleanupTrackedStacks","t":8,"sn":"CleanupTrackedStacks","rt":$n[0].Void},{"at":[new UnityEngine.ContextMenu.ctor("Clear Existing Stacks")],"a":2,"n":"ClearExistingStacks","t":8,"sn":"ClearExistingStacks","rt":$n[0].Void},{"a":1,"n":"ClearStacksPlacedOnFloors","t":8,"sn":"ClearStacksPlacedOnFloors","rt":$n[0].Void},{"a":1,"n":"CollectSpawnFloors","t":8,"pi":[{"n":"floors","pt":$n[5].IReadOnlyList$1(HexFloor),"ps":0},{"n":"noSpawnCoords","pt":$n[5].HashSet$1(System.Int64),"ps":1}],"sn":"CollectSpawnFloors","rt":$n[5].List$1(HexFloor),"p":[$n[5].IReadOnlyList$1(HexFloor),$n[5].HashSet$1(System.Int64)]},{"a":1,"n":"CreateRuntimeSpawnTemplate","t":8,"sn":"CreateRuntimeSpawnTemplate","rt":$n[0].Void},{"a":1,"n":"DespawnStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"DespawnStack","rt":$n[0].Void,"p":[HexStack]},{"a":2,"n":"FillFloorsWithConfiguredStacks","t":8,"pi":[{"n":"floors","pt":$n[5].IReadOnlyList$1(HexFloor),"ps":0}],"sn":"FillFloorsWithConfiguredStacks","rt":$n[0].Void,"p":[$n[5].IReadOnlyList$1(HexFloor)]},{"a":1,"n":"GetActivePaletteColorCount","t":8,"pi":[{"n":"palette","pt":System.Array.type(UnityEngine.Color),"ps":0}],"sn":"GetActivePaletteColorCount","rt":$n[0].Int32,"p":[System.Array.type(UnityEngine.Color)],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"GetAvailableTopColors","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"spawnSet","pt":$n[5].HashSet$1(HexFloor),"ps":1},{"n":"assignedColors","pt":$n[5].Dictionary$2(HexFloor,System.Int32),"ps":2},{"n":"colorCount","pt":$n[0].Int32,"ps":3}],"sn":"GetAvailableTopColors","rt":$n[5].List$1(System.Int32),"p":[HexFloor,$n[5].HashSet$1(HexFloor),$n[5].Dictionary$2(HexFloor,System.Int32),$n[0].Int32]},{"a":1,"n":"GetPlayerStackColorIds","t":8,"sn":"GetPlayerStackColorIds","rt":$n[0].Array.type(System.Int32)},{"a":1,"n":"GetRandomPresetColorIds","t":8,"pi":[{"n":"activePaletteColorCount","pt":$n[0].Int32,"ps":0}],"sn":"GetRandomPresetColorIds","rt":$n[0].Array.type(System.Int32),"p":[$n[0].Int32]},{"a":1,"n":"GetSpawnNeighborCount","is":true,"t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"spawnSet","pt":$n[5].HashSet$1(HexFloor),"ps":1}],"sn":"GetSpawnNeighborCount","rt":$n[0].Int32,"p":[HexFloor,$n[5].HashSet$1(HexFloor)],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"IsSlotOccupied","t":8,"pi":[{"n":"slot","pt":$n[2].Transform,"ps":0}],"sn":"IsSlotOccupied","rt":$n[0].Boolean,"p":[$n[2].Transform],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"LogGeneratedFloorFill","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogGeneratedFloorFill","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"LogStacksCreator","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogStacksCreator","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"MarkInitialPlayerStacksCompleted","t":8,"sn":"MarkInitialPlayerStacksCompleted","rt":$n[0].Void},{"a":1,"n":"NormalizeColorId","is":true,"t":8,"pi":[{"n":"colorId","pt":$n[0].Int32,"ps":0},{"n":"colorCount","pt":$n[0].Int32,"ps":1}],"sn":"NormalizeColorId","rt":$n[0].Int32,"p":[$n[0].Int32,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"NormalizePresetColorIds","is":true,"t":8,"pi":[{"n":"presetColorIds","pt":$n[0].Array.type(System.Int32),"ps":0},{"n":"colorCount","pt":$n[0].Int32,"ps":1}],"sn":"NormalizePresetColorIds","rt":$n[0].Array.type(System.Int32),"p":[$n[0].Array.type(System.Int32),$n[0].Int32]},{"a":2,"n":"NotifyStackPlaced","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"NotifyStackPlaced","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"PrewarmStacks","t":8,"sn":"PrewarmStacks","rt":$n[0].Void},{"a":1,"n":"RegisterPendingPlacementStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"RegisterPendingPlacementStack","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"RentStack","t":8,"pi":[{"n":"prefab","pt":HexStack,"ps":0},{"n":"position","pt":$n[2].Vector3,"ps":1},{"n":"rotation","pt":$n[2].Quaternion,"ps":2},{"n":"parent","pt":$n[2].Transform,"ps":3}],"sn":"RentStack","rt":HexStack,"p":[HexStack,$n[2].Vector3,$n[2].Quaternion,$n[2].Transform]},{"a":1,"n":"ResolveBottomColorId","t":8,"pi":[{"n":"topColorId","pt":$n[0].Int32,"ps":0},{"n":"paletteLength","pt":$n[0].Int32,"ps":1}],"sn":"ResolveBottomColorId","rt":$n[0].Int32,"p":[$n[0].Int32,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":2,"n":"ResolveTileTemplateForPool","t":8,"sn":"ResolveTileTemplateForPool","rt":HexTile},{"a":1,"n":"SpawnConfiguredFloorStack","t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"prefab","pt":HexStack,"ps":1},{"n":"topColorId","pt":$n[0].Int32,"ps":2},{"n":"activePaletteColorCount","pt":$n[0].Int32,"ps":3}],"sn":"SpawnConfiguredFloorStack","rt":$n[0].Boolean,"p":[HexFloor,HexStack,$n[0].Int32,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"SpawnStacksIntoSlots","t":8,"sn":"SpawnStacksIntoSlots","rt":$n[0].Int32,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":1,"n":"TryBuildFivePlusFiveColorIds","t":8,"pi":[{"n":"activePaletteColorCount","pt":$n[0].Int32,"ps":0},{"n":"colorIdsBottomToTop","out":true,"pt":$n[0].Array.type(System.Int32),"ps":1}],"sn":"TryBuildFivePlusFiveColorIds","rt":$n[0].Boolean,"p":[$n[0].Int32,$n[0].Array.type(System.Int32)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryBuildTopColorAssignment","t":8,"pi":[{"n":"spawnFloors","pt":$n[5].List$1(HexFloor),"ps":0},{"n":"colorCount","pt":$n[0].Int32,"ps":1},{"n":"topColorByFloor","out":true,"pt":$n[5].Dictionary$2(HexFloor,System.Int32),"ps":2}],"sn":"TryBuildTopColorAssignment","rt":$n[0].Boolean,"p":[$n[5].List$1(HexFloor),$n[0].Int32,$n[5].Dictionary$2(HexFloor,System.Int32)],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"TryRecycleEmptyStack","t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"TryRecycleEmptyStack","rt":$n[0].Boolean,"p":[HexStack],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TrySpawnIntoSlotsByPlacementState","t":8,"pi":[{"n":"respectRespawnToggle","pt":$n[0].Boolean,"ps":0}],"sn":"TrySpawnIntoSlotsByPlacementState","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"HexConfig","t":16,"rt":HexConfig,"g":{"a":1,"n":"get_HexConfig","t":8,"rt":HexConfig,"fg":"HexConfig"},"fn":"HexConfig"},{"a":2,"n":"InitialPlayerStacksCompleted","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_InitialPlayerStacksCompleted","t":8,"rt":$n[0].Boolean,"fg":"InitialPlayerStacksCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"s":{"a":1,"n":"set_InitialPlayerStacksCompleted","t":8,"p":[$n[0].Boolean],"rt":$n[0].Void,"fs":"InitialPlayerStacksCompleted"},"fn":"InitialPlayerStacksCompleted"},{"a":1,"n":"PoolService","t":16,"rt":HexPoolService,"g":{"a":1,"n":"get_PoolService","t":8,"rt":HexPoolService,"fg":"PoolService"},"fn":"PoolService"},{"a":1,"n":"GeneratedBottomLayerCount","is":true,"t":4,"rt":$n[0].Int32,"sn":"GeneratedBottomLayerCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"GeneratedTopLayerCount","is":true,"t":4,"rt":$n[0].Int32,"sn":"GeneratedTopLayerCount","box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"clearExistingOnStart","t":4,"rt":$n[0].Boolean,"sn":"clearExistingOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"debugLogs","t":4,"rt":$n[0].Boolean,"sn":"debugLogs","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("References"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"a":1,"n":"hasSpawnedStacks","t":4,"rt":$n[0].Boolean,"sn":"hasSpawnedStacks","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.HeaderAttribute("Generated Floor Fill"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"logGeneratedFill","t":4,"rt":$n[0].Boolean,"sn":"logGeneratedFill","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"pendingPlacementStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"pendingPlacementStacks","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"respawnWhenAllPlaced","t":4,"rt":$n[0].Boolean,"sn":"respawnWhenAllPlaced","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"runtimePooledStacks","t":4,"rt":$n[5].HashSet$1(HexStack),"sn":"runtimePooledStacks","ro":true},{"a":1,"n":"runtimeSpawnTemplate","t":4,"rt":HexStack,"sn":"runtimeSpawnTemplate"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"slotOccupancyRadius","t":4,"rt":$n[0].Single,"sn":"slotOccupancyRadius","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.HeaderAttribute("Spawn"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnOnStart","t":4,"rt":$n[0].Boolean,"sn":"spawnOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnSlotsOnlyOnce","t":4,"rt":$n[0].Boolean,"sn":"spawnSlotsOnlyOnce","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"spawnStackPrefab","t":4,"rt":HexStack,"sn":"spawnStackPrefab"},{"a":1,"n":"stackQueryBuffer","t":4,"rt":$n[5].List$1(HexStack),"sn":"stackQueryBuffer","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stackSlots","t":4,"rt":System.Array.type(UnityEngine.Transform),"sn":"stackSlots"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"stacksRoot","t":4,"rt":$n[2].Transform,"sn":"stacksRoot"},{"a":1,"backing":true,"n":"<InitialPlayerStacksCompleted>k__BackingField","t":4,"rt":$n[0].Boolean,"sn":"InitialPlayerStacksCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
     /*HexStacksCreator end.*/
 
     /*HexTile start.*/
-    $m("HexTile", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"SetMaterial","t":8,"pi":[{"n":"material","pt":$n[2].Material,"ps":0}],"sn":"SetMaterial","rt":$n[0].Void,"p":[$n[2].Material]},{"a":2,"n":"CurrentMaterial","t":16,"rt":$n[2].Material,"g":{"a":2,"n":"get_CurrentMaterial","t":8,"rt":$n[2].Material,"fg":"CurrentMaterial"},"fn":"CurrentMaterial"},{"a":1,"n":"myMaterial","t":4,"rt":$n[2].Material,"sn":"myMaterial"},{"a":2,"n":"myMeshRenderer","t":4,"rt":$n[2].MeshRenderer,"sn":"myMeshRenderer"}]}; }, $n);
+    $m("HexTile", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"ApplyColor","t":8,"pi":[{"n":"color","pt":$n[2].Color,"ps":0}],"sn":"ApplyColor","rt":$n[0].Void,"p":[$n[2].Color]},{"a":2,"n":"ClearColor","t":8,"sn":"ClearColor","rt":$n[0].Void},{"a":2,"n":"SetColor","t":8,"pi":[{"n":"id","pt":$n[0].Int32,"ps":0},{"n":"color","pt":$n[2].Color,"ps":1}],"sn":"SetColor","rt":$n[0].Void,"p":[$n[0].Int32,$n[2].Color]},{"a":2,"n":"TryGetColor","t":8,"pi":[{"n":"color","out":true,"pt":$n[2].Color,"ps":0}],"sn":"TryGetColor","rt":$n[0].Boolean,"p":[$n[2].Color],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"ColorIdValue","t":16,"rt":$n[0].Int32,"g":{"a":2,"n":"get_ColorIdValue","t":8,"rt":$n[0].Int32,"fg":"ColorIdValue","box":function ($v) { return Bridge.box($v, System.Int32);}},"fn":"ColorIdValue"},{"a":2,"n":"CurrentColor","t":16,"rt":$n[2].Color,"g":{"a":2,"n":"get_CurrentColor","t":8,"rt":$n[2].Color,"fg":"CurrentColor"},"fn":"CurrentColor"},{"a":2,"n":"HasColor","t":16,"rt":$n[0].Boolean,"g":{"a":2,"n":"get_HasColor","t":8,"rt":$n[0].Boolean,"fg":"HasColor","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"fn":"HasColor"},{"a":1,"n":"BaseColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"BaseColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"ColorId","is":true,"t":4,"rt":$n[0].Int32,"sn":"ColorId","ro":true,"box":function ($v) { return Bridge.box($v, System.Int32);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"colorId","t":4,"rt":$n[0].Int32,"sn":"colorId","box":function ($v) { return Bridge.box($v, System.Int32);}},{"a":1,"n":"colorPropertyBlock","t":4,"rt":$n[2].MaterialPropertyBlock,"sn":"colorPropertyBlock"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"currentColor","t":4,"rt":$n[2].Color,"sn":"currentColor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"myMeshRenderer","t":4,"rt":$n[2].MeshRenderer,"sn":"myMeshRenderer"}]}; }, $n);
     /*HexTile end.*/
 
     /*HexTransferAnimator start.*/
@@ -6218,15 +7729,15 @@ if ( TRACE ) { TRACE( "TutorialOverlayController#SetTutorialVisible", this ); }
     /*LunaBridge end.*/
 
     /*PackshotController start.*/
-    $m("PackshotController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":2,"n":"HidePackshot","t":8,"sn":"HidePackshot","rt":$n[0].Void},{"a":1,"n":"KillFadeTween","t":8,"sn":"KillFadeTween","rt":$n[0].Void},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":2,"n":"OnPlayNowPressed","t":8,"sn":"OnPlayNowPressed","rt":$n[0].Void},{"a":1,"n":"SetStaticContentActive","t":8,"pi":[{"n":"active","pt":$n[0].Boolean,"ps":0}],"sn":"SetStaticContentActive","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"SetVisible","t":8,"pi":[{"n":"visible","pt":$n[0].Boolean,"ps":0},{"n":"alpha","pt":$n[0].Single,"ps":1}],"sn":"SetVisible","rt":$n[0].Void,"p":[$n[0].Boolean,$n[0].Single]},{"a":2,"n":"ShowPackshot","t":8,"sn":"ShowPackshot","rt":$n[0].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"WasPointerPressedThisFrame","t":8,"sn":"WasPointerPressedThisFrame","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"backgroundObject","t":4,"rt":$n[2].GameObject,"sn":"backgroundObject"},{"at":[new UnityEngine.HeaderAttribute("Animation"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fadeDuration","t":4,"rt":$n[0].Single,"sn":"fadeDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fadeEase","t":4,"rt":$n[3].Ease,"sn":"fadeEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"a":1,"n":"fadeTween","t":4,"rt":$n[3].Tween,"sn":"fadeTween"},{"at":[new UnityEngine.HeaderAttribute("Behaviour"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hideOnStart","t":4,"rt":$n[0].Boolean,"sn":"hideOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isShown","t":4,"rt":$n[0].Boolean,"sn":"isShown","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"logoObject","t":4,"rt":$n[2].GameObject,"sn":"logoObject"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotCanvasGroup","t":4,"rt":$n[2].CanvasGroup,"sn":"packshotCanvasGroup"},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotRoot","t":4,"rt":$n[2].GameObject,"sn":"packshotRoot"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"playNowButtonObject","t":4,"rt":$n[2].GameObject,"sn":"playNowButtonObject"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"reactToAnyTap","t":4,"rt":$n[0].Boolean,"sn":"reactToAnyTap","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
+    $m("PackshotController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"Awake","t":8,"sn":"Awake","rt":$n[0].Void},{"a":2,"n":"HidePackshot","t":8,"sn":"HidePackshot","rt":$n[0].Void},{"a":1,"n":"KillFadeTween","t":8,"sn":"KillFadeTween","rt":$n[0].Void},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":2,"n":"OnPlayNowPressed","t":8,"sn":"OnPlayNowPressed","rt":$n[0].Void},{"a":1,"n":"SetStaticContentActive","t":8,"pi":[{"n":"active","pt":$n[0].Boolean,"ps":0}],"sn":"SetStaticContentActive","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"SetVisible","t":8,"pi":[{"n":"visible","pt":$n[0].Boolean,"ps":0},{"n":"alpha","pt":$n[0].Single,"ps":1}],"sn":"SetVisible","rt":$n[0].Void,"p":[$n[0].Boolean,$n[0].Single]},{"a":2,"n":"ShowPackshot","t":8,"sn":"ShowPackshot","rt":$n[0].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"WasPointerPressedThisFrame","t":8,"sn":"WasPointerPressedThisFrame","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"backgroundObject","t":4,"rt":$n[2].GameObject,"sn":"backgroundObject"},{"at":[new UnityEngine.HeaderAttribute("Animation"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fadeDuration","t":4,"rt":$n[0].Single,"sn":"fadeDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fadeEase","t":4,"rt":$n[3].Ease,"sn":"fadeEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"a":1,"n":"fadeTween","t":4,"rt":$n[3].Tween,"sn":"fadeTween"},{"at":[new UnityEngine.HeaderAttribute("Behaviour"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"hideOnStart","t":4,"rt":$n[0].Boolean,"sn":"hideOnStart","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isShown","t":4,"rt":$n[0].Boolean,"sn":"isShown","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"logoObject","t":4,"rt":$n[2].GameObject,"sn":"logoObject"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotCanvasGroup","t":4,"rt":$n[2].CanvasGroup,"sn":"packshotCanvasGroup"},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotRoot","t":4,"rt":$n[2].GameObject,"sn":"packshotRoot"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"playNowButtonObject","t":4,"rt":$n[2].GameObject,"sn":"playNowButtonObject"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"reactToAnyTap","t":4,"rt":$n[0].Boolean,"sn":"reactToAnyTap","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"PackshotShown","t":2,"ad":{"a":2,"n":"add_PackshotShown","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"addPackshotShown","rt":$n[0].Void,"p":[Function]},"r":{"a":2,"n":"remove_PackshotShown","t":8,"pi":[{"n":"value","pt":Function,"ps":0}],"sn":"removePackshotShown","rt":$n[0].Void,"p":[Function]}}]}; }, $n);
     /*PackshotController end.*/
 
     /*PlayableUIRoot start.*/
-    $m("PlayableUIRoot", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":2,"n":"ShowPackshot","t":8,"sn":"ShowPackshot","rt":$n[0].Void},{"a":2,"n":"StartCountdownTimer","t":8,"sn":"StartCountdownTimer","rt":$n[0].Void},{"a":2,"n":"StartTutorial","t":8,"sn":"StartTutorial","rt":$n[0].Void},{"a":2,"n":"StopCountdownTimer","t":8,"sn":"StopCountdownTimer","rt":$n[0].Void},{"a":2,"n":"StopTutorial","t":8,"sn":"StopTutorial","rt":$n[0].Void},{"a":2,"n":"CountdownTimerPanel","t":16,"rt":CountdownTimerPanel,"g":{"a":2,"n":"get_CountdownTimerPanel","t":8,"rt":CountdownTimerPanel,"fg":"CountdownTimerPanel"},"fn":"CountdownTimerPanel"},{"a":2,"n":"PackshotController","t":16,"rt":PackshotController,"g":{"a":2,"n":"get_PackshotController","t":8,"rt":PackshotController,"fg":"PackshotController"},"fn":"PackshotController"},{"a":2,"n":"TutorialController","t":16,"rt":TutorialOverlayController,"g":{"a":2,"n":"get_TutorialController","t":8,"rt":TutorialOverlayController,"fg":"TutorialController"},"fn":"TutorialController"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"countdownTimerPanel","t":4,"rt":CountdownTimerPanel,"sn":"countdownTimerPanel"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotController","t":4,"rt":PackshotController,"sn":"packshotController"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tutorialController","t":4,"rt":TutorialOverlayController,"sn":"tutorialController"}]}; }, $n);
+    $m("PlayableUIRoot", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"HandleCountdownFinished","t":8,"sn":"HandleCountdownFinished","rt":$n[0].Void},{"a":1,"n":"HandleFirstTransferAndClearChainFinished","t":8,"sn":"HandleFirstTransferAndClearChainFinished","rt":$n[0].Void},{"a":1,"n":"HandlePackshotShown","t":8,"sn":"HandlePackshotShown","rt":$n[0].Void},{"a":1,"n":"IsEndGameAfterFirstChainEnabled","t":8,"sn":"IsEndGameAfterFirstChainEnabled","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":2,"n":"ShowPackshot","t":8,"sn":"ShowPackshot","rt":$n[0].Void},{"a":2,"n":"StartCountdownTimer","t":8,"sn":"StartCountdownTimer","rt":$n[0].Void},{"a":2,"n":"StartTutorial","t":8,"sn":"StartTutorial","rt":$n[0].Void},{"a":2,"n":"StopCountdownTimer","t":8,"sn":"StopCountdownTimer","rt":$n[0].Void},{"a":2,"n":"StopTutorial","t":8,"sn":"StopTutorial","rt":$n[0].Void},{"a":1,"n":"SubscribeManagerEvents","t":8,"sn":"SubscribeManagerEvents","rt":$n[0].Void},{"a":1,"n":"TryGetConfiguredGameDuration","t":8,"pi":[{"n":"durationSeconds","out":true,"pt":$n[0].Single,"ps":0}],"sn":"TryGetConfiguredGameDuration","rt":$n[0].Boolean,"p":[$n[0].Single],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"UnsubscribeManagerEvents","t":8,"sn":"UnsubscribeManagerEvents","rt":$n[0].Void},{"a":2,"n":"CountdownTimerPanel","t":16,"rt":CountdownTimerPanel,"g":{"a":2,"n":"get_CountdownTimerPanel","t":8,"rt":CountdownTimerPanel,"fg":"CountdownTimerPanel"},"fn":"CountdownTimerPanel"},{"a":2,"n":"PackshotController","t":16,"rt":PackshotController,"g":{"a":2,"n":"get_PackshotController","t":8,"rt":PackshotController,"fg":"PackshotController"},"fn":"PackshotController"},{"a":2,"n":"TutorialController","t":16,"rt":TutorialOverlayController,"g":{"a":2,"n":"get_TutorialController","t":8,"rt":TutorialOverlayController,"fg":"TutorialController"},"fn":"TutorialController"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"countdownTimerPanel","t":4,"rt":CountdownTimerPanel,"sn":"countdownTimerPanel"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"packshotController","t":4,"rt":PackshotController,"sn":"packshotController"},{"a":1,"n":"subscribedManager","t":4,"rt":HexManager,"sn":"subscribedManager"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tutorialController","t":4,"rt":TutorialOverlayController,"sn":"tutorialController"}]}; }, $n);
     /*PlayableUIRoot end.*/
 
     /*TutorialOverlayController start.*/
-    $m("TutorialOverlayController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"HandleDragFinished","t":8,"pi":[{"n":"draggedStack","pt":HexStack,"ps":0},{"n":"successfulDrop","pt":$n[0].Boolean,"ps":1}],"sn":"HandleDragFinished","rt":$n[0].Void,"p":[HexStack,$n[0].Boolean]},{"a":1,"n":"HandleDragStarted","t":8,"pi":[{"n":"draggedStack","pt":HexStack,"ps":0}],"sn":"HandleDragStarted","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"KillHandTween","t":8,"sn":"KillHandTween","rt":$n[0].Void},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":1,"n":"PlayHandLoop","t":8,"sn":"PlayHandLoop","rt":$n[0].Void},{"a":2,"n":"ResetTutorialState","t":8,"sn":"ResetTutorialState","rt":$n[0].Void},{"a":1,"n":"RestartTutorialAfterDelayRoutine","t":8,"sn":"RestartTutorialAfterDelayRoutine","rt":$n[4].IEnumerator},{"a":1,"n":"SetTutorialVisible","t":8,"pi":[{"n":"visible","pt":$n[0].Boolean,"ps":0}],"sn":"SetTutorialVisible","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":2,"n":"StartTutorial","t":8,"sn":"StartTutorial","rt":$n[0].Void},{"a":1,"n":"StopRestartRoutine","t":8,"sn":"StopRestartRoutine","rt":$n[0].Void},{"a":2,"n":"StopTutorial","t":8,"sn":"StopTutorial","rt":$n[0].Void},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"completeOnSuccessfulDrop","t":4,"rt":$n[0].Boolean,"sn":"completeOnSuccessfulDrop","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fromAnchor","t":4,"rt":$n[2].RectTransform,"sn":"fromAnchor"},{"at":[new UnityEngine.HeaderAttribute("Animation"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handMoveDuration","t":4,"rt":$n[0].Single,"sn":"handMoveDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handMoveEase","t":4,"rt":$n[3].Ease,"sn":"handMoveEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handPauseDuration","t":4,"rt":$n[0].Single,"sn":"handPauseDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handTransform","t":4,"rt":$n[2].RectTransform,"sn":"handTransform"},{"a":1,"n":"handTween","t":4,"rt":$n[3].Tween,"sn":"handTween"},{"a":1,"n":"isCompleted","t":4,"rt":$n[0].Boolean,"sn":"isCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"restartDelay","t":4,"rt":$n[0].Single,"sn":"restartDelay","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"restartRoutine","t":4,"rt":$n[2].Coroutine,"sn":"restartRoutine"},{"at":[new UnityEngine.HeaderAttribute("Behaviour"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"startOnEnable","t":4,"rt":$n[0].Boolean,"sn":"startOnEnable","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"toAnchor","t":4,"rt":$n[2].RectTransform,"sn":"toAnchor"},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tutorialRoot","t":4,"rt":$n[2].GameObject,"sn":"tutorialRoot"}]}; }, $n);
+    $m("TutorialOverlayController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"AreInitialGenerationSystemsReady","t":8,"sn":"AreInitialGenerationSystemsReady","rt":$n[0].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"AreInitialGenerationSystemsReady","t":8,"pi":[{"n":"details","out":true,"pt":$n[0].String,"ps":0}],"sn":"AreInitialGenerationSystemsReady$1","rt":$n[0].Boolean,"p":[$n[0].String],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":2,"n":"DisableTutorialPermanently","t":8,"sn":"DisableTutorialPermanently","rt":$n[0].Void},{"a":1,"n":"GetFloorName","is":true,"t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0}],"sn":"GetFloorName","rt":$n[0].String,"p":[HexFloor]},{"a":1,"n":"GetStackName","is":true,"t":8,"pi":[{"n":"stack","pt":HexStack,"ps":0}],"sn":"GetStackName","rt":$n[0].String,"p":[HexStack]},{"a":1,"n":"HandleDragFinished","t":8,"pi":[{"n":"draggedStack","pt":HexStack,"ps":0},{"n":"successfulDrop","pt":$n[0].Boolean,"ps":1}],"sn":"HandleDragFinished","rt":$n[0].Void,"p":[HexStack,$n[0].Boolean]},{"a":1,"n":"HandleDragStarted","t":8,"pi":[{"n":"draggedStack","pt":HexStack,"ps":0}],"sn":"HandleDragStarted","rt":$n[0].Void,"p":[HexStack]},{"a":1,"n":"HasNeighborWithTopColor","t":8,"pi":[{"n":"centerFloor","pt":HexFloor,"ps":0},{"n":"colorId","pt":$n[0].Int32,"ps":1}],"sn":"HasNeighborWithTopColor","rt":$n[0].Boolean,"p":[HexFloor,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"IsMatchingNeighborStack","is":true,"t":8,"pi":[{"n":"floor","pt":HexFloor,"ps":0},{"n":"colorId","pt":$n[0].Int32,"ps":1}],"sn":"IsMatchingNeighborStack","rt":$n[0].Boolean,"p":[HexFloor,$n[0].Int32],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"KillHandTween","t":8,"sn":"KillHandTween","rt":$n[0].Void},{"a":1,"n":"LogTutorial","t":8,"pi":[{"n":"message","pt":$n[0].String,"ps":0}],"sn":"LogTutorial","rt":$n[0].Void,"p":[$n[0].String]},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[0].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[0].Void},{"a":1,"n":"PlayHandLoop","t":8,"sn":"PlayHandLoop","rt":$n[0].Void},{"a":2,"n":"ResetTutorialState","t":8,"sn":"ResetTutorialState","rt":$n[0].Void},{"a":1,"n":"ResolveManager","t":8,"sn":"ResolveManager","rt":HexManager},{"a":1,"n":"ResolveWorldCamera","t":8,"sn":"ResolveWorldCamera","rt":$n[2].Camera},{"a":1,"n":"RestartTutorialAfterDelayRoutine","t":8,"sn":"RestartTutorialAfterDelayRoutine","rt":$n[4].IEnumerator},{"a":1,"n":"SelectBestTargetFloor","is":true,"t":8,"pi":[{"n":"sourceStack","pt":HexStack,"ps":0},{"n":"candidateFloors","pt":$n[5].List$1(HexFloor),"ps":1}],"sn":"SelectBestTargetFloor","rt":HexFloor,"p":[HexStack,$n[5].List$1(HexFloor)]},{"a":1,"n":"SelectBottomMostPlayerStack","t":8,"pi":[{"n":"stacks","pt":$n[5].List$1(HexStack),"ps":0}],"sn":"SelectBottomMostPlayerStack","rt":HexStack,"p":[$n[5].List$1(HexStack)]},{"a":1,"n":"SetTutorialVisible","t":8,"pi":[{"n":"visible","pt":$n[0].Boolean,"ps":0}],"sn":"SetTutorialVisible","rt":$n[0].Void,"p":[$n[0].Boolean]},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[0].Void},{"a":2,"n":"StartTutorial","t":8,"sn":"StartTutorial","rt":$n[0].Void},{"a":1,"n":"StartTutorialAfterBootstrap","t":8,"sn":"StartTutorialAfterBootstrap","rt":$n[4].IEnumerator},{"a":1,"n":"StopRestartRoutine","t":8,"sn":"StopRestartRoutine","rt":$n[0].Void},{"a":2,"n":"StopTutorial","t":8,"sn":"StopTutorial","rt":$n[0].Void},{"a":1,"n":"TryConvertWorldToUiPosition","t":8,"pi":[{"n":"worldPosition","pt":$n[2].Vector3,"ps":0},{"n":"uiPosition","out":true,"pt":$n[2].Vector3,"ps":1}],"sn":"TryConvertWorldToUiPosition","rt":$n[0].Boolean,"p":[$n[2].Vector3,$n[2].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryFindTutorialMovePair","t":8,"pi":[{"n":"sourceStack","out":true,"pt":HexStack,"ps":0},{"n":"targetFloor","out":true,"pt":HexFloor,"ps":1}],"sn":"TryFindTutorialMovePair","rt":$n[0].Boolean,"p":[HexStack,HexFloor],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryResolveDynamicHandTargets","t":8,"pi":[{"n":"fromPosition","out":true,"pt":$n[2].Vector3,"ps":0},{"n":"toPosition","out":true,"pt":$n[2].Vector3,"ps":1}],"sn":"TryResolveDynamicHandTargets","rt":$n[0].Boolean,"p":[$n[2].Vector3,$n[2].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"TryResolveHandTargets","t":8,"pi":[{"n":"fromPosition","out":true,"pt":$n[2].Vector3,"ps":0},{"n":"toPosition","out":true,"pt":$n[2].Vector3,"ps":1}],"sn":"TryResolveHandTargets","rt":$n[0].Boolean,"p":[$n[2].Vector3,$n[2].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[0].Void},{"a":1,"n":"cachedFallbackWorldCamera","t":4,"rt":$n[2].Camera,"sn":"cachedFallbackWorldCamera"},{"a":1,"n":"cachedManager","t":4,"rt":HexManager,"sn":"cachedManager"},{"a":1,"n":"candidateChainFloorsBuffer","t":4,"rt":$n[5].List$1(HexFloor),"sn":"candidateChainFloorsBuffer","ro":true},{"a":1,"n":"candidateFreeFloorsBuffer","t":4,"rt":$n[5].List$1(HexFloor),"sn":"candidateFreeFloorsBuffer","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"canvasRoot","t":4,"rt":$n[2].RectTransform,"sn":"canvasRoot"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"debugLogs","t":4,"rt":$n[0].Boolean,"sn":"debugLogs","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fallbackScanInterval","t":4,"rt":$n[0].Single,"sn":"fallbackScanInterval","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"fromAnchor","t":4,"rt":$n[2].RectTransform,"sn":"fromAnchor"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"gameContext","t":4,"rt":HexGameContext,"sn":"gameContext"},{"at":[new UnityEngine.HeaderAttribute("Animation"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handMoveDuration","t":4,"rt":$n[0].Single,"sn":"handMoveDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handMoveEase","t":4,"rt":$n[3].Ease,"sn":"handMoveEase","box":function ($v) { return Bridge.box($v, DG.Tweening.Ease, System.Enum.toStringFn(DG.Tweening.Ease));}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handPauseDuration","t":4,"rt":$n[0].Single,"sn":"handPauseDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handScreenOffset","t":4,"rt":$n[2].Vector2,"sn":"handScreenOffset"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"handTransform","t":4,"rt":$n[2].RectTransform,"sn":"handTransform"},{"a":1,"n":"handTween","t":4,"rt":$n[3].Tween,"sn":"handTween"},{"a":1,"n":"hasStarted","t":4,"rt":$n[0].Boolean,"sn":"hasStarted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isCompleted","t":4,"rt":$n[0].Boolean,"sn":"isCompleted","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"isPermanentlyDisabled","t":4,"rt":$n[0].Boolean,"sn":"isPermanentlyDisabled","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"nextBootstrapStateLogAt","t":4,"rt":$n[0].Single,"sn":"nextBootstrapStateLogAt","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"nextFloorFallbackScanAt","t":4,"rt":$n[0].Single,"sn":"nextFloorFallbackScanAt","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"nextStackFallbackScanAt","t":4,"rt":$n[0].Single,"sn":"nextStackFallbackScanAt","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"restartDelay","t":4,"rt":$n[0].Single,"sn":"restartDelay","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"restartRoutine","t":4,"rt":$n[2].Coroutine,"sn":"restartRoutine"},{"at":[new UnityEngine.HeaderAttribute("Behaviour"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"startOnEnable","t":4,"rt":$n[0].Boolean,"sn":"startOnEnable","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"toAnchor","t":4,"rt":$n[2].RectTransform,"sn":"toAnchor"},{"at":[new UnityEngine.HeaderAttribute("Bindings"),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"tutorialRoot","t":4,"rt":$n[2].GameObject,"sn":"tutorialRoot"},{"a":1,"n":"tutorialStacksBuffer","t":4,"rt":$n[5].List$1(HexStack),"sn":"tutorialStacksBuffer","ro":true},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"uiCamera","t":4,"rt":$n[2].Camera,"sn":"uiCamera"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"useDynamicWorldTargets","t":4,"rt":$n[0].Boolean,"sn":"useDynamicWorldTargets","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"worldCamera","t":4,"rt":$n[2].Camera,"sn":"worldCamera"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"worldTargetHeightOffset","t":4,"rt":$n[0].Single,"sn":"worldTargetHeightOffset","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*TutorialOverlayController end.*/
 
     /*DG.Tweening.DOTweenCYInstruction start.*/

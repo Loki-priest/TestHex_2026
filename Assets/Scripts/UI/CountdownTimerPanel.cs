@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// UI-панель обратного отсчета с цветовыми состояниями и эффектом тревоги на малом времени.
+/// </summary>
 public class CountdownTimerPanel : MonoBehaviour
 {
     [Header("Timer")]
@@ -102,7 +105,7 @@ public class CountdownTimerPanel : MonoBehaviour
 
         isRunning = false;
         StopShake();
-        Debug.Log("Time is over");
+        LogTimerEvent("Time is over");
         CountdownFinished?.Invoke();
     }
 
@@ -156,7 +159,7 @@ public class CountdownTimerPanel : MonoBehaviour
 
         if (panelRoot == null)
         {
-            Debug.LogWarning("CountdownTimerPanel: panelRoot is not assigned.", this);
+            LogTimerWarning("CountdownTimerPanel: panelRoot is not assigned.");
         }
     }
 
@@ -282,6 +285,20 @@ public class CountdownTimerPanel : MonoBehaviour
         {
             iconRoot.localRotation = Quaternion.identity;
         }
+    }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
+    private void LogTimerEvent(string message)
+    {
+        Debug.Log(message, this);
+    }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
+    private void LogTimerWarning(string message)
+    {
+        Debug.LogWarning(message, this);
     }
 }
 

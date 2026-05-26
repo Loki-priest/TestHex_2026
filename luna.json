@@ -1839,15 +1839,7 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.Resolution",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.RootMotionData",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Screen",
                 "excluded": true
             },
             {
@@ -12446,7 +12438,7 @@
                     },
                     {
                         "name": "System$Collections$Generic$IEnumerable$1$GetEnumerator",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$IEnumerable$GetEnumerator",
@@ -12614,7 +12606,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Dispose",
@@ -12638,7 +12630,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -28475,6 +28467,18 @@
                     {
                         "name": "StopShake",
                         "excluded": false
+                    },
+                    {
+                        "name": "ApplyConfiguredDurationFromConfig",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LogTimerEvent",
+                        "excluded": true
+                    },
+                    {
+                        "name": "LogTimerWarning",
+                        "excluded": true
                     }
                 ]
             },
@@ -28656,7 +28660,7 @@
                     },
                     {
                         "name": "IsGlobalDragEnabled#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetGlobalDragEnabled",
@@ -28676,6 +28680,10 @@
                     },
                     {
                         "name": "IsActiveStackValid",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetNearestFloorFromHits",
                         "excluded": false
                     }
                 ]
@@ -28779,6 +28787,14 @@
                     {
                         "name": "SetGridCoordinates",
                         "excluded": false
+                    },
+                    {
+                        "name": "ActiveFloors#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
                     }
                 ]
             },
@@ -28819,6 +28835,14 @@
                     {
                         "name": "ClearGeneratedFloor",
                         "excluded": true
+                    },
+                    {
+                        "name": "MarkInitialGenerationCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LogFloorCreator",
+                        "excluded": true
                     }
                 ]
             },
@@ -28844,7 +28868,7 @@
                     },
                     {
                         "name": "FloorCreator#get",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -29225,6 +29249,18 @@
                     {
                         "name": "CountTopTilesWithColorId",
                         "excluded": false
+                    },
+                    {
+                        "name": "ActiveStacks#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
                     }
                 ]
             },
@@ -29383,6 +29419,14 @@
                     {
                         "name": "LogGeneratedFloorFill",
                         "excluded": false
+                    },
+                    {
+                        "name": "MarkInitialPlayerStacksCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LogStacksCreator",
+                        "excluded": true
                     }
                 ]
             },
@@ -29559,6 +29603,26 @@
                     {
                         "name": "HandlePackshotShown",
                         "excluded": false
+                    },
+                    {
+                        "name": "HandleFirstTransferAndClearChainFinished",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SubscribeManagerEvents",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UnsubscribeManagerEvents",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryGetConfiguredGameDuration",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsEndGameAfterFirstChainEnabled",
+                        "excluded": false
                     }
                 ]
             },
@@ -29645,6 +29709,54 @@
                     {
                         "name": "TryConvertWorldToUiPosition",
                         "excluded": false
+                    },
+                    {
+                        "name": "SelectBestTargetFloor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetStackName",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetFloorName",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartTutorialAfterBootstrap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableTutorialPermanently",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SelectBottomMostPlayerStack",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResolveWorldCamera",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AreInitialGenerationSystemsReady$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AreInitialGenerationSystemsReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "LogTutorial",
+                        "excluded": true
                     }
                 ]
             },
@@ -30628,6 +30740,122 @@
                     },
                     {
                         "name": "InstallFullGame",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Resolution",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "getDefaultValue",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getHashCode",
+                        "excluded": true
+                    },
+                    {
+                        "name": "equals",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$clone",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Screen",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "width#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "height#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "safeArea#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "currentResolution#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "fullScreen#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "fullScreen#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "dpi#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "dpi#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "orientation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "orientation#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sleepTimeout#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "sleepTimeout#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeLeft#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeLeft#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeRight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToLandscapeRight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortrait#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortrait#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortraitUpsideDown#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "autorotateToPortraitUpsideDown#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
                         "excluded": false
                     }
                 ]

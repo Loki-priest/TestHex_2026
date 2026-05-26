@@ -29,11 +29,19 @@ public class HexFloor : MonoBehaviour
 
 	private static readonly int EmissionColorId = Shader.PropertyToID("_EmissionColor");
 
+	private static readonly HashSet<HexFloor> ActiveFloorSet = new HashSet<HexFloor>();
+
 	private List<HexFloor> nearFloors = new List<HexFloor>();
 
 	[Header("Placement")]
 	[SerializeField]
 	private Transform stackAnchor;
+
+	[SerializeField]
+	private int gridX;
+
+	[SerializeField]
+	private int gridZ;
 
 	private HexStack occupiedStack;
 
@@ -108,6 +116,12 @@ public class HexFloor : MonoBehaviour
 
 	public Transform StackAnchor => stackAnchor;
 
+	public int GridX => gridX;
+
+	public int GridZ => gridZ;
+
+	public static IEnumerable<HexFloor> ActiveFloors => ActiveFloorSet;
+
 	private void Awake()
 	{
 		CacheHighlightRenderers();
@@ -118,8 +132,14 @@ public class HexFloor : MonoBehaviour
 		}
 	}
 
+	private void OnEnable()
+	{
+		ActiveFloorSet.Add(this);
+	}
+
 	private void OnDisable()
 	{
+		ActiveFloorSet.Remove(this);
 		SetDropHighlight(false);
 	}
 
@@ -167,6 +187,12 @@ public class HexFloor : MonoBehaviour
 	public void SetOccupiedStack(HexStack stack)
 	{
 		occupiedStack = stack;
+	}
+
+	public void SetGridCoordinates(int x, int z)
+	{
+		gridX = x;
+		gridZ = z;
 	}
 
 	public void ClearOccupiedStack(HexStack stack)

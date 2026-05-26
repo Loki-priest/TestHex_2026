@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Координирует UI плейбла: туториал, таймер, пэкшот и события завершения игры.
+/// </summary>
 public class PlayableUIRoot : MonoBehaviour
 {
     [SerializeField] private HexGameContext gameContext;

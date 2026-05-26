@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Генерирует сетку пола из шестиугольных клеток и при необходимости заполняет ее стартовыми стопками.
+/// </summary>
 public class HexFloorCreator : MonoBehaviour
 {
     [Header("References")]
@@ -15,6 +18,7 @@ public class HexFloorCreator : MonoBehaviour
     [SerializeField] private bool clearBeforeGenerate = true;
     [SerializeField] private bool refreshNeighborsAfterGenerate = true;
     [SerializeField] private bool fillStacksAfterGenerate = true;
+    [SerializeField] private bool debugLogs = false;
 
     [Header("Layout")]
     [SerializeField, Min(0.001f)] private float neighborDistance = 1f;
@@ -23,13 +27,17 @@ public class HexFloorCreator : MonoBehaviour
 
     private readonly List<HexFloor> generatedFloors = new();
     private HexConfig HexConfig => gameContext != null ? gameContext.Config : null;
+    public bool InitialGenerationCompleted { get; private set; }
 
     private void Start()
     {
+        LogFloorCreator($"Start. generateOnStart={generateOnStart}");
         if (generateOnStart)
         {
             GenerateFloor();
         }
+
+        MarkInitialGenerationCompleted();
     }
 
     [ContextMenu("Generate Floor")]
@@ -38,6 +46,7 @@ public class HexFloorCreator : MonoBehaviour
         HexConfig hexConfig = HexConfig;
         if (hexConfig == null || floorPrefab == null)
         {
+            LogFloorCreator("GenerateFloor aborted: config or floorPrefab is null.");
             return;
         }
 
@@ -129,10 +138,14 @@ public class HexFloorCreator : MonoBehaviour
 
         if (!shouldFillStacks || gameContext == null || gameContext.StacksCreator == null)
         {
+            LogFloorCreator($"GenerateFloor done. floors={generatedFloors.Count}, shouldFillStacks={shouldFillStacks}");
+            MarkInitialGenerationCompleted();
             return;
         }
 
         gameContext.StacksCreator.FillFloorsWithConfiguredStacks(generatedFloors);
+        LogFloorCreator($"GenerateFloor done with fill. floors={generatedFloors.Count}");
+        MarkInitialGenerationCompleted();
     }
 
     [ContextMenu("Clear Generated Floor")]
@@ -182,5 +195,28 @@ public class HexFloorCreator : MonoBehaviour
                 DestroyImmediate(floor.gameObject);
             }
         }
+    }
+
+    private void MarkInitialGenerationCompleted()
+    {
+        if (InitialGenerationCompleted)
+        {
+            return;
+        }
+
+        InitialGenerationCompleted = true;
+        LogFloorCreator("InitialGenerationCompleted=true");
+    }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
+    private void LogFloorCreator(string message)
+    {
+        if (!debugLogs)
+        {
+            return;
+        }
+
+        Debug.Log($"[HexFloorCreator] {message}", this);
     }
 }

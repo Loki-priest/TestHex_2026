@@ -1,6 +1,9 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Единая точка ссылок на ключевые сервисы и конфиг игры.
+/// </summary>
 public class HexGameContext : MonoBehaviour
 {
     [Header("Core")]

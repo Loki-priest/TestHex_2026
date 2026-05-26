@@ -4,6 +4,9 @@ using DG.Tweening;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Управляет установкой стопок, цепочками перекладывания/очистки и синхронизацией состояния поля.
+/// </summary>
 public class HexManager : MonoBehaviour
 {
     public event Action FirstTransferAndClearChainFinished;
@@ -26,7 +29,7 @@ public class HexManager : MonoBehaviour
     [SerializeField] private HexClearFxPlayer clearFxPlayer;
 
     [Header("Debug")]
-    [SerializeField] private bool logTransferEvents = true;
+    [SerializeField] private bool logTransferEvents = false;
 
     private const int MaxResolveIterations = 4096;
     private int activeTransferRoutines;
@@ -48,6 +51,9 @@ public class HexManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Состояние выполнения одной цепочки перекладываний и очисток.
+    /// </summary>
     private sealed class TransferChainState
     {
         public readonly Queue<HexStack> PendingStacks = new();
@@ -215,10 +221,25 @@ public class HexManager : MonoBehaviour
             }
         }
 
-        HexStack anyStack = FindObjectOfType<HexStack>();
+        HexStack anyStack = null;
+        foreach (HexStack stack in HexStack.ActiveStacks)
+        {
+            if (stack == null)
+            {
+                continue;
+            }
+
+            anyStack = stack;
+            break;
+        }
+
         if (anyStack == null)
         {
-            return null;
+            anyStack = FindObjectOfType<HexStack>();
+            if (anyStack == null)
+            {
+                return null;
+            }
         }
 
         return anyStack.GetTileTemplateForPool();
@@ -467,8 +488,7 @@ public class HexManager : MonoBehaviour
 
     private void EnqueueAllStacksForTransferCheck(Queue<HexStack> pendingStacks, HashSet<HexStack> queuedStacks)
     {
-        HexStack[] discoveredStacks = FindObjectsOfType<HexStack>();
-        foreach (HexStack stack in discoveredStacks)
+        foreach (HexStack stack in HexStack.ActiveStacks)
         {
             EnqueueForTransferCheck(stack, pendingStacks, queuedStacks);
         }
@@ -492,8 +512,7 @@ public class HexManager : MonoBehaviour
         sourceStack = null;
         sourceFloor = null;
 
-        HexStack[] discoveredStacks = FindObjectsOfType<HexStack>();
-        foreach (HexStack stack in discoveredStacks)
+        foreach (HexStack stack in HexStack.ActiveStacks)
         {
             if (!TryResolveStackFloor(stack, out HexFloor floor))
             {
@@ -646,8 +665,7 @@ public class HexManager : MonoBehaviour
             floor.ClearOccupiedStack(occupiedStack);
         }
 
-        HexStack[] discoveredStacks = FindObjectsOfType<HexStack>();
-        foreach (HexStack stack in discoveredStacks)
+        foreach (HexStack stack in HexStack.ActiveStacks)
         {
             if (stack == null)
             {
@@ -913,6 +931,8 @@ public class HexManager : MonoBehaviour
         return Mathf.Max(1, config.topMatchClearCount);
     }
 
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
     private void LogTransferEvent(string message)
     {
         if (!logTransferEvents)

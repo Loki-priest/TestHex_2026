@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class HexClearFxPlayer : MonoBehaviour
 {
-	private static readonly int BaseColorId = Shader.PropertyToID("_BaseColor");
-
-	private static readonly int ColorId = Shader.PropertyToID("_Color");
-
-	private static readonly int TintColorId = Shader.PropertyToID("_TintColor");
-
 	[SerializeField]
 	private ParticleSystem clearTilesFxPrefab;
 
@@ -36,13 +30,9 @@ public class HexClearFxPlayer : MonoBehaviour
 		for (int i = 0; i < tiles.Count; i++)
 		{
 			HexTile tile = tiles[i];
-			if (!(tile == null))
+			if (!(tile == null) && tile.TryGetColor(out color))
 			{
-				Material tileMaterial = tile.CurrentMaterial;
-				if (TryGetColorFromMaterial(tileMaterial, out color))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
@@ -153,30 +143,5 @@ public class HexClearFxPlayer : MonoBehaviour
 			}
 		}
 		return maxLifetime;
-	}
-
-	private static bool TryGetColorFromMaterial(Material material, out Color color)
-	{
-		color = Color.white;
-		if (material == null)
-		{
-			return false;
-		}
-		if (material.HasProperty(BaseColorId))
-		{
-			color = material.GetColor(BaseColorId);
-			return true;
-		}
-		if (material.HasProperty(ColorId))
-		{
-			color = material.GetColor(ColorId);
-			return true;
-		}
-		if (material.HasProperty(TintColorId))
-		{
-			color = material.GetColor(TintColorId);
-			return true;
-		}
-		return false;
 	}
 }

@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Создает, респавнит и заполняет стопки игрока/пола по конфигу с учетом пулов и правил генерации.
+/// </summary>
 public class HexStacksCreator : MonoBehaviour
 {
 
@@ -20,32 +23,36 @@ public class HexStacksCreator : MonoBehaviour
 
     [Header("Generated Floor Fill")]
     [SerializeField] private bool logGeneratedFill;
+    [SerializeField] private bool debugLogs = false;
 
     private const int GeneratedBottomLayerCount = 5;
     private const int GeneratedTopLayerCount = 5;
 
     private readonly HashSet<HexStack> pendingPlacementStacks = new();
     private readonly HashSet<HexStack> runtimePooledStacks = new();
+    private readonly List<HexStack> stackQueryBuffer = new();
     private HexStack runtimeSpawnTemplate;
     private bool hasSpawnedStacks;
+    public bool InitialPlayerStacksCompleted { get; private set; }
     private HexConfig HexConfig => gameContext != null ? gameContext.Config : null;
     private HexPoolService PoolService => gameContext != null ? gameContext.PoolService : null;
 
     private void Start()
     {
-        if (!spawnOnStart)
+        LogStacksCreator($"Start. spawnOnStart={spawnOnStart}, clearExistingOnStart={clearExistingOnStart}");
+        if (spawnOnStart)
         {
-            return;
+            if (clearExistingOnStart)
+            {
+                ClearExistingStacks();
+            }
+
+            CreateRuntimeSpawnTemplate();
+            PrewarmStacks();
+            TrySpawnIntoSlotsByPlacementState(false);
         }
 
-        if (clearExistingOnStart)
-        {
-            ClearExistingStacks();
-        }
-
-        CreateRuntimeSpawnTemplate();
-        PrewarmStacks();
-        TrySpawnIntoSlotsByPlacementState(false);
+        MarkInitialPlayerStacksCompleted();
     }
 
     public bool TryRecycleEmptyStack(HexStack stack)
@@ -71,6 +78,7 @@ public class HexStacksCreator : MonoBehaviour
 
     public void NotifyStackPlaced(HexStack stack)
     {
+        LogStacksCreator($"NotifyStackPlaced. stack={(stack != null ? stack.name : "null")}");
         if (stack != null)
         {
             pendingPlacementStacks.Remove(stack);
@@ -148,16 +156,19 @@ public class HexStacksCreator : MonoBehaviour
     {
         if (respectRespawnToggle && !respawnWhenAllPlaced)
         {
+            LogStacksCreator("TrySpawnIntoSlotsByPlacementState skipped: respawnWhenAllPlaced=false");
             return;
         }
 
         if (spawnSlotsOnlyOnce && hasSpawnedStacks)
         {
+            LogStacksCreator("TrySpawnIntoSlotsByPlacementState skipped: spawnSlotsOnlyOnce already used.");
             return;
         }
 
         if (!AreAllPendingStacksPlacedOnFloor())
         {
+            LogStacksCreator($"TrySpawnIntoSlotsByPlacementState waiting: pending={pendingPlacementStacks.Count}");
             return;
         }
 
@@ -166,6 +177,8 @@ public class HexStacksCreator : MonoBehaviour
         {
             hasSpawnedStacks = true;
         }
+
+        LogStacksCreator($"TrySpawnIntoSlotsByPlacementState result: spawned={spawnedCount}, pending={pendingPlacementStacks.Count}");
     }
 
     public HexTile ResolveTileTemplateForPool()
@@ -386,11 +399,9 @@ public class HexStacksCreator : MonoBehaviour
         float safeRadius = Mathf.Max(0.01f, slotOccupancyRadius);
         float maxSqrDistance = safeRadius * safeRadius;
         Vector3 slotPosition = slot.position;
-        HexStack[] allStacks = FindObjectsOfType<HexStack>();
 
-        for (int i = 0; i < allStacks.Length; i++)
+        foreach (HexStack stack in HexStack.ActiveStacks)
         {
-            HexStack stack = allStacks[i];
             if (stack == null || !stack.gameObject.activeInHierarchy || stack.TileCount == 0)
             {
                 continue;
@@ -451,10 +462,9 @@ public class HexStacksCreator : MonoBehaviour
 
     private void ClearStacksPlacedOnFloors()
     {
-        HexStack[] allStacks = FindObjectsOfType<HexStack>();
-        for (int i = 0; i < allStacks.Length; i++)
+        stackQueryBuffer.Clear();
+        foreach (HexStack stack in HexStack.ActiveStacks)
         {
-            HexStack stack = allStacks[i];
             if (stack == null || stack == runtimeSpawnTemplate)
             {
                 continue;
@@ -465,7 +475,12 @@ public class HexStacksCreator : MonoBehaviour
                 continue;
             }
 
-            DespawnStack(stack);
+            stackQueryBuffer.Add(stack);
+        }
+
+        for (int i = 0; i < stackQueryBuffer.Count; i++)
+        {
+            DespawnStack(stackQueryBuffer[i]);
         }
     }
 
@@ -800,6 +815,8 @@ public class HexStacksCreator : MonoBehaviour
         return ((long)x << 32) ^ (uint)z;
     }
 
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
     private void LogGeneratedFloorFill(string message)
     {
         if (!logGeneratedFill)
@@ -818,5 +835,28 @@ public class HexStacksCreator : MonoBehaviour
         }
 
         stack.SetGameContext(gameContext);
+    }
+
+    private void MarkInitialPlayerStacksCompleted()
+    {
+        if (InitialPlayerStacksCompleted)
+        {
+            return;
+        }
+
+        InitialPlayerStacksCompleted = true;
+        LogStacksCreator("InitialPlayerStacksCompleted=true");
+    }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
+    private void LogStacksCreator(string message)
+    {
+        if (!debugLogs)
+        {
+            return;
+        }
+
+        Debug.Log($"[HexStacksCreator] {message}", this);
     }
 }

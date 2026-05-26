@@ -2,12 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Представляет одну клетку пола: хранит занятость, соседей и визуал подсветки дропа.
+/// </summary>
 public class HexFloor : MonoBehaviour
 {
     private const int SideCount = 6;
     private static readonly int BaseColorId = Shader.PropertyToID("_BaseColor");
     private static readonly int ColorId = Shader.PropertyToID("_Color");
     private static readonly int EmissionColorId = Shader.PropertyToID("_EmissionColor");
+    private static readonly HashSet<HexFloor> ActiveFloorSet = new();
 
     private List<HexFloor> nearFloors = new();
 
@@ -23,6 +27,7 @@ public class HexFloor : MonoBehaviour
     public Transform StackAnchor => stackAnchor;
     public int GridX => gridX;
     public int GridZ => gridZ;
+    public static IEnumerable<HexFloor> ActiveFloors => ActiveFloorSet;
 
     [Header("Drop Highlight")]
     [SerializeField] private Renderer[] highlightRenderers;
@@ -48,6 +53,9 @@ public class HexFloor : MonoBehaviour
     [SerializeField] private Color gizmoNoNeighborColor = new(1f, 0.65f, 0f, 0.9f);
     [SerializeField] private Color gizmoNeighborColor = new(0.2f, 1f, 0.3f, 0.9f);
 
+    /// <summary>
+    /// Кэш исходных визуальных параметров рендера для корректного включения/выключения подсветки.
+    /// </summary>
     private sealed class RendererHighlightState
     {
         public Renderer Renderer;
@@ -74,8 +82,14 @@ public class HexFloor : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        ActiveFloorSet.Add(this);
+    }
+
     private void OnDisable()
     {
+        ActiveFloorSet.Remove(this);
         SetDropHighlight(false);
     }
 

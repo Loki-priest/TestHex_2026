@@ -5,6 +5,8 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class HexStack : MonoBehaviour
 {
+	private static readonly HashSet<HexStack> ActiveStackSet = new HashSet<HexStack>();
+
 	[SerializeField]
 	private List<HexTile> hexTiles = new List<HexTile>();
 
@@ -33,6 +35,8 @@ public class HexStack : MonoBehaviour
 
 	public HexGameContext GameContext => gameContext;
 
+	public static IEnumerable<HexStack> ActiveStacks => ActiveStackSet;
+
 	public int TileCount
 	{
 		get
@@ -48,6 +52,16 @@ public class HexStack : MonoBehaviour
 		CacheGeometryFromTiles();
 	}
 
+	private void OnEnable()
+	{
+		ActiveStackSet.Add(this);
+	}
+
+	private void OnDisable()
+	{
+		ActiveStackSet.Remove(this);
+	}
+
 	private void Start()
 	{
 		if (!stackInitialized)
@@ -57,32 +71,30 @@ public class HexStack : MonoBehaviour
 		RefreshVisibilityAndBinding();
 	}
 
-	public void CreateStack(Material[] colorsBottomToTop = null)
+	public void CreateStack(int[] colorIdsBottomToTop = null)
 	{
 		EnsureTilesInitializedFromChildren();
-		bool hasPreset = colorsBottomToTop != null && colorsBottomToTop.Length != 0;
-		Material[] randomColors = null;
-		if (!hasPreset)
+		bool hasPreset = colorIdsBottomToTop != null && colorIdsBottomToTop.Length != 0;
+		Color[] palette = null;
+		HexConfig config = ((gameContext != null) ? gameContext.Config : null);
+		if (config == null || config.colors == null || config.colors.Length == 0)
 		{
-			HexConfig config = ((gameContext != null) ? gameContext.Config : null);
-			if (config == null)
-			{
-				return;
-			}
-			randomColors = config.colors;
+			return;
 		}
-		if ((!hasPreset && (randomColors == null || randomColors.Length == 0)) || (hasPreset && !EnsureTileCount(colorsBottomToTop.Length)))
+		palette = config.colors;
+		int activePaletteColorCount = ResolveActivePaletteColorCount(config, palette.Length);
+		if (activePaletteColorCount <= 0 || (hasPreset && !EnsureTileCount(colorIdsBottomToTop.Length)))
 		{
 			return;
 		}
 		CompactNullTiles();
 		for (int i = 0; i < hexTiles.Count; i++)
 		{
-			Material tileMaterial = ResolveTileMaterialForIndex(i, colorsBottomToTop, randomColors);
-			if (tileMaterial != null)
+			int tileColorId = ResolveTileColorIdForIndex(i, colorIdsBottomToTop, activePaletteColorCount);
+			if (tileColorId >= 0 && tileColorId < palette.Length)
 			{
 				hexTiles[i].gameObject.SetActive(true);
-				hexTiles[i].SetMaterial(tileMaterial);
+				hexTiles[i].SetColor(tileColorId, palette[tileColorId]);
 			}
 		}
 		stackInitialized = true;
@@ -115,15 +127,15 @@ public class HexStack : MonoBehaviour
 		return hexTiles[hexTiles.Count - 1];
 	}
 
-	public Material GetTopMaterial()
+	public int GetTopColorId()
 	{
 		HexTile topTile = GetTopTile();
-		return (topTile != null) ? topTile.CurrentMaterial : null;
+		return (topTile != null) ? topTile.ColorIdValue : (-1);
 	}
 
-	public int CountTopTilesWithMaterial(Material material)
+	public int CountTopTilesWithColorId(int colorId)
 	{
-		if (material == null)
+		if (colorId < 0)
 		{
 			return 0;
 		}
@@ -132,7 +144,7 @@ public class HexStack : MonoBehaviour
 		for (int i = hexTiles.Count - 1; i >= 0; i--)
 		{
 			HexTile tile = hexTiles[i];
-			if (tile == null || tile.CurrentMaterial != material)
+			if (tile == null || tile.ColorIdValue != colorId)
 			{
 				break;
 			}
@@ -333,21 +345,35 @@ public class HexStack : MonoBehaviour
 		}
 	}
 
-	private static Material ResolveTileMaterialForIndex(int index, Material[] presetColors, Material[] randomColors)
+	private static int ResolveTileColorIdForIndex(int index, int[] presetColorIds, int paletteLength)
 	{
-		if (presetColors != null && index < presetColors.Length)
+		if (paletteLength <= 0)
 		{
-			Material presetMaterial = presetColors[index];
-			if (presetMaterial != null)
+			return -1;
+		}
+		if (presetColorIds != null && index < presetColorIds.Length)
+		{
+			int presetColorId = presetColorIds[index];
+			if (presetColorId >= 0 && presetColorId < paletteLength)
 			{
-				return presetMaterial;
+				return presetColorId;
 			}
 		}
-		if (randomColors == null || randomColors.Length == 0)
+		return UnityEngine.Random.Range(0, paletteLength);
+	}
+
+	private static int ResolveActivePaletteColorCount(HexConfig config, int paletteLength)
+	{
+		if (paletteLength <= 0)
 		{
-			return null;
+			return 0;
 		}
-		return randomColors[UnityEngine.Random.Range(0, randomColors.Length)];
+		int configuredCount = ((config != null) ? config.paletteColorCount : 0);
+		if (configuredCount <= 0)
+		{
+			return paletteLength;
+		}
+		return Mathf.Clamp(configuredCount, 1, paletteLength);
 	}
 
 	private void RefreshVisibilityAndBinding()
@@ -376,8 +402,7 @@ public class HexStack : MonoBehaviour
 			currentFloor.ClearOccupiedStack(this);
 			currentFloor = null;
 		}
-		HexFloor[] allFloors = UnityEngine.Object.FindObjectsOfType<HexFloor>();
-		foreach (HexFloor floor in allFloors)
+		foreach (HexFloor floor in HexFloor.ActiveFloors)
 		{
 			if (!(floor == null))
 			{

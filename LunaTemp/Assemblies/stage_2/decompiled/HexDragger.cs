@@ -3,12 +3,12 @@ using DG.Tweening;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(HexStack))]
 public class HexDragger : MonoBehaviour
 {
 	private const int MousePointerId = -1;
 
 	[Header("Input")]
+	[SerializeField]
 	private HexGameContext gameContext;
 
 	[SerializeField]
@@ -53,13 +53,9 @@ public class HexDragger : MonoBehaviour
 	[SerializeField]
 	private Ease dropEase = Ease.InOutQuad;
 
-	[Header("Behaviour")]
-	[SerializeField]
-	private bool destroyOnSuccessfulDrop;
+	private static HexDragger instance;
 
-	private static HexDragger activeDraggedDragger;
-
-	private HexStack stack;
+	private static bool globalDragEnabled = true;
 
 	private Tween activeTween;
 
@@ -83,19 +79,58 @@ public class HexDragger : MonoBehaviour
 
 	private RaycastHit[] floorRaycastBuffer;
 
-	private HexManager Manager => (gameContext != null) ? gameContext.Manager : null;
+	private HexManager cachedManager;
+
+	private HexStack activeStack;
+
+	private Transform activeStackTransform;
+
+	public static bool IsGlobalDragEnabled => globalDragEnabled;
+
+	private HexManager Manager
+	{
+		get
+		{
+			if (cachedManager != null)
+			{
+				return cachedManager;
+			}
+			if (gameContext == null)
+			{
+				gameContext = UnityEngine.Object.FindObjectOfType<HexGameContext>();
+			}
+			cachedManager = ((gameContext != null) ? gameContext.Manager : null);
+			return cachedManager;
+		}
+	}
 
 	public static event Action<HexStack> DragStarted;
 
 	public static event Action<HexStack, bool> DragFinished;
 
+	public static void SetGlobalDragEnabled(bool enabled)
+	{
+		globalDragEnabled = enabled;
+		if (!enabled && instance != null)
+		{
+			instance.CancelActiveDrag();
+		}
+	}
+
+	public void SetGameContext(HexGameContext context)
+	{
+		gameContext = context;
+		cachedManager = null;
+	}
+
 	private void Awake()
 	{
-		stack = GetComponent<HexStack>();
-		if (gameContext == null && stack != null)
+		instance = this;
+		if (gameContext == null)
 		{
-			gameContext = stack.GameContext;
+			gameContext = UnityEngine.Object.FindObjectOfType<HexGameContext>();
 		}
+		cachedManager = ((gameContext != null) ? gameContext.Manager : null);
 		if (inputCamera == null)
 		{
 			inputCamera = Camera.main;
@@ -103,41 +138,65 @@ public class HexDragger : MonoBehaviour
 		EnsureFloorRaycastBuffer();
 	}
 
-	public void SetGameContext(HexGameContext context)
+	private void OnEnable()
 	{
-		gameContext = context;
+		instance = this;
 	}
 
 	private void Update()
 	{
-		if (isSettling)
+		if (!globalDragEnabled)
 		{
-			return;
+			if (isDragging || isSettling)
+			{
+				CancelActiveDrag();
+			}
 		}
-		if (!isDragging)
+		else
 		{
-			TryBeginDrag();
-			return;
-		}
-		if (TryGetPointerPosition(activePointerId, out var pointerPosition))
-		{
-			UpdateDrag(pointerPosition);
-		}
-		if (WasPointerReleased(activePointerId))
-		{
-			EndDrag();
+			if (isSettling)
+			{
+				return;
+			}
+			if (!isDragging)
+			{
+				TryBeginDrag();
+				return;
+			}
+			if (!IsActiveStackValid())
+			{
+				CancelActiveDrag();
+				return;
+			}
+			if (TryGetPointerPosition(activePointerId, out var pointerPosition))
+			{
+				UpdateDrag(pointerPosition);
+			}
+			if (WasPointerReleased(activePointerId))
+			{
+				EndDrag();
+			}
 		}
 	}
 
 	private void OnDisable()
 	{
 		KillActiveTween(false);
-		ReleaseDragState();
+		CancelActiveDragInternal(false);
+		if (instance == this)
+		{
+			instance = null;
+		}
 	}
 
 	private void TryBeginDrag()
 	{
-		if (activeDraggedDragger != null || inputCamera == null || (Manager != null && Manager.IsTransferInProgress) || !TryGetPointerDown(out var pointerId, out var pointerPosition))
+		if (inputCamera == null)
+		{
+			return;
+		}
+		HexManager manager = Manager;
+		if ((manager != null && manager.IsTransferInProgress) || !TryGetPointerDown(out var pointerId, out var pointerPosition))
 		{
 			return;
 		}
@@ -145,44 +204,68 @@ public class HexDragger : MonoBehaviour
 		if (Physics.Raycast(ray, out var hit, pickMaxDistance, interactionMask, QueryTriggerInteraction.Ignore))
 		{
 			HexStack hitStack = hit.collider.GetComponentInParent<HexStack>();
-			if (!(hitStack != stack))
+			if (!(hitStack == null) && hitStack.gameObject.activeInHierarchy && hitStack.TileCount != 0 && !(hitStack.CurrentFloor != null))
 			{
-				StartDrag(pointerId, hit.point);
+				StartDrag(hitStack, pointerId, hit.point);
 			}
 		}
 	}
 
-	private void StartDrag(int pointerId, Vector3 hitPoint)
+	private void StartDrag(HexStack stackToDrag, int pointerId, Vector3 hitPoint)
 	{
+		if (stackToDrag == null)
+		{
+			return;
+		}
 		KillActiveTween(false);
+		activeStack = stackToDrag;
+		activeStackTransform = stackToDrag.transform;
+		if (activeStackTransform == null)
+		{
+			CancelActiveDragInternal(false);
+			return;
+		}
+		if (gameContext == null && activeStack.GameContext != null)
+		{
+			gameContext = activeStack.GameContext;
+			cachedManager = gameContext.Manager;
+		}
 		isDragging = true;
-		activeDraggedDragger = this;
+		isSettling = false;
 		activePointerId = pointerId;
-		dragStartPosition = base.transform.position;
+		dragStartPosition = activeStackTransform.position;
 		dragLiftY = dragStartPosition.y + liftHeight;
 		dragPlane = new Plane(Vector3.up, dragStartPosition);
 		dragOffset = dragStartPosition - hitPoint;
 		dragOffset.y = 0f;
 		dragEndedWithSuccessfulDrop = false;
-		HexDragger.DragStarted?.Invoke(stack);
+		HexDragger.DragStarted?.Invoke(activeStack);
 		UpdateDropHighlight();
-		activeTween = base.transform.DOMoveY(dragLiftY, liftDuration).SetEase(liftEase);
+		activeTween = activeStackTransform.DOMoveY(dragLiftY, liftDuration).SetEase(liftEase);
 	}
 
 	private void UpdateDrag(Vector2 pointerPosition)
 	{
-		Ray ray = inputCamera.ScreenPointToRay(pointerPosition);
-		if (dragPlane.Raycast(ray, out var enter))
+		if (!(activeStackTransform == null) && !(inputCamera == null))
 		{
-			Vector3 pointOnPlane = ray.GetPoint(enter) + dragOffset;
-			Vector3 current = base.transform.position;
-			base.transform.position = new Vector3(pointOnPlane.x, current.y, pointOnPlane.z);
-			UpdateDropHighlight();
+			Ray ray = inputCamera.ScreenPointToRay(pointerPosition);
+			if (dragPlane.Raycast(ray, out var enter))
+			{
+				Vector3 pointOnPlane = ray.GetPoint(enter) + dragOffset;
+				Vector3 current = activeStackTransform.position;
+				activeStackTransform.position = new Vector3(pointOnPlane.x, current.y, pointOnPlane.z);
+				UpdateDropHighlight();
+			}
 		}
 	}
 
 	private void EndDrag()
 	{
+		if (!IsActiveStackValid())
+		{
+			CancelActiveDragInternal(false);
+			return;
+		}
 		isDragging = false;
 		HexFloor floor = highlightedFloor;
 		bool hasFloorUnderStack = floor != null;
@@ -190,7 +273,8 @@ public class HexDragger : MonoBehaviour
 		{
 			hasFloorUnderStack = TryGetFloorUnderStack(out floor);
 		}
-		if (hasFloorUnderStack && Manager != null && !Manager.CanPlaceStackOnFloor(stack, floor))
+		HexManager manager = Manager;
+		if (hasFloorUnderStack && manager != null && !manager.CanPlaceStackOnFloor(activeStack, floor))
 		{
 			hasFloorUnderStack = false;
 			floor = null;
@@ -198,36 +282,44 @@ public class HexDragger : MonoBehaviour
 		SetHighlightedFloor(null);
 		Vector3 targetPosition = (hasFloorUnderStack ? floor.GetStackPlacementPosition(dragStartPosition.y) : dragStartPosition);
 		dragEndedWithSuccessfulDrop = hasFloorUnderStack;
-		bool destroyAfterSettle = hasFloorUnderStack && destroyOnSuccessfulDrop;
-		StartSettleTween(targetPosition, hasFloorUnderStack ? floor : null, destroyAfterSettle);
+		StartSettleTween(targetPosition, hasFloorUnderStack ? floor : null);
 	}
 
-	private void StartSettleTween(Vector3 targetPosition, HexFloor targetFloor, bool destroyAfterSettle)
+	private void StartSettleTween(Vector3 targetPosition, HexFloor targetFloor)
 	{
+		if (activeStackTransform == null)
+		{
+			CancelActiveDragInternal(false);
+			return;
+		}
 		isSettling = true;
 		KillActiveTween(false);
-		float moveY = Mathf.Max(base.transform.position.y, dragLiftY);
+		float moveY = Mathf.Max(activeStackTransform.position.y, dragLiftY);
 		Vector3 movePoint = new Vector3(targetPosition.x, moveY, targetPosition.z);
 		Sequence sequence = DOTween.Sequence();
-		sequence.Append(base.transform.DOMove(movePoint, attachMoveDuration).SetEase(attachMoveEase));
-		sequence.Append(base.transform.DOMoveY(targetPosition.y, dropDuration).SetEase(dropEase));
+		sequence.Append(activeStackTransform.DOMove(movePoint, attachMoveDuration).SetEase(attachMoveEase));
+		sequence.Append(activeStackTransform.DOMoveY(targetPosition.y, dropDuration).SetEase(dropEase));
 		sequence.OnComplete(delegate
 		{
-			base.transform.position = targetPosition;
-			activeTween = null;
-			if (targetFloor != null && Manager != null)
+			if (activeStackTransform != null)
 			{
-				Manager.HandleStackPlaced(stack, targetFloor, delegate
+				activeStackTransform.position = targetPosition;
+			}
+			activeTween = null;
+			HexManager manager = Manager;
+			if (targetFloor != null && manager != null && activeStack != null)
+			{
+				manager.HandleStackPlaced(activeStack, targetFloor, delegate
 				{
 					if (!(this == null))
 					{
-						FinalizeSettle(destroyAfterSettle);
+						FinalizeSettle();
 					}
 				});
 			}
 			else
 			{
-				FinalizeSettle(destroyAfterSettle);
+				FinalizeSettle();
 			}
 		});
 		sequence.OnKill(delegate
@@ -243,34 +335,53 @@ public class HexDragger : MonoBehaviour
 		activeTween = sequence;
 	}
 
-	private void FinalizeSettle(bool destroyAfterSettle)
+	private void FinalizeSettle()
 	{
+		HexStack finishedStack = activeStack;
+		bool wasSuccessfulDrop = dragEndedWithSuccessfulDrop;
 		isSettling = false;
-		HexDragger.DragFinished?.Invoke(stack, dragEndedWithSuccessfulDrop);
 		ReleaseDragState();
-		if (destroyAfterSettle)
-		{
-			UnityEngine.Object.Destroy(this);
-		}
+		HexDragger.DragFinished?.Invoke(finishedStack, wasSuccessfulDrop);
 	}
 
 	private bool TryGetFloorUnderStack(out HexFloor floor)
 	{
 		floor = null;
-		Vector3 origin = base.transform.position + Vector3.up * floorCheckStartHeight;
+		if (!IsActiveStackValid())
+		{
+			return false;
+		}
+		Vector3 origin = activeStackTransform.position + Vector3.up * floorCheckStartHeight;
+		float rayDistance = floorCheckStartHeight + floorCheckDistance;
 		EnsureFloorRaycastBuffer();
-		int hitCount = Physics.RaycastNonAlloc(origin, Vector3.down, floorRaycastBuffer, floorCheckStartHeight + floorCheckDistance, interactionMask, QueryTriggerInteraction.Ignore);
+		int hitCount = Physics.RaycastNonAlloc(origin, Vector3.down, floorRaycastBuffer, rayDistance, interactionMask, QueryTriggerInteraction.Ignore);
+		if (hitCount >= floorRaycastBuffer.Length)
+		{
+			RaycastHit[] allHits = Physics.RaycastAll(origin, Vector3.down, rayDistance, interactionMask, QueryTriggerInteraction.Ignore);
+			floor = GetNearestFloorFromHits(allHits, allHits.Length);
+			return floor != null;
+		}
+		floor = GetNearestFloorFromHits(floorRaycastBuffer, hitCount);
+		return floor != null;
+	}
+
+	private HexFloor GetNearestFloorFromHits(RaycastHit[] hits, int hitCount)
+	{
+		if (hits == null || hitCount <= 0)
+		{
+			return null;
+		}
 		float nearestDistance = float.MaxValue;
 		HexFloor nearestFloor = null;
 		for (int i = 0; i < hitCount; i++)
 		{
-			RaycastHit hit = floorRaycastBuffer[i];
+			RaycastHit hit = hits[i];
 			if (hit.collider == null)
 			{
 				continue;
 			}
 			HexStack hitStack = hit.collider.GetComponentInParent<HexStack>();
-			if (!(hitStack == stack))
+			if (!(hitStack == activeStack))
 			{
 				HexFloor candidateFloor = hit.collider.GetComponentInParent<HexFloor>();
 				if (!(candidateFloor == null) && !(hit.distance >= nearestDistance))
@@ -280,8 +391,7 @@ public class HexDragger : MonoBehaviour
 				}
 			}
 		}
-		floor = nearestFloor;
-		return floor != null;
+		return nearestFloor;
 	}
 
 	private void EnsureFloorRaycastBuffer()
@@ -308,25 +418,47 @@ public class HexDragger : MonoBehaviour
 	{
 		activePointerId = int.MinValue;
 		isDragging = false;
+		dragEndedWithSuccessfulDrop = false;
 		SetHighlightedFloor(null);
-		if (activeDraggedDragger == this)
+		activeStack = null;
+		activeStackTransform = null;
+	}
+
+	private void CancelActiveDrag()
+	{
+		CancelActiveDragInternal(false);
+	}
+
+	private void CancelActiveDragInternal(bool invokeFinishedEvent)
+	{
+		HexStack cancelledStack = activeStack;
+		KillActiveTween(false);
+		if (activeStackTransform != null)
 		{
-			activeDraggedDragger = null;
+			activeStackTransform.position = dragStartPosition;
+		}
+		isSettling = false;
+		ReleaseDragState();
+		if (invokeFinishedEvent && cancelledStack != null)
+		{
+			HexDragger.DragFinished?.Invoke(cancelledStack, false);
 		}
 	}
 
 	private void UpdateDropHighlight()
 	{
-		HexFloor floor;
-		if (!isDragging)
+		if (!isDragging || !IsActiveStackValid())
 		{
 			SetHighlightedFloor(null);
+			return;
 		}
-		else if (!TryGetFloorUnderStack(out floor))
+		if (!TryGetFloorUnderStack(out var floor))
 		{
 			SetHighlightedFloor(null);
+			return;
 		}
-		else if (Manager != null && !Manager.CanPlaceStackOnFloor(stack, floor))
+		HexManager manager = Manager;
+		if (manager != null && !manager.CanPlaceStackOnFloor(activeStack, floor))
 		{
 			SetHighlightedFloor(null);
 		}
@@ -412,5 +544,10 @@ public class HexDragger : MonoBehaviour
 			}
 		}
 		return !touchStillPresent;
+	}
+
+	private bool IsActiveStackValid()
+	{
+		return activeStack != null && activeStackTransform != null && activeStack.gameObject.activeInHierarchy;
 	}
 }

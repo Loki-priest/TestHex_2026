@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -27,6 +28,12 @@ public class HexFloorCreator : MonoBehaviour
 	[SerializeField]
 	private bool refreshNeighborsAfterGenerate = true;
 
+	[SerializeField]
+	private bool fillStacksAfterGenerate = true;
+
+	[SerializeField]
+	private bool debugLogs = false;
+
 	[Header("Layout")]
 	[SerializeField]
 	[Min(0.001f)]
@@ -42,12 +49,15 @@ public class HexFloorCreator : MonoBehaviour
 
 	private HexConfig HexConfig => (gameContext != null) ? gameContext.Config : null;
 
+	public bool InitialGenerationCompleted { get; private set; }
+
 	private void Start()
 	{
 		if (generateOnStart)
 		{
 			GenerateFloor();
 		}
+		MarkInitialGenerationCompleted();
 	}
 
 	[ContextMenu("Generate Floor")]
@@ -103,6 +113,7 @@ public class HexFloorCreator : MonoBehaviour
 				else
 				{
 					floor.name = $"HexFloor [x:{colX}, z:{rowZ}]";
+					floor.SetGridCoordinates(colX, rowZ);
 					generatedFloors.Add(floor);
 				}
 			}
@@ -110,18 +121,25 @@ public class HexFloorCreator : MonoBehaviour
 		if (Application.isPlaying)
 		{
 		}
-		if (!refreshNeighborsAfterGenerate)
+		bool shouldFillStacks = fillStacksAfterGenerate && hexConfig.fillGeneratedFloorWithStacks;
+		if (refreshNeighborsAfterGenerate || shouldFillStacks)
 		{
-			return;
-		}
-		for (int i = 0; i < generatedFloors.Count; i++)
-		{
-			HexFloor floor2 = generatedFloors[i];
-			if (!(floor2 == null))
+			for (int i = 0; i < generatedFloors.Count; i++)
 			{
-				floor2.FindNearFloors();
+				HexFloor floor2 = generatedFloors[i];
+				if (!(floor2 == null))
+				{
+					floor2.FindNearFloors();
+				}
 			}
 		}
+		if (!shouldFillStacks || gameContext == null || gameContext.StacksCreator == null)
+		{
+			MarkInitialGenerationCompleted();
+			return;
+		}
+		gameContext.StacksCreator.FillFloorsWithConfiguredStacks(generatedFloors);
+		MarkInitialGenerationCompleted();
 	}
 
 	[ContextMenu("Clear Generated Floor")]
@@ -162,6 +180,24 @@ public class HexFloorCreator : MonoBehaviour
 					Object.DestroyImmediate(floor.gameObject);
 				}
 			}
+		}
+	}
+
+	private void MarkInitialGenerationCompleted()
+	{
+		if (!InitialGenerationCompleted)
+		{
+			InitialGenerationCompleted = true;
+		}
+	}
+
+	[Conditional("UNITY_EDITOR")]
+	[Conditional("DEVELOPMENT_BUILD")]
+	private void LogFloorCreator(string message)
+	{
+		if (debugLogs)
+		{
+			UnityEngine.Debug.Log("[HexFloorCreator] " + message, this);
 		}
 	}
 }

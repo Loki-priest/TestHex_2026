@@ -1,3 +1,5 @@
+using System;
+using System.Diagnostics;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +8,9 @@ using UnityEngine.UI;
 public class CountdownTimerPanel : MonoBehaviour
 {
 	[Header("Timer")]
+	[SerializeField]
+	private HexGameContext gameContext;
+
 	[SerializeField]
 	private float durationSeconds = 20f;
 
@@ -114,8 +119,11 @@ public class CountdownTimerPanel : MonoBehaviour
 
 	public float RemainingSeconds => remainingSeconds;
 
+	public event Action CountdownFinished;
+
 	private void Awake()
 	{
+		ApplyConfiguredDurationFromConfig();
 		ConfigureStaticBindings();
 		ResetToInitialState();
 	}
@@ -124,11 +132,14 @@ public class CountdownTimerPanel : MonoBehaviour
 	{
 		if (autoStartOnEnable)
 		{
+			ApplyConfiguredDurationFromConfig();
 			StartCountdown();
-			return;
 		}
-		StopCountdown();
-		ResetToInitialState();
+		else
+		{
+			StopCountdown();
+			ResetToInitialState();
+		}
 	}
 
 	private void OnDisable()
@@ -148,7 +159,7 @@ public class CountdownTimerPanel : MonoBehaviour
 			{
 				isRunning = false;
 				StopShake();
-				Debug.Log("Время кончилось");
+				this.CountdownFinished?.Invoke();
 			}
 		}
 	}
@@ -175,6 +186,15 @@ public class CountdownTimerPanel : MonoBehaviour
 		StartCountdown();
 	}
 
+	private void ApplyConfiguredDurationFromConfig()
+	{
+		HexConfig config = ((gameContext != null) ? gameContext.Config : null);
+		if (!(config == null))
+		{
+			durationSeconds = Mathf.Max(0.1f, config.gameDurationSeconds);
+		}
+	}
+
 	private void ConfigureStaticBindings()
 	{
 		if (barFillImage != null)
@@ -188,9 +208,8 @@ public class CountdownTimerPanel : MonoBehaviour
 		{
 			arrowImage.color = arrowNormalColor;
 		}
-		if (panelRoot == null)
+		if (!(panelRoot == null))
 		{
-			Debug.LogWarning("CountdownTimerPanel: panelRoot is not assigned.", this);
 		}
 	}
 
@@ -289,5 +308,19 @@ public class CountdownTimerPanel : MonoBehaviour
 		{
 			iconRoot.localRotation = Quaternion.identity;
 		}
+	}
+
+	[Conditional("UNITY_EDITOR")]
+	[Conditional("DEVELOPMENT_BUILD")]
+	private void LogTimerEvent(string message)
+	{
+		UnityEngine.Debug.Log(message, this);
+	}
+
+	[Conditional("UNITY_EDITOR")]
+	[Conditional("DEVELOPMENT_BUILD")]
+	private void LogTimerWarning(string message)
+	{
+		UnityEngine.Debug.LogWarning(message, this);
 	}
 }

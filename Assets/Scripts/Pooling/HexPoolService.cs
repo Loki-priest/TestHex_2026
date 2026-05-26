@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Централизованный сервис пулов для стопок, плиток и эффектов.
+/// </summary>
 public class HexPoolService : MonoBehaviour
 {
     [Header("Pool Roots")]
@@ -120,6 +123,9 @@ public class HexPoolService : MonoBehaviour
         return rootObject.transform;
     }
 
+    /// <summary>
+    /// Универсальный внутренний пул компонентов по бакетам префабов.
+    /// </summary>
     private sealed class ComponentPool<T> where T : Component
     {
         private readonly Transform poolRoot;

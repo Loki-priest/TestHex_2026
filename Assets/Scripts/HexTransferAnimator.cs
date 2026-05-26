@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
+/// <summary>
+/// Анимирует перекладывание верхних плиток между соседними стопками.
+/// </summary>
 public class HexTransferAnimator : MonoBehaviour
 {
     [Header("Runtime")]
-    [SerializeField] private bool logTransferAnimatorEvents = true;
+    [SerializeField] private bool logTransferAnimatorEvents = false;
 
     [SerializeField] private float tileFlipDuration = 0.22f;
     [SerializeField] private Ease tileFlipEase = Ease.InOutSine;
@@ -251,6 +254,8 @@ public class HexTransferAnimator : MonoBehaviour
         return sourceFloor != null ? sourceFloor.transform.forward : Vector3.forward;
     }
 
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
     private void LogTransferAnimator(string message)
     {
         if (!logTransferAnimatorEvents)

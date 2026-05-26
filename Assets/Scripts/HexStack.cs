@@ -2,8 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+/// <summary>
+/// Модель и поведение стопки плиток: хранение, модификация, позиционирование и связь с полом.
+/// </summary>
 public class HexStack : MonoBehaviour
 {
+    private static readonly HashSet<HexStack> ActiveStackSet = new();
+
     [SerializeField] private List<HexTile> hexTiles = new();
     private HexGameContext gameContext;
     private HexFloor currentFloor;
@@ -16,6 +21,7 @@ public class HexStack : MonoBehaviour
 
     public HexFloor CurrentFloor => currentFloor;
     public HexGameContext GameContext => gameContext;
+    public static IEnumerable<HexStack> ActiveStacks => ActiveStackSet;
     public int TileCount
     {
         get
@@ -29,6 +35,16 @@ public class HexStack : MonoBehaviour
     {
         EnsureTilesInitializedFromChildren();
         CacheGeometryFromTiles();
+    }
+
+    private void OnEnable()
+    {
+        ActiveStackSet.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        ActiveStackSet.Remove(this);
     }
 
     private void Start()
@@ -439,10 +455,8 @@ public class HexStack : MonoBehaviour
             currentFloor = null;
         }
 
-        HexFloor[] allFloors = FindObjectsOfType<HexFloor>();
-        for (int i = 0; i < allFloors.Length; i++)
+        foreach (HexFloor floor in HexFloor.ActiveFloors)
         {
-            HexFloor floor = allFloors[i];
             if (floor == null)
             {
                 continue;

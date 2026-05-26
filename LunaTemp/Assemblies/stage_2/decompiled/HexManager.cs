@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using DG.Tweening;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ public class HexManager : MonoBehaviour
 
 		public readonly HashSet<HexStack> QueuedStacks = new HashSet<HexStack>();
 
+		public readonly HashSet<HexStack> TransferTargetStacks = new HashSet<HexStack>();
+
 		public readonly int Generation;
 
 		public readonly Action OnComplete;
@@ -38,6 +41,10 @@ public class HexManager : MonoBehaviour
 		public bool PassStarted;
 
 		public bool TransferredInPass;
+
+		public bool HadTransfers;
+
+		public bool HadClears;
 
 		public bool IsCompleted;
 
@@ -70,9 +77,6 @@ public class HexManager : MonoBehaviour
 
 	[Header("Top Match Clear")]
 	[SerializeField]
-	private int topMatchClearCount = 3;
-
-	[SerializeField]
 	private float clearScaleDuration = 0.14f;
 
 	[SerializeField]
@@ -86,13 +90,15 @@ public class HexManager : MonoBehaviour
 
 	[Header("Debug")]
 	[SerializeField]
-	private bool logTransferEvents = true;
+	private bool logTransferEvents = false;
 
 	private const int MaxResolveIterations = 4096;
 
 	private int activeTransferRoutines;
 
 	private int transferGeneration;
+
+	private bool firstTransferAndClearChainRaised;
 
 	public bool IsTransferInProgress => activeTransferRoutines > 0;
 
@@ -102,8 +108,11 @@ public class HexManager : MonoBehaviour
 
 	private HexStacksCreator StacksCreator => (gameContext != null) ? gameContext.StacksCreator : null;
 
+	public event Action FirstTransferAndClearChainFinished;
+
 	private void Awake()
 	{
+		firstTransferAndClearChainRaised = false;
 		PrewarmPools();
 	}
 
@@ -174,7 +183,6 @@ public class HexManager : MonoBehaviour
 			onComplete?.Invoke();
 			return;
 		}
-		LogTransferEvent("Stack placed on floor. stack=" + GetStackDebugName(placedStack) + ", floor=" + GetFloorDebugName(targetFloor));
 		AttachStackToFloor(placedStack, targetFloor);
 		HexStacksCreator stacksCreator = StacksCreator;
 		if (stacksCreator != null)
@@ -217,10 +225,23 @@ public class HexManager : MonoBehaviour
 				return tileTemplate;
 			}
 		}
-		HexStack anyStack = UnityEngine.Object.FindObjectOfType<HexStack>();
+		HexStack anyStack = null;
+		foreach (HexStack stack in HexStack.ActiveStacks)
+		{
+			if (stack == null)
+			{
+				continue;
+			}
+			anyStack = stack;
+			break;
+		}
 		if (anyStack == null)
 		{
-			return null;
+			anyStack = UnityEngine.Object.FindObjectOfType<HexStack>();
+			if (anyStack == null)
+			{
+				return null;
+			}
 		}
 		return anyStack.GetTileTemplateForPool();
 	}
@@ -229,18 +250,14 @@ public class HexManager : MonoBehaviour
 	{
 		activeTransferRoutines++;
 		TransferChainState state = new TransferChainState(transferGeneration, onComplete);
-		LogTransferEvent($"Transfer chain started. sourceStack={GetStackDebugName(sourceStack)}, sourceFloor={GetFloorDebugName(sourceFloor)}, activeChains={activeTransferRoutines}");
 		if (sourceStack == null || sourceFloor == null)
 		{
-			LogTransferEvent("Transfer chain aborted: sourceStack/sourceFloor is null.");
 			FinishTransferChain(state);
+			return;
 		}
-		else
-		{
-			EnqueueForTransferCheck(sourceStack, state.PendingStacks, state.QueuedStacks);
-			EnqueueNeighborStacksForTransferCheck(sourceFloor, state.PendingStacks, state.QueuedStacks);
-			ContinueResolveTopColorTransfer(state);
-		}
+		EnqueueForTransferCheck(sourceStack, state.PendingStacks, state.QueuedStacks);
+		EnqueueNeighborStacksForTransferCheck(sourceFloor, state.PendingStacks, state.QueuedStacks);
+		ContinueResolveTopColorTransfer(state);
 	}
 
 	private void ContinueResolveTopColorTransfer(TransferChainState state)
@@ -265,11 +282,11 @@ public class HexManager : MonoBehaviour
 				state.LoopGuard++;
 				HexStack currentSourceStack = state.PendingStacks.Dequeue();
 				state.QueuedStacks.Remove(currentSourceStack);
-				if (!TryResolveStackFloor(currentSourceStack, out var currentSourceFloor) || !TryFindMatchingNeighbor(currentSourceStack, currentSourceFloor, out var targetStack, out var targetFloor, out var topMaterial))
+				if (!TryResolveStackFloor(currentSourceStack, out var currentSourceFloor) || !TryFindMatchingNeighbor(currentSourceStack, currentSourceFloor, out var targetStack, out var targetFloor, out var topColorId))
 				{
 					continue;
 				}
-				int transferCount = currentSourceStack.CountTopTilesWithMaterial(topMaterial);
+				int transferCount = currentSourceStack.CountTopTilesWithColorId(topColorId);
 				if (transferCount <= 0)
 				{
 					continue;
@@ -277,12 +294,15 @@ public class HexManager : MonoBehaviour
 				state.TransferredInPass = true;
 				int transferStepNumber = state.TransferStepIndex + 1;
 				float transferSpeedMultiplier = GetChainSpeedMultiplier(state.TransferStepIndex, transferSpeedIncreasePerStack);
-				LogTransferEvent($"Transfer step #{transferStepNumber}: count={transferCount}, color={GetMaterialDebugName(topMaterial)}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}");
 				transferAnimator.TransferTopTilesFan(currentSourceStack, currentSourceFloor, targetStack, targetFloor, transferCount, transferSpeedMultiplier, delegate
 				{
 					if (IsTransferChainActive(state))
 					{
-						LogTransferEvent($"Transfer step #{transferStepNumber} completed.");
+						state.HadTransfers = true;
+						if (targetStack != null)
+						{
+							state.TransferTargetStacks.Add(targetStack);
+						}
 						state.TransferStepIndex++;
 						EnqueueForTransferCheck(currentSourceStack, state.PendingStacks, state.QueuedStacks);
 						EnqueueForTransferCheck(targetStack, state.PendingStacks, state.QueuedStacks);
@@ -309,19 +329,18 @@ public class HexManager : MonoBehaviour
 				EnqueueNeighborStacksForTransferCheck(transferCandidateFloor, state.PendingStacks, state.QueuedStacks);
 				continue;
 			}
-			if (!TryCollectClearBatches(out var clearBatches))
+			if (!TryCollectClearBatches(state.TransferTargetStacks, out var clearBatches))
 			{
 				FinishTransferChain(state);
 				return;
 			}
 			bool isParallelClear = clearBatches.Count > 1;
 			float clearSpeedMultiplier = (isParallelClear ? 1f : GetChainSpeedMultiplier(state.ClearStepIndex, clearSpeedIncreasePerStack));
-			LogTransferEvent($"Top clear phase: batches={clearBatches.Count}, parallel={isParallelClear}, speedMul={clearSpeedMultiplier:F2}");
+			state.HadClears = true;
 			ClearBatchesParallel(clearBatches, clearSpeedMultiplier, delegate
 			{
 				if (IsTransferChainActive(state))
 				{
-					LogTransferEvent("Top clear phase completed.");
 					if (!isParallelClear)
 					{
 						state.ClearStepIndex++;
@@ -346,7 +365,11 @@ public class HexManager : MonoBehaviour
 		{
 			state.IsCompleted = true;
 			activeTransferRoutines = Mathf.Max(0, activeTransferRoutines - 1);
-			LogTransferEvent($"Transfer chain finished. activeChains={activeTransferRoutines}");
+			if (!firstTransferAndClearChainRaised && state.HadTransfers && state.HadClears)
+			{
+				firstTransferAndClearChainRaised = true;
+				this.FirstTransferAndClearChainFinished?.Invoke();
+			}
 			state.OnComplete?.Invoke();
 		}
 	}
@@ -378,9 +401,7 @@ public class HexManager : MonoBehaviour
 
 	private void EnqueueAllStacksForTransferCheck(Queue<HexStack> pendingStacks, HashSet<HexStack> queuedStacks)
 	{
-		HexStack[] discoveredStacks = UnityEngine.Object.FindObjectsOfType<HexStack>();
-		HexStack[] array = discoveredStacks;
-		foreach (HexStack stack in array)
+		foreach (HexStack stack in HexStack.ActiveStacks)
 		{
 			EnqueueForTransferCheck(stack, pendingStacks, queuedStacks);
 		}
@@ -401,26 +422,27 @@ public class HexManager : MonoBehaviour
 	{
 		sourceStack = null;
 		sourceFloor = null;
-		HexStack[] discoveredStacks = UnityEngine.Object.FindObjectsOfType<HexStack>();
-		HexStack[] array = discoveredStacks;
-		foreach (HexStack stack in array)
+		foreach (HexStack stack in HexStack.ActiveStacks)
 		{
-			if (TryResolveStackFloor(stack, out var floor) && TryFindMatchingNeighbor(stack, floor, out var _, out var _, out var _))
+			if (!TryResolveStackFloor(stack, out var floor) || !TryFindMatchingNeighbor(stack, floor, out var _, out var _, out var _))
 			{
-				sourceStack = stack;
-				sourceFloor = floor;
-				return true;
+				continue;
 			}
+			sourceStack = stack;
+			sourceFloor = floor;
+			return true;
 		}
 		return false;
 	}
 
-	private bool TryCollectClearBatches(out List<StackClearBatch> clearBatches)
+	private bool TryCollectClearBatches(HashSet<HexStack> eligibleStacks, out List<StackClearBatch> clearBatches)
 	{
 		clearBatches = new List<StackClearBatch>();
-		HexStack[] discoveredStacks = UnityEngine.Object.FindObjectsOfType<HexStack>();
-		HexStack[] array = discoveredStacks;
-		foreach (HexStack stack in array)
+		if (eligibleStacks == null || eligibleStacks.Count == 0)
+		{
+			return false;
+		}
+		foreach (HexStack stack in eligibleStacks)
 		{
 			if (!(stack == null) && stack.TileCount != 0 && TryExtractTopMatchTiles(stack, out var tilesToClear))
 			{
@@ -430,19 +452,19 @@ public class HexManager : MonoBehaviour
 		return clearBatches.Count > 0;
 	}
 
-	private bool TryFindMatchingNeighbor(HexStack sourceStack, HexFloor sourceFloor, out HexStack targetStack, out HexFloor targetFloor, out Material topMaterial)
+	private bool TryFindMatchingNeighbor(HexStack sourceStack, HexFloor sourceFloor, out HexStack targetStack, out HexFloor targetFloor, out int topColorId)
 	{
 		targetStack = null;
 		targetFloor = null;
-		topMaterial = ((sourceStack != null) ? sourceStack.GetTopMaterial() : null);
-		if (sourceStack == null || sourceFloor == null || topMaterial == null)
+		topColorId = ((sourceStack != null) ? sourceStack.GetTopColorId() : (-1));
+		if (sourceStack == null || sourceFloor == null || topColorId < 0)
 		{
 			return false;
 		}
 		for (int sideIndex = 0; sideIndex < 6; sideIndex++)
 		{
 			HexFloor neighborFloor = sourceFloor.GetNeighborBySide(sideIndex);
-			if (TryGetMatchingStack(sourceStack, neighborFloor, topMaterial, out targetStack))
+			if (TryGetMatchingStack(sourceStack, neighborFloor, topColorId, out targetStack))
 			{
 				targetFloor = neighborFloor;
 				return true;
@@ -452,7 +474,7 @@ public class HexManager : MonoBehaviour
 		for (int i = 0; i < nearFloors.Count; i++)
 		{
 			HexFloor neighborFloor2 = nearFloors[i];
-			if (TryGetMatchingStack(sourceStack, neighborFloor2, topMaterial, out targetStack))
+			if (TryGetMatchingStack(sourceStack, neighborFloor2, topColorId, out targetStack))
 			{
 				targetFloor = neighborFloor2;
 				return true;
@@ -461,7 +483,7 @@ public class HexManager : MonoBehaviour
 		return false;
 	}
 
-	private bool TryGetMatchingStack(HexStack sourceStack, HexFloor neighborFloor, Material topMaterial, out HexStack matchingStack)
+	private bool TryGetMatchingStack(HexStack sourceStack, HexFloor neighborFloor, int topColorId, out HexStack matchingStack)
 	{
 		matchingStack = null;
 		if (neighborFloor == null)
@@ -473,7 +495,7 @@ public class HexManager : MonoBehaviour
 		{
 			return false;
 		}
-		if (neighborStack.GetTopMaterial() != topMaterial)
+		if (neighborStack.GetTopColorId() != topColorId)
 		{
 			return false;
 		}
@@ -515,15 +537,14 @@ public class HexManager : MonoBehaviour
 			}
 			floor.ClearOccupiedStack(occupiedStack);
 		}
-		HexStack[] discoveredStacks = UnityEngine.Object.FindObjectsOfType<HexStack>();
-		HexStack[] array = discoveredStacks;
-		foreach (HexStack stack in array)
+		foreach (HexStack stack in HexStack.ActiveStacks)
 		{
-			if (!(stack == null) && stack.gameObject.activeInHierarchy && stack.TileCount != 0 && !(stack == ignoredStack) && !(stack.CurrentFloor != floor))
+			if (stack == null || !stack.gameObject.activeInHierarchy || stack.TileCount == 0 || stack == ignoredStack || stack.CurrentFloor != floor)
 			{
-				floor.SetOccupiedStack(stack);
-				return stack;
+				continue;
 			}
+			floor.SetOccupiedStack(stack);
+			return stack;
 		}
 		return null;
 	}
@@ -688,13 +709,13 @@ public class HexManager : MonoBehaviour
 		{
 			return false;
 		}
-		Material topMaterial = stack.GetTopMaterial();
-		if (topMaterial == null)
+		int topColorId = stack.GetTopColorId();
+		if (topColorId < 0)
 		{
 			return false;
 		}
-		int topSameColorCount = stack.CountTopTilesWithMaterial(topMaterial);
-		if (topSameColorCount < topMatchClearCount)
+		int topSameColorCount = stack.CountTopTilesWithColorId(topColorId);
+		if (topSameColorCount < GetTopMatchClearCount())
 		{
 			return false;
 		}
@@ -712,11 +733,23 @@ public class HexManager : MonoBehaviour
 		return tilesToClear.Count > 0;
 	}
 
+	private int GetTopMatchClearCount()
+	{
+		HexConfig config = hexConfig;
+		if (config == null)
+		{
+			return 3;
+		}
+		return Mathf.Max(1, config.topMatchClearCount);
+	}
+
+	[Conditional("UNITY_EDITOR")]
+	[Conditional("DEVELOPMENT_BUILD")]
 	private void LogTransferEvent(string message)
 	{
 		if (logTransferEvents)
 		{
-			Debug.Log("[HexTransfer] " + message, this);
+			UnityEngine.Debug.Log("[HexTransfer] " + message, this);
 		}
 	}
 
@@ -728,10 +761,5 @@ public class HexManager : MonoBehaviour
 	private static string GetFloorDebugName(HexFloor floor)
 	{
 		return (floor != null) ? floor.name : "<none>";
-	}
-
-	private static string GetMaterialDebugName(Material material)
-	{
-		return (material != null) ? material.name : "<none>";
 	}
 }
