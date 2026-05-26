@@ -182,7 +182,7 @@ public class HexStacksCreator : MonoBehaviour
             spawnedStack.gameObject.SetActive(true);
             spawnedStack.transform.SetPositionAndRotation(slot.position, slot.rotation);
             spawnedStack.SetCurrentFloor(null);
-            spawnedStack.CreateStack(GetRandomPresetColors());
+            spawnedStack.CreateStack(GetRandomPresetColorIds());
 
             runtimePooledStacks.Add(spawnedStack);
             RegisterPendingPlacementStack(spawnedStack);
@@ -192,7 +192,7 @@ public class HexStacksCreator : MonoBehaviour
         return spawnedCount;
     }
 
-    private Material[] GetRandomPresetColors()
+    private int[] GetRandomPresetColorIds()
     {
         HexConfig hexConfig = HexConfig;
         if (hexConfig == null || hexConfig.startStackColors == null || hexConfig.startStackColors.Length == 0)
@@ -204,12 +204,12 @@ public class HexStacksCreator : MonoBehaviour
         for (int i = 0; i < hexConfig.startStackColors.Length; i++)
         {
             HexConfig.StackColorPreset preset = hexConfig.startStackColors[(startIndex + i) % hexConfig.startStackColors.Length];
-            if (preset == null || preset.colorsBottomToTop == null || preset.colorsBottomToTop.Length == 0)
+            if (preset == null || preset.colorIdsBottomToTop == null || preset.colorIdsBottomToTop.Length == 0)
             {
                 continue;
             }
 
-            return preset.colorsBottomToTop;
+            return preset.colorIdsBottomToTop;
         }
 
         return null;

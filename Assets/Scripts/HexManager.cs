@@ -276,13 +276,13 @@ public class HexManager : MonoBehaviour
                         currentSourceFloor,
                         out HexStack targetStack,
                         out HexFloor targetFloor,
-                        out Material topMaterial
+                        out int topColorId
                     ))
                 {
                     continue;
                 }
 
-                int transferCount = currentSourceStack.CountTopTilesWithMaterial(topMaterial);
+                int transferCount = currentSourceStack.CountTopTilesWithColorId(topColorId);
                 if (transferCount <= 0)
                 {
                     continue;
@@ -295,7 +295,7 @@ public class HexManager : MonoBehaviour
                     transferSpeedIncreasePerStack
                 );
                 LogTransferEvent(
-                    $"Transfer step #{transferStepNumber}: count={transferCount}, color={GetMaterialDebugName(topMaterial)}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}"
+                    $"Transfer step #{transferStepNumber}: count={transferCount}, colorId={topColorId}, from={GetStackDebugName(currentSourceStack)}({GetFloorDebugName(currentSourceFloor)}) -> to={GetStackDebugName(targetStack)}({GetFloorDebugName(targetFloor)}), speedMul={transferSpeedMultiplier:F2}"
                 );
 
                 transferAnimator.TransferTopTilesFan(
@@ -522,14 +522,14 @@ public class HexManager : MonoBehaviour
         HexFloor sourceFloor,
         out HexStack targetStack,
         out HexFloor targetFloor,
-        out Material topMaterial
+        out int topColorId
     )
     {
         targetStack = null;
         targetFloor = null;
-        topMaterial = sourceStack != null ? sourceStack.GetTopMaterial() : null;
+        topColorId = sourceStack != null ? sourceStack.GetTopColorId() : -1;
 
-        if (sourceStack == null || sourceFloor == null || topMaterial == null)
+        if (sourceStack == null || sourceFloor == null || topColorId < 0)
         {
             return false;
         }
@@ -537,7 +537,7 @@ public class HexManager : MonoBehaviour
         for (int sideIndex = 0; sideIndex < 6; sideIndex++)
         {
             HexFloor neighborFloor = sourceFloor.GetNeighborBySide(sideIndex);
-            if (TryGetMatchingStack(sourceStack, neighborFloor, topMaterial, out targetStack))
+            if (TryGetMatchingStack(sourceStack, neighborFloor, topColorId, out targetStack))
             {
                 targetFloor = neighborFloor;
                 return true;
@@ -548,7 +548,7 @@ public class HexManager : MonoBehaviour
         for (int i = 0; i < nearFloors.Count; i++)
         {
             HexFloor neighborFloor = nearFloors[i];
-            if (TryGetMatchingStack(sourceStack, neighborFloor, topMaterial, out targetStack))
+            if (TryGetMatchingStack(sourceStack, neighborFloor, topColorId, out targetStack))
             {
                 targetFloor = neighborFloor;
                 return true;
@@ -558,7 +558,7 @@ public class HexManager : MonoBehaviour
         return false;
     }
 
-    private bool TryGetMatchingStack(HexStack sourceStack, HexFloor neighborFloor, Material topMaterial, out HexStack matchingStack)
+    private bool TryGetMatchingStack(HexStack sourceStack, HexFloor neighborFloor, int topColorId, out HexStack matchingStack)
     {
         matchingStack = null;
         if (neighborFloor == null)
@@ -572,7 +572,7 @@ public class HexManager : MonoBehaviour
             return false;
         }
 
-        if (neighborStack.GetTopMaterial() != topMaterial)
+        if (neighborStack.GetTopColorId() != topColorId)
         {
             return false;
         }
@@ -851,13 +851,13 @@ public class HexManager : MonoBehaviour
             return false;
         }
 
-        Material topMaterial = stack.GetTopMaterial();
-        if (topMaterial == null)
+        int topColorId = stack.GetTopColorId();
+        if (topColorId < 0)
         {
             return false;
         }
 
-        int topSameColorCount = stack.CountTopTilesWithMaterial(topMaterial);
+        int topSameColorCount = stack.CountTopTilesWithColorId(topColorId);
         if (topSameColorCount < topMatchClearCount)
         {
             return false;
@@ -897,11 +897,6 @@ public class HexManager : MonoBehaviour
     private static string GetFloorDebugName(HexFloor floor)
     {
         return floor != null ? floor.name : "<none>";
-    }
-
-    private static string GetMaterialDebugName(Material material)
-    {
-        return material != null ? material.name : "<none>";
     }
 
 }

@@ -13,43 +13,16 @@ MonoBehaviour:
   m_Name: Hex1
   m_EditorClassIdentifier: 
   colors:
-  - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-  - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-  - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-  - {fileID: 2100000, guid: 48e2b89502141494981c605b13272083, type: 2}
-  - {fileID: 2100000, guid: 4789c3d5d44f5744b9edbb383662149e, type: 2}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 8.4952645e+20}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 4.541784e+30}
+  - {r: 1, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 1, a: 1}
+  startStackColors:
+  - colorIdsBottomToTop: 00000000000000000000000001000000010000000200000002000000
+  - colorIdsBottomToTop: 0100000001000000020000000200000000000000
+  - colorIdsBottomToTop: 0200000002000000010000000100000000000000
   floorWidth: 5
   floorLength: 3
-  startStackColors:
-  - colorsBottomToTop:
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-  - colorsBottomToTop:
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-  - colorsBottomToTop:
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-  - colorsBottomToTop:
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
-  - colorsBottomToTop:
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 6039899e75b82f14282248ec2eaa15d5, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 9fdb0c220837f3c498bb1c526c242e20, type: 2}
-    - {fileID: 2100000, guid: 1c3869a3ab687504da2880ebd485169f, type: 2}
