@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CountdownTimerPanel : MonoBehaviour
 {
     [Header("Timer")]
+    [SerializeField] private HexGameContext gameContext;
     [SerializeField] private float durationSeconds = 20f;
     [SerializeField] private bool autoStartOnEnable = true;
     [SerializeField, Range(0.05f, 0.95f)] private float lowTimeThresholdNormalized = 0.2f;
@@ -58,6 +59,7 @@ public class CountdownTimerPanel : MonoBehaviour
 
     private void Awake()
     {
+        ApplyConfiguredDurationFromConfig();
         ConfigureStaticBindings();
         ResetToInitialState();
     }
@@ -66,6 +68,7 @@ public class CountdownTimerPanel : MonoBehaviour
     {
         if (autoStartOnEnable)
         {
+            ApplyConfiguredDurationFromConfig();
             StartCountdown();
             return;
         }
@@ -123,6 +126,17 @@ public class CountdownTimerPanel : MonoBehaviour
     {
         durationSeconds = Mathf.Max(0.1f, newDurationSeconds);
         StartCountdown();
+    }
+
+    private void ApplyConfiguredDurationFromConfig()
+    {
+        HexConfig config = gameContext != null ? gameContext.Config : null;
+        if (config == null)
+        {
+            return;
+        }
+
+        durationSeconds = Mathf.Max(0.1f, config.gameDurationSeconds);
     }
 
     private void ConfigureStaticBindings()

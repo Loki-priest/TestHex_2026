@@ -14,6 +14,7 @@ public class HexFloorCreator : MonoBehaviour
     [SerializeField] private bool generateOnStart;
     [SerializeField] private bool clearBeforeGenerate = true;
     [SerializeField] private bool refreshNeighborsAfterGenerate = true;
+    [SerializeField] private bool fillStacksAfterGenerate = true;
 
     [Header("Layout")]
     [SerializeField, Min(0.001f)] private float neighborDistance = 1f;
@@ -100,6 +101,7 @@ public class HexFloorCreator : MonoBehaviour
                 }
 
                 floor.name = $"HexFloor [x:{colX}, z:{rowZ}]";
+                floor.SetGridCoordinates(colX, rowZ);
                 generatedFloors.Add(floor);
             }
         }
@@ -109,21 +111,28 @@ public class HexFloorCreator : MonoBehaviour
             //Physics.SyncTransforms();
         }
 
-        if (!refreshNeighborsAfterGenerate)
+        bool shouldFillStacks = fillStacksAfterGenerate && hexConfig.fillGeneratedFloorWithStacks;
+        bool needNeighborRefresh = refreshNeighborsAfterGenerate || shouldFillStacks;
+        if (needNeighborRefresh)
+        {
+            for (int i = 0; i < generatedFloors.Count; i++)
+            {
+                HexFloor floor = generatedFloors[i];
+                if (floor == null)
+                {
+                    continue;
+                }
+
+                floor.FindNearFloors();
+            }
+        }
+
+        if (!shouldFillStacks || gameContext == null || gameContext.StacksCreator == null)
         {
             return;
         }
 
-        for (int i = 0; i < generatedFloors.Count; i++)
-        {
-            HexFloor floor = generatedFloors[i];
-            if (floor == null)
-            {
-                continue;
-            }
-
-            floor.FindNearFloors();
-        }
+        gameContext.StacksCreator.FillFloorsWithConfiguredStacks(generatedFloors);
     }
 
     [ContextMenu("Clear Generated Floor")]

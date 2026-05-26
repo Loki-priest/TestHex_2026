@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c9a2747c8ad2340a4c67c999220e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 714c3587840433f4a9c09570ff2fb255, type: 2}
+  config: {fileID: 11400000, guid: 3899c2162288d52408ed3bc0dfbfdea6, type: 2}
   poolService: {fileID: 2008521431}
   manager: {fileID: 1104437397}
   stacksCreator: {fileID: 1373010792}
@@ -715,8 +715,8 @@ MonoBehaviour:
   floorCheckStartHeight: 2
   floorCheckDistance: 8
   floorRaycastBufferSize: 16
-  liftHeight: 0.75
-  liftDuration: 0.22
+  liftHeight: 0.45
+  liftDuration: 0.12
   liftEase: 6
   attachMoveDuration: 0.14
   attachMoveEase: 6
@@ -962,7 +962,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3354515, y: 0, z: 0, w: 0.9420575}
-  m_LocalPosition: {x: 0, y: 5, z: -6.33}
+  m_LocalPosition: {x: 0, y: 6.06, z: -8.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1024,7 +1024,7 @@ Transform:
   m_GameObject: {fileID: 1064815393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: -3}
+  m_LocalPosition: {x: -2, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   clearScaleEase: 26
   clearScaleStagger: 0.02
   clearFxPlayer: {fileID: 1104437399}
-  logTransferEvents: 0
+  logTransferEvents: 1
 --- !u!4 &1104437398
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6a0064b429d474781adeed5eea5a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logTransferAnimatorEvents: 0
+  logTransferAnimatorEvents: 1
   tileFlipDuration: 0.22
   tileFlipEase: 4
   tileSettleDuration: 0.1
@@ -1438,7 +1438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2010000001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 700}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialRoot: {fileID: 2010000010}
   handTransform: {fileID: 2010000018}
-  canvasRoot: {fileID: 2010000001}
+  canvasRoot: {fileID: 0}
   uiCamera: {fileID: 0}
   worldCamera: {fileID: 0}
   gameContext: {fileID: 725719213}
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameContext: {fileID: 0}
-  durationSeconds: 30
+  durationSeconds: 20
   autoStartOnEnable: 1
   lowTimeThresholdNormalized: 0.2
   barFrameNormalColor: {r: 0.11, g: 0.38, b: 0.86, a: 1}
@@ -2650,7 +2650,7 @@ Transform:
   m_GameObject: {fileID: 2099578306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: -3}
+  m_LocalPosition: {x: 2, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

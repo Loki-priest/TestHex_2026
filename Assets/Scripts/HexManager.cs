@@ -6,6 +6,8 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class HexManager : MonoBehaviour
 {
+    public event Action FirstTransferAndClearChainFinished;
+
     [Header("References")]
     [SerializeField] private HexGameContext gameContext;
 
@@ -18,7 +20,6 @@ public class HexManager : MonoBehaviour
     [SerializeField, Min(0f)] private float clearSpeedIncreasePerStack = 0.3f;
 
     [Header("Top Match Clear")]
-    [SerializeField] private int topMatchClearCount = 3;
     [SerializeField] private float clearScaleDuration = 0.14f;
     [SerializeField] private Ease clearScaleEase = Ease.InBack;
     [SerializeField] private float clearScaleStagger = 0.02f;
@@ -30,6 +31,7 @@ public class HexManager : MonoBehaviour
     private const int MaxResolveIterations = 4096;
     private int activeTransferRoutines;
     private int transferGeneration;
+    private bool firstTransferAndClearChainRaised;
 
     public bool IsTransferInProgress => activeTransferRoutines > 0;
     public HexConfig hexConfig => gameContext != null ? gameContext.Config : null;
@@ -50,6 +52,7 @@ public class HexManager : MonoBehaviour
     {
         public readonly Queue<HexStack> PendingStacks = new();
         public readonly HashSet<HexStack> QueuedStacks = new();
+        public readonly HashSet<HexStack> TransferTargetStacks = new();
         public readonly int Generation;
         public readonly Action OnComplete;
 
@@ -58,6 +61,8 @@ public class HexManager : MonoBehaviour
         public int LoopGuard;
         public bool PassStarted;
         public bool TransferredInPass;
+        public bool HadTransfers;
+        public bool HadClears;
         public bool IsCompleted;
 
         public TransferChainState(int generation, Action onComplete)
@@ -72,6 +77,7 @@ public class HexManager : MonoBehaviour
 
     private void Awake()
     {
+        firstTransferAndClearChainRaised = false;
         PrewarmPools();
     }
 
@@ -313,6 +319,11 @@ public class HexManager : MonoBehaviour
                         }
 
                         LogTransferEvent($"Transfer step #{transferStepNumber} completed.");
+                        state.HadTransfers = true;
+                        if (targetStack != null)
+                        {
+                            state.TransferTargetStacks.Add(targetStack);
+                        }
                         state.TransferStepIndex++;
 
                         EnqueueForTransferCheck(currentSourceStack, state.PendingStacks, state.QueuedStacks);
@@ -346,7 +357,7 @@ public class HexManager : MonoBehaviour
                 continue;
             }
 
-            if (!TryCollectClearBatches(out List<StackClearBatch> clearBatches))
+            if (!TryCollectClearBatches(state.TransferTargetStacks, out List<StackClearBatch> clearBatches))
             {
                 FinishTransferChain(state);
                 return;
@@ -359,6 +370,7 @@ public class HexManager : MonoBehaviour
             LogTransferEvent(
                 $"Top clear phase: batches={clearBatches.Count}, parallel={isParallelClear}, speedMul={clearSpeedMultiplier:F2}"
             );
+            state.HadClears = true;
 
             ClearBatchesParallel(
                 clearBatches,
@@ -404,6 +416,13 @@ public class HexManager : MonoBehaviour
         state.IsCompleted = true;
         activeTransferRoutines = Mathf.Max(0, activeTransferRoutines - 1);
         LogTransferEvent($"Transfer chain finished. activeChains={activeTransferRoutines}");
+
+        if (!firstTransferAndClearChainRaised && state.HadTransfers && state.HadClears)
+        {
+            firstTransferAndClearChainRaised = true;
+            FirstTransferAndClearChainFinished?.Invoke();
+        }
+
         state.OnComplete?.Invoke();
     }
 
@@ -494,12 +513,16 @@ public class HexManager : MonoBehaviour
         return false;
     }
 
-    private bool TryCollectClearBatches(out List<StackClearBatch> clearBatches)
+    private bool TryCollectClearBatches(HashSet<HexStack> eligibleStacks, out List<StackClearBatch> clearBatches)
     {
         clearBatches = new List<StackClearBatch>();
 
-        HexStack[] discoveredStacks = FindObjectsOfType<HexStack>();
-        foreach (HexStack stack in discoveredStacks)
+        if (eligibleStacks == null || eligibleStacks.Count == 0)
+        {
+            return false;
+        }
+
+        foreach (HexStack stack in eligibleStacks)
         {
             if (stack == null || stack.TileCount == 0)
             {
@@ -858,7 +881,7 @@ public class HexManager : MonoBehaviour
         }
 
         int topSameColorCount = stack.CountTopTilesWithColorId(topColorId);
-        if (topSameColorCount < topMatchClearCount)
+        if (topSameColorCount < GetTopMatchClearCount())
         {
             return false;
         }
@@ -877,6 +900,17 @@ public class HexManager : MonoBehaviour
         }
 
         return tilesToClear.Count > 0;
+    }
+
+    private int GetTopMatchClearCount()
+    {
+        HexConfig config = hexConfig;
+        if (config == null)
+        {
+            return 3;
+        }
+
+        return Mathf.Max(1, config.topMatchClearCount);
     }
 
     private void LogTransferEvent(string message)

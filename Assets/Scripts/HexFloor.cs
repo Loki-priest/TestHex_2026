@@ -13,12 +13,16 @@ public class HexFloor : MonoBehaviour
 
     [Header("Placement")]
     [SerializeField] private Transform stackAnchor;
+    [SerializeField] private int gridX;
+    [SerializeField] private int gridZ;
 
     private HexStack occupiedStack;
 
     public IReadOnlyList<HexFloor> NearFloors => nearFloors;
     public HexStack OccupiedStack => occupiedStack;
     public Transform StackAnchor => stackAnchor;
+    public int GridX => gridX;
+    public int GridZ => gridZ;
 
     [Header("Drop Highlight")]
     [SerializeField] private Renderer[] highlightRenderers;
@@ -124,6 +128,12 @@ public class HexFloor : MonoBehaviour
     public void SetOccupiedStack(HexStack stack)
     {
         occupiedStack = stack;
+    }
+
+    public void SetGridCoordinates(int x, int z)
+    {
+        gridX = x;
+        gridZ = z;
     }
 
     public void ClearOccupiedStack(HexStack stack)

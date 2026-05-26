@@ -55,6 +55,11 @@ public class HexStack : MonoBehaviour
         }
 
         palette = config.colors;
+        int activePaletteColorCount = ResolveActivePaletteColorCount(config, palette.Length);
+        if (activePaletteColorCount <= 0)
+        {
+            return;
+        }
 
         if (hasPreset && !EnsureTileCount(colorIdsBottomToTop.Length))
         {
@@ -64,7 +69,7 @@ public class HexStack : MonoBehaviour
         CompactNullTiles();
         for (int i = 0; i < hexTiles.Count; i++)
         {
-            int tileColorId = ResolveTileColorIdForIndex(i, colorIdsBottomToTop, palette.Length);
+            int tileColorId = ResolveTileColorIdForIndex(i, colorIdsBottomToTop, activePaletteColorCount);
             if (tileColorId < 0 || tileColorId >= palette.Length)
             {
                 continue;
@@ -381,6 +386,22 @@ public class HexStack : MonoBehaviour
         }
 
         return Random.Range(0, paletteLength);
+    }
+
+    private static int ResolveActivePaletteColorCount(HexConfig config, int paletteLength)
+    {
+        if (paletteLength <= 0)
+        {
+            return 0;
+        }
+
+        int configuredCount = config != null ? config.paletteColorCount : 0;
+        if (configuredCount <= 0)
+        {
+            return paletteLength;
+        }
+
+        return Mathf.Clamp(configuredCount, 1, paletteLength);
     }
 
     private void RefreshVisibilityAndBinding()
