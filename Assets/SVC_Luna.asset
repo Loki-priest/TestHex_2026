@@ -456,7 +456,7 @@ MonoBehaviour:
       - _SPECULARHIGHLIGHTS_OFF
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 493
+  version: 671
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0

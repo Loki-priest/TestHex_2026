@@ -114,6 +114,7 @@ MonoBehaviour:
   gridX: 0
   gridZ: 0
   highlightRenderers: []
+  originalColor: {r: 0.42352945, g: 0.5529412, b: 0.7803922, a: 1}
   dropHighlightColor: {r: 0.35, g: 1, b: 0.45, a: 1}
   dropHighlightBlend: 0.55
   useEmissionHighlight: 1
@@ -307,6 +308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6df342e3b0e34cd4780fa3e02f22eddb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5cf207b8764b9749b3c652664e329a5, type: 2}
     - target: {fileID: -5754084199372789682, guid: 6df342e3b0e34cd4780fa3e02f22eddb, type: 3}
       propertyPath: m_Mesh
       value: 

@@ -587,7 +587,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -606,13 +606,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.36599812, y: -0.45315394, z: 0.2113091, w: 0.78488564}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -60, z: 0}
 --- !u!1 &706233418
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,10 +718,11 @@ MonoBehaviour:
   liftHeight: 0.75
   liftDuration: 0.22
   liftEase: 6
-  attachMoveDuration: 0.14
-  attachMoveEase: 6
+  attachMoveDuration: 0.04
+  attachMoveEase: 1
+  returnMoveDuration: 0.14
   dropDuration: 0.12
-  dropEase: 7
+  dropEase: 1
 --- !u!1 &738262199
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,13 +962,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3354515, y: 0, z: 0, w: 0.9420575}
-  m_LocalPosition: {x: 0, y: 5, z: -6.33}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 5, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 39.2, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!1 &1006725968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   gameContext: {fileID: 725719213}
   transferOnStackPlaced: 1
   transferAnimator: {fileID: 1104437400}
-  transferSpeedIncreasePerStack: 0.12
+  transferSpeedIncreasePerStack: 0.05
   clearSpeedIncreasePerStack: 0.1
   clearScaleDuration: 0.2
   clearScaleEase: 26
@@ -1113,11 +1114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logTransferAnimatorEvents: 0
-  tileFlipDuration: 0.22
+  tileFlipDuration: 0.26
   tileFlipEase: 4
   tileSettleDuration: 0.1
   tileSettleEase: 6
   tileTransferFanStagger: 0.04
+  tileTransferArcHeightMultiplier: 1.5
 --- !u!1 &1259603092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1175,7 @@ MonoBehaviour:
   refreshNeighborsAfterGenerate: 1
   fillStacksAfterGenerate: 1
   debugLogs: 0
-  neighborDistance: 1
+  neighborDistance: 0.9
   shiftOddColumnsForward: 1
   anchorLocalOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1373010790
@@ -1567,6 +1569,7 @@ MonoBehaviour:
   useDynamicWorldTargets: 1
   handScreenOffset: {x: 0, y: 0}
   worldTargetHeightOffset: 0.2
+  fallbackScanInterval: 0.35
   debugLogs: 0
   handMoveDuration: 0.8
   handPauseDuration: 0.15

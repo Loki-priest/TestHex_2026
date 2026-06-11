@@ -31,6 +31,7 @@ public class HexFloor : MonoBehaviour
 
     [Header("Drop Highlight")]
     [SerializeField] private Renderer[] highlightRenderers;
+    [SerializeField] private Color originalColor = new(0.42f, 0.55f, 0.78f, 1f);
     [SerializeField] private Color dropHighlightColor = new(0.35f, 1f, 0.45f, 1f);
     [SerializeField, Range(0f, 1f)] private float dropHighlightBlend = 0.55f;
     [SerializeField] private bool useEmissionHighlight = true;
@@ -74,6 +75,7 @@ public class HexFloor : MonoBehaviour
     private void Awake()
     {
         CacheHighlightRenderers();
+        SetDropHighlight(false, true);
         EnsureNeighborRaycastBuffer();
 
         if (autoFindOnAwake && GetComponentInParent<HexFloorCreator>() == null)
@@ -172,7 +174,12 @@ public class HexFloor : MonoBehaviour
 
     public void SetDropHighlight(bool enabled)
     {
-        if (enabled == isDropHighlighted)
+        SetDropHighlight(enabled, false);
+    }
+
+    private void SetDropHighlight(bool enabled, bool force)
+    {
+        if (!force && enabled == isDropHighlighted)
         {
             return;
         }
@@ -222,7 +229,7 @@ public class HexFloor : MonoBehaviour
         Renderer[] renderers = highlightRenderers;
         if (renderers == null || renderers.Length == 0)
         {
-            renderers = GetComponentsInChildren<Renderer>(true);
+            renderers = GetComponentsInChildren<Renderer>();
         }
 
         if (renderers == null || renderers.Length == 0)
@@ -255,13 +262,13 @@ public class HexFloor : MonoBehaviour
             {
                 state.HasColorProperty = true;
                 state.ColorPropertyId = BaseColorId;
-                state.BaseColor = sharedMaterial.GetColor(BaseColorId);
+                state.BaseColor = originalColor;
             }
             else if (sharedMaterial.HasProperty(ColorId))
             {
                 state.HasColorProperty = true;
                 state.ColorPropertyId = ColorId;
-                state.BaseColor = sharedMaterial.GetColor(ColorId);
+                state.BaseColor = originalColor;
             }
 
             if (sharedMaterial.HasProperty(EmissionColorId))

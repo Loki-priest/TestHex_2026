@@ -16,6 +16,7 @@ public class HexTransferAnimator : MonoBehaviour
     [SerializeField] private float tileSettleDuration = 0.1f;
     [SerializeField] private Ease tileSettleEase = Ease.OutQuad;
     [SerializeField] private float tileTransferFanStagger = 0.04f;
+    [SerializeField, Min(0f)] private float tileTransferArcHeightMultiplier = 1f;
 
     public void TransferTopTilesFan(
         HexStack sourceStack,
@@ -141,11 +142,11 @@ public class HexTransferAnimator : MonoBehaviour
             }
         }
 
-        Vector3 sourceCenter = sourceFloor != null ? sourceFloor.transform.position : tileTransform.position;
-        Vector3 targetCenter = targetFloor != null ? targetFloor.transform.position : targetPosition;
-        Vector3 edgePoint = (sourceCenter + targetCenter) * 0.5f;
-        float targetHeightAlongUp = Vector3.Dot(targetPosition - targetCenter, up);
-        edgePoint += up * targetHeightAlongUp;
+        Vector3 startPosition = tileTransform.position;
+        Quaternion startRotation = tileTransform.rotation;
+        float flipRadius = GetTransferFlipRadius(startPosition, targetPosition, direction, up);
+        Vector3 startPivotPoint = startPosition + direction * flipRadius;
+        Vector3 targetPivotPoint = targetPosition - direction * flipRadius;
 
         Sequence sequence = DOTween.Sequence();
         if (startDelay > 0f)
@@ -153,16 +154,20 @@ public class HexTransferAnimator : MonoBehaviour
             sequence.AppendInterval(startDelay);
         }
 
-        float previousAngle = 0f;
         sequence.Append(
             DOTween
                 .To(
                     () => 0f,
                     angle =>
                     {
-                        float delta = angle - previousAngle;
-                        previousAngle = angle;
-                        tileTransform.RotateAround(edgePoint, edgeAxis, delta);
+                        float progress = Mathf.Clamp01(angle / 180f);
+                        float angleRadians = angle * Mathf.Deg2Rad;
+                        Vector3 pivotPoint = Vector3.Lerp(startPivotPoint, targetPivotPoint, progress);
+                        Vector3 pageOffset = direction * (-Mathf.Cos(angleRadians) * flipRadius)
+                            + up * (Mathf.Sin(angleRadians) * flipRadius * tileTransferArcHeightMultiplier);
+
+                        tileTransform.position = pivotPoint + pageOffset;
+                        tileTransform.rotation = Quaternion.AngleAxis(angle, edgeAxis) * startRotation;
                     },
                     180f,
                     flipDuration
@@ -231,6 +236,24 @@ public class HexTransferAnimator : MonoBehaviour
             callbackInvoked = true;
             onComplete?.Invoke();
         }
+    }
+
+    private static float GetTransferFlipRadius(
+        Vector3 startPosition,
+        Vector3 targetPosition,
+        Vector3 direction,
+        Vector3 up
+    )
+    {
+        Vector3 transferOffset = targetPosition - startPosition;
+        float radius = Mathf.Abs(Vector3.Dot(transferOffset, direction)) * 0.5f;
+        if (radius > 0.0001f)
+        {
+            return radius;
+        }
+
+        Vector3 planarOffset = Vector3.ProjectOnPlane(transferOffset, up);
+        return Mathf.Max(0.0001f, planarOffset.magnitude * 0.5f);
     }
 
     private Vector3 GetNeighborDirection(HexFloor sourceFloor, HexFloor targetFloor, Vector3 up)
