@@ -25,6 +25,10 @@ public class HexTransferAnimator : MonoBehaviour
 	[SerializeField]
 	private float tileTransferFanStagger = 0.04f;
 
+	[SerializeField]
+	[Min(0f)]
+	private float tileTransferArcHeightMultiplier = 1f;
+
 	public void TransferTopTilesFan(HexStack sourceStack, HexFloor sourceFloor, HexStack targetStack, HexFloor targetFloor, int transferCount, float speedMultiplier, Action onComplete)
 	{
 		if (sourceStack == null || targetStack == null || transferCount <= 0)
@@ -101,22 +105,24 @@ public class HexTransferAnimator : MonoBehaviour
 				edgeAxis = Vector3.right;
 			}
 		}
-		Vector3 sourceCenter = ((sourceFloor != null) ? sourceFloor.transform.position : tileTransform.position);
-		Vector3 targetCenter = ((targetFloor != null) ? targetFloor.transform.position : targetPosition);
-		Vector3 edgePoint = (sourceCenter + targetCenter) * 0.5f;
-		float targetHeightAlongUp = Vector3.Dot(targetPosition - targetCenter, up);
-		edgePoint += up * targetHeightAlongUp;
+		Vector3 startPosition = tileTransform.position;
+		Quaternion startRotation = tileTransform.rotation;
+		float flipRadius = GetTransferFlipRadius(startPosition, targetPosition, direction, up);
+		Vector3 startPivotPoint = startPosition + direction * flipRadius;
+		Vector3 targetPivotPoint = targetPosition - direction * flipRadius;
 		Sequence sequence = DOTween.Sequence();
 		if (startDelay > 0f)
 		{
 			sequence.AppendInterval(startDelay);
 		}
-		float previousAngle = 0f;
 		sequence.Append(DOTween.To(() => 0f, delegate(float angle)
 		{
-			float angle2 = angle - previousAngle;
-			previousAngle = angle;
-			tileTransform.RotateAround(edgePoint, edgeAxis, angle2);
+			float t = Mathf.Clamp01(angle / 180f);
+			float f = angle * (3.14159265f / 180f);
+			Vector3 vector = Vector3.Lerp(startPivotPoint, targetPivotPoint, t);
+			Vector3 vector2 = direction * ((0f - Mathf.Cos(f)) * flipRadius) + up * (Mathf.Sin(f) * flipRadius * tileTransferArcHeightMultiplier);
+			tileTransform.position = vector + vector2;
+			tileTransform.rotation = Quaternion.AngleAxis(angle, edgeAxis) * startRotation;
 		}, 180f, flipDuration).SetEase(tileFlipEase));
 		sequence.Append(tileTransform.DOMove(targetPosition, settleDuration).SetEase(tileSettleEase));
 		return sequence;
@@ -172,6 +178,17 @@ public class HexTransferAnimator : MonoBehaviour
 			callbackInvoked = true;
 			onComplete?.Invoke();
 		}
+	}
+
+	private static float GetTransferFlipRadius(Vector3 startPosition, Vector3 targetPosition, Vector3 direction, Vector3 up)
+	{
+		Vector3 transferOffset = targetPosition - startPosition;
+		float radius = Mathf.Abs(Vector3.Dot(transferOffset, direction)) * 0.5f;
+		if (radius > 0.0001f)
+		{
+			return radius;
+		}
+		return Mathf.Max(0.0001f, Vector3.ProjectOnPlane(transferOffset, up).magnitude * 0.5f);
 	}
 
 	private Vector3 GetNeighborDirection(HexFloor sourceFloor, HexFloor targetFloor, Vector3 up)

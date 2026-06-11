@@ -48,6 +48,9 @@ public class HexDragger : MonoBehaviour
 	private Ease attachMoveEase = Ease.OutQuad;
 
 	[SerializeField]
+	private float returnMoveDuration = 0.14f;
+
+	[SerializeField]
 	private float dropDuration = 0.12f;
 
 	[SerializeField]
@@ -282,10 +285,10 @@ public class HexDragger : MonoBehaviour
 		SetHighlightedFloor(null);
 		Vector3 targetPosition = (hasFloorUnderStack ? floor.GetStackPlacementPosition(dragStartPosition.y) : dragStartPosition);
 		dragEndedWithSuccessfulDrop = hasFloorUnderStack;
-		StartSettleTween(targetPosition, hasFloorUnderStack ? floor : null);
+		StartSettleTween(targetPosition, hasFloorUnderStack ? floor : null, !hasFloorUnderStack);
 	}
 
-	private void StartSettleTween(Vector3 targetPosition, HexFloor targetFloor)
+	private void StartSettleTween(Vector3 targetPosition, HexFloor targetFloor, bool isReturnToPlayerSlot)
 	{
 		if (activeStackTransform == null)
 		{
@@ -296,8 +299,9 @@ public class HexDragger : MonoBehaviour
 		KillActiveTween(false);
 		float moveY = Mathf.Max(activeStackTransform.position.y, dragLiftY);
 		Vector3 movePoint = new Vector3(targetPosition.x, moveY, targetPosition.z);
+		float moveDuration = (isReturnToPlayerSlot ? returnMoveDuration : attachMoveDuration);
 		Sequence sequence = DOTween.Sequence();
-		sequence.Append(activeStackTransform.DOMove(movePoint, attachMoveDuration).SetEase(attachMoveEase));
+		sequence.Append(activeStackTransform.DOMove(movePoint, moveDuration).SetEase(attachMoveEase));
 		sequence.Append(activeStackTransform.DOMoveY(targetPosition.y, dropDuration).SetEase(dropEase));
 		sequence.OnComplete(delegate
 		{

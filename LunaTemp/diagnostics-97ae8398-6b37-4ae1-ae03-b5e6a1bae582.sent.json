@@ -1,0 +1,113 @@
+{
+  "BuildID": "97ae8398-6b37-4ae1-ae03-b5e6a1bae582",
+  "Command": "project:deploy",
+  "ProjectID": "72ca743d8c13cb8488a5f26576d5f7d9",
+  "ProjectStateHash": "014cd75b2e1ef2cdef275353755cb01c30daaaa7b53c5a164d5623fb358cf691",
+  "StageCompletedAt": 3,
+  "EarliestFatalError": 0,
+  "StartTime": 1781144314872,
+  "EndTime": 1781144336607,
+  "PlaygroundUserID": 36598,
+  "OperatingSystem": "win32",
+  "UnityPackageID": null,
+  "TargetPlatform": "playground",
+  "UnityVersion": "2022.3.62f1",
+  "LunaVersion": "7.2.0",
+  "LogCount": 4,
+  "Logs": [
+    {
+      "LogID": "be215554-0c41-4a06-be09-aebcd4a73d2e",
+      "Order": 3,
+      "Timestamp": 1781144337037,
+      "Stage": 3,
+      "ErrorType": 3,
+      "ErrorCode": "LP3007",
+      "Description": "You are not using any custom events",
+      "Details": [
+        "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+      ],
+      "DescriptionValues": [
+        ""
+      ],
+      "DetailsValues": [
+        ""
+      ],
+      "LogCount": 1,
+      "LinePosition": null,
+      "FilePath": "",
+      "ClassName": "",
+      "MemberName": "",
+      "Severity": 0
+    },
+    {
+      "LogID": "6854ec0c-94fb-445d-b799-094231786699",
+      "Order": 3,
+      "Timestamp": 1781144337038,
+      "Stage": 3,
+      "ErrorType": 3,
+      "ErrorCode": "LP3011",
+      "Description": "You are not using any LunaPlaygroundFields attributes.",
+      "Details": [
+        "You are not using any LunaPlaygroundFields attributes, it allows you to configure your playable to different concepts to find the best variation, which can drastically improve playable performance on all ad networks."
+      ],
+      "DescriptionValues": null,
+      "DetailsValues": null,
+      "LogCount": 1,
+      "LinePosition": null,
+      "FilePath": "",
+      "ClassName": "",
+      "MemberName": "",
+      "Severity": 0
+    },
+    {
+      "LogID": "5cd8a2a8-782a-4e1b-8686-dced51a55235",
+      "Order": 0,
+      "Timestamp": 1781144317822,
+      "Stage": 1,
+      "ErrorType": 2,
+      "ErrorCode": "LP1007",
+      "Description": "Extensive use of mesh colliders",
+      "Details": [
+        "Usage of mesh colliders has negative effect on performance. You can use primitive colliders instead."
+      ],
+      "DescriptionValues": [],
+      "DetailsValues": [],
+      "LogCount": 1,
+      "LinePosition": 0,
+      "FilePath": "",
+      "ClassName": "",
+      "MemberName": "",
+      "Severity": 0
+    },
+    {
+      "LogID": "3b843461-d012-43e6-a371-d8b330bbfcd3",
+      "Order": 1,
+      "Timestamp": 1781144317829,
+      "Stage": 1,
+      "ErrorType": 2,
+      "ErrorCode": "LP1010",
+      "Description": "Looks like a collider was scaled, this might affect performance.",
+      "Details": [
+        "hex smooth 2",
+        "hex smooth 2 opt",
+        "hex smooth 2",
+        "hex smooth 2 opt",
+        "hex smooth 2",
+        "hex smooth 2 opt",
+        "hex smooth 2",
+        "hex smooth 2 opt",
+        "hex smooth 1",
+        "hex smooth opt",
+        "Plane"
+      ],
+      "DescriptionValues": [],
+      "DetailsValues": [],
+      "LogCount": 11,
+      "LinePosition": 0,
+      "FilePath": "",
+      "ClassName": "",
+      "MemberName": "",
+      "Severity": 0
+    }
+  ]
+}
